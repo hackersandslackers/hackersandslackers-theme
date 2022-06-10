@@ -597,11 +597,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 /* ---------------------------------------------------------- */
 
 .post-feed {
-    position: relative;
+    grid-gap: 30px;
     display: grid;
-    gap: 4.8vmin 4vmin;
-    grid-template-columns: repeat(6, 1fr);
-    padding: max(4.8vmin, 36px) 0 0;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
 }
 
 :is(.tag-template, .author-template) .post-feed {
@@ -829,7 +830,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 */
 
-@media (min-width: 1001px) {
+/* @media (min-width: 1001px) {
     .post-card-large {
         grid-column: span 6;
         display: grid;
@@ -913,7 +914,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-card.dynamic .post-card-title {
         font-size: 3rem;
     }
-}
+} */
 
 
 /* 7. Single Post
@@ -2104,6 +2105,17 @@ html.dark-mode .footer-cta-title {
     html.auto-color .footer-cta-title {
         color: #fff;
     }
+}
+
+
+
+.sidebar-container {
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    margin: 0 auto;
+    max-width: 95%;
+    width: 970px;
 }
 
 /*

@@ -10,7 +10,6 @@ const postcss = require('gulp-postcss');
 const zip = require('gulp-zip');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const beeper = require('beeper');
 const fs = require('fs');
 
 // postcss plugins
@@ -31,7 +30,7 @@ function serve(done) {
 const handleError = (done) => {
     return function (err) {
         if (err) {
-            beeper();
+            console.log(err);
         }
         return done(err);
     };
