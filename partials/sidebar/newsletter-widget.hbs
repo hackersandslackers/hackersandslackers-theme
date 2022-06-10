@@ -1,0 +1,20 @@
+{{#unless @member}}
+    <div class='widget newsletter'>
+        <div class='subscribe'>
+            <h3>{{t '{siteTitle} Newsletter' siteTitle=@site.title}}</h3>
+            <p>{{t 'Join the newsletter to receive the latest updates in your inbox.' }}</p>
+
+            <form data-members-form='subscribe' class='subscribe-form {{ formClass }}'>
+                <div class='form-group'>
+                    <label for='{{ inputLabel }}' class='hidden-visually'>{{t 'Your email address' }}</label>
+                    <input type='email' name='email' id='{{ inputLabel }}' placeholder='{{t 'Your email address' }}' required data-members-email>
+                    <button type='submit' value='{{t 'Subscribe' }}' class='btn'>{{t 'Subscribe' }}</button>
+                </div>
+
+                <div class='alert success'>{{t 'Please check your inbox and click the link to confirm your subscription.' }}</div>
+                <div class='alert invalid'>{{t 'Please enter a valid email address!' }}</div>
+                <div class='alert error'>{{t 'An error occurred, please try again later.' }}</div>
+            </form>
+        </div>
+    </div>
+{{/unless}}

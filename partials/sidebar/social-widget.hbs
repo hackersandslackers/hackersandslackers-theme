@@ -1,0 +1,13 @@
+{{#if isSecondary}}
+    <div class="widget social">
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}">
+                <a href="{{url}}" class="social-link">
+                    <svg width="32" height="32" role="img" aria-label="{{slug}} icon">
+                        <use xlink:href="#{{slug}}"></use>
+                    </svg>
+                </a>
+            </li>
+        {{/foreach}}
+    </div>
+{{/if}}

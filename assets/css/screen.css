@@ -38,7 +38,7 @@ production stylesheet in assets/built/screen.css
     --color-midgrey: #738a94;
     --color-lightgrey: #f1f1f1;
     --color-secondary-text: #979797;
-    --color-border: #e1e1e1;
+    --color-border: #eaecee;
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
 
@@ -92,7 +92,8 @@ production stylesheet in assets/built/screen.css
 .site-header {
     position: relative;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: white;
+    margin-bottom: 30px;
 }
 
 .site-header-cover {
@@ -119,7 +120,7 @@ production stylesheet in assets/built/screen.css
 
 .has-cover .site-header-content {
     min-height: 560px;
-    background-color: var(--ghost-accent-color);
+    background-color: white;
     color: #fff;
 }
 
@@ -251,38 +252,90 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 /* 5. Site Navigation
 /* ---------------------------------------------------------- */
 
-.gh-head {
-    padding-top: min(24px, 3.6vmin);
-    padding-bottom: min(24px, 3.6vmin);
-    font-size: 1.6rem;
-    line-height: 1.3em;
+.site-navigation {
+    position: relative;
+    padding: 20px;
     background-color: #fff;
+    border-bottom: 0.5px solid var(--color-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul {
+    padding-left: unset;
+    padding-right: unset;
+}
+
+.site-header li {
+    display: inline-block;
+    padding-left: unset;
+    margin-top: unset;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.site-header ul {
+    max-width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.tags-list {
+    padding: 20px;
+    border-bottom: 0.5px solid var(--color-border);
+}
+
+.tag-item {
+    font-size: .8em;
+}
+
+.logo {
+height: 40px;
+margin-right: 25px;
+transition: all .2s ease-out;
+width: 40px;
+}
+
+.gh-head {
+padding-top: min(24px, 3.6vmin);
+padding-bottom: min(24px, 3.6vmin);
+font-size: 1.6rem;
+line-height: 1.3em;
+background-color: #fff;
 }
 
 .has-cover:not(.home-template) .gh-head {
-    background-color: var(--ghost-accent-color);
-    color: #fff;
+background-color: white;
+color: #fff;
 }
 
 .home-template.has-cover .gh-head {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 2000;
-    background-color: transparent;
-    color: #fff;
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+z-index: 2000;
+background-color: transparent;
+color: #fff;
 }
 
 .gh-head a {
-    text-decoration: none;
+text-decoration: none;
 }
 
 .gh-head-inner {
-    display: grid;
-    grid-gap: 40px;
-    grid-template-columns: auto auto 1fr;
-    grid-auto-flow: row dense;
+display: grid;
+grid-gap: 40px;
+grid-template-columns: auto auto 1fr;
+grid-auto-flow: row dense;
 }
 
 
@@ -404,7 +457,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     font-size: 1.5rem;
     border-radius: 6px;
     color: #fff;
-    background: var(--ghost-accent-color);
+    background: white;
 }
 
 .has-cover .gh-head-button {
@@ -589,7 +642,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .has-cover.gh-head-open .gh-head {
-    background: var(--ghost-accent-color);
+    background: white;
 }
 
 
@@ -721,7 +774,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     align-items: center;
     gap: 3px;
     padding-left: 18px;
-    color: var(--ghost-accent-color);
+    color: white;
 }
 
 .post-card-featured svg {
@@ -1084,7 +1137,7 @@ is the very first element in the post content */
 
 /* Now the content typography styles */
 .gh-content a {
-    color: var(--ghost-accent-color);
+    color: white;
     text-decoration: underline;
     word-break: break-word;
 }
@@ -1161,7 +1214,7 @@ is the very first element in the post content */
     top: 0;
     bottom: 0;
     width: 0.3rem;
-    background: var(--ghost-accent-color);
+    background: white;
 }
 
 .gh-content :not(pre) > code {
@@ -1507,7 +1560,7 @@ iframe.instagram-media + script + :not([id]) {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: -0.005em;
-    background: var(--ghost-accent-color);
+    background: white;
     border-radius: 6px;
 }
 
