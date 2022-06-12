@@ -64,11 +64,17 @@ which templates loop over to generate a list of posts. --}}
         </a>
 
         <footer class="post-card-meta">
+            <div>
             <time class="post-card-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
             {{#if reading_time}}
                 <span class="sep">—</span>
                 <span class="post-card-meta-length">{{reading_time}}</span>
             {{/if}}
+            </div>
+
+            {{#primary_tag}}
+                <a href="{{url}}" style="background:{{accent_color}}" class="post-card-primary-tag">{{name}}</a>
+            {{/primary_tag}}
         </footer>
 
     </div>

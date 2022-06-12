@@ -31,6 +31,7 @@ production stylesheet in assets/built/screen.css
 :root {
 
     /* Colours */
+    --color-theme: #0297f6;
     --color-green: #a4d037;
     --color-yellow: #fecd35;
     --color-red: #f05230;
@@ -42,6 +43,8 @@ production stylesheet in assets/built/screen.css
     --color-wash: #e5eff5;
     --color-darkmode: #151719;
     --color-background-grey: #f4f8fb;
+    --color-header-grey: #4e576a;
+    --color-hover: #40cebb;
 
     /*
     An accent color is also set by Ghost itself in
@@ -63,6 +66,7 @@ production stylesheet in assets/built/screen.css
 
     /* Etc. */
     --card-shadow: 0 1px 4px rgba(39, 44, 49, .15);
+    --transition: all .2s ease-out;
 
 }
 
@@ -282,9 +286,21 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     padding-right: 0;
 }
 
-.nav.left a,
-.nav.right a {
+.nav.left a {
     color: var(--color-lightgrey);
+    font-family: var(--body-font-bold);
+    transition: var(--transition);
+}
+
+.nav.left a:hover {
+    color: var(--color-hover);
+    cursor: pointer;
+
+}
+
+.nav.right a {
+    font-family: var(--body-font-bold);
+    transition: var(--transition);
 }
 
 .nav.left li {
@@ -293,6 +309,46 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 
 .nav-link {
     color: var(--color-lightgrey);
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    font-family: CamphorPro-Regular,HelveticaNeue,sans-serif;
+    letter-spacing: .5px;
+    text-align: center;
+    text-transform: initial;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.nav-btn.outline {
+    color: var(--color-theme);
+    background-color: white;
+    box-shadow: inset 0 0 0 1px var(--color-theme);
+    transition: var(--transition);
+}
+
+.nav-btn.outline:hover {
+    color: white;
+    background-color: var(--color-theme);
+    cursor: pointer;
+}
+
+.nav-btn.filled {
+    color: white !important;
+    background-color: var(--color-theme);
+    box-shadow: inset 0 0 0 1px var(--color-theme);
+}
+
+.nav-btn.filled:hover {
+    cursor: pointer;
 }
 
 .tags-navigation {
@@ -348,7 +404,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 .logo {
     height: 40px;
     margin-right: 25px;
-    transition: all .2s ease-out;
+    transition: var(--transition);
     width: 40px;
 }
 
@@ -738,6 +794,11 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     position: relative;
     overflow: hidden;
     display: block;
+    transition: var(--transition)
+}
+
+.post-card-image-link:hover {
+    opacity: .8;
 }
 
 .post-card-image-link::after {
@@ -835,10 +896,18 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0;
     font-size: 2.6rem;
     font-weight: 800;
+    color: var(--color-header-grey);
+    font-family: var(--header-font);
+    transition: var(--transition);
+}
+
+.post-card-title:hover {
+    color: var(--color-hover);
 }
 
 .post-card-content-link:hover .post-card-title {
     opacity: 0.9;
+    color: var(--color-hover);
 }
 
 .no-image .post-card-title {
@@ -863,15 +932,17 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .post-card-excerpt {
-    display: -webkit-box;
-    overflow-y: hidden;
-    margin-top: 12px;
-    max-width: 720px;
-    font-size: 1.6rem;
-    line-height: 1.5;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
-    word-break: break-word;
+    color: #5e6877;
+    display: -webkit-box;
+    font-family: CamphorPro-Medium,HelveticaNeue,sans-serif;
+    font-size: 1.2em;
+    letter-spacing: -.5px;
+    line-height: 1.3;
+    margin: 10px auto 20px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
 }
 
 .has-sans-body .post-card-excerpt {
@@ -887,12 +958,24 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 }
 
 .post-card-meta {
-    display: flex;
+    -webkit-line-clamp: 1;
     align-items: center;
-    margin-top: 12px;
-    padding: 0;
-    font-size: 1.3rem;
+    border-top: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px 0 0;
+    text-overflow: ellipsis;
     color: var(--color-secondary-text);
+}
+
+.post-card-primary-tag {
+    color: white;
+    padding: 6px;
+    border-radius: 3px;
+    line-height: 1;
+    font-family: var(--body-font-bold);
 }
 
 .post-card-meta .sep {
@@ -2241,7 +2324,7 @@ html.dark-mode .footer-cta-title {
     display: block;
     height: 47px;
     margin: 0 auto 15px;
-    transition: all .2s ease-out;
+    transition: var(--transition);
     width: 230px;
 }
 
@@ -2275,6 +2358,13 @@ html.dark-mode .footer-cta-title {
     -moz-transition: all .2s ease;
     -o-transition: all .2s ease;
     transition: all .2s ease;
+}
+
+.widget .tag-cloud .tag-cloud-link:hover {
+    background: var(--color-hover);
+    border: 1px solid var(--color-hover);
+    color: white;
+    cursor: pointer;
 }
 
 /*
