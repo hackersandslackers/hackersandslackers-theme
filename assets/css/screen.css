@@ -57,6 +57,9 @@ production stylesheet in assets/built/screen.css
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
 
+    /* Etc. */
+    --card-shadow: 0 1px 4px rgba(39, 44, 49, .15);
+
 }
 
 
@@ -724,6 +727,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     background-size: cover;
     word-break: break-word;
     background: white;
+    box-shadow: var(--card-shadow);
 }
 
 .post-card-image-link {
@@ -2202,8 +2206,6 @@ html.dark-mode .footer-cta-title {
     }
 }
 
-
-
 .sidebar-container {
     grid-gap: 30px;
     display: grid;
@@ -2215,7 +2217,60 @@ html.dark-mode .footer-cta-title {
 
 .sidebar .widget {
     background-color: white;
-    padding: 15px;
+    padding: 20px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px;
+}
+
+.widget-title {
+    color: var(--color-lightgrey);
+    font-family: CamphorPro-Bold,HelveticaNeue,sans-serif;
+    font-size: 1.1em;
+    letter-spacing: .6px;
+    line-height: 1;
+    margin: 0 0 10px;
+    padding: 0;
+    text-align: left;
+}
+
+.widget.about .widget-logo {
+    display: block;
+    height: 47px;
+    margin: 0 auto 15px;
+    transition: all .2s ease-out;
+    width: 230px;
+}
+
+.widget.about .description {
+    font-family: CamphorPro-Regular,HelveticaNeue,sans-serif;
+    font-size: .9em;
+    line-height: 1.4;
+    margin: 15px 0 0;
+    text-align: center;
+}
+
+.widget .tag-cloud {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.widget .tag-cloud .tag-cloud-link {
+    border: 1px solid #d7dee7;
+    color: #78849c;
+    display: inline-block;
+    flex-grow: 1;
+    font-family: CamphorPro-Medium,HelveticaNeue,sans-serif;
+    font-size: .8em !important;
+    line-height: 1.5em;
+    margin: 0 2px 4px;
+    padding: 4px 10px;
+    text-align: center;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
 }
 
 /*

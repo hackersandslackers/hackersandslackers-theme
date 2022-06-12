@@ -1,0 +1,10 @@
+<div class="widget tags">
+    <h3 class="widget-title">Tags</h3>
+    <div class="tag-cloud">
+        {{#get "tags" limit="all" include="count.posts" order="count.posts DESC" }}
+            {{#foreach tags}}
+                <a class="tag-cloud-link" href="{{url}}" class="">{{name}}</a>
+            {{/foreach}}
+        {{/get}}
+    </div>
+</div>
