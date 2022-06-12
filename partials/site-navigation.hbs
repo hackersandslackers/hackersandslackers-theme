@@ -1,47 +1,51 @@
 <header class="site-header">
 
     <div class="site-navigation">
-        <div class="nav left">
-            <div class="logo">
-                {{#if @site.icon}}
-                    <a href="{{ @site.url }}">
-                        <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
-                    </a>
-                {{else}}
-                    <a class="link" href="{{ @site.url }}">{{ @site.title }}</a>
-                {{/if}}
+        <div class="nav-wrapper nav-links">
+            <div class="nav left">
+                <div class="logo">
+                    {{#if @site.icon}}
+                        <a href="{{ @site.url }}">
+                            <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
+                        </a>
+                    {{else}}
+                        <a class="nav-link" href="{{ @site.url }}">{{ @site.title }}</a>
+                    {{/if}}
+                </div>
+                {{ navigation }}
             </div>
-            {{ navigation }}
-        </div>
 
-        <ul class="nav right">
-            <li class="nav-item">
-                <a href="#" class="nav-link toggle-search-button js-search-toggle" aria-label="{{t 'Search' }}">
-                    {{t 'Search' }}
-                </a>
-            </li>
-            {{#if @member}}
-                <li class="nav-item"><a href="#/portal/account" class="nav link">{{t 'Account' }}</a></li>
-            {{else}}
-                <li class="nav-item"><a href="#/portal/signin" class="btn outline">{{t 'Log in' }}</a></li>
-                <li class="nav-item"><a href="#/portal/signup" class="btn action">{{t 'Subscribe' }}</a></li>
-            {{/if}}
-        </ul>
+            <ul class="nav right">
+                <li class="nav-item">
+                    <a href="#" class="nav-link toggle-search-button js-search-toggle" aria-label="{{t 'Search' }}">
+                        {{t 'Search' }}
+                    </a>
+                </li>
+                {{#if @member}}
+                    <li class="nav-item"><a href="#/portal/account" class="nav-link">{{t 'Account' }}</a></li>
+                {{else}}
+                    <li class="nav-item"><a href="#/portal/signin" class="btn outline">{{t 'Log in' }}</a></li>
+                    <li class="nav-item"><a href="#/portal/signup" class="btn action">{{t 'Subscribe' }}</a></li>
+                {{/if}}
+            </ul>
+        </div>
     </div>
 
     <div class="tags-navigation">
-        {{#get "tags" limit="all"}}
-            <ul class="tags-list dragscroll">
-                <li class="tag-item">
-                    <a href="/" class="tag-link">{{t "Latest" }}</a>
-                </li>
-                {{#foreach tags}}
+        <div class="nav-wrapper tag-links">
+            {{#get "tags" limit="all"}}
+                <ul class="tags-list dragscroll">
                     <li class="tag-item">
-                        <a href="{{ url }}" class="tag-link">{{ name }}</a>
+                        <a href="/" class="tag-link">{{t "Latest" }}</a>
                     </li>
-                {{/foreach}}
-            </ul>
-        {{/get}}
+                    {{#foreach tags}}
+                        <li class="tag-item">
+                            <a href="{{ url }}" class="tag-link">{{ name }}</a>
+                        </li>
+                    {{/foreach}}
+                </ul>
+            {{/get}}
+        </div>
     </div>
 
 </header>
