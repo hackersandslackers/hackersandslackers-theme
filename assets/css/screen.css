@@ -45,6 +45,7 @@ production stylesheet in assets/built/screen.css
     --color-background-grey: #f4f8fb;
     --color-header-grey: #4e576a;
     --color-hover: #40cebb;
+    --color-social-btn: #a1adc6;
 
     /*
     An accent color is also set by Ghost itself in
@@ -2325,6 +2326,25 @@ html.dark-mode .footer-cta-title {
     border: 1px solid var(--color-hover);
     color: white;
     cursor: pointer;
+}
+
+.widget.social {
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget.social .social-media-icon {
+    color: var(--color-social-btn);
+    fill: var(--color-social-btn);
+    width: 1.5em;
+    transition: var(--transition);
+}
+
+.widget.social .social-media-icon:hover {
+    cursor: pointer;
+    width: 1.8em;
+    height: 70px;
+    align-items: center;
 }
 
 /*

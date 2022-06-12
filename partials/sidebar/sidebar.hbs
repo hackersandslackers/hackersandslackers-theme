@@ -1,5 +1,7 @@
 <div class="sidebar">
-    {{> "sidebar/about-widget" }}
+    {{#is "index"}}
+        {{> "sidebar/about-widget" }}
+    {{/is}}
     {{> "sidebar/social-widget" }}
     {{> "sidebar/tags-widget" }}
     {{> "sidebar/newsletter-widget" }}
