@@ -65,6 +65,11 @@ production stylesheet in assets/built/screen.css
     --header-font: "TTNormsPro-Bold", "HelveticaNeue", sans-serif;
     --header-font-secondary: "TTNormsPro-Medium", "HelveticaNeue", sans-serif;
 
+    /* Breakpoints */
+    --smallscreen-breakpoint: 950px;
+    --tablet-breakpoint: 800px;
+    --mobile-breakpoint: 600px;
+
     /* Etc. */
     --card-shadow: 0 1px 4px rgba(39, 44, 49, .15);
     --transition: all .2s ease-out;
@@ -107,6 +112,7 @@ production stylesheet in assets/built/screen.css
     color: #fff;
     background: white;
     margin-bottom: 30px;
+    box-shadow: var(--card-shadow);
 }
 
 .site-header-cover {
@@ -346,10 +352,14 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     color: white !important;
     background-color: var(--color-theme);
     box-shadow: inset 0 0 0 1px var(--color-theme);
+    transition: var(--transition);
 }
 
 .nav-btn.filled:hover {
     cursor: pointer;
+    background-color: white;
+    color: var(--color-hover) !important;
+    box-shadow: inset 0 0 0 1px var(--color-hover);
 }
 
 .tags-navigation {
@@ -763,19 +773,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0 auto;
 }
 
-@media (max-width: 991px) {
-    .post-feed {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 767px) {
-    .post-feed {
-        grid-template-columns: 1fr;
-        grid-gap: 40px;
-    }
-}
-
 .post-card {
     position: relative;
     grid-column: span 2;
@@ -893,6 +890,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0;
     font-size: 3rem;
     font-weight: 800;
+    line-height: 1;
     color: var(--color-header-grey);
     font-family: var(--header-font);
     transition: var(--transition);
@@ -900,6 +898,13 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-title:hover {
     color: var(--color-hover);
+}
+
+@media(max-width: 600px) {
+    .post-card-title {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
 }
 
 .post-card-content-link:hover .post-card-title {
@@ -936,7 +941,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     font-family: CamphorPro-Medium,HelveticaNeue,sans-serif;
     font-size: 1.2em;
     letter-spacing: -.5px;
-    line-height: 1.3;
+    line-height: 1.2;
     margin: 10px auto 20px;
     overflow-y: hidden;
     text-overflow: ellipsis;
@@ -944,6 +949,14 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .has-sans-body .post-card-excerpt {
     font-family: var(--body-font);
+}
+
+@media(max-width: 600px) {
+    .post-card-excerpt {
+        font-size: 1.1em;
+        line-height: 1.1em;
+        margin: 10px auto 15px;
+    }
 }
 
 .post-card:not(.post-card-large):not(.post-card-full):not(.dynamic):not(.no-image) .post-card-excerpt {
@@ -992,11 +1005,11 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-primary-tag {
     color: white;
-    padding: 6px;
-    border-radius: 3px;
+    padding: 6px 8px 4px;
+    border-radius: 2px;
     line-height: 1;
     font-family: var(--body-font-bold);
-    font-size: .9em;
+    font-size: .95em;
     transition: var(--transition);
 }
 
@@ -1004,7 +1017,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     cursor: pointer;
     background: white !important;
     color: var(--color-hover);
-    border-color: var(--color-hover);
+    box-shadow: inset 0 0 0 1px var(--color-hover) !important;
 }
 
 .post-card-meta-item {
@@ -2259,8 +2272,21 @@ html.dark-mode .footer-cta-title {
     display: grid;
     grid-template-columns: 2.1fr 1fr;
     margin: 0 auto;
-    max-width: 95%;
+    max-width: 100%;
     width: 970px;
+}
+
+@media (max-width: 950px) {
+    .sidebar-container {
+        grid-gap: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .sidebar-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
 }
 
 .sidebar .widget {
@@ -2283,7 +2309,6 @@ html.dark-mode .footer-cta-title {
 
 .widget.about .widget-logo {
     display: block;
-    height: 47px;
     margin: 0 auto 15px;
     transition: var(--transition);
     width: 230px;
@@ -2331,18 +2356,23 @@ html.dark-mode .footer-cta-title {
 .widget.social {
     display: flex;
     justify-content: space-between;
+    overflow: visible;
+    height: 70px;
+    align-items: center;
 }
 
-.widget.social .social-media-icon {
+.widget.social .social-media-button {
     color: var(--color-social-btn);
     fill: var(--color-social-btn);
     width: 1.5em;
+    background: unset;
+    padding: 0;
     transition: var(--transition);
 }
 
-.widget.social .social-media-icon:hover {
+.widget.social .social-media-button:hover {
     cursor: pointer;
-    width: 1.8em;
+    width: 2em;
     height: 70px;
     align-items: center;
 }
