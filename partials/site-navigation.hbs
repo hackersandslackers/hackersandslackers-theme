@@ -33,7 +33,7 @@
 
     <div class="tags-navigation">
         <div class="nav-wrapper tag-links">
-            {{#get "tags" limit="all"}}
+            {{#get "tags" limit="20" include="count.posts" order="count.posts DESC" filter="slug:-Latest" }}
                 <ul class="tags-list dragscroll">
                     <li class="tag-item">
                         <a href="/" class="tag-link">{{t "Latest" }}</a>

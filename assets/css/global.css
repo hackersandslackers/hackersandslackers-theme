@@ -85,17 +85,21 @@ video {
     font-size: 100%;
     vertical-align: baseline;
 }
+
 body {
     line-height: 1;
 }
+
 ol,
 ul {
     list-style: none;
 }
+
 blockquote,
 q {
     quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
@@ -103,15 +107,18 @@ q:after {
     content: "";
     content: none;
 }
+
 table {
     border-spacing: 0;
     border-collapse: collapse;
 }
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
+
 html {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -119,34 +126,42 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
+
 *,
 *:before,
 *:after {
     box-sizing: inherit;
 }
+
 a {
     background-color: transparent;
 }
+
 a:active,
 a:hover {
     outline: 0;
 }
+
 b,
 strong {
     font-weight: bold;
 }
+
 i,
 em,
 dfn {
     font-style: italic;
 }
+
 h1 {
     margin: 0.67em 0;
     font-size: 2em;
 }
+
 small {
     font-size: 80%;
 }
+
 sub,
 sup {
     position: relative;
@@ -154,21 +169,27 @@ sup {
     line-height: 0;
     vertical-align: baseline;
 }
+
 sup {
     top: -0.5em;
 }
+
 sub {
     bottom: -0.25em;
 }
+
 img {
     border: 0;
 }
+
 svg:not(:root) {
     overflow: hidden;
 }
+
 mark {
     background-color: #fdffb6;
 }
+
 code,
 kbd,
 pre,
@@ -176,6 +197,7 @@ samp {
     font-family: monospace, monospace;
     font-size: 1em;
 }
+
 kbd {
     padding: 3px 5px;
     font-family: var(--font-mono);
@@ -185,11 +207,13 @@ kbd {
     border-radius: 6px;
     box-shadow: inset 0 -1px 0 rgba(124, 139, 154, 0.25);
 }
+
 @media (max-width: 600px) {
     kbd {
         font-size: 1.3rem;
     }
 }
+
 button,
 input,
 optgroup,
@@ -199,67 +223,111 @@ textarea {
     color: inherit; /* 1 */
     font: inherit; /* 2 */
 }
+
 button {
     overflow: visible;
     border: none;
 }
+
 button,
 select {
     text-transform: none;
 }
+
 button,
 html input[type="button"],
-/* 1 */
+    /* 1 */
 input[type="reset"],
 input[type="submit"] {
     cursor: pointer; /* 3 */
 
     -webkit-appearance: button; /* 2 */
 }
+
 button[disabled],
 html input[disabled] {
     cursor: default;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
     padding: 0;
     border: 0;
 }
+
 input {
     line-height: normal;
 }
+
 input:focus {
     outline: none;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
+
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
+
 input[type="search"] {
     box-sizing: content-box; /* 2 */
 
     -webkit-appearance: textfield; /* 1 */
 }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
+input[type="email"],
+input[type="text"] {
+    -webkit-appearance: none;
+    background: #f7f8fa;
+    border: 1px solid #d6dde9;
+    border-radius: 3px !important;
+    color: #4e5869;
+    font-family: var(--body-font);
+    font-size: .9em;
+    letter-spacing: .5px;
+    margin-bottom: 0;
+    padding: 16px 10px 12px !important;
+    transition: var(--transition);
+}
+
+
+input[type="email"]:hover,
+input[type="text"]:hover {
+    border-color: var(--color-theme);
+    filter: brightness(1.1);
+    color: #35668a;
+    transition: var(--transition);
+}
+
+input[type="email"]:hover::placeholder,
+input[type="text"]:hover::placeholder {
+    color: #527dab !important;
+}
+
 legend {
     padding: 0; /* 2 */
     border: 0; /* 1 */
 }
+
 textarea {
     overflow: auto;
 }
+
 table {
     border-spacing: 0;
     border-collapse: collapse;
 }
+
 td,
 th {
     padding: 0;
@@ -385,6 +453,7 @@ blockquote small {
     font-size: 0.9em;
     opacity: 0.8;
 }
+
 /* Quotation marks */
 blockquote small:before {
     content: "\2014 \00A0";
@@ -393,6 +462,7 @@ blockquote small:before {
 blockquote cite {
     font-weight: bold;
 }
+
 blockquote cite a {
     font-weight: normal;
 }
@@ -422,6 +492,7 @@ h1 {
     font-weight: 700;
     letter-spacing: -0.015em;
 }
+
 @media (max-width: 600px) {
     h1 {
         font-size: 2.8rem;
@@ -433,6 +504,7 @@ h2 {
     font-size: 2.8rem;
     font-weight: 700;
 }
+
 @media (max-width: 600px) {
     h2 {
         font-size: 2.3rem;
@@ -444,6 +516,7 @@ h3 {
     font-size: 2.4rem;
     font-weight: 600;
 }
+
 @media (max-width: 600px) {
     h3 {
         font-size: 1.7rem;
@@ -454,6 +527,7 @@ h4 {
     margin: 1.5em 0 0.5em 0;
     font-size: 2rem;
 }
+
 @media (max-width: 600px) {
     h4 {
         font-size: 1.7rem;
