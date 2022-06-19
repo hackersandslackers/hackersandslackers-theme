@@ -1,0 +1,12 @@
+{{#if @site.description }}
+    <div class='footer-widget info'>
+        {{#if @site.logo}}
+            <a href='{{ @site.url }}'>
+                <img class='footer-logo' src='{{ @site.logo }}' alt='{{ @site.title }}' />
+            </a>
+        {{else}}
+            <a class='footer-link' href='{{ @site.url }}'>{{ @site.title }}</a>
+        {{/if}}
+        <p class='footer-description'>{{ @site.description }}</p>
+    </div>
+{{/if}}

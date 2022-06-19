@@ -40,15 +40,15 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/hackersandslackers/hackersandslackers-casper.git"
+        "url": "https://github.com/hackersandslackers/hackersandslackers-theme.git"
     },
-    "bugs": "https://github.com/hackersandslackers/hackersandslackers-casper/issues",
-    "contributors": "https://github.com/hackersandslackers/hackersandslackers-casper/graphs/contributors",
+    "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
+    "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
         "@tryghost/release-utils": "0.8.0",
         "autoprefixer": "10.4.7",
         "beeper": "3.0.0",
-        "cssnano": "5.1.11",
+        "cssnano": "5.1.12",
         "gscan": "4.31.2",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",

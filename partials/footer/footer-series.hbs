@@ -1,0 +1,17 @@
+{{#if 'tags'}}
+    <div class='footer-widget series'>
+        <h4 class='footer-title'>{{t "Series'" }}</h4>
+        <ul class='footer-list'>
+            {{#get "tags"
+                   limit="60"
+                   include="count.posts"
+                   filter="feature_image:-null+slug:-[adventures-in-excel,microsoft-powerpivot,code-snippet-corner,mongodb-cloud]"
+                   order="count.posts DESC"
+            }}
+                {{#foreach tags visibility='internal'}}
+                    <li><a href="/series/{{slug}}">{{meta_title}}</a></li>
+                {{/foreach}}
+            {{/get}}
+        </ul>
+    </div>
+{{/if}}
