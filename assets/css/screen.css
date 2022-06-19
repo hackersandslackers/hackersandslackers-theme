@@ -1084,45 +1084,73 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
-.article {
+.post {
     padding: max(8vmin, 40px) 0 max(8vmin, 64px);
     word-break: break-word;
 }
 
-.page-template .article {
+.page-template .post {
     padding-top: max(12vmin, 64px);
 }
 
-.article-header {
-    padding: 0 0 max(6.4vmin, 40px) 0;
+.post-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 0;
 }
 
-.page-template .article-header {
+.post-header-details {
+    margin: 0 auto;
+    padding: 60px 0 20px;
+    width: 100%;
+}
+
+
+.post-header-details .post-excerpt {
+    color: #8c96a4;
+    font-family: var(--body-font-medium);
+    font-size: 1.1em;
+    margin: 15px 0 0;
+    max-width: 720px;
+    order: 1;
+}
+
+.post-header-details .post-meta {
+    display: flex;
+    margin: 15px auto 0;
+}
+
+.page-template .post-header {
     padding-bottom: max(3.2vmin, 28px);
 }
 
-.article-tag {
+.post-tag {
     margin-bottom: 16px;
     font-size: 1.6rem;
 }
 
-.article-tag a {
+.post-tag a {
     color: var(--color-secondary-text);
 }
 
-.article-title {
-    margin-bottom: 0;
-    font-size: clamp(3.2rem, 5vw, 5.2rem);
-    font-weight: 800;
-    line-height: 1;
+.post-title {
     color: var(--color-darkgrey);
+    display: block;
+    font-family: var(--header-font);
+    font-size: 2.1em;
+    font-weight: unset;
+    line-height: 1.1;
+    max-width: 720px;
+    order: 2;
+    width: -webkit-fill-available;
 }
 
-.has-serif-title .article-title {
+.has-serif-title .post-title {
     font-family: var(--font-serif);
 }
 
-.article-excerpt {
+.post-excerpt {
     margin-top: 20px;
     max-width: 720px;
     font-size: 2rem;
@@ -1130,21 +1158,21 @@ make sure this only happens on large viewports / desktop-ish devices.
     color: var(--color-darkgrey);
 }
 
-.gh-canvas .article-image {
+.gh-canvas .post-image {
     grid-column: wide-start / wide-end;
     width: 100%;
     margin: max(6.4vmin, 40px) 0 0;
 }
 
-.image-full .article-image {
+.image-full .post-image {
     grid-column: full-start / full-end;
 }
 
-.image-small .article-image {
+.image-small .post-image {
     grid-column: main-start / main-end;
 }
 
-.gh-canvas .article-image img {
+.gh-canvas .post-image img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -1152,7 +1180,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 @media (max-width: 767px) {
-    .article-excerpt {
+    .post-excerpt {
         margin-top: 14px;
         font-size: 1.7rem;
     }
@@ -1486,7 +1514,7 @@ iframe.instagram-media + script + :not([id]) {
     grid-column: main-start / main-end;
 }
 
-.article-comments {
+.post-comments {
     margin: 6vmin 0 0 0;
 }
 
@@ -1566,37 +1594,37 @@ iframe.instagram-media + script + :not([id]) {
 /* 7.1. Post Byline
 /* ---------------------------------------------------------- */
 
-.article-byline {
+.post-byline {
     display: flex;
     justify-content: space-between;
     margin: min(24px, 5.6vmin) 0 0;
 }
 
-.article-byline-content {
+.post-byline-content {
     flex-grow: 1;
     display: flex;
     align-items: center;
 }
 
-.article-byline-content .author-list {
+.post-byline-content .author-list {
     justify-content: flex-start;
     padding: 0 14px 0 0;
 }
 
-.article-byline-meta {
+.post-byline-meta {
     color: var(--color-secondary-text);
     font-size: 1.4rem;
     line-height: 1.2em;
 }
 
-.article-byline-meta .author-name {
+.post-byline-meta .author-name {
     margin: 0 0 6px;
     font-size: 1.7rem;
     font-weight: 700;
     letter-spacing: 0;
 }
 
-.article-byline-meta .bull {
+.post-byline-meta .bull {
     display: inline-block;
     margin: 0 2px;
 }
@@ -1612,15 +1640,15 @@ iframe.instagram-media + script + :not([id]) {
     background-color: var(--color-border);
 }
 
-.page-template .article-title {
+.page-template .post-title {
     margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
-    .article-byline-content .author-list {
+    .post-byline-content .author-list {
         padding-right: 12px;
     }
-    .article-byline-meta .author-name {
+    .post-byline-meta .author-name {
         margin-bottom: 4px;
     }
 }
@@ -1981,7 +2009,7 @@ html.dark-mode .post-card-image {
     background: var(--color-darkmode);
 }
 
-html.dark-mode :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
+html.dark-mode :is(.post-card-tags, .post-card-meta, .post-tag a, .byline-meta-content) {
     color: color-mod(var(--color-secondary-text) l(-22%));
 }
 
@@ -1997,11 +2025,11 @@ html.dark-mode .post-card-excerpt {
     color: var(--color-secondary-text);
 }
 
-html.dark-mode .article-title {
+html.dark-mode .post-title {
     color: #fff;
 }
 
-html.dark-mode .article-excerpt {
+html.dark-mode .post-excerpt {
     color: var(--color-secondary-text);
 }
 
@@ -2022,7 +2050,7 @@ html.dark-mode .author-profile-image path {
     fill: var(--color-darkmode);
 }
 
-html.dark-mode .article-byline-meta .author-name a {
+html.dark-mode .post-byline-meta .author-name a {
     color: #fff;
 }
 
@@ -2153,7 +2181,7 @@ html.dark-mode .footer-cta-title {
         background: var(--color-darkmode);
     }
     
-    html.auto-color :is(.post-card-tags, .post-card-meta, .article-tag a, .byline-meta-content) {
+    html.auto-color :is(.post-card-tags, .post-card-meta, .post-tag a, .byline-meta-content) {
         color: color-mod(var(--color-secondary-text) l(-22%));
     }
     
@@ -2169,11 +2197,11 @@ html.dark-mode .footer-cta-title {
         color: var(--color-secondary-text);
     }
     
-    html.auto-color .article-title {
+    html.auto-color .post-title {
         color: #fff;
     }
     
-    html.auto-color .article-excerpt {
+    html.auto-color .post-excerpt {
         color: var(--color-secondary-text);
     }
     
@@ -2194,7 +2222,7 @@ html.dark-mode .footer-cta-title {
         fill: var(--color-darkmode);
     }
     
-    html.auto-color .article-byline-meta .author-name a {
+    html.auto-color .post-byline-meta .author-name a {
         color: #fff;
     }
     
