@@ -16,9 +16,9 @@ into the {body} tag of the default.hbs template --}}
                 <div class="post-header-details">
                     <div class="post-tag post-card-tags">
                         {{#primary_tag}}
-                            <span class="post-card-primary-tag">
-                    <a href="{{url}}">{{name}}</a>
-                </span>
+                            <span >
+                                <a href="{{url}}" style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};" class="post-card-primary-tag">{{name}}</a>
+                            </span>
                         {{/primary_tag}}
                         {{#if featured}}
                             <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
@@ -57,8 +57,8 @@ into the {body} tag of the default.hbs template --}}
                                     <time class="byline-meta-date"
                                           datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
                                     {{#if reading_time}}
-                                        <span class="byline-reading-time"><span
-                                                class="bull">&bull;</span> {{reading_time}}</span>
+                                        <span class="byline-reading-time">
+                                            <span class="bull">&bull;</span> {{reading_time}}</span>
                                     {{/if}}
                                 </div>
                             </div>
