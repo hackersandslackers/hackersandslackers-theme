@@ -1,3 +1,5 @@
+@import "global.css";
+
 /* Table of Contents
 /* ------------------------------------------------------------
 
@@ -18,18 +20,16 @@ production stylesheet in assets/built/screen.css
 8.  Author Template
 9.  Error Template
 11. Site Footer
-12. Dark Mode
+12. Sidebar
 
-*/
+ */
 
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 
 /* Import CSS reset and base styles */
-@import "global.css";
 
 :root {
-
     /* Colours */
     --color-theme: #0297f6;
     --color-green: #a4d037;
@@ -211,7 +211,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     max-width: 560px;
     font-size: 2.4rem;
     font-weight: 500;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 :is(.site-logo, .site-title) + .site-description {
@@ -414,6 +414,12 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 
 .tags-list {
     padding: 20px 0;
+}
+
+@media(max-width: 1020px) {
+    .tags-list {
+        padding: 20px;
+    }
 }
 
 .tag-link {
@@ -928,7 +934,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0;
     font-size: 3rem;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.1;
     color: var(--color-header-grey);
     font-family: var(--header-font);
     transition: var(--transition);
@@ -2002,355 +2008,7 @@ iframe.instagram-media + script + :not([id]) {
     }
 }
 
-
-/* 12. Dark Mode
-/* ---------------------------------------------------------- */
-
-html.dark-mode body {
-    color: rgba(255, 255, 255, 0.75);
-    background: var(--color-darkmode);
-}
-
-html.dark-mode img {
-    opacity: 0.9;
-}
-
-html.dark-mode kbd {
-    background: color-mod(var(--color-darkmode) l(+5%));
-}
-
-html.dark-mode figcaption a {
-    color: #fff;
-}
-
-html.dark-mode .gh-head {
-    background: var(--color-darkmode);
-    color: #fff;
-}
-
-html.dark-mode .gh-burger-box {
-    color: #fff;
-}
-
-html.dark-mode .site-header-content {
-    color: #fff;
-}
-
-html.dark-mode .post-card-image {
-    background: var(--color-darkmode);
-}
-
-html.dark-mode :is(.post-card-tags, .post-card-meta, .post-tag a, .byline-meta-content) {
-    color: color-mod(var(--color-secondary-text) l(-22%));
-}
-
-html.dark-mode .post-card-featured {
-    color: #fff;
-}
-
-html.dark-mode .post-card-title {
-    color: #fff;
-}
-
-html.dark-mode .post-card-excerpt {
-    color: var(--color-secondary-text);
-}
-
-html.dark-mode .post-title {
-    color: #fff;
-}
-
-html.dark-mode .post-excerpt {
-    color: var(--color-secondary-text);
-}
-
-html.dark-mode .post-full-image {
-    background-color: color-mod(var(--color-darkmode) l(+8%));
-}
-
-html.dark-mode .author-avatar {
-    border-color: var(--color-darkmode);
-    background-color: color-mod(var(--color-darkmode) l(+8%));
-}
-
-html.dark-mode .author-profile-image {
-    opacity: 1;
-}
-
-html.dark-mode .author-profile-image path {
-    fill: var(--color-darkmode);
-}
-
-html.dark-mode .post-byline-meta .author-name a {
-    color: #fff;
-}
-
-html.dark-mode .no-image .author-social-link a {
-    color: rgba(255, 255, 255, 0.75);
-}
-
-html.dark-mode .gh-content > [id] {
-    color: rgba(255, 255, 255, 0.9);
-}
-
-html.dark-mode .gh-content pre {
-    background: color-mod(var(--color-darkgrey) l(-8%));
-}
-
-html.dark-mode .gh-content :not(pre) > code {
-    background: color-mod(var(--color-darkgrey) l(+6%));
-    border-color: color-mod(var(--color-darkmode) l(+8%));
-    color: var(--color-wash);
-}
-
-html.dark-mode .gh-content a:not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button) {
-    color: #fff;
-}
-
-html.dark-mode .gh-content strong {
-    color: #fff;
-}
-
-html.dark-mode .gh-content em {
-    color: #fff;
-}
-
-html.dark-mode .gh-content code {
-    color: #fff;
-    background: #000;
-}
-
-html.dark-mode hr {
-    border-top-color: color-mod(var(--color-darkmode) l(+8%));
-}
-
-html.dark-mode .gh-content hr:after {
-    background: color-mod(var(--color-darkmode) l(+8%));
-    box-shadow: var(--color-darkmode) 0 0 0 5px;
-}
-
-html.dark-mode figcaption {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-html.dark-mode .gh-content table td:first-child {
-    background-image: linear-gradient(to right, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
-}
-
-html.dark-mode .gh-content table td:last-child {
-    background-image: linear-gradient(to left, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
-}
-
-html.dark-mode .gh-content table th {
-    color: rgba(255, 255, 255, 0.85);
-    background-color: color-mod(var(--color-darkmode) l(+8%));
-}
-
-html.dark-mode .gh-content table th,
-html.dark-mode .gh-content table td {
-    border: color-mod(var(--color-darkmode) l(+8%)) 1px solid;
-}
-
-html.dark-mode .gh-content input {
-    color: color-mod(var(--color-midgrey) l(-30%));
-}
-
-html.dark-mode .site-archive-header .no-image {
-    color: rgba(255, 255, 255, 0.9);
-    background: var(--color-darkmode);
-}
-
-html.dark-mode .kg-header-card.kg-style-dark {
-    background: color-mod(var(--color-darkgrey) l(-5%));
-}
-
-html.dark-mode .kg-header-card.kg-style-light {
-    background: color-mod(var(--color-darkgrey) l(+5%));
-}
-
-html.dark-mode .kg-header-card h2.kg-header-card-header,
-html.dark-mode .kg-header-card h3.kg-header-card-subheader {
-    color: #fff;
-}
-
-html.dark-mode .footer-cta-title {
-    color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-    html.auto-color body {
-        color: rgba(255, 255, 255, 0.75);
-        background: var(--color-darkmode);
-    }
-
-    html.auto-color img {
-        opacity: 0.9;
-    }
-
-    html.auto-color kbd {
-        background: color-mod(var(--color-darkmode) l(+5%));
-    }
-
-    html.auto-color figcaption a {
-        color: #fff;
-    }
-
-    html.auto-color .gh-head {
-        background: var(--color-darkmode);
-        color: #fff;
-    }
-
-    html.auto-color .gh-burger-box {
-        color: #fff;
-    }
-
-    html.auto-color .site-header-content {
-        color: #fff;
-    }
-
-    html.auto-color .post-card-image {
-        background: var(--color-darkmode);
-    }
-
-    html.auto-color :is(.post-card-tags, .post-card-meta, .post-tag a, .byline-meta-content) {
-        color: color-mod(var(--color-secondary-text) l(-22%));
-    }
-
-    html.auto-color .post-card-featured {
-        color: #fff;
-    }
-
-    html.auto-color .post-card-title {
-        color: #fff;
-    }
-
-    html.auto-color .post-card-excerpt {
-        color: var(--color-secondary-text);
-    }
-
-    html.auto-color .post-title {
-        color: #fff;
-    }
-
-    html.auto-color .post-excerpt {
-        color: var(--color-secondary-text);
-    }
-
-    html.auto-color .post-full-image {
-        background-color: color-mod(var(--color-darkmode) l(+8%));
-    }
-
-    html.auto-color .author-avatar {
-        border-color: var(--color-darkmode);
-        background-color: color-mod(var(--color-darkmode) l(+8%));
-    }
-
-    html.auto-color .author-profile-image {
-        opacity: 1;
-    }
-
-    html.auto-color .author-profile-image path {
-        fill: var(--color-darkmode);
-    }
-
-    html.auto-color .post-byline-meta .author-name a {
-        color: #fff;
-    }
-
-    html.auto-color .no-image .author-social-link a {
-        color: rgba(255, 255, 255, 0.75);
-    }
-
-    html.auto-color .gh-content > [id] {
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    html.auto-color .gh-content pre {
-        background: color-mod(var(--color-darkgrey) l(-8%));
-    }
-
-    html.auto-color .gh-content :not(pre) > code {
-        background: color-mod(var(--color-darkgrey) l(+6%));
-        border-color: color-mod(var(--color-darkmode) l(+8%));
-        color: var(--color-wash);
-    }
-
-    html.auto-color .gh-content a:not(.kg-btn):not(.kg-nft-card-container):not(.kg-product-card-button):not(.kg-header-card-button) {
-        color: #fff;
-    }
-
-    html.auto-color .gh-content strong {
-        color: #fff;
-    }
-
-    html.auto-color .gh-content em {
-        color: #fff;
-    }
-
-    html.auto-color .gh-content code {
-        color: #fff;
-        background: #000;
-    }
-
-    html.auto-color hr {
-        border-top-color: color-mod(var(--color-darkmode) l(+8%));
-    }
-
-    html.auto-color .gh-content hr:after {
-        background: color-mod(var(--color-darkmode) l(+8%));
-        box-shadow: var(--color-darkmode) 0 0 0 5px;
-    }
-
-    html.auto-color figcaption {
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    html.auto-color .gh-content table td:first-child {
-        background-image: linear-gradient(to right, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
-    }
-
-    html.auto-color .gh-content table td:last-child {
-        background-image: linear-gradient(to left, var(--color-darkmode) 50%, color-mod(var(--color-darkmode) a(0%)) 100%);
-    }
-
-    html.auto-color .gh-content table th {
-        color: rgba(255, 255, 255, 0.85);
-        background-color: color-mod(var(--color-darkmode) l(+8%));
-    }
-
-    html.auto-color .gh-content table th,
-    html.auto-color .gh-content table td {
-        border: color-mod(var(--color-darkmode) l(+8%)) 1px solid;
-    }
-
-    html.auto-color .gh-content input {
-        color: color-mod(var(--color-midgrey) l(-30%));
-    }
-
-    html.auto-color .site-archive-header .no-image {
-        color: rgba(255, 255, 255, 0.9);
-        background: var(--color-darkmode);
-    }
-
-    html.auto-color .kg-header-card.kg-style-dark {
-        background: color-mod(var(--color-darkgrey) l(-5%));
-    }
-
-    html.auto-color .kg-header-card.kg-style-light {
-        background: color-mod(var(--color-darkgrey) l(+5%));
-    }
-
-    html.auto-color .kg-header-card h2.kg-header-card-header,
-    html.auto-color .kg-header-card h3.kg-header-card-subheader {
-        color: #fff;
-    }
-
-    html.auto-color .footer-cta-title {
-        color: #fff;
-    }
-}
-
-/* 13. Sidebar
+/* 12. Sidebar
 /* ---------------------------------------------------------- */
 
 .sidebar-container {
@@ -2500,8 +2158,48 @@ html.dark-mode .footer-cta-title {
     font-family: var(--body-font);
 }
 
-.alert {
+.widget .alert {
     display: none;
+}
+
+.widget.series .series-widget-list .series-list-link {
+    font-family: var(--body-font-medium);
+    padding: 10px 0;
+    border-bottom: 1px solid #dee1e7;
+    transition: var(--transition);
+    font-size: .9em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.widget.series .series-widget-list .series-list-link * {
+    transition: var(--transition);
+}
+
+.widget.series .series-widget-list .series-list-link:hover * {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+.widget.series .series-widget-list .series-list-link:last-of-type {
+    border-bottom: unset;
+    padding: 10px 0 0;
+}
+
+.widget.series .series-widget-list .series-list-link a {
+    color: var(--color-lightgrey);
+}
+
+.widget.series .series-widget-list .series-list-link a,
+.widget.series .series-widget-list .series-list-link span,
+.widget.series .series-list-count {
+    display: block;
+}
+
+.widget.series .series-list-count {
+    font-family: var(--body-font);
 }
 
 
@@ -2510,7 +2208,7 @@ html.dark-mode .footer-cta-title {
 
 .footer {
     width: 100%;
-    padding: 80px 0 40px;
+    padding: 60px 0 40px;
     border-top: 0.5px solid var(--color-border);
     background-color: #fff;
     margin: 40px auto 0;
@@ -2535,6 +2233,7 @@ html.dark-mode .footer-cta-title {
     text-transform: uppercase;
     text-rendering: optimizelegibility;
     font-size: 1.1em;
+    margin: 0 0 20px;
 }
 
 .footer .widget .footer-logo {
@@ -2551,7 +2250,7 @@ html.dark-mode .footer-cta-title {
 }
 
 .footer .widget.info {
-    max-width: 23%;
+    max-width: 26%;
 }
 
 .footer .widget .footer-list {
@@ -2567,14 +2266,19 @@ html.dark-mode .footer-cta-title {
 
 .footer .widget .footer-list li {
     display: block;
-    margin-bottom: 4px;
-    padding: 0 0 4px;
-    font-size: 14px;
+    margin-bottom: 18px;
+    padding: 0;
+    font-size: .95em;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 1;
     text-rendering: optimizelegibility;
     color: #414d5a;
     transition: var(--transition);
+}
+
+.footer .widget .footer-list li a:hover {
+    cursor: pointer;
+    color: var(--color-hover);
 }
 
 /*

@@ -1,0 +1,15 @@
+<div class="widget series">
+    <h3 class="widget-title">Series'</h3>
+    <div class="series-widget-list">
+        {{#get "tags" limit="all"
+               filter="slug:-[adventures-in-excel,newsletter,code-snippet-corner,hacking-tableau-server,microsoft-powerpivot,mongodb-cloud,create-an-aws-api]"
+               include="count.posts,meta_title,accent_color" order="count.posts DESC" }}
+            {{#foreach tags visibility="internal"}}
+                <div class="series-list-link">
+                    <a href="{{url}}">{{meta_title}}</a>
+                    <span class="series-list-count" style="color:{{accent_color}};">{{count.posts}}</span>
+                </div>
+            {{/foreach}}
+        {{/get}}
+    </div>
+</div>
