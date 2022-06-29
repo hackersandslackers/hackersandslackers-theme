@@ -21,6 +21,7 @@ production stylesheet in assets/built/screen.css
 9.  Error Template
 11. Site Footer
 12. Sidebar
+13. footer
 
  */
 
@@ -1437,7 +1438,7 @@ specially styled bookmark links. We add extra styling here to
 make sure they look good, and are given a bit of extra spacing. */
 
 /* Add extra margin before/after any cards,
-except for when immediately preceeded by a heading */
+except for when immediately preceded by a heading */
 .gh-content :not(.kg-card):not([id]) + .kg-card {
     margin-top: 6vmin;
     margin-bottom: 0;
@@ -2069,7 +2070,6 @@ iframe.instagram-media + script + :not([id]) {
     color: var(--color-hover);
 }
 
-
 .widget-title {
     color: var(--color-lightgrey);
     font-family: CamphorPro-Bold, HelveticaNeue, sans-serif;
@@ -2080,6 +2080,9 @@ iframe.instagram-media + script + :not([id]) {
     padding: 0;
     text-align: left;
 }
+
+/* 12.1 Sidebar About Widget
+/* ---------------------------------------------------------- */
 
 .widget.about .widget-logo {
     display: block;
@@ -2095,6 +2098,9 @@ iframe.instagram-media + script + :not([id]) {
     margin: 15px 0 0;
     text-align: center;
 }
+
+/* 12.2 Sidebar Tag Widget
+/* ---------------------------------------------------------- */
 
 .widget .tag-cloud {
     display: flex;
@@ -2127,6 +2133,9 @@ iframe.instagram-media + script + :not([id]) {
     cursor: pointer;
 }
 
+/* 12.3 Sidebar Social Widget
+/* ---------------------------------------------------------- */
+
 .widget.social {
     display: flex;
     justify-content: space-between;
@@ -2151,6 +2160,9 @@ iframe.instagram-media + script + :not([id]) {
     align-items: center;
 }
 
+/* 12.4 Sidebar Newsletter Widget
+/* ---------------------------------------------------------- */
+
 .widget.newsletter p {
     line-height: 1.2;
     font-size: 1em;
@@ -2162,24 +2174,33 @@ iframe.instagram-media + script + :not([id]) {
     display: none;
 }
 
+/* 12.5 Sidebar Series Widget
+/* ---------------------------------------------------------- */
+
 .widget.series .series-widget-list .series-list-link {
     font-family: var(--body-font-medium);
     padding: 10px 0;
     border-bottom: 1px solid #dee1e7;
-    transition: var(--transition);
     font-size: .9em;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: var(--transition);
 }
 
 .widget.series .series-widget-list .series-list-link * {
     transition: var(--transition);
 }
 
+.widget.series .series-widget-list .series-list-link:hover {
+    background-color: var(--color-hover);
+    border-bottom: 1px solid var(--color-hover);
+    cursor: pointer;
+}
+
 .widget.series .series-widget-list .series-list-link:hover * {
-    color: var(--color-hover);
+    color: white;
     cursor: pointer;
 }
 
@@ -2203,7 +2224,7 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 
-/* 14. Footer
+/* 13. Footer
 /* ---------------------------------------------------------- */
 
 .footer {
