@@ -1,7 +1,9 @@
 {{!-- This is a partial file used to generate a post "card"
 which templates loop over to generate a list of posts. --}}
 
-<article class="post-card {{#match @custom.feed_layout "Classic"}}{{/match}}{{#match @custom.feed_layout "Grid"}} keep-ratio{{/match}}{{#unless access}} post-access-{{visibility}}{{/unless}}">
+<article class="post-card {{#match @custom.feed_layout "Classic"}}{{/match}}{{#match @custom.feed_layout
+                                                                                     "Grid"}} keep-ratio{{/match}}{{#unless
+        access}} post-access-{{visibility}}{{/unless}}">
 
     {{#if feature_image}}
     <a class="post-card-image-link" href="{{url}}">
@@ -9,31 +11,35 @@ which templates loop over to generate a list of posts. --}}
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
         <img class="post-card-image"
-            srcset="{{img_url feature_image size="s"}} 300w,
+             srcset="{{img_url feature_image size="s"}} 300w,
                     {{img_url feature_image size="m"}} 600w,
                     {{img_url feature_image size="l"}} 1000w,
                     {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 1000px) 400px, 800px"
-            src="{{img_url feature_image size="m"}}"
-            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-            loading="lazy"
+             sizes="(max-width: 1000px) 400px, 800px"
+             src="{{img_url feature_image size="m"}}"
+             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+             loading="lazy"
         />
 
         {{#unless access}}
-        {{^has visibility="public"}}
-            <div class="post-card-access">
-                {{> "icons/lock"}}
-                {{#has visibility="members"}}
-                    Members only
-                {{else}}
-                    Paid-members only
-                {{/has}}
-            </div>
-        {{/has}}
+            {{^has visibility="public"}}
+                <div class="post-card-access">
+                    {{> "icons/lock"}}
+                    {{#has visibility="members"}}
+                        Members only
+                    {{else}}
+                        Paid-members only
+                    {{/has}}
+                </div>
+            {{/has}}
         {{/unless}}
 
-    </a>
+    {{else}}
+        <i class="fa-solid fa-user"></i>
     {{/if}}
+
+</a>
+
 
     <div class="post-card-content">
 
@@ -41,11 +47,11 @@ which templates loop over to generate a list of posts. --}}
             <header class="post-card-header">
                 <h2 class="post-card-title">
                     {{#unless access}}
-                    {{^has visibility="public"}}
-                        {{#unless feature_image}}
-                            {{> "icons/lock"}}
-                        {{/unless}}
-                    {{/has}}
+                        {{^has visibility="public"}}
+                            {{#unless feature_image}}
+                                {{> "icons/lock"}}
+                            {{/unless}}
+                        {{/has}}
                     {{/unless}}
                     {{title}}
                 </h2>
@@ -58,13 +64,14 @@ which templates loop over to generate a list of posts. --}}
         <footer class="post-card-meta">
             <div class="meta-items-left">
                 {{#primary_author}}
-                        {{#if profile_image}}
-                            <a href="{{url}}" class="post-card-author-avatar">
-                                <img class="post-card-author-image" src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
-                            </a>
-                        {{else}}
-                            <a href="{{url}}" class="post-card-author-avatar">{{> "icons/avatar"}}</a>
-                        {{/if}}
+                    {{#if profile_image}}
+                        <a href="{{url}}" class="post-card-author-avatar">
+                            <img class="post-card-author-image" src="{{img_url profile_image size="xs"}}"
+                                 alt="{{name}}"/>
+                        </a>
+                    {{else}}
+                        <a href="{{url}}" class="post-card-author-avatar">{{> "icons/avatar"}}</a>
+                    {{/if}}
                 {{/primary_author}}
 
                 <div>
@@ -87,7 +94,8 @@ which templates loop over to generate a list of posts. --}}
             </div>
 
             {{#primary_tag}}
-                <a href="{{url}}" style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};" class="post-card-primary-tag">{{name}}</a>
+                <a href="{{url}}" style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};"
+                   class="post-card-primary-tag">{{name}}</a>
             {{/primary_tag}}
         </footer>
 
