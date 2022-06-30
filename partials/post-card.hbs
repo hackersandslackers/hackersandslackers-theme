@@ -1,9 +1,7 @@
 {{!-- This is a partial file used to generate a post "card"
 which templates loop over to generate a list of posts. --}}
 
-<article class="post-card {{#match @custom.feed_layout "Classic"}}{{/match}}{{#match @custom.feed_layout
-                                                                                     "Grid"}} keep-ratio{{/match}}{{#unless
-        access}} post-access-{{visibility}}{{/unless}}">
+<article class="post-card {{#unless access}} post-access-{{visibility}}{{/unless}}">
 
     {{#if feature_image}}
     <a class="post-card-image-link" href="{{url}}">
@@ -33,12 +31,9 @@ which templates loop over to generate a list of posts. --}}
                 </div>
             {{/has}}
         {{/unless}}
-
-    {{else}}
-        <i class="fa-solid fa-user"></i>
     {{/if}}
 
-</a>
+    </a>
 
 
     <div class="post-card-content">
@@ -66,11 +61,16 @@ which templates loop over to generate a list of posts. --}}
                 {{#primary_author}}
                     {{#if profile_image}}
                         <a href="{{url}}" class="post-card-author-avatar">
-                            <img class="post-card-author-image" src="{{img_url profile_image size="xs"}}"
-                                 alt="{{name}}"/>
+                            <img
+                                 class="post-card-author-image"
+                                 src="{{img_url profile_image size="xs"}}"
+                                 alt="{{name}}"
+                            />
                         </a>
                     {{else}}
-                        <a href="{{url}}" class="post-card-author-avatar">{{> "icons/avatar"}}</a>
+                        <a href="{{url}}" class="post-card-author-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </a>
                     {{/if}}
                 {{/primary_author}}
 
@@ -94,8 +94,13 @@ which templates loop over to generate a list of posts. --}}
             </div>
 
             {{#primary_tag}}
-                <a href="{{url}}" style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};"
-                   class="post-card-primary-tag">{{name}}</a>
+                <a
+                    href="{{url}}"
+                    style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};"
+                    class="post-card-primary-tag"
+                >
+                    {{name}}
+                </a>
             {{/primary_tag}}
         </footer>
 
