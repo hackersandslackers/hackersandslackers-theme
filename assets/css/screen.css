@@ -2149,7 +2149,7 @@ iframe.instagram-media + script + :not([id]) {
     fill: var(--color-social-btn);
     width: 1.5em;
     background: unset;
-    padding: 0;
+    padding: 0;align-items: center;
     transition: var(--transition);
 }
 
@@ -2157,7 +2157,15 @@ iframe.instagram-media + script + :not([id]) {
     cursor: pointer;
     width: 2em;
     height: 70px;
-    align-items: center;
+}
+
+.widget.social .social-media-button i {
+    font-size: 1.4em;
+    transition: var(--transition);
+}
+
+.widget.social .social-media-button i:hover {
+    font-size: 1.8em;
 }
 
 /* 12.4 Sidebar Newsletter Widget

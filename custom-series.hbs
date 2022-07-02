@@ -11,7 +11,6 @@
         </section>
 
         <main class="series-container">
-            {{> cover-tag}}
             {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
                 {{#foreach tags visibility="internal"}}
                     {{> "series/series-summary-card" }}
