@@ -108,7 +108,7 @@ into the {body} tag of the default.hbs template --}}
     {{#if @site.members_enabled}}
         {{#unless @member}}
             {{#if access}}
-                <section class="footer-cta outer">
+                <section class="footer-cta">
                     <div class="inner">
                         {{#if @custom.email_signup_text}}
                             <h2 class="footer-cta-title">{{@custom.email_signup_text}}</h2>{{/if}}
@@ -135,7 +135,7 @@ into the {body} tag of the default.hbs template --}}
         {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
 
             {{#if more_posts}}
-                <aside class="read-more-wrap outer">
+                <aside class="read-more-wrap">
                     <div class="read-more inner">
                         {{#foreach more_posts}}
                             {{> "post-card"}}

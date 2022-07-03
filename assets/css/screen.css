@@ -951,7 +951,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     color: var(--color-hover);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .post-card-title {
         font-size: 3rem;
     }
@@ -1857,12 +1857,14 @@ iframe.instagram-media + script + :not([id]) {
 .info-card-title {
     margin: 0 0 10px;
     line-height: 1;
+    color: var(--color-header-grey);
+    font-family: var(--header-font);
 }
 
 .tag-image {
-    width: 150px;
-    height: auto;
-    margin-right: 20px;
+    height: min-content;
+    width: 125px;
+    margin-right: 25px;
 }
 
 .tag-template .post-card-large .post-card-image-link {
