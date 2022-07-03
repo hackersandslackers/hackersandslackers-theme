@@ -91,6 +91,12 @@ production stylesheet in assets/built/screen.css
     flex-grow: 1;
 }
 
+@media (max-width: 1000px) {
+    .site-content {
+        margin: 0 30px;
+    }
+}
+
 /* Full width page blocks */
 .outer {
     position: relative;
@@ -331,7 +337,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     font-size: 12px;
     line-height: 16px;
     font-weight: 600;
-    font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
+    font-family: var(--body-font);
     letter-spacing: .5px;
     text-align: center;
     text-transform: initial;
@@ -417,7 +423,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     padding: 20px 0;
 }
 
-@media(max-width: 1020px) {
+@media (max-width: 1020px) {
     .tags-list {
         padding: 20px;
     }
@@ -933,7 +939,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-title {
     margin: 0;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
     line-height: 1.1;
     color: var(--color-header-grey);
@@ -945,10 +951,15 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     color: var(--color-hover);
 }
 
+@media (max-width: 800px) {
+    .post-card-title {
+        font-size: 3rem;
+    }
+}
+
 @media (max-width: 600px) {
     .post-card-title {
         font-size: 2.5rem;
-        line-height: 1.1;
     }
 }
 
@@ -1148,6 +1159,20 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .page-template .post-header {
     padding-bottom: max(3.2vmin, 28px);
+}
+
+.page-template .main-content {
+    background: white;
+    box-shadow: var(--card-shadow);
+}
+
+.page-template .main-content p {
+    -webkit-font-smoothing: antialiased;
+    color: #414d5a;
+    font-family: var(--body-font);
+    font-size: 1em;
+    line-height: 1.8em;
+    margin: 0 0 25px;
 }
 
 .post-tag {
@@ -1933,6 +1958,12 @@ iframe.instagram-media + script + :not([id]) {
     background: color-mod(var(--color-darkgrey) l(-5%));
 }
 
+@media (max-width: 800px) {
+    .footer-wrapper {
+        flex-direction: column;
+    }
+}
+
 .site-footer .inner {
     display: grid;
     grid-gap: 40px;
@@ -2028,6 +2059,12 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 @media (max-width: 800px) {
+
+    .sidebar {
+        display: none;
+    }
+
+
     .sidebar-container {
         grid-template-columns: 1fr;
         max-width: 100%;
@@ -2149,7 +2186,8 @@ iframe.instagram-media + script + :not([id]) {
     fill: var(--color-social-btn);
     width: 1.5em;
     background: unset;
-    padding: 0;align-items: center;
+    padding: 0;
+    align-items: center;
     transition: var(--transition);
 }
 
@@ -2166,6 +2204,7 @@ iframe.instagram-media + script + :not([id]) {
 
 .widget.social .social-media-button i:hover {
     font-size: 1.8em;
+    color: var(--color-hover);
 }
 
 /* 12.4 Sidebar Newsletter Widget
@@ -2308,6 +2347,19 @@ iframe.instagram-media + script + :not([id]) {
 .footer .widget .footer-list li a:hover {
     cursor: pointer;
     color: var(--color-hover);
+}
+
+@media (max-width: 800px) {
+    .footer .widget,
+    .footer .widget.info {
+        width: 100%;
+        margin-bottom: 40px;
+        max-width: unset;
+    }
+
+    .footer .widget:last-of-type {
+        margin-bottom: unset;
+    }
 }
 
 /*
