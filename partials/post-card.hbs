@@ -81,12 +81,12 @@ which templates loop over to generate a list of posts. --}}
                         </a>
                     {{/primary_author}}
                     <div class="post-card-meta-details">
-                        <span class="post-card-meta-item">
+                        <span class="post-card-meta-item date">
                             <time class="post-card-meta-date" datetime="{{date format="DD-MMM-YYYY"}}">{{date}}</time>
                         </span>
                         {{#if reading_time}}
-                            <span class="post-card-meta-item">•</span>
-                            <span class="post-card-meta-item">{{reading_time}}</span>
+                            <span class="post-card-meta-item separator">•</span>
+                            <span class="post-card-meta-item reading-time">{{reading_time}}</span>
                         {{/if}}
                     </div>
                 </div>
