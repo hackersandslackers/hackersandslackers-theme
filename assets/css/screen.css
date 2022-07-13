@@ -1060,6 +1060,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     min-width: 38px;
 }
 
+.post-card-author-image i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: var(--color-header-grey);
+}
+
 .post-card-author-name {
     color: #646f7d;
     display: block;
