@@ -128,6 +128,12 @@ production stylesheet in assets/built/screen.css
     box-shadow: var(--card-shadow);
 }
 
+@media(max-width: 600px) {
+    .site-header {
+        margin-bottom: 20px;
+    }
+}
+
 .site-header-cover {
     position: absolute;
     top: 0;
@@ -379,6 +385,16 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     background-color: white;
     color: var(--color-hover) !important;
     box-shadow: inset 0 0 0 1px var(--color-hover);
+}
+
+.site-header .search-button {
+    color: var(--color-lightgrey);
+    transition: var(--transition);
+}
+
+.site-header .search-button:hover {
+    color: var(--color-hover);
+    cursor: pointer;
 }
 
 .tags-navigation {
@@ -953,7 +969,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin: 0;
     font-size: 3.5rem;
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1;
     color: var(--color-header-grey);
     font-family: var(--header-font);
     transition: var(--transition);
@@ -1080,12 +1096,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     cursor: pointer;
 }
 
-@media(max-width: 600px) {
-    .post-card-author-name {
-        font-size: 1.1em;
-    }
-}
-
 .post-card-primary-tag {
     color: white;
     padding: 6px 8px 4px;
@@ -1105,7 +1115,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 @media(max-width: 600px) {
     .post-card-primary-tag {
-        font-size: .9em;
+        font-size: .8em;
     }
 }
 
@@ -2241,6 +2251,7 @@ iframe.instagram-media + script + :not([id]) {
 
 .widget.social .social-media-button i {
     font-size: 1.4em;
+    color: var(--color-social-btn);
     transition: var(--transition);
 }
 
