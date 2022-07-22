@@ -45,7 +45,7 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
-        "@tryghost/release-utils": "0.8.0",
+        "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.7",
         "beeper": "3.0.0",
         "cssnano": "5.1.12",
