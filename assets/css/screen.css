@@ -1076,6 +1076,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     min-width: 38px;
 }
 
+.post-card-author-avatar {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: var(--color-header-grey);
+}
+
 .post-card-author-image i {
     font-size: 1.5em;
     margin-right: 10px;
@@ -1908,13 +1914,33 @@ iframe.instagram-media + script + :not([id]) {
     margin: 0 0 10px;
     line-height: 1;
     color: var(--color-header-grey);
-    font-family: var(--header-font);
+    font-family: var(--header-font-secondary);
+    font-size: 4rem;
+}
+
+@media(max-width: 600px) {
+    .info-card {
+        padding: 25px;
+    }
+
+    .info-card-title {
+        font-size: 3rem;
+    }
+
+    .tag-image {
+        margin-right: 20px;
+    }
+
+    .info-card-excerpt {
+        line-height: 1.5;
+    }
 }
 
 .tag-image {
     height: min-content;
     width: 125px;
     margin-right: 25px;
+    max-width: 30%;
 }
 
 .tag-template .post-card-large .post-card-image-link {

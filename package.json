@@ -45,11 +45,11 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
-        "@tryghost/release-utils": "0.8.0",
+        "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.7",
         "beeper": "3.0.0",
         "cssnano": "5.1.12",
-        "gscan": "4.31.2",
+        "gscan": "4.32.0",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
         "gulp-livereload": "4.0.2",

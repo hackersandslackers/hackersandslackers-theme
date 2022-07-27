@@ -1,6 +1,6 @@
 THEME_PATH := $(CURDIR)
 DEV_GHOST_PATH := '/Users/toddbirchard/projects/ghostlocal'
-DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-casper'
+DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-theme'
 
 define HELP
 Manage development of Hackersandslackers Ghost theme.
