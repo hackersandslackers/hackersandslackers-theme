@@ -321,8 +321,9 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 
 .site-header .nav.left a {
     color: var(--color-lightgrey);
-    font-family: var(--body-font-bold);
+    font-family: var(--body-font-medium);
     transition: var(--transition);
+    line-height: 1;
 }
 
 .site-header .nav.left a:hover {
@@ -337,6 +338,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 
 .site-header .nav.left li {
     margin-right: 25px;
+    line-height: 1;
 }
 
 .site-header .nav-link {
@@ -346,7 +348,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 .site-header .nav-btn {
     display: inline-block;
     padding: 8px 16px;
-    font-size: 12px;
+    font-size: .8em;
     line-height: 16px;
     font-weight: 600;
     font-family: var(--body-font);
@@ -418,7 +420,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 }
 
 .site-header li {
-    display: inline-block;
+    display: inline;;
     padding-left: unset;
     margin-top: unset;
     margin-right: 15px;
@@ -426,6 +428,7 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
     font-size: 16px;
     font-style: normal;
+    line-height: 1;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -967,7 +970,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .post-card-title {
     margin: 0;
-    font-size: 3.5rem;
+    font-size: 2em;
     font-weight: 800;
     line-height: 1;
     color: var(--color-header-grey);
@@ -1080,6 +1083,7 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     margin-right: 10px;
     font-size: 1.5em;
     color: var(--color-header-grey);
+    opacity: .8;
 }
 
 .post-card-author-image i {

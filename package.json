@@ -1,5 +1,5 @@
 {
-    "name": "HackersAndSlackers Ghost Theme",
+    "name": "HackersAndSlackers",
     "description": "A clean, minimal default theme for the Ghost publishing platform",
     "version": "0.0.1",
     "engines": {
@@ -66,7 +66,7 @@
         "defaults"
     ],
     "config": {
-        "posts_per_page": 25,
+        "posts_per_page": 15,
         "image_sizes": {
             "xxs": {
                 "width": 30
