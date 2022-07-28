@@ -2280,14 +2280,25 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 .widget.social .social-media-button i {
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: var(--color-social-btn);
     transition: var(--transition);
 }
 
 .widget.social .social-media-button i:hover {
-    font-size: 1.8em;
+    font-size: 1.9em;
     color: var(--color-hover);
+}
+
+@media(max-width: 900px) {
+    .widget.social .social-media-button i {
+        font-size: 1.4em;
+    }
+
+    .widget.social .social-media-button i:hover {
+        font-size: 1.7em;
+        color: var(--color-hover);
+    7
 }
 
 /* 12.4 Sidebar Newsletter Widget
