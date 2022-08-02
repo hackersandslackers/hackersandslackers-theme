@@ -1918,8 +1918,13 @@ iframe.instagram-media + script + :not([id]) {
     margin: 0 0 10px;
     line-height: 1;
     color: var(--color-header-grey);
-    font-family: var(--header-font-secondary);
-    font-size: 4rem;
+    font-family: var(--body-font-medium);
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.info-card-excerpt{
+    line-height: 1.5;
 }
 
 @media(max-width: 600px) {
@@ -2191,7 +2196,7 @@ iframe.instagram-media + script + :not([id]) {
 
 .widget-title {
     color: var(--color-lightgrey);
-    font-family: CamphorPro-Bold, HelveticaNeue, sans-serif;
+    font-family: var(--body-font-medium);
     font-size: 1.1em;
     letter-spacing: .6px;
     line-height: 1;
@@ -2291,6 +2296,9 @@ iframe.instagram-media + script + :not([id]) {
 }
 
 @media(max-width: 900px) {
+    .widget.social {
+        height: 60px;
+    }
     .widget.social .social-media-button i {
         font-size: 1.4em;
     }
@@ -2298,7 +2306,7 @@ iframe.instagram-media + script + :not([id]) {
     .widget.social .social-media-button i:hover {
         font-size: 1.7em;
         color: var(--color-hover);
-    7
+    }
 }
 
 /* 12.4 Sidebar Newsletter Widget
