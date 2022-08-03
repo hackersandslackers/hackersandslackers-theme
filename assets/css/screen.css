@@ -1039,6 +1039,12 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     font-family: var(--body-font);
 }
 
+@media (max-width: 900px) {
+    .post-card-excerpt {
+        font-size: 1.1em;
+    }
+}
+
 @media (max-width: 600px) {
     .post-card-excerpt {
         font-size: 1.05em;
@@ -1914,6 +1920,12 @@ iframe.instagram-media + script + :not([id]) {
     grid-column: span 2;
 }
 
+@media(max-width: 900px) {
+    .info-card {
+        padding: 25px;
+    }
+}
+
 .info-card-title {
     margin: 0 0 10px;
     line-height: 1;
@@ -2288,11 +2300,16 @@ iframe.instagram-media + script + :not([id]) {
     font-size: 1.6em;
     color: var(--color-social-btn);
     transition: var(--transition);
+    line-height: 1;
 }
 
 .widget.social .social-media-button i:hover {
     font-size: 1.9em;
     color: var(--color-hover);
+}
+
+.widget.social a {
+    line-height: 1;
 }
 
 @media(max-width: 900px) {
