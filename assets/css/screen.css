@@ -1187,8 +1187,9 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* ---------------------------------------------------------- */
 
 .post {
-    padding: max(8vmin, 40px) 0 max(8vmin, 64px);
+    background: white;
     word-break: break-word;
+    box-shadow: var(--card-shadow);
 }
 
 .page-template .post {
@@ -1207,7 +1208,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     padding: 60px 0 20px;
     width: 100%;
 }
-
 
 .post-header-details .post-excerpt {
     color: #8c96a4;
@@ -1272,6 +1272,12 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-size: 2rem;
     line-height: 1.45;
     color: var(--color-darkgrey);
+}
+
+.post p {
+    font-family: var(--body-font);
+    line-height: 1.5em;
+    font-size: 1em;
 }
 
 .gh-canvas .post-image {
@@ -1395,27 +1401,6 @@ is the very first element in the post content */
     color: white;
     text-decoration: underline;
     word-break: break-word;
-}
-
-.gh-content > blockquote:not([class]),
-.gh-content > ol,
-.gh-content > ul,
-.gh-content > dl,
-.gh-content > p {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 1.6em;
-}
-
-.gh-content .kg-callout-card .kg-callout-text,
-.gh-content .kg-toggle-card .kg-toggle-content > ol,
-.gh-content .kg-toggle-card .kg-toggle-content > ul,
-.gh-content .kg-toggle-card .kg-toggle-content > p {
-    font-family: var(--font-serif);
-    font-weight: 400;
-    font-size: 1.9rem;
-    line-height: 1.6em;
 }
 
 .gh-content .kg-product-card .kg-product-card-description > p,
@@ -2100,7 +2085,7 @@ iframe.instagram-media + script + :not([id]) {
     align-items: center;
     padding: 0;
     margin: 0;
-    line-height: 2em;
+    line-height: 2em;  
 }
 
 .site-footer-nav a {
