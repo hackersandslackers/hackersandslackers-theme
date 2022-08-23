@@ -7,7 +7,7 @@ into the {body} tag of the default.hbs template --}}
 {{#post}}
 {{!-- Everything inside the #post block pulls data from the post --}}
 
-    <main id="site-main" class="site-main">
+    <main id="site-main" class="post-wrapper">
         <article class="post {{post_class}} {{#match @custom.post_image_style
                                                      "Full"}}image-full{{else match @custom.post_image_style "=" "Small"}}image-small{{/match}}">
 
@@ -91,7 +91,7 @@ into the {body} tag of the default.hbs template --}}
 
             </header>
 
-            <section class="gh-content gh-canvas">
+            <section class="post-content">
                 {{content}}
             </section>
 

@@ -1186,10 +1186,19 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
+.post-wrapper {
+    width: 850px;
+    margin: 20px auto;
+}
+
 .post {
     background: white;
     word-break: break-word;
     box-shadow: var(--card-shadow);
+}
+
+.post-content {
+    padding: 0 60px;
 }
 
 .page-template .post {
@@ -1198,14 +1207,14 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post-header {
     align-items: center;
-    display: flex;
+    display: flex !important;
     flex-direction: column-reverse;
     padding: 0;
 }
 
 .post-header-details {
     margin: 0 auto;
-    padding: 60px 0 20px;
+    padding: 40px 65px;
     width: 100%;
 }
 
@@ -1246,10 +1255,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-size: 1.6rem;
 }
 
-.post-tag a {
-    color: var(--color-secondary-text);
-}
-
 .post-title {
     color: var(--color-darkgrey);
     display: block;
@@ -1283,7 +1288,6 @@ make sure this only happens on large viewports / desktop-ish devices.
 .gh-canvas .post-image {
     grid-column: wide-start / wide-end;
     width: 100%;
-    margin: max(6.4vmin, 40px) 0 0;
 }
 
 .image-full .post-image {
@@ -1358,96 +1362,95 @@ created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
 /* Default vertical spacing */
-.gh-content > * + * {
+.post-content > * + * {
     margin-top: max(3.2vmin, 24px);
     margin-bottom: 0;
 }
 
 /* [id] represents all headings h1-h6, reset all margins */
-.gh-content > [id] {
+.post-content > [id] {
     margin: 0;
     color: var(--color-darkgrey);
 }
 
-.has-serif-title .gh-content > [id] {
+.has-serif-title .post-content > [id] {
     font-family: var(--font-serif);
 }
 
 /* Add back a top margin to all headings, unless a heading
 is the very first element in the post content */
-.gh-content > [id]:not(:first-child) {
+.post-content > [id]:not(:first-child) {
     margin: 2em 0 0;
 }
 
 /* Add a small margin between a heading and anything after it */
-.gh-content > [id] + * {
+.post-content > [id] + * {
     margin-top: 1.5rem !important;
 }
 
 /* A larger margin before/after HRs and blockquotes */
-.gh-content > hr,
-.gh-content > blockquote {
+.post-content > hr,
+.post-content > blockquote {
     position: relative;
     margin-top: max(4.8vmin, 32px);
 }
 
-.gh-content > hr + *,
-.gh-content > blockquote + * {
+.post-content > hr + *,
+.post-content > blockquote + * {
     margin-top: max(4.8vmin, 32px) !important;
 }
 
 /* Now the content typography styles */
-.gh-content a {
-    color: white;
+.post-content a {
+    color: var(--color-theme);
     text-decoration: underline;
     word-break: break-word;
 }
 
-.gh-content .kg-product-card .kg-product-card-description > p,
-.gh-content .kg-product-card .kg-product-card-description > ol,
-.gh-content .kg-product-card .kg-product-card-description > ul {
+.post-content .kg-product-card .kg-product-card-description > p,
+.post-content .kg-product-card .kg-product-card-description > ol,
+.post-content .kg-product-card .kg-product-card-description > ul {
     font-size: 1.7rem;
     line-height: 1.6em;
 }
 
-.gh-content .kg-callout-card .kg-callout-emoji {
+.post-content .kg-callout-card .kg-callout-emoji {
     font-size: 2.1rem;
-    line-height: 1.4em;
+    line-height: 1.4epost
 }
-
-.gh-content .kg-toggle-card .kg-toggle-heading-text {
+.post-content .kg-toggle-card .kg-toggle-heading-text {
     font-size: 2.0rem;
 }
 
-.has-sans-body .gh-content > blockquote,
-.has-sans-body .gh-content > ol,
-.has-sans-body .gh-content > ul,
-.has-sans-body .gh-content > dl,
-.has-sans-body .gh-content > p,
-.has-sans-body .gh-content .kg-callout-card .kg-callout-text,
-.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content > ol,
-.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content > ul,
-.has-sans-body .gh-content .kg-toggle-card .kg-toggle-content > p {
+.has-sans-body .post-content > blockquote,
+.has-sans-body .post-content > ol,
+.has-sans-body .post-content > ul,
+.has-sans-body .post-content > dl,
+.has-sans-body .post-content > p,
+.has-sans-body .post-content .kg-callout-card .kg-callout-text,
+.has-sans-body .post-content .kg-toggle-card .kg-toggle-content > ol,
+.has-sans-body .post-content .kg-toggle-card .kg-toggle-content > ul,
+.has-sans-body .post-content .kg-toggle-card .kg-toggle-content > p {
     font-family: var(--body-font);
 }
 
-.gh-content > ul,
-.gh-content > ol,
-.gh-content > dl,
-.gh-content .kg-toggle-card .kg-toggle-content > ol,
-.gh-content .kg-toggle-card .kg-toggle-content > ul,
-.gh-content .kg-product-card .kg-product-card-description > ol,
-.gh-content .kg-product-card .kg-product-card-description > ul {
+.post-content > ul,
+.post-content > ol,
+.post-content > dl,
+.post-content .kg-toggle-card .kg-toggle-content > ol,
+.post-content .kg-toggle-card .kg-toggle-content > ul,
+.post-content .kg-product-card .kg-product-card-description > ol,
+.post-content .kg-product-card .kg-product-card-description > ul {
     padding-left: 1.9em;
 }
 
-.gh-content > blockquote:not([class]) {
+.post-content > blockquote:not([class]) {
     position: relative;
     font-style: italic;
     padding: 0;
 }
 
-.gh-content > blockquote:not([class])::before {
+.post-content > blockquote:not([class])::before {
     content: "";
     position: absolute;
     left: -1.5em;
@@ -1457,7 +1460,7 @@ is the very first element in the post content */
     background: white;
 }
 
-.gh-content :not(pre) > code {
+.post-content :not(pre) > code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
     border: #e1eaef 1px solid;
@@ -1469,7 +1472,7 @@ is the very first element in the post content */
     border-radius: 0.25em;
 }
 
-.gh-content pre {
+.post-content pre {
     overflow: auto;
     padding: 16px 20px;
     color: var(--color-wash);
@@ -1481,21 +1484,21 @@ is the very first element in the post content */
 }
 
 @media (max-width: 650px) {
-    .gh-content > blockquote:not([class]),
-    .gh-content > ol,
-    .gh-content > ul,
-    .gh-content > dl,
-    .gh-content > p,
-    .gh-content .kg-callout-card .kg-callout-text,
-    .gh-content .kg-toggle-card .kg-toggle-content > ol,
-    .gh-content .kg-toggle-card .kg-toggle-content > ul,
-    .gh-content .kg-toggle-card .kg-toggle-content > p {
+    .post-content > blockquote:not([class]),
+    .post-content > ol,
+    .post-content > ul,
+    .post-content > dl,
+    .post-content > p,
+    .post-content .kg-callout-card .kg-callout-text,
+    .post-content .kg-toggle-card .kg-toggle-content > ol,
+    .post-content .kg-toggle-card .kg-toggle-content > ul,
+    .post-content .kg-toggle-card .kg-toggle-content > p {
         font-size: 1.8rem;
     }
 
-    .gh-content .kg-product-card .kg-product-card-description > p,
-    .gh-content .kg-product-card .kg-product-card-description > ol,
-    .gh-content .kg-product-card .kg-product-card-description > ul {
+    .post-content .kg-product-card .kg-product-card-description > p,
+    .post-content .kg-product-card .kg-product-card-description > ol,
+    .post-content .kg-product-card .kg-product-card-description > ul {
         font-size: 1.6rem;
     }
 
@@ -1515,12 +1518,12 @@ make sure they look good, and are given a bit of extra spacing. */
 
 /* Add extra margin before/after any cards,
 except for when immediately preceded by a heading */
-.gh-content :not(.kg-card):not([id]) + .kg-card {
+.post-content :not(.kg-card):not([id]) + .kg-card {
     margin-top: 6vmin;
     margin-bottom: 0;
 }
 
-.gh-content .kg-card + :not(.kg-card) {
+.post-content .kg-card + :not(.kg-card) {
     margin-top: 6vmin;
     margin-bottom: 0;
 }
@@ -1542,7 +1545,7 @@ except for when immediately preceded by a heading */
     font-family: var(--font-serif);
 }
 
-.gh-content .kg-callout-card-accent a {
+.post-content .kg-callout-card-accent a {
     text-decoration: underline;
 }
 
@@ -2368,6 +2371,7 @@ iframe.instagram-media + script + :not([id]) {
 .widget.series .series-widget-list .series-list-link span,
 .widget.series .series-list-count {
     display: block;
+    font-weight: bold;
 }
 
 .widget.series .series-list-count {
