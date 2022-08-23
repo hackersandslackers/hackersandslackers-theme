@@ -104,47 +104,21 @@ into the {body} tag of the default.hbs template --}}
         </article>
     </main>
 
-    {{!-- A signup call to action is displayed here, unless viewed as a logged-in member --}}
-    {{#if @site.members_enabled}}
-        {{#unless @member}}
-            {{#if access}}
-                <section class="footer-cta">
-                    <div class="inner">
-                        {{#if @custom.email_signup_text}}
-                            <h2 class="footer-cta-title">{{@custom.email_signup_text}}</h2>{{/if}}
-                        <a class="footer-cta-button" href="#/portal" data-portal>
-                            <div class="footer-cta-input">Enter your email</div>
-                            <span>Subscribe</span>
-                        </a>
-                        {{!-- ^ This looks like a form element, but it's just a link to Portal,
-                        making the form validation and submission much simpler. --}}
-                    </div>
-                </section>
-            {{/if}}
-        {{/unless}}
-    {{/if}}
+    {{> "post/post-comments"}}
 
-
-    {{!-- Read more links, just above the footer --}}
-    {{#if @custom.show_recent_posts_footer}}
     {{!-- The {#get} helper below fetches some of the latest posts here
     so that people have something else to read when they finish this one.
 
     This query gets the latest 3 posts on the site, but adds a filter to
     exclude the post we're currently on from being included. --}}
+    <section class="related-posts">
         {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
-
             {{#if more_posts}}
-                <aside class="read-more-wrap">
-                    <div class="read-more inner">
                         {{#foreach more_posts}}
                             {{> "post-card"}}
                         {{/foreach}}
-                    </div>
-                </aside>
             {{/if}}
-
         {{/get}}
-    {{/if}}
+    </section>
 
 {{/post}}

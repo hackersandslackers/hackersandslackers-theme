@@ -1,15 +1,14 @@
-{{!-- related posts --}}
-<div class="widget">
-  <h4 class="title">Related</h4>
-  <div class="content recent-post">
-    {{#get "posts" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}"}}
-      {{#foreach posts}}
-        <div class="recent-single-post">
-          <a href="{{url}}" class="post-title">{{title}}</a>
-          <div class="date">{{date format="MMMM DD"}}</div>
-        </div>
-      {{/foreach}}
-    {{/get}}
+{{!-- Read more links, just above the footer --}}
+
+  <div class="related-posts">
+    {{#get "posts" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" as |related_posts|}}
+      {{#if related_posts}}
+       <aside class="read-more-wrap">
+                    <div class="read-more inner">
+                        {{#foreach related_posts}}
+                            {{> "post-card"}}
+                        {{/foreach}}
+                    </div>
+      {{/get}}
+      {{/if}}
   </div>
-</div>
-{{!-- end widget --}}
