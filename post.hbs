@@ -1,107 +1,93 @@
-{{!< default}}
+{{!< default}} {{!-- The tag above means: insert everything in this file into the {body} tag of the default.hbs template
+    --}} {{#post}} {{!-- Everything inside the #post block pulls data from the post --}} <main id="site-main"
+    class="post-wrapper">
+    <article class="post {{post_class}} {{#match @custom.post_image_style
+                                                     " Full"}}image-full{{else match
+        @custom.post_image_style "=" "Small" }}image-small{{/match}}">
 
-{{!-- The tag above means: insert everything in this file
-into the {body} tag of the default.hbs template --}}
+        <header class="post-header gh-canvas">
 
-
-{{#post}}
-{{!-- Everything inside the #post block pulls data from the post --}}
-
-    <main id="site-main" class="post-wrapper">
-        <article class="post {{post_class}} {{#match @custom.post_image_style
-                                                     "Full"}}image-full{{else match @custom.post_image_style "=" "Small"}}image-small{{/match}}">
-
-            <header class="post-header gh-canvas">
-
-                <div class="post-header-details">
-                    <div class="post-tag post-card-tags">
-                        {{#primary_tag}}
-                            <span >
-                                <a href="{{url}}" style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};" class="post-card-primary-tag">{{name}}</a>
-                            </span>
-                        {{/primary_tag}}
-                        {{#if featured}}
-                            <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
-                        {{/if}}
-                    </div>
-
-                    <h1 class="post-title">{{title}}</h1>
-
-                    {{#if custom_excerpt}}
-                        <p class="post-excerpt">{{custom_excerpt}}</p>
+            <div class="post-header-details">
+                <div class="post-tag post-card-tags">
+                    {{#primary_tag}}
+                    <span>
+                        <a href="{{url}}"
+                            style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};"
+                            class="post-card-primary-tag">{{name}}</a>
+                    </span>
+                    {{/primary_tag}}
+                    {{#if featured}}
+                    <span class="post-card-featured">{{> "icons/fire"}} Featured</span>
                     {{/if}}
-
-                    <div class="post-byline">
-                        <section class="post-byline-content">
-
-                            <ul class="author-list">
-                                {{#foreach authors}}
-                                    <li class="author-list-item">
-                                        {{#if profile_image}}
-                                            <a href="{{url}}" class="author-avatar">
-                                                <img class="author-profile-image"
-                                                     src="{{img_url profile_image size="xs"}}"
-                                                     alt="{{name}}"/>
-                                            </a>
-                                        {{else}}
-                                            <a href="{{url}}"
-                                               class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
-                                        {{/if}}
-                                    </li>
-                                {{/foreach}}
-                            </ul>
-
-                            <div class="post-byline-meta">
-                                <h4 class="author-name">{{authors}}</h4>
-                                <div class="byline-meta-content">
-                                    <time class="byline-meta-date"
-                                          datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-                                    {{#if reading_time}}
-                                        <span class="byline-reading-time">
-                                            <span class="bull">&bull;</span> {{reading_time}}</span>
-                                    {{/if}}
-                                </div>
-                            </div>
-
-                        </section>
-                    </div>
                 </div>
 
+                <h1 class="post-title">{{title}}</h1>
 
-                {{#match @custom.post_image_style "!=" "Hidden"}}
-                    {{#if feature_image}}
-                        <figure class="post-image">
-                            {{!-- This is a responsive image, it loads different sizes depending on device
-                            https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-                            <img
-                                    srcset="{{img_url feature_image size="s"}} 300w,
-                            {{img_url feature_image size="m"}} 600w,
-                            {{img_url feature_image size="l"}} 1000w,
-                            {{img_url feature_image size="xl"}} 2000w"
-                                    sizes="(min-width: 1400px) 1400px, 92vw"
-                                    src="{{img_url feature_image size="xl"}}"
-                                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                            />
-                            {{#if feature_image_caption}}
-                                <figcaption>{{feature_image_caption}}</figcaption>
-                            {{/if}}
-                        </figure>
-                    {{/if}}
-                {{/match}}
+                {{#if custom_excerpt}}
+                <p class="post-excerpt">{{custom_excerpt}}</p>
+                {{/if}}
 
-            </header>
+                <div class="post-byline">
+                    <section class="post-byline-content">
 
-            <section class="post-content">
-                {{content}}
-            </section>
+                        <ul class="author-list">
+                            {{#foreach authors}}
+                            <li class="author-list-item">
+                                {{#if profile_image}}
+                                <a href="{{url}}" class="author-avatar">
+                                    <img class="author-profile-image" src="{{img_url profile_image size=" xs"}}"
+                                        alt="{{name}}" />
+                                </a>
+                                {{else}}
+                                <a href="{{url}}" class="author-avatar author-profile-image">{{> "icons/avatar"}}</a>
+                                {{/if}}
+                            </li>
+                            {{/foreach}}
+                        </ul>
 
-            {{!--
-            <section class="post-comments gh-canvas">
-                If you want to embed comments, this is a good place to paste your code!
-            </section>
-            --}}
+                        <div class="post-byline-meta">
+                            <h4 class="author-name">{{authors}}</h4>
+                            <div class="byline-meta-content">
+                                <time class="byline-meta-date" datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
+                                {{#if reading_time}}
+                                <span class="byline-reading-time">
+                                    <span class="bull">&bull;</span> {{reading_time}}</span>
+                                {{/if}}
+                            </div>
+                        </div>
 
-        </article>
+                    </section>
+                </div>
+            </div>
+
+
+            {{#match @custom.post_image_style "!=" "Hidden"}}
+            {{#if feature_image}}
+            <figure class="post-image">
+                <img srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w,
+                    {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+                    sizes="(min-width: 1400px) 1400px, 92vw" src="{{img_url feature_image size=" xl"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+            </figure>
+            {{/if}}
+            {{/match}}
+
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        {{!--
+        <section class="post-comments gh-canvas">
+            If you want to embed comments, this is a good place to paste your code!
+        </section>
+        --}}
+
+    </article>
     </main>
 
     {{> "post/post-comments"}}
@@ -113,12 +99,12 @@ into the {body} tag of the default.hbs template --}}
     exclude the post we're currently on from being included. --}}
     <section class="related-posts">
         {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
-            {{#if more_posts}}
-                        {{#foreach more_posts}}
-                            {{> "post-card"}}
-                        {{/foreach}}
-            {{/if}}
+        {{#if more_posts}}
+        {{#foreach more_posts}}
+        {{> "post-card"}}
+        {{/foreach}}
+        {{/if}}
         {{/get}}
     </section>
 
-{{/post}}
+    {{/post}}
