@@ -89,12 +89,7 @@ production stylesheet in assets/built/screen.css
 
 .site-content {
     flex-grow: 1;
-}
-
-@media (max-width: 1000px) {
-    .site-content {
-        margin: 0 30px;
-    }
+    margin: 10px auto;
 }
 
 @media (max-width: 600px) {
@@ -126,6 +121,12 @@ production stylesheet in assets/built/screen.css
     background: white;
     margin-bottom: 30px;
     box-shadow: var(--card-shadow);
+}
+
+@media(max-width: 900px) {
+    .post-template .site-header {
+        margin-bottom: 0;
+    }
 }
 
 @media(max-width: 600px) {
@@ -1038,12 +1039,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     font-family: var(--body-font);
 }
 
-@media (max-width: 900px) {
-    .post-card-excerpt {
-        font-size: 1.1em;
-    }
-}
-
 @media (max-width: 600px) {
     .post-card-excerpt {
         font-size: 1.05em;
@@ -1189,6 +1184,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-template .site-content {
     width: 850px;
     margin: 20px auto;
+    max-width: 100%;
 }
 
 .post {
@@ -1216,6 +1212,16 @@ make sure this only happens on large viewports / desktop-ish devices.
     margin: 0 auto;
     padding: 40px 65px;
     width: 100%;
+}
+
+@media(max-width: 600px) {
+    .post-header-details {
+        padding: 30px;
+    }
+
+    .post-content {
+        padding: 0 30px 30px;
+    }
 }
 
 .post-header-details .post-excerpt {
@@ -1281,7 +1287,7 @@ make sure this only happens on large viewports / desktop-ish devices.
 
 .post p {
     font-family: var(--body-font);
-    line-height: 1.5em;
+    line-height: 1.7em;
     font-size: 1em;
 }
 
@@ -1353,7 +1359,7 @@ headings, text, images and lists. We deal with cards lower down. */
 
 /* Default vertical spacing */
 .post-content>*+* {
-    margin-top: max(3.2vmin, 24px);
+    margin-top: max(3vmin, 20px);
     margin-bottom: 0;
 }
 
@@ -1376,6 +1382,12 @@ is the very first element in the post content */
 /* Add a small margin between a heading and anything after it */
 .post-content>[id]+* {
     margin-top: 1rem !important;
+}
+
+.post-content h2 {
+    font-family: var(--body-font);
+    font-weight: normal;
+    font-size: 2em;
 }
 
 /* A larger margin before/after HRs and blockquotes */
@@ -1507,25 +1519,6 @@ is the very first element in the post content */
 }
 
 @media (max-width: 650px) {
-
-    .post-content>blockquote:not([class]),
-    .post-content>ol,
-    .post-content>ul,
-    .post-content>dl,
-    .post-content>p,
-    .post-content .kg-callout-card .kg-callout-text,
-    .post-content .kg-toggle-card .kg-toggle-content>ol,
-    .post-content .kg-toggle-card .kg-toggle-content>ul,
-    .post-content .kg-toggle-card .kg-toggle-content>p {
-        font-size: 1.8rem;
-    }
-
-    .post-content .kg-product-card .kg-product-card-description>p,
-    .post-content .kg-product-card .kg-product-card-description>ol,
-    .post-content .kg-product-card .kg-product-card-description>ul {
-        font-size: 1.6rem;
-    }
-
     .gh-content blockquote:not([class])::before {
         left: min(-4vmin, -20px);
     }
@@ -1597,11 +1590,12 @@ except for when immediately preceded by a heading */
 
 /* Captions */
 figcaption {
-    padding: 1rem 1rem 0;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
     font-size: 1.3rem;
-    line-height: 1.4em;
+    line-height: 1.1em;
+    padding-top: 5px;
+    font-family: var(--body-font-medium);
 }
 
 figcaption strong {
@@ -1858,6 +1852,7 @@ iframe.instagram-media+script+ :not([id]) {
 
 .related-posts .post-card .post-card-title {
     font-size: 1.3em;
+    line-height: 1.2;
 }
 
 .related-posts .post-card .post-card-excerpt {
@@ -1940,11 +1935,17 @@ iframe.instagram-media+script+ :not([id]) {
     box-shadow: var(--card-shadow);
     padding: 30px;
     grid-column: span 2;
+    margin-bottom: 20px;
 }
 
 @media(max-width: 900px) {
-    .info-card {
-        padding: 25px;
+    .info-card-title {
+        margin: 0 0 5px;
+    }
+
+    .info-card .tag-image {
+        width: 110px;
+        margin-right: 20px;
     }
 }
 
@@ -1993,6 +1994,14 @@ iframe.instagram-media+script+ :not([id]) {
 
 .tag-template .post-card-large .post-card-content {
     order: 1;
+}
+
+.tag-template .post-feed {
+    display: block;
+}
+
+.tag-template .post-feed .post-card {
+    margin-bottom: 20px;
 }
 
 
