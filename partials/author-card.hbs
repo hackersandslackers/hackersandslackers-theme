@@ -1,0 +1,37 @@
+<div class="author-card {{slug}}">
+    {{#if profile_image}}
+    <a href="{{url}}" class="author-avatar-link"><img src="{{img_url profile_image}}" alt="{{name}}'s' avatar"
+            loading="lazy" class="lazy avatar"></a>
+    {{else}}
+    <a href="{{url}}" class="author-avatar-link"><img src="{{asset " default-user-image.jpg"}}" alt="{{name}}'s' avatar"
+            class="avatar"></a>
+    {{/if}}
+    <div class="author-details">
+        <a class="author-name" href="{{url}}">{{name}}</a>
+        <div class="author-meta">
+            <div class="title"></div>
+            <div class="post-count author-meta-item"><i class="fas fa-pencil"></i><a href="{{url}}">{{plural count.posts
+                    empty=(t "0
+                    Posts") singular=(t "% Post") plural=(t "% Posts")}}</a></div>
+            {{#if location}}
+            <div class="location author-meta-item"><i class="fas fa-home"></i>{{location}}</div>
+            {{/if}}
+            {{#if website}}
+            <div class="website author-meta-item"><i class="fas fa-globe"></i><a href="{{website}}"
+                    target="_BLANK">{{website}}</a></div>
+            {{/if}}
+            {{#if twitter}}
+            <div class="website author-meta-item"><i class="fab fa-twitter"></i><a
+                    href="{{twitter_url}}">{{twitter}}</a></div>
+            {{/if}}
+            {{#if facebook}}
+            <div class="website author-meta-item"><i class="fab fa-facebook"></i><a href="{{facebook_url}}">Facebook</a>
+            </div>
+            {{/if}}
+        </div>
+        {{#if bio}}
+        <p class="bio"> {{bio}} </p>
+        {{/if}}
+    </div>
+
+</div>

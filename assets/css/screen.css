@@ -22,6 +22,7 @@ production stylesheet in assets/built/screen.css
 11. Site Footer
 12. Sidebar
 13. footer
+14. About
 
  */
 
@@ -2594,6 +2595,37 @@ iframe.instagram-media+script+ :not([id]) {
     .footer .widget:last-of-type {
         margin-bottom: unset;
     }
+}
+
+
+/* 14. About
+/* ---------------------------------------------------------- */
+
+.about-template .about-content {
+    padding: 0 10px;
+}
+
+.about-template .author-card {
+    box-shadow: unset;
+}
+
+.about-template .author-avatar-link {
+    border-radius: 50%;
+    height: 80px;
+    min-width: 80px;
+    overflow: hidden;
+    width: 80px;
+}
+
+.about-template .author-meta {
+    display: flex;
+    margin: 15px 0;
+}
+
+
+.about-template .author-meta .author-meta-item {
+    display: flex;
+    align-items: center;
 }
 
 /*

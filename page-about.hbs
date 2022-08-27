@@ -1,7 +1,6 @@
-{{!< default}} {{#post}} {{!-- Everything inside the #post block pulls data from the page --}} <div
-    class="sidebar-container">
+{{!< default}} {{#post}} <div class="sidebar-container about-template">
 
-    <main id="site-main" class="page-content">
+    <main class="about-content main-content">
 
         <h1 class="page-title">{{title}}</h1>
 
@@ -20,6 +19,10 @@
         {{/if}}
 
         {{content}}
+
+        {{#foreach authors include="count.posts"}}
+        {{> author-card}}
+        {{/foreach}}
 
     </main>
 
