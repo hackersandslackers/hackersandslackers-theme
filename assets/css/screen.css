@@ -1228,6 +1228,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     color: #8c96a4;
     font-family: var(--body-font-medium);
     font-size: 1.1em;
+    line-height: 1.3;
     margin: 15px 0 0;
     max-width: 720px;
     order: 1;
@@ -1236,6 +1237,24 @@ make sure this only happens on large viewports / desktop-ish devices.
 .post-header-details .post-meta {
     display: flex;
     margin: 15px auto 0;
+}
+
+.post-meta-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: #7e8da3;
+    line-height: 1;
+}
+
+.post-meta-item i {
+    margin-right: 5px;
+}
+
+.post-meta-item * {
+    color: #7e8da3;
+    font-family: var(--body-font-bold);
+    line-height: 1;
 }
 
 .page-template .post-header {
@@ -1262,10 +1281,11 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-title {
-    color: var(--color-darkgrey);
+    color: var(--color-header-grey);
     display: block;
     font-family: var(--header-font);
-    font-size: 2.1em;
+    font-size: 2.3em;
+    margin: unset;
     font-weight: unset;
     line-height: 1.1;
     max-width: 720px;
@@ -1278,11 +1298,13 @@ make sure this only happens on large viewports / desktop-ish devices.
 }
 
 .post-excerpt {
-    margin-top: 20px;
+    color: #8c96a4;
+    font-family: var(--body-font-medium);
+    font-size: 1.2em;
+    line-height: 1.1em;
+    margin: 15px 0;
     max-width: 720px;
-    font-size: 2rem;
-    line-height: 1.45;
-    color: var(--color-darkgrey);
+    order: 1;
 }
 
 .post p {
@@ -2015,7 +2037,6 @@ iframe.instagram-media+script+ :not([id]) {
     color: var(--color-header-grey);
     font-family: var(--body-font-medium);
     font-size: 2em;
-    letter-spacing: 1px;
 }
 
 .info-card-excerpt {
