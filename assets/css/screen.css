@@ -17,7 +17,8 @@ production stylesheet in assets/built/screen.css
   7.2. Members Subscribe Form
   7.4. Related Posts
   7.5. Koenig Styles
-8.  Author Template
+8.  Authors
+  8.1. Author Card
 9.  Error Template
 11. Site Footer
 12. Sidebar
@@ -1910,6 +1911,18 @@ iframe.instagram-media+script+ :not([id]) {
 /* 8. Authors
 /* ---------------------------------------------------------- */
 
+.author-profile-footer {
+    margin-top: 16px;
+}
+
+.author-profile-social-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* 8.1. Author Card
+/* ---------------------------------------------------------- */
+
 .author-card {
     background: white;
     padding: 30px;
@@ -1966,6 +1979,11 @@ iframe.instagram-media+script+ :not([id]) {
     margin: 0 0 0.3em;
 }
 
+.author-card .author-meta .author {
+    color: var(--color-secondary-text);
+    font-family: var(--body-font-bold);
+}
+
 .author-card .author-meta-item {
     color: #4d525d;
     font-family: var(--body-font-bold);
@@ -1995,7 +2013,7 @@ iframe.instagram-media+script+ :not([id]) {
     cursor: pointer;
 }
 
-.author-profile-pic {
+.author-card .author-profile-pic {
     display: block;
     width: 80px;
     height: 80px;
@@ -2005,29 +2023,19 @@ iframe.instagram-media+script+ :not([id]) {
     border-radius: 50%;
 }
 
-.author-profile-footer {
-    margin-top: 16px;
-}
-
 .author-card .author-meta span {
     font-weight: 700;
 }
 
-.author-meta {
+.author-card .author-meta {
     display: flex;
     gap: 10px;
+    margin: 15px 0;
 }
 
-.author-card .author-meta .author {
-    color: var(--color-secondary-text);
-    font-family: var(--body-font-bold);
+.author-card .author-avatar-link {
+    margin-right: 15px;
 }
-
-.author-profile-social-link svg {
-    width: 16px;
-    height: 16px;
-}
-
 
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
@@ -2654,14 +2662,7 @@ iframe.instagram-media+script+ :not([id]) {
     width: 70px;
 }
 
-.author-card .author-meta {
-    display: flex;
-    margin: 15px 0;
-}
 
-.author-card .author-avatar-link {
-    margin-right: 15px;
-}
 
 .about-template .author-card .author-meta {
     margin: 10px 0 0;
