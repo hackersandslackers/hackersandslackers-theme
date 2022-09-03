@@ -1267,7 +1267,7 @@ make sure this only happens on large viewports / desktop-ish devices.
     box-shadow: var(--card-shadow);
 }
 
-.page-template .main-content p {
+.page-template .main-content>p {
     -webkit-font-smoothing: antialiased;
     color: #414d5a;
     font-family: var(--body-font);
@@ -1907,7 +1907,7 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 
-/* 8. Author Template
+/* 8. Authors
 /* ---------------------------------------------------------- */
 
 .author-card {
@@ -1915,6 +1915,14 @@ iframe.instagram-media+script+ :not([id]) {
     padding: 30px;
     display: flex;
     box-shadow: var(--card-shadow);
+}
+
+.author-card .author-avatar-link {
+    border-radius: 50%;
+    height: 80px;
+    min-width: 80px;
+    overflow: hidden;
+    width: 80px;
 }
 
 .author-card .author-avatar-wrapper {
@@ -1958,29 +1966,33 @@ iframe.instagram-media+script+ :not([id]) {
     margin: 0 0 0.3em;
 }
 
-.author-card .author-profile-meta {
-    align-items: center;
+.author-card .author-meta-item {
     color: #4d525d;
-    display: flex;
     font-family: var(--body-font-bold);
-    margin: 10px 0 20px;
     font-size: .95em !important;
     line-height: 1;
-    margin-right: 20px;
     white-space: nowrap;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
 }
 
-.author-card .author-meta-item {
-    display: inline-block;
-    height: 11px;
-    line-height: 1;
-    opacity: .8;
-    margin-right: 15px;
-    white-space: nowrap;
+.author-card .author-meta-item a,
+.author-card .author-meta-item span {
+    color: #4d525d;
 }
 
 .author-card .author-meta-item i {
-    margin-right: 5px;
+    margin-right: 3px;
+}
+
+.author-card .author-meta a {
+    transition: var(--transition);
+}
+
+.author-card .author-meta a:hover {
+    color: var(--color-hover);
+    cursor: pointer;
 }
 
 .author-profile-pic {
@@ -2001,18 +2013,14 @@ iframe.instagram-media+script+ :not([id]) {
     font-weight: 700;
 }
 
-.author-profile-meta {
+.author-meta {
     display: flex;
     gap: 10px;
 }
 
-.author-profile-social-link {
+.author-card .author-meta .author {
     color: var(--color-secondary-text);
     font-family: var(--body-font-bold);
-}
-
-.author-profile-social-link:hover {
-    color: var(--color-darkgrey);
 }
 
 .author-profile-social-link svg {
@@ -2623,14 +2631,27 @@ iframe.instagram-media+script+ :not([id]) {
 
 .about-template .author-card {
     box-shadow: unset;
+    box-shadow: unset;
+    padding: 0 0 30px 0;
+    margin-bottom: 30px;
+    border-bottom: var(--color-border) 1px solid;
 }
 
-.author-avatar-link {
-    border-radius: 50%;
-    height: 80px;
-    min-width: 80px;
-    overflow: hidden;
-    width: 80px;
+.about-template .author-card:last-of-type {
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: unset;
+}
+
+.about-template .author-card .author-avatar-link {
+    height: 70px;
+    min-width: 70px;
+    width: 70px;
+}
+
+.about-template .author-card .author-avatar-link img {
+    height: 70px;
+    width: 70px;
 }
 
 .author-card .author-meta {
@@ -2642,10 +2663,34 @@ iframe.instagram-media+script+ :not([id]) {
     margin-right: 15px;
 }
 
+.about-template .author-card .author-meta {
+    margin: 10px 0 0;
+}
 
 .author-card .author-meta .author-meta-item {
     display: flex;
     align-items: center;
+    display: inline-block;
+    height: 11px;
+    line-height: 1;
+    opacity: .8;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+
+.about-template .author-card .author-card-excerpt {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.about-template .author-card .author-meta-item a,
+.about-template .author-card .author-meta-item span,
+.about-template .author-card .author-meta-item i {
+    font-size: .9em;
+}
+
+.about-template .author-card .author-card-excerpt {
+    margin: 15px auto 0;
 }
 
 /*
