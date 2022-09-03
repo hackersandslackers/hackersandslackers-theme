@@ -87,17 +87,19 @@ production stylesheet in assets/built/screen.css
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: auto;
 }
+
+.home-template .viewport,
+.author-template .viewport,
+.tag-template .viewport,
+.about-template .viewport {
+    max-width: 95%;
+}
+
 
 .site-content {
     flex-grow: 1;
-    margin: 10px auto;
-}
-
-@media (max-width: 600px) {
-    .site-content {
-        margin: 0 20px;
-    }
 }
 
 /* Full width page blocks */
@@ -126,7 +128,9 @@ production stylesheet in assets/built/screen.css
 }
 
 @media(max-width: 900px) {
-    .post-template .site-header {
+
+    .post-template .site-header,
+    .tag-template .site-header {
         margin-bottom: 0;
     }
 }
@@ -410,6 +414,14 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     .site-navigation .nav.left ul {
         display: none;
     }
+
+    .tags-navigation {
+        display: none;
+    }
+
+    .site-navigation .nav-item.login {
+        display: none;
+    }
 }
 
 .site-navigation .nav {
@@ -424,7 +436,6 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 
 .site-header li {
     display: inline;
-    ;
     padding-left: unset;
     margin-top: unset;
     margin-right: 15px;
@@ -1070,14 +1081,13 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 
 .meta-items-left {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     white-space: nowrap;
 }
 
 .post-card-author-image {
     border-radius: 50%;
     height: 38px;
-    margin-right: 10px;
     min-width: 38px;
 }
 
@@ -1118,6 +1128,18 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     transition: var(--transition);
 }
 
+@media(max-width: 800px) {
+    .post-card-primary-tag {
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 600px) {
+    .post-card-primary-tag {
+        font-size: .9em;
+    }
+}
+
 .post-card-primary-tag:hover {
     cursor: pointer;
     background: white !important;
@@ -1125,14 +1147,8 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     box-shadow: inset 0 0 0 1px var(--color-hover) !important;
 }
 
-@media(max-width: 600px) {
-    .post-card-primary-tag {
-        font-size: .8em;
-    }
-}
-
 .post-card-meta-details {
-    line-height: 1.2;
+    line-height: 1;
 }
 
 .post-card-meta-item {
@@ -1911,6 +1927,59 @@ iframe.instagram-media+script+ :not([id]) {
 /* 8. Authors
 /* ---------------------------------------------------------- */
 
+.author-template .author-card {
+    margin-bottom: 30px !important;
+}
+
+@media (max-width: 950px) {
+
+    .author-template .author-card,
+    .tag-template .info-card {
+        margin-bottom: 20px !important;
+    }
+
+    .author-template .site-content {
+        margin: unset;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .author-template .site-header,
+    .tag-template .site-header {
+        margin: unset;
+        box-shadow: unset;
+    }
+
+    .author-template .author-card,
+    .tag-template .info-card {
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        padding: 25px;
+    }
+
+    .author-template .author-card .author-avatar-wrapper {
+        margin-right: 15px !important;
+
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .author-template .author-card .author-avatar-wrapper,
+    .author-template .author-card .author-profile-pic {
+        height: 70px;
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .author-template .author-card .author-meta {
+        margin: 10px 0;
+    }
+}
+
 .author-profile-footer {
     margin-top: 16px;
 }
@@ -1950,9 +2019,9 @@ iframe.instagram-media+script+ :not([id]) {
     color: #5e6877;
     display: -webkit-box;
     font-family: var(--body-font-medium);
-    font-size: 1.1em;
+    font-size: 1em;
     letter-spacing: -.5px;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: 20px auto 0;
     overflow-y: hidden;
     text-overflow: ellipsis;
@@ -2018,7 +2087,6 @@ iframe.instagram-media+script+ :not([id]) {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    margin: 0 0 2rem;
     background: color-mod(var(--color-lightgrey) l(+10%));
     border-radius: 50%;
 }

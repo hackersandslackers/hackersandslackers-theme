@@ -1,7 +1,8 @@
 {{!< default}} {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template
     --}} <main id="site-main" class="site-main">
     <div class="sidebar-container">
-        <div class="post-feed">
+
+        <div class="main-feed">
 
 
             {{#author}}
@@ -63,11 +64,15 @@
             </section>
             {{/author}}
 
-            {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-            {{/foreach}}
 
+            <div class="post-feed">
+
+                {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+                {{> "post-card"}}
+                {{/foreach}}
+
+            </div>
         </div>
 
         <div class="sidebar">

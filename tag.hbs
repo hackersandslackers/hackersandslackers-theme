@@ -1,19 +1,19 @@
-{{!< default}}
-{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
-
-<main id="site-main" class="site-main">
+{{!< default}} {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template
+    --}} <main id="site-main" class="site-main">
 
     <div class="inner posts sidebar-container">
-
-        <div class="post-feed">
+        <div class="main-feed">
             {{#tag}}
-                {{> "info-card"}}
+            {{> "info-card"}}
             {{/tag}}
 
-            {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/info-card.hbs --}}
+
+            <div class="post-feed">
+                {{#foreach posts}}
+                {{!-- The tag below includes the markup for each post - partials/info-card.hbs --}}
                 {{> "post-card"}}
-            {{/foreach}}
+                {{/foreach}}
+            </div>
         </div>
 
         <div class="sidebar">
@@ -22,4 +22,4 @@
 
     </div>
 
-</main>
+    </main>
