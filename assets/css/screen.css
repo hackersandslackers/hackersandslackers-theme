@@ -127,7 +127,7 @@ production stylesheet in assets/built/screen.css
     box-shadow: var(--card-shadow);
 }
 
-@media(max-width: 900px) {
+@media(max-width: 800px) {
 
     .post-template .site-header,
     .tag-template .site-header {
@@ -995,15 +995,9 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     color: var(--color-hover);
 }
 
-@media (max-width: 1000px) {
-    .post-card-title {
-        font-size: 3rem;
-    }
-}
-
 @media (max-width: 600px) {
     .post-card-title {
-        font-size: 2.5rem;
+        font-size: 1.8em;
         letter-spacing: -.3px;
     }
 }
@@ -1443,10 +1437,19 @@ is the very first element in the post content */
 }
 
 /* Now the content typography styles */
-.post-content a {
-    color: var(--color-theme);
+.post-content a,
+.content-body a {
+    border-bottom: 1px solid var(--color-theme);
     text-decoration: underline;
     word-break: break-word;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.post-content a:hover,
+.content-body a:hover {
+    color: var(--color-theme);
+    cursor: pointer;
 }
 
 .post-content .kg-product-card .kg-product-card-description>p,
@@ -2129,6 +2132,17 @@ iframe.instagram-media+script+ :not([id]) {
     }
 }
 
+@media(max-width: 600px) {
+    .info-card .tag-image {
+        margin-right: 15px;
+    }
+
+    .info-card .info-card-title {
+        font-size: 1.8em;
+        margin: 0 0 5px;
+    }
+}
+
 .info-card-title {
     margin: 0 0 10px;
     line-height: 1;
@@ -2138,7 +2152,7 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 .info-card-excerpt {
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 @media(max-width: 600px) {
@@ -2556,7 +2570,7 @@ iframe.instagram-media+script+ :not([id]) {
 
 .widget.series .series-widget-list .series-list-link {
     font-family: var(--body-font-medium);
-    padding: 10px 0;
+    padding: 10px;
     border-bottom: 1px solid #dee1e7;
     font-size: .9em;
     width: 100%;
@@ -2583,7 +2597,7 @@ iframe.instagram-media+script+ :not([id]) {
 
 .widget.series .series-widget-list .series-list-link:last-of-type {
     border-bottom: unset;
-    padding: 10px 0 0;
+    padding: 10px 10px 0;
 }
 
 .widget.series .series-widget-list .series-list-link a {
@@ -2626,8 +2640,18 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 @media(max-width: 950px) {
-    .footer-wrapper {
+
+    .footer {
+        padding: 40px 0 0;
+    }
+
+    .footer-wrapper,
+    .footer .subfooter {
         max-width: 90%;
+    }
+
+    .footer .widget .footer-description {
+        font-size: 1em;
     }
 }
 
@@ -2647,11 +2671,12 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 .footer .widget .footer-logo:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .footer .widget .footer-description {
     line-height: 1.4;
+    font-size: 1.05em;
 }
 
 .footer .widget {
@@ -2659,7 +2684,7 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 .footer .widget.info {
-    max-width: 26%;
+    max-width: 28%;
 }
 
 .footer .widget .footer-list {
@@ -2685,6 +2710,7 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 .footer .widget .footer-list li a {
+    font-family: var(--body-font-medium);
     transition: var(--transition);
 }
 
@@ -2720,6 +2746,24 @@ iframe.instagram-media+script+ :not([id]) {
 .footer .widget.social {
     max-width: unset;
     width: 250px;
+}
+
+@media(max-width: 600px) {
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer .subfooter {
+        display: block;
+    }
+
+    .footer .widget.social {
+        display: none;
+    }
+
+    .footer .subfooter .copyright {
+        text-align: center;
+    }
 }
 
 
