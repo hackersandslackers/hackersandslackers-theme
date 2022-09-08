@@ -66,7 +66,7 @@ production stylesheet in assets/built/screen.css
     --body-font-medium: "CamphorPro-Medium", "HelveticaNeue", sans-serif;
     --body-font-bold: "CamphorPro-Bold", "HelveticaNeue", sans-serif;
     --header-font: "TTNormsPro-Bold", "HelveticaNeue", sans-serif;
-    --header-font-secondary: "TTNormsPro-Medium", "HelveticaNeue", sans-serif;
+    --header-font-medium: "TTNormsPro-Medium", "HelveticaNeue", sans-serif;
 
     /* Breakpoints */
     --smallscreen-breakpoint: 950px;
@@ -266,6 +266,44 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 
 .has-cover .site-header-content.left-aligned :is(.site-logo, .site-title)+.site-description {
     font-size: 2.2rem;
+}
+
+.page-title {
+    font-family: var(--header-font-medium);
+    color: var(--color-header-grey);
+}
+
+.page-template h2,
+.post-template h2 {
+    font-family: var(--body-font);
+    font-size: 2em;
+    color: var(--color-header-grey);
+}
+
+.page-template a,
+.post-template a {
+    transition: var(--transition);
+}
+
+.page-template a:hover,
+.post-template a:hover {
+    color: var(--color-hover);
+}
+
+.page-template iframe,
+.post-template iframe {
+    width: 100%;
+}
+
+.about-template iframe {
+    height: 368px;
+}
+
+.kg-card.kg-embed-card {
+    display: block;
+    width: 100%;
+    border: 1px solid #d0d8df;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
@@ -1400,7 +1438,7 @@ headings, text, images and lists. We deal with cards lower down. */
 /* [id] represents all headings h1-h6, reset all margins */
 .post-content>[id] {
     margin: 0;
-    color: var(--color-darkgrey);
+    color: var(--color-header-grey);
 }
 
 .has-serif-title .post-content>[id] {
@@ -2045,10 +2083,11 @@ iframe.instagram-media+script+ :not([id]) {
 
 .author-card .author-name {
     color: #666c70;
-    font-family: TTNormsPro-Medium, HelveticaNeue, sans-serif;
+    font-family: var(--header-font-medium);
     font-size: 1.3em;
     font-weight: unset;
     margin: 0 0 0.3em;
+    transition: var(--transition);
 }
 
 .author-card .author-meta .author {
@@ -2657,7 +2696,7 @@ iframe.instagram-media+script+ :not([id]) {
 
 .footer .widget .footer-title {
     color: var(--color-header-grey);
-    font-family: var(--header-font-secondary);
+    font-family: var(--header-font-medium);
     text-transform: uppercase;
     text-rendering: optimizelegibility;
     font-size: 1.1em;
