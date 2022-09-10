@@ -1117,6 +1117,19 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     white-space: nowrap;
 }
 
+.meta-items-left * {
+    transition: var(--transition);
+}
+
+.meta-items-left:hover * {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+.meta-items-left:hover .post-card-author-avatar {
+    opacity: .7;
+}
+
 .post-card-author-image {
     border-radius: 50%;
     height: 38px;
@@ -2680,10 +2693,6 @@ iframe.instagram-media+script+ :not([id]) {
 
 @media(max-width: 950px) {
 
-    .footer {
-        padding: 40px 0 0;
-    }
-
     .footer-wrapper,
     .footer .subfooter {
         max-width: 90%;
@@ -2737,6 +2746,12 @@ iframe.instagram-media+script+ :not([id]) {
     padding: 0;
 }
 
+.footer .widget .footer-list a {
+    color: var(--color-header-grey);
+    opacity: .8;
+    transition: var(--transition);
+}
+
 .footer .widget .footer-list li {
     display: block;
     margin-bottom: 18px;
@@ -2756,15 +2771,31 @@ iframe.instagram-media+script+ :not([id]) {
 .footer .widget .footer-list li a:hover {
     cursor: pointer;
     color: var(--color-hover);
+    opacity: 1;
+}
+
+@media (max-width: 1020px) {
+
+    .footer {
+        padding: 60px 30px 20px;
+    }
 }
 
 @media (max-width: 800px) {
+
+    .footer {
+        padding: 40px 30px 20px;
+    }
 
     .footer .widget,
     .footer .widget.info {
         width: 100%;
         margin-bottom: 40px;
         max-width: unset;
+    }
+
+    .footer .widget:last-of-type {
+        margin-bottom: 0;
     }
 
     .footer .widget:last-of-type {
