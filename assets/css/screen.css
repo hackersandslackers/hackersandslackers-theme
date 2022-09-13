@@ -529,9 +529,54 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     width: 40px;
 }
 
+.logo.mobile {
+    display: none;
+}
+
+.logo.mobile a {
+    display: flex;
+    align-items: center;
+}
+
+.logo.mobile img {
+    margin-right: 10px;
+}
+
+.logo.mobile .icon.title {
+    color: var(--color-theme);
+    font-size: 1em;
+    margin: unset;
+    white-space: nowrap;
+}
+
+.logo.mobile .icon.title:hover {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+.logo.mobile:hover * {
+    color: var(--color-hover);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.logo.mobile:hover img {
+    opacity: 0.7;
+}
+
 @media (max-width: 800px) {
     .logo {
         margin-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo.mobile {
+        display: block;
+    }
+
+    .logo.desktop {
+        display: none;
     }
 }
 
