@@ -93,8 +93,9 @@ production stylesheet in assets/built/screen.css
 .home-template .viewport,
 .author-template .viewport,
 .tag-template .viewport,
-.about-template .viewport {
-    max-width: 95%;
+.about-template .viewport,
+.paged .viewport {
+    max-width: 93%;
 }
 
 
@@ -900,6 +901,27 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     grid-auto-rows: min-content;
     grid-template-columns: 1fr;
     margin: 0 auto;
+}
+
+.post-feed .pagination {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-feed .pagination i {
+    font-size: 1.3em;
+    transition: var(--transition);
+    color: var(--color-lightgrey);
+}
+
+.post-feed .pagination i:hover {
+    color: var(--color-hover);
+    cursor: pointer;
+}
+
+.post-feed .pagination .hidden {
+    visibility: hidden;
 }
 
 @media(max-width: 600px) {
@@ -2607,7 +2629,7 @@ iframe.instagram-media+script+ :not([id]) {
 /* ---------------------------------------------------------- */
 
 .widget.newsletter p {
-    line-height: 1.2;
+    line-height: 1.3;
     font-size: 1em;
     margin-bottom: 15px;
     font-family: var(--body-font);
@@ -2679,12 +2701,13 @@ iframe.instagram-media+script+ :not([id]) {
     margin: 40px auto 0;
 }
 
-.footer-wrapper,
+.footer .footer-wrapper,
 .footer .subfooter {
     display: flex;
     justify-content: space-between;
     max-width: 1000px;
     margin: 0 auto;
+    max-width: 85%;
 }
 
 .footer .subfooter {
@@ -2692,11 +2715,6 @@ iframe.instagram-media+script+ :not([id]) {
 }
 
 @media(max-width: 950px) {
-
-    .footer-wrapper,
-    .footer .subfooter {
-        max-width: 90%;
-    }
 
     .footer .widget .footer-description {
         font-size: 1em;
@@ -2774,17 +2792,21 @@ iframe.instagram-media+script+ :not([id]) {
     opacity: 1;
 }
 
+.footer .widget.social {
+    margin-bottom: 0;
+}
+
 @media (max-width: 1020px) {
 
     .footer {
-        padding: 60px 30px 20px;
+        padding: 60px 0 20px;
     }
 }
 
 @media (max-width: 800px) {
 
     .footer {
-        padding: 40px 30px 20px;
+        padding: 40px 0 20px;
     }
 
     .footer .widget,
@@ -2794,12 +2816,20 @@ iframe.instagram-media+script+ :not([id]) {
         max-width: unset;
     }
 
+    .footer .widget.social {
+        display: none;
+    }
+
     .footer .widget:last-of-type {
         margin-bottom: 0;
     }
 
     .footer .widget:last-of-type {
         margin-bottom: unset;
+    }
+
+    .footer .subfooter {
+        margin: 40px auto 0;
     }
 }
 

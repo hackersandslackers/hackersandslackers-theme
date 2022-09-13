@@ -1,0 +1,12 @@
+<nav class="pagination" role="navigation">
+
+    <a class="newer-posts {{#unless prev}}hidden{{/unless}}" href="{{page_url prev}}">
+        <i class="fa-sharp fa-solid fa-arrow-left"></i>
+    </a>
+
+    <span class="page-number">Page {{page}} of {{pages}}</span>
+
+    <a class="older-posts {{#unless next}}hidden{{/unless}}" href="{{page_url next}}">
+        <i class="fa-sharp fa-solid fa-arrow-right"></i>
+    </a>
+</nav>
