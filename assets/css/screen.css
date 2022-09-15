@@ -22,6 +22,10 @@ production stylesheet in assets/built/screen.css
 9.  Error Template
 11. Site Footer
 12. Sidebar
+  12.1. Sidebar About Widget
+  12.2. Sidebar Tag Widget
+  12.3. Sidebar Social Widget
+  12.4. Sidebar Newsletter Widget
 13. footer
 14. About
 
@@ -2560,7 +2564,7 @@ iframe.instagram-media+script+ :not([id]) {
     text-align: left;
 }
 
-/* 12.1 Sidebar About Widget
+/* 12.1. Sidebar About Widget
 /* ---------------------------------------------------------- */
 
 .widget.about .widget-logo {
@@ -2568,6 +2572,11 @@ iframe.instagram-media+script+ :not([id]) {
     margin: 0 auto 15px;
     transition: var(--transition);
     width: 230px;
+}
+
+.widget.about .widget-logo:hover {
+    opacity: .7;
+    cursor: pointer;
 }
 
 .widget.about .description {
@@ -2578,7 +2587,7 @@ iframe.instagram-media+script+ :not([id]) {
     text-align: center;
 }
 
-/* 12.2 Sidebar Tag Widget
+/* 12.2. Sidebar Tag Widget
 /* ---------------------------------------------------------- */
 
 .widget .tag-cloud {
@@ -2612,7 +2621,7 @@ iframe.instagram-media+script+ :not([id]) {
     cursor: pointer;
 }
 
-/* 12.3 Sidebar Social Widget
+/* 12.3. Sidebar Social Widget
 /* ---------------------------------------------------------- */
 
 .widget.social {
@@ -2670,7 +2679,7 @@ iframe.instagram-media+script+ :not([id]) {
     }
 }
 
-/* 12.4 Sidebar Newsletter Widget
+/* 12.4. Sidebar Newsletter Widget
 /* ---------------------------------------------------------- */
 
 .widget.newsletter p {
