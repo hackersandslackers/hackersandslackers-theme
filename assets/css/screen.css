@@ -279,9 +279,10 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 }
 
 .page-template h2,
-.post-template h2 {
+.post-content h2 {
     font-family: var(--body-font);
     font-size: 2em;
+    margin: 40px 0 5px;
     color: var(--color-header-grey);
 }
 
@@ -464,6 +465,10 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 }
 
 @media (max-width: 600px) {
+    .site-navigation {
+        padding: 20px 15px;
+    }
+
     .site-navigation .nav.left ul {
         display: none;
     }
@@ -1366,6 +1371,10 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-content {
         padding: 0 30px 30px;
     }
+
+    .post-template .site-content {
+        margin: unset;
+    }
 }
 
 .post-header-details .post-excerpt {
@@ -1497,6 +1506,10 @@ make sure this only happens on large viewports / desktop-ish devices.
         font-size: 2em;
     }
 
+    .post-header-details .post-excerpt {
+        margin: 5px 0 0;
+    }
+
     .post-header-details .post-meta {
         flex-direction: column;
     }
@@ -1546,37 +1559,16 @@ use it for applying any other styles. */
 created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
-/* Default vertical spacing */
-.post-content>*+* {
-    margin-top: max(3vmin, 20px);
-    margin-bottom: 0;
-}
-
-/* [id] represents all headings h1-h6, reset all margins */
-.post-content>[id] {
-    margin: 0;
-    color: var(--color-header-grey);
-}
 
 .has-serif-title .post-content>[id] {
     font-family: var(--font-serif);
-}
-
-/* Add back a top margin to all headings, unless a heading
-is the very first element in the post content */
-.post-content>[id]:not(:first-child) {
-    margin: 2em 0 0;
-}
-
-/* Add a small margin between a heading and anything after it */
-.post-content>[id]+* {
-    margin-top: 1rem !important;
 }
 
 .post-content h2 {
     font-family: var(--body-font);
     font-weight: normal;
     font-size: 2em;
+    margin: 40px 0 5px;
 }
 
 /* A larger margin before/after HRs and blockquotes */
@@ -1721,18 +1713,6 @@ posts, for example: embedded videos, tweets, galleries, or
 specially styled bookmark links. We add extra styling here to
 make sure they look good, and are given a bit of extra spacing. */
 
-/* Add extra margin before/after any cards,
-except for when immediately preceded by a heading */
-.post-content :not(.kg-card):not([id])+.kg-card {
-    margin-top: 3vmin;
-    margin-bottom: 0;
-}
-
-.post-content .kg-card+ :not(.kg-card) {
-    margin-top: 3vmin;
-    margin-bottom: 0;
-}
-
 /* This keeps small embeds centered */
 .kg-embed-card {
     display: flex;
@@ -1751,11 +1731,43 @@ except for when immediately preceded by a heading */
     transition: var(--transition);
 }
 
-/* This keeps small iamges centered */
+/* This keeps small image centered */
 .kg-image-card img {
     margin: auto;
     box-shadow: 0 0 3px rgb(0 0 0 / 20%);
     border-radius: 3px;
+}
+
+.kg-code-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.kg-code-card pre,
+pre[class*="language-"] {
+    margin: 0 !important;
+    order: 1;
+}
+
+.kg-code-card figcaption {
+    order: 1;
+    width: stretch;
+    width: -moz-available;
+    margin: 0 auto;
+    padding: 14px 15px 10px;
+    border-radius: 4px 4px 0 0;
+    background: #20242c;
+    color: #d2d7e1;
+    font-family: var(--body-font-medium);
+    font-size: 0.95em;
+    line-height: 1;
+    text-align: left;
+    white-space: normal;
+    order: 0;
 }
 
 @media(max-width: 600px) {
@@ -1765,9 +1777,24 @@ except for when immediately preceded by a heading */
         margin-left: calc(-50vw + 50%) !important;
         margin-right: calc(-50vw + 50%) !important;
         border-radius: unset;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        position: relative;
+        width: unset;
     }
 
     .kg-code-card pre {
+        border-radius: unset;
+        font-size: .85em !important;
+    }
+
+    .kg-code-card figcaption {
+        min-width: 100%;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        border-right: 0;
+        border-left: 0;
         border-radius: unset;
     }
 }
@@ -1858,6 +1885,15 @@ iframe.instagram-media+script+ :not([id]) {
     display: block !important;
     width: 850px;
     margin: 20px auto;
+    max-width: 100%;
+}
+
+@media(max-width: 600px) {
+    .post-comments {
+        padding: 0 30px;
+    }
+
+
 }
 
 /* -----old------ */
@@ -2094,6 +2130,17 @@ iframe.instagram-media+script+ :not([id]) {
 
     .read-more .post-card:nth-child(2) {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .related-posts {
+        grid-template-columns: 1fr;
+        padding: 0 30px;
+    }
+
+    .related-posts .post-card {
+        margin-bottom: 20px;
     }
 }
 
