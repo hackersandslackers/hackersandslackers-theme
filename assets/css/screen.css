@@ -285,6 +285,10 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     color: var(--color-header-grey);
 }
 
+.post-template h3 {
+    color: var(--color-header-grey);
+}
+
 .page-template a,
 .post-template a {
     transition: var(--transition);
@@ -309,6 +313,12 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     width: 100%;
     border: 1px solid #d0d8df;
     margin-bottom: 20px;
+}
+
+.kg-image-card figcaption {
+    line-height: 1.4;
+    margin: 0 auto;
+    padding: 8px 0 0;
 }
 
 @media (max-width: 767px) {
@@ -1447,6 +1457,14 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-size: 1em;
 }
 
+.post-content>ol,
+.post-content>ul,
+.post-content ol,
+.post-content ul {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 .gh-canvas .post-image {
     grid-column: wide-start / wide-end;
     width: 100%;
@@ -1471,6 +1489,21 @@ make sure this only happens on large viewports / desktop-ish devices.
     .post-excerpt {
         margin-top: 14px;
         font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .post-header .post-title {
+        font-size: 2em;
+    }
+
+    .post-header-details .post-meta {
+        flex-direction: column;
+    }
+
+    .post-header-details .post-meta .post-meta-item {
+        margin-bottom: 10px;
+        font-size: .9em;
     }
 }
 
@@ -1602,16 +1635,6 @@ is the very first element in the post content */
     font-family: var(--body-font);
 }
 
-.post-content>ul,
-.post-content>ol,
-.post-content>dl,
-.post-content .kg-toggle-card .kg-toggle-content>ol,
-.post-content .kg-toggle-card .kg-toggle-content>ul,
-.post-content .kg-product-card .kg-product-card-description>ol,
-.post-content .kg-product-card .kg-product-card-description>ul {
-    padding-left: 1.9em;
-}
-
 .post-content>blockquote:not([class]) {
     position: relative;
     font-style: italic;
@@ -1718,9 +1741,35 @@ except for when immediately preceded by a heading */
     width: 100%;
 }
 
+.kg-card {
+    margin: 30px 0;
+}
+
+.kg-image-card {
+    border-radius: 3px;
+    margin: 30px auto;
+    transition: var(--transition);
+}
+
 /* This keeps small iamges centered */
 .kg-image-card img {
     margin: auto;
+    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+    border-radius: 3px;
+}
+
+@media(max-width: 600px) {
+
+    .kg-image-card,
+    .kg-code-card {
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        border-radius: unset;
+    }
+
+    .kg-code-card pre {
+        border-radius: unset;
+    }
 }
 
 .has-serif-title .kg-toggle-card .kg-toggle-heading-text {
