@@ -18,7 +18,8 @@
         "pretest": "gulp build",
         "preship": "yarn test",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
-        "postship": "git fetch && gulp release"
+        "postship": "git fetch && gulp release",
+        "build": "webpack"
     },
     "author": {
         "name": "Hackers And Slackers",
@@ -45,10 +46,15 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
+        "@babel/core": "^7.19.1",
+        "@babel/eslint-parser": "^7.19.1",
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.11",
         "beeper": "3.0.0",
+        "css-loader": "^6.7.1",
         "cssnano": "5.1.13",
+        "eslint": "^8.23.1",
+        "font-config-webpack-plugin": "^2.0.3",
         "gscan": "4.34.0",
         "gulp": "4.0.2",
         "gulp-concat": "2.6.1",
@@ -60,7 +66,12 @@
         "postcss": "8.4.16",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0"
+        "pump": "3.0.0",
+        "sass": "^1.54.9",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0"
     },
     "browserslist": [
         "defaults"

@@ -54,15 +54,6 @@ production stylesheet in assets/built/screen.css
     --color-hover: #40cebb;
     --color-social-btn: #a1adc6;
 
-    /*
-    An accent color is also set by Ghost itself in
-    Ghost Admin > Settings > Brand
-
-    --ghost-accent-color: {value};
-
-    You can use this variable throughout your styles
-     */
-
     /* Fonts */
     --font-serif: Georgia, Times, serif;
     --font-mono: Menlo, Courier, monospace;
@@ -101,7 +92,6 @@ production stylesheet in assets/built/screen.css
 .paged .viewport {
     max-width: 93%;
 }
-
 
 .site-content {
     flex-grow: 1;
@@ -1474,6 +1464,13 @@ make sure this only happens on large viewports / desktop-ish devices.
     padding-right: 1em;
 }
 
+.post-content>ol li,
+.post-content>ul li,
+.post-content ol li,
+.post-content ul li {
+    margin-bottom: 10px;
+}
+
 .gh-canvas .post-image {
     grid-column: wide-start / wide-end;
     width: 100%;
@@ -1786,7 +1783,7 @@ pre[class*="language-"] {
 
     .kg-code-card pre {
         border-radius: unset;
-        font-size: .85em !important;
+        font-size: .8em !important;
     }
 
     .kg-code-card figcaption {

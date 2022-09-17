@@ -1,0 +1,34 @@
+/* Colors */
+$color-theme: #0297f6;
+$color-green: #a4d037;
+$color-yellow: #fecd35;
+$color-red: #f05230;
+$color-darkgrey: #15171A;
+$color-midgrey: #738a94;
+$color-lightgrey: #687385;
+$color-secondary-text: #979797;
+$color-border: #eaecee;
+$color-wash: #e5eff5;
+$color-darkmode: #151719;
+$color-background-grey: #f4f8fb;
+$color-header-grey: #4e576a;
+$color-hover: #40cebb;
+$color-social-btn: #a1adc6;
+
+/* Fonts */
+$font-serif: Georgia, Times, serif;
+$font-mono: Menlo, Courier, monospace;
+$body-font: "CamphorPro-Regular", "HelveticaNeue", sans-serif;
+$body-font-medium: "CamphorPro-Medium", "HelveticaNeue", sans-serif;
+$body-font-bold: "CamphorPro-Bold", "HelveticaNeue", sans-serif;
+$header-font: "TTNormsPro-Bold", "HelveticaNeue", sans-serif;
+$header-font-medium: "TTNormsPro-Medium", "HelveticaNeue", sans-serif;
+
+/* Breakpoints */
+$smallscreen-breakpoint: 950px;
+$tablet-breakpoint: 800px;
+$mobile-breakpoint: 600px;
+
+/* Etc. */
+$card-shadow: 0 1px 4px rgba(39, 44, 49, .15);
+$transition: all .2s ease-out;
