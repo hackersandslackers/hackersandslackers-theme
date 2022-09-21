@@ -1,0 +1,99 @@
+/* Cards
+/* ---------------------------------------------------------- */
+
+/* Cards are dynamic blocks of content which appear within Ghost
+posts, for example: embedded videos, tweets, galleries, or
+specially styled bookmark links. We add extra styling here to
+make sure they look good, and are given a bit of extra spacing. */
+
+/* This keeps small embeds centered */
+.kg-embed-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.kg-card {
+    margin: 30px 0;
+}
+
+.kg-image-card {
+    border-radius: 3px;
+    margin: 30px auto;
+    transition: $transition;
+
+    img {
+        margin: auto;
+        box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+        border-radius: 3px;
+    }
+}
+
+
+.kg-code-card {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 5px 5px 0 0;
+
+    figcaption {
+        order: 1;
+        width: stretch;
+        width: -moz-available;
+        margin: 0 auto;
+        padding: 14px 15px 10px;
+        border-radius: 4px 4px 0 0;
+        background: #20242c;
+        color: #d2d7e1;
+        font-family: $body-font-medium;
+        font-size: 0.95em;
+        line-height: 1;
+        text-align: left;
+        white-space: normal;
+        order: 0;
+        @media(max-width: $mobile-breakpoint) {
+            min-width: 100%;
+            margin-left: calc(-50vw + 50%) !important;
+            margin-right: calc(-50vw + 50%) !important;
+            border-right: 0;
+            border-left: 0;
+            border-radius: unset;
+        }
+    }
+}
+
+.kg-code-card pre,
+pre[class*="language-"] {
+    margin: 0 !important;
+    order: 1;
+}
+
+.kg-product-card .kg-product-card-description>p,
+.kg-product-card .kg-product-card-description>ol,
+.kg-product-card .kg-product-card-description>ul {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+}
+
+@media(max-width: $mobile-breakpoint) {
+
+    .kg-image-card,
+    .kg-code-card {
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        border-radius: unset;
+        display: flex;
+        flex-direction: column;
+        margin: 30px 0;
+        position: relative;
+        width: unset;
+    }
+
+    .kg-code-card pre {
+        border-radius: unset;
+        font-size: .8em !important;
+    }
+}

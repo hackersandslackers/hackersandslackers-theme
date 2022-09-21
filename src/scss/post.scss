@@ -1,5 +1,5 @@
 /* 7. Single Post
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* ---------------------------------------------------------- */
 
 .post-template {
     .site-content {
@@ -15,8 +15,79 @@
         padding-top: max(12vmin, 64px);
     }
 
+    .post-header {
+        align-items: center;
+        display: flex !important;
+        flex-direction: column-reverse;
+        padding: 0;
+
+        .post-header-details {
+            margin: 0 auto;
+            padding: 40px 65px;
+            width: 100%;
+        }
+    }
+
     .post-content {
         padding: 0 60px 60px;
+
+        h2 {
+            font-family: $body-font;
+            font-weight: normal;
+            font-size: 2em;
+            margin: 40px 0 5px;
+        }
+
+        h3 {
+            color: $color-header-grey;
+        }
+
+        a:hover {
+            color: $color-theme;
+            cursor: pointer;
+        }
+
+        pre {
+            overflow: auto;
+            padding: 16px 20px;
+            color: $color-wash;
+            font-size: 1.4rem;
+            line-height: 1.5em;
+            background: $color-darkgrey;
+            border-radius: 5px;
+            box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
+        }
+
+        .intro-notice {
+            align-items: center;
+            background: #eceef1;
+            border-radius: 5px;
+            color: #6e7482;
+            display: flex;
+            font-size: .95em;
+            font-style: italic;
+            justify-content: left;
+            line-height: 1.6;
+            margin: auto;
+            padding: 20px;
+
+            img {
+                height: 40px;
+                margin-right: 15px;
+                min-width: 40px;
+                opacity: .7;
+                color: #677584;
+                margin: 0;
+            }
+
+            p {
+                font-family: $body-font-medium;
+                color: #677584;
+                letter-spacing: -.2px;
+                line-height: 1.6em;
+                margin: 0;
+            }
+        }
     }
 
     .post-header {
@@ -155,19 +226,6 @@
     margin-bottom: 10px;
 }
 
-.gh-canvas .post-image {
-    grid-column: wide-start / wide-end;
-    width: 100%;
-}
-
-.image-full .post-image {
-    grid-column: full-start / full-end;
-}
-
-.image-small .post-image {
-    grid-column: main-start / main-end;
-}
-
 .gh-canvas .post-image img {
     display: block;
     margin-left: auto;
@@ -202,18 +260,6 @@
 }
 
 
-
-.post-template h3 {
-    color: $color-header-grey;
-}
-
-.post-content h2 {
-    font-family: $body-font;
-    font-weight: normal;
-    font-size: 2em;
-    margin: 40px 0 5px;
-}
-
 /* A larger margin before/after HRs and blockquotes */
 .post-content>hr,
 .post-content>blockquote {
@@ -242,13 +288,6 @@
     cursor: pointer;
 }
 
-.post-content .kg-product-card .kg-product-card-description>p,
-.post-content .kg-product-card .kg-product-card-description>ol,
-.post-content .kg-product-card .kg-product-card-description>ul {
-    font-size: 1.7rem;
-    line-height: 1.6em;
-}
-
 .post-content .kg-callout-card .kg-callout-emoji {
     font-size: 2.1rem;
     line-height: 1.4epost
@@ -256,34 +295,6 @@
 
 .post-content .kg-toggle-card .kg-toggle-heading-text {
     font-size: 2.0rem;
-}
-
-.has-sans-body .post-content>blockquote,
-.has-sans-body .post-content>ol,
-.has-sans-body .post-content>ul,
-.has-sans-body .post-content>dl,
-.has-sans-body .post-content>p,
-.has-sans-body .post-content .kg-callout-card .kg-callout-text,
-.has-sans-body .post-content .kg-toggle-card .kg-toggle-content>ol,
-.has-sans-body .post-content .kg-toggle-card .kg-toggle-content>ul,
-.has-sans-body .post-content .kg-toggle-card .kg-toggle-content>p {
-    font-family: $body-font;
-}
-
-.post-content>blockquote:not([class]) {
-    position: relative;
-    font-style: italic;
-    padding: 0;
-}
-
-.post-content>blockquote:not([class])::before {
-    content: "";
-    position: absolute;
-    left: -1.5em;
-    top: 0;
-    bottom: 0;
-    width: 0.3rem;
-    background: white;
 }
 
 .post-content :not(pre)>code {
@@ -296,140 +307,4 @@
     color: #15171A;
     background: #f0f6f9;
     border-radius: 0.25em;
-}
-
-.post-content pre {
-    overflow: auto;
-    padding: 16px 20px;
-    color: $color-wash;
-    font-size: 1.4rem;
-    line-height: 1.5em;
-    background: $color-darkgrey;
-    border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4;
-}
-
-.post-content .intro-notice {
-    align-items: center;
-    background: #eceef1;
-    border-radius: 5px;
-    color: #6e7482;
-    display: flex;
-    font-size: .95em;
-    font-style: italic;
-    justify-content: left;
-    line-height: 1.6;
-    margin: auto;
-    padding: 20px;
-}
-
-.post-content .intro-notice img {
-    height: 40px;
-    margin-right: 15px;
-    min-width: 40px;
-    opacity: .7;
-    color: #677584;
-    margin: 0;
-}
-
-
-.post-content .intro-notice p {
-    font-family: $body-font-medium;
-    color: #677584;
-    letter-spacing: -.2px;
-    line-height: 1.6em;
-    margin: 0;
-}
-
-/* Cards
-/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
-
-/* Cards are dynamic blocks of content which appear within Ghost
-posts, for example: embedded videos, tweets, galleries, or
-specially styled bookmark links. We add extra styling here to
-make sure they look good, and are given a bit of extra spacing. */
-
-/* This keeps small embeds centered */
-.kg-embed-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.kg-card {
-    margin: 30px 0;
-}
-
-.kg-image-card {
-    border-radius: 3px;
-    margin: 30px auto;
-    transition: $transition;
-
-    img {
-        margin: auto;
-        box-shadow: 0 0 3px rgb(0 0 0 / 20%);
-        border-radius: 3px;
-    }
-}
-
-
-.kg-code-card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    margin: 30px 0;
-    border-radius: 5px 5px 0 0;
-
-    figcaption {
-        order: 1;
-        width: stretch;
-        width: -moz-available;
-        margin: 0 auto;
-        padding: 14px 15px 10px;
-        border-radius: 4px 4px 0 0;
-        background: #20242c;
-        color: #d2d7e1;
-        font-family: $body-font-medium;
-        font-size: 0.95em;
-        line-height: 1;
-        text-align: left;
-        white-space: normal;
-        order: 0;
-        @media(max-width: $mobile-breakpoint) {
-            min-width: 100%;
-            margin-left: calc(-50vw + 50%) !important;
-            margin-right: calc(-50vw + 50%) !important;
-            border-right: 0;
-            border-left: 0;
-            border-radius: unset;
-        }
-    }
-}
-
-.kg-code-card pre,
-pre[class*="language-"] {
-    margin: 0 !important;
-    order: 1;
-}
-
-@media(max-width: $mobile-breakpoint) {
-
-    .kg-image-card,
-    .kg-code-card {
-        margin-left: calc(-50vw + 50%) !important;
-        margin-right: calc(-50vw + 50%) !important;
-        border-radius: unset;
-        display: flex;
-        flex-direction: column;
-        margin: 30px 0;
-        position: relative;
-        width: unset;
-    }
-
-    .kg-code-card pre {
-        border-radius: unset;
-        font-size: .8em !important;
-    }
 }

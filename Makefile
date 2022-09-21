@@ -23,7 +23,7 @@ all help:
 
 .PHONY: build
 build:
-	gulp
+	npm run build
 
 .PHONY: dev
 dev:
@@ -31,7 +31,7 @@ dev:
 	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
 	cd $(DEV_GHOST_THEME_PATH)
-	gulp
+	npm run dev
 
 .PHONY: clean
 clean:

@@ -1,0 +1,12 @@
+.post-title {
+    color: $color-header-grey;
+    display: block;
+    font-family: var(--header-font);
+    font-size: 2.3em;
+    margin: unset;
+    font-weight: unset;
+    line-height: 1.1;
+    max-width: 720px;
+    order: 2;
+    width: -webkit-fill-available;
+}

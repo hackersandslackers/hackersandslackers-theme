@@ -25,10 +25,13 @@
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
+    <script src="{{asset 'built/main.js'}}"></script>
+    {{!--
     <link rel="stylesheet" type="text/css" href="{{asset 'built/fonts.css'}}" />
     <link rel="stylesheet" type="text/css" href="{{asset 'built/screen.css'}}" />
     <link rel="stylesheet" type="text/css" href="{{asset 'built/prism.css'}}" />
     <link rel="stylesheet" type="text/css" href="{{asset 'built/nord.css'}}" />
+    --}}
 
     {{!-- Icons via Font Awesome --}}
     <script src="https://kit.fontawesome.com/5b4eea6520.js" crossorigin="anonymous"> </script>
@@ -59,7 +62,8 @@
 
 
     {{!-- Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries --}}
-    <script src="{{asset " built/casper.js"}}"></script>
+    {{!--
+    <script src="{{asset " built/casper.js"}}"></script> --}}
 
     {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the
     closing body tag --}}

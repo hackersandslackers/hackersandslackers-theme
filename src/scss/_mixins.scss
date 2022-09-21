@@ -1,0 +1,7 @@
+@mixin content-link {
+    border-bottom: 1px solid var(--color-theme);
+    text-decoration: underline;
+    word-break: break-word;
+    transition: var(--transition);
+    text-decoration: none;
+}
