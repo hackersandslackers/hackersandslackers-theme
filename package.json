@@ -11,7 +11,7 @@
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-        "dev": "webpack --watch",
+        "dev": "webpack --mode=development",
         "zip": "gulp zip",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
@@ -19,7 +19,7 @@
         "preship": "yarn test",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
         "postship": "git fetch && gulp release",
-        "build": "webpack"
+        "build": "webpack --mode=production"
     },
     "author": {
         "name": "Hackers And Slackers",
@@ -185,5 +185,8 @@
         "extends": [
             "@tryghost:theme"
         ]
+    },
+    "dependencies": {
+        "dotenv": "^16.0.2"
     }
 }

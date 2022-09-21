@@ -1,10 +1,11 @@
+require('dotenv').config();
 const path = require("path");
 const FontConfigWebpackPlugin = require("font-config-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.ENVIRONMENT,
   entry: {
     'main': './src/js/index.js',
   },
@@ -13,7 +14,7 @@ module.exports = {
     new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"}),
   ],
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'assets/built'),
   },
   module: {
