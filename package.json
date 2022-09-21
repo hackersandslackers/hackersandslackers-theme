@@ -52,6 +52,7 @@
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.12",
         "babel-loader": "^8.2.5",
+        "babel-plugin-import": "^1.13.5",
         "beeper": "3.0.0",
         "css-loader": "^6.7.1",
         "cssnano": "5.1.13",

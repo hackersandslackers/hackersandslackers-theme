@@ -13,6 +13,12 @@ module.exports = {
     new FontConfigWebpackPlugin(),
     new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"}),
   ],
+  resolve: {
+    alias: {
+      Fonts: path.resolve(__dirname, './assets/fonts/'),
+      Styles: path.resolve(__dirname, './src/scss/')
+    }
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'assets/built'),
