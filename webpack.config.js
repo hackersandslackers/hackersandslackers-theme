@@ -1,18 +1,21 @@
-require('dotenv').config();
 const path = require("path");
+const DotEnv = require(`dotenv-webpack`);
 const FontConfigWebpackPlugin = require("font-config-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require(`terser-webpack-plugin`);
 
 
 module.exports = {
-  mode: process.env.ENVIRONMENT,
   entry: {
-    'main': './src/js/index.js',
+    'main':  path.resolve(__dirname, `./src/js/index.js`),
+    'posts': path.resolve(__dirname, `./src/js/posts.js`),
   },
   plugins: [
+    new DotEnv({ path: './.env' }),
     new FontConfigWebpackPlugin(),
     new MiniCssExtractPlugin({filename: "[name].css", chunkFilename: "[id].css"}),
   ],
+  mode: process.env.ENVIRONMENT,
   resolve: {
     alias: {
       Fonts: path.resolve(__dirname, './assets/fonts/'),
@@ -21,7 +24,11 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'assets/built'),
+    path: path.resolve(__dirname, './assets/built'),
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
   },
   module: {
     rules: [
@@ -42,7 +49,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {

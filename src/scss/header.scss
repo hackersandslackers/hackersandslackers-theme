@@ -6,7 +6,7 @@
     color: #fff;
     background: white;
     margin-bottom: 30px;
-    box-shadow: var(--card-shadow);
+    box-shadow: $card-shadow;
     @media(max-width: $mobile-breakpoint) {
         margin-bottom: 20px;
     }
@@ -19,8 +19,6 @@
         margin-bottom: 0;
     }
 }
-
-
 
 .site-header-cover {
     position: absolute;
@@ -41,7 +39,7 @@
     padding-top: 6.4vmin;
     padding-bottom: 6.4vmin;
     text-align: center;
-    color: var(--color-darkgrey);
+    color: $color-darkgrey;
 }
 
 .has-cover .site-header-content {
@@ -86,6 +84,219 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     margin-right: auto;
     margin-left: 0;
     max-height: 96px;
+}
+
+.site-title {
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+
+.site-navigation {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 0.5px solid $color-border;
+}
+
+.site-header .nav-wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.site-header .nav-wrapper.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header .nav.right {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.site-header .nav.left a {
+    color: $color-lightgrey;
+    font-family: $body-font-medium;
+    transition: $transition;
+    line-height: 1;
+}
+
+.site-header .nav.left a:hover {
+    color: $color-hover;
+    cursor: pointer;
+}
+
+.site-header .nav.right a {
+    font-family: $body-font-bold;
+    transition: $transition;
+}
+
+.site-header .nav.left li {
+    margin-right: 25px;
+    line-height: 1;
+}
+
+.site-header .nav-link {
+    color: $color-lightgrey;
+}
+
+.site-header .nav-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: .8em;
+    line-height: 16px;
+    font-weight: 600;
+    font-family: $body-font;
+    letter-spacing: .5px;
+    text-align: center;
+    text-transform: initial;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: $transition;
+}
+
+.nav-btn.outline {
+    color: $color-theme;
+    background-color: white;
+    box-shadow: inset 0 0 0 1px $color-theme;
+    transition: $transition;
+}
+
+.nav-btn.outline:hover {
+    color: white;
+    background-color: $color-theme;
+    cursor: pointer;
+}
+
+.nav-btn.filled {
+    color: white !important;
+    background-color: $color-theme;
+    box-shadow: inset 0 0 0 1px $color-theme;
+    transition: $transition;
+}
+
+.nav-btn.filled:hover {
+    cursor: pointer;
+    background-color: white;
+    color: $color-hover !important;
+    box-shadow: inset 0 0 0 1px $color-hover;
+}
+
+.site-header .search-button {
+    color: $color-lightgrey;
+    transition: $transition;
+}
+
+.site-header .search-button:hover {
+    color: $color-hover;
+    cursor: pointer;
+}
+
+.tags-navigation {
+    border-bottom: 0.5px solid $color-border;
+}
+
+
+.site-navigation .nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-navigation .nav ul {
+    padding-left: unset;
+    padding-right: unset;
+}
+
+.site-header li {
+    display: inline;
+    padding-left: unset;
+    margin-top: unset;
+    margin-right: 15px;
+    white-space: nowrap;
+    font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 1;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-header li:last-child {
+    margin-right: unset;
+}
+
+.site-header ul {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.tags-list {
+    padding: 20px 0;
+}
+
+
+.tag-link {
+    color: $color-lightgrey;
+    letter-spacing: 0.5px;
+    line-height: 16px;
+    white-space: nowrap;
+    font-size: .8em;
+    font-family: $body-font-bold;
+}
+
+.tag-link:hover {
+    cursor: pointer;
+    color: $color-hover;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 25px;
+    transition: $transition;
+    width: 40px;
+}
+
+.logo.mobile {
+    display: none;
+}
+
+.logo.mobile a {
+    display: flex;
+    align-items: center;
+}
+
+.logo.mobile img {
+    margin-right: 10px;
+}
+
+.logo.mobile .icon.title {
+    color: $color-theme;
+    font-size: 1em;
+    margin: unset;
+    white-space: nowrap;
+}
+
+.logo.mobile .icon.title:hover {
+    color: $color-hover;
+    cursor: pointer;
+}
+
+.logo.mobile:hover * {
+    color: $color-hover;
+    cursor: pointer;
+    transition: $transition;
+}
+
+.logo.mobile:hover img {
+    opacity: 0.7;
 }
 
 .site-title {

@@ -1,3 +1,5 @@
+
+
 /* Cards
 /* ---------------------------------------------------------- */
 
@@ -96,4 +98,17 @@ pre[class*="language-"] {
         border-radius: unset;
         font-size: .8em !important;
     }
+}
+
+.kg-card.kg-embed-card {
+    display: block;
+    width: 100%;
+    border: 1px solid #d0d8df;
+    margin-bottom: 20px;
+}
+
+.kg-image-card figcaption {
+    line-height: 1.4;
+    margin: 0 auto;
+    padding: 8px 0 0;
 }

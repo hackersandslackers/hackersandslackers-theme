@@ -1,0 +1,219 @@
+
+
+.post-card {
+    position: relative;
+    display: block;
+    background-size: cover;
+    word-break: break-word;
+    background: white;
+    box-shadow: $card-shadow;
+}
+
+.post-card-title {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 1;
+    color: $color-header-grey;
+    font-family: $header-font;
+    transition: $transition;
+    @media (max-width: 600px) {
+        font-size: 1.8em;
+        letter-spacing: -.3px;
+    }
+}
+
+.post-card-image-link {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    transition: $transition;
+}
+
+.post-card-image-link:hover {
+    opacity: .8;
+}
+
+.post-card-image-link::after {
+    content: "";
+    display: block;
+    padding-bottom: 55%;
+}
+
+.post-card[class*="post-access-"] .post-card-image-link::after {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+}
+
+.post-card.keep-ratio[class*="post-access-"] .post-card-image-link::after {
+    position: absolute;
+    inset: 0;
+    padding-bottom: 0;
+}
+
+.post-card.keep-ratio:not(.post-card-large):not(.post-card-full) .post-card-image-link::after {
+    padding-bottom: 0;
+}
+
+.post-card-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-lightgrey no-repeat center center;
+    object-fit: cover;
+}
+
+.post-card-title svg {
+    margin-top: -3px;
+    margin-left: -1px;
+}
+
+.post-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.post-card-excerpt {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: #5e6877;
+    display: -webkit-box;
+    font-family: CamphorPro-Medium, HelveticaNeue, sans-serif;
+    font-size: 1.2em;
+    letter-spacing: -.5px;
+    line-height: 1.2;
+    margin: 10px auto 20px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+
+.post-card-meta {
+    -webkit-line-clamp: 1;
+    align-items: center;
+    border-top: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    overflow: hidden;
+    padding: 20px 0 0;
+    text-overflow: ellipsis;
+    color: $color-secondary-text;
+    @media (max-width: 600px) {
+        padding: 15px 0 0;
+    }
+}
+
+.meta-items-left {
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+
+.meta-items-left * {
+    transition: $transition;
+}
+
+.meta-items-left:hover * {
+    color: $color-hover;
+    cursor: pointer;
+}
+
+.meta-items-left:hover .post-card-author-avatar {
+    opacity: .7;
+}
+
+.post-card-author-image {
+    border-radius: 50%;
+    height: 38px;
+    min-width: 38px;
+}
+
+.post-card-author-avatar {
+    margin-right: 10px;
+    font-size: 1.5em;
+    color: $color-header-grey;
+    opacity: .8;
+}
+
+.post-card-author-image i {
+    font-size: 1.5em;
+    margin-right: 10px;
+    color: $color-header-grey;
+}
+
+.post-card-author-name {
+    color: #646f7d;
+    display: block;
+    font-family: $body-font-bold;
+    font-size: 1em;
+    line-height: 1;
+    transition: $transition;
+}
+
+.post-card-author-name:hover {
+    color: $color-hover;
+    cursor: pointer;
+}
+
+.post-card-primary-tag {
+    color: white;
+    padding: 6px 8px 4px;
+    border-radius: 2px;
+    line-height: 1;
+    font-family: $body-font-bold;
+    font-size: .95em;
+    transition: $transition;
+    @media(max-width: 800px) {
+        font-size: 1em;
+    }
+}
+
+.post-card-meta-details {
+    line-height: 1;
+}
+
+.post-card-meta-item {
+    font-size: .8em;
+    font-family: $body-font-medium;
+    line-height: 1;
+}
+
+.post-card-tags {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 10px;
+    color: $color-secondary-text;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    line-height: 1;
+}
+
+.post-card-title:hover {
+    color: $color-hover;
+}
+
+.post-card-primary-tag:hover {
+    cursor: pointer;
+    background: white !important;
+    color: $color-hover;
+    box-shadow: inset 0 0 0 1px $color-hover !important;
+}
+
+.post-excerpt {
+    color: #8c96a4;
+    font-family: $body-font-medium;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    margin: 15px 0;
+    max-width: 720px;
+    order: 1;
+    @media (max-width: 767px) {
+            margin-top: 14px;
+            font-size: 1.7rem;
+    }
+}

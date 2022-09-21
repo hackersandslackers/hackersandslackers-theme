@@ -1,7 +1,7 @@
 @mixin content-link {
-    border-bottom: 1px solid var(--color-theme);
+    border-bottom: 1px solid $color-theme;
     text-decoration: underline;
     word-break: break-word;
-    transition: var(--transition);
+    transition: $transition;
     text-decoration: none;
 }

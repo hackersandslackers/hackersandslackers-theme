@@ -47,7 +47,7 @@ update:
 	npm install npm@latest -g
 	npm install -g npm-check-updates@latest
 	ncu -u
-	npm i
+	yarn i
 
 .PHONY: reset
 reset: clean
