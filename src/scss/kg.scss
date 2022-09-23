@@ -18,20 +18,48 @@ make sure they look good, and are given a bit of extra spacing. */
 
 .kg-card {
     margin: 30px 0;
+
+    > .kg-embed-card {
+        display: block;
+        width: 100%;
+        border: 1px solid #d0d8df;
+        margin-bottom: 20px;
+    }
+
+    figcaption {
+        text-align: center;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 1.1em;
+        padding-top: 5px;
+        font-family: $body-font-medium;
+
+        a {
+            text-decoration: underline;
+        }
+    }
 }
 
 .kg-image-card {
     border-radius: 3px;
     margin: 30px auto;
     transition: $transition;
+    @media(max-width: $mobile-breakpoint) {
+        @include kg-fullwidth-mobile;
+    }
 
     img {
         margin: auto;
         box-shadow: 0 0 3px rgb(0 0 0 / 20%);
         border-radius: 3px;
     }
-}
 
+    figcaption {
+        line-height: 1.4;
+        margin: 0 auto;
+        padding: 8px 0 0;
+    }
+}
 
 .kg-code-card {
     display: flex;
@@ -39,15 +67,28 @@ make sure they look good, and are given a bit of extra spacing. */
     flex-direction: column;
     width: 100%;
     margin: 30px 0;
-    border-radius: 5px 5px 0 0;
+    @media(max-width: $mobile-breakpoint) {
+        @include kg-fullwidth-mobile;
+    }
+
+    pre,
+    pre[class*="language-"] {
+        margin: 0 !important;
+        order: 1;
+        border-radius: 0 0 5px 5px;
+        @media(max-width: $mobile-breakpoint) {
+            border-radius: unset;
+            font-size: .8em !important;
+        }
+    }
 
     figcaption {
         order: 1;
-        width: stretch;
+        width: 100%;
         width: -moz-available;
         margin: 0 auto;
         padding: 14px 15px 10px;
-        border-radius: 4px 4px 0 0;
+        border-radius: 4px 4px 0 0 !important;
         background: #20242c;
         color: #d2d7e1;
         font-family: $body-font-medium;
@@ -67,48 +108,12 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 }
 
-.kg-code-card pre,
-pre[class*="language-"] {
-    margin: 0 !important;
-    order: 1;
-}
 
-.kg-product-card .kg-product-card-description>p,
-.kg-product-card .kg-product-card-description>ol,
-.kg-product-card .kg-product-card-description>ul {
-    font-size: 1.7rem;
-    line-height: 1.6em;
-}
-
-@media(max-width: $mobile-breakpoint) {
-
-    .kg-image-card,
-    .kg-code-card {
-        margin-left: calc(-50vw + 50%) !important;
-        margin-right: calc(-50vw + 50%) !important;
-        border-radius: unset;
-        display: flex;
-        flex-direction: column;
-        margin: 30px 0;
-        position: relative;
-        width: unset;
+.kg-product-card .kg-product-card-description {
+    > p,
+    > ol,
+    > ul {
+        font-size: 1.7rem;
+        line-height: 1.6em;
     }
-
-    .kg-code-card pre {
-        border-radius: unset;
-        font-size: .8em !important;
-    }
-}
-
-.kg-card.kg-embed-card {
-    display: block;
-    width: 100%;
-    border: 1px solid #d0d8df;
-    margin-bottom: 20px;
-}
-
-.kg-image-card figcaption {
-    line-height: 1.4;
-    margin: 0 auto;
-    padding: 8px 0 0;
 }

@@ -8,7 +8,8 @@ const TerserPlugin = require(`terser-webpack-plugin`);
 module.exports = {
   entry: {
     'main':  path.resolve(__dirname, `./src/js/index.js`),
-    'posts': path.resolve(__dirname, `./src/js/posts.js`),
+    'post': path.resolve(__dirname, `./src/js/post.js`),
+    'page': path.resolve(__dirname, `./src/js/page.js`),
   },
   plugins: [
     new DotEnv({ path: './.env' }),

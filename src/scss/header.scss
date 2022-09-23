@@ -10,12 +10,81 @@
     @media(max-width: $mobile-breakpoint) {
         margin-bottom: 20px;
     }
+
+    .nav-wrapper {
+        max-width: 1000px;
+        margin: auto;
+
+        > .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    .nav.right {
+        padding-left: 0;
+        padding-right: 0;
+
+        a {
+            font-family: $body-font-bold;
+            transition: $transition;
+        }
+    }
+
+    .nav.left {
+        a {
+            color: $color-lightgrey;
+            font-family: $body-font-medium;
+            transition: $transition;
+            line-height: 1;
+
+            &:hover {
+                color: $color-hover;
+                cursor: pointer;
+            }
+        }
+
+        li {
+            margin-right: 25px;
+            line-height: 1;
+        }
+    }
+
+    li {
+        display: inline;
+        padding-left: unset;
+        margin-top: unset;
+        margin-right: 15px;
+        white-space: nowrap;
+        font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 1;
+        text-rendering: optimizelegibility;
+        -webkit-font-smoothing: antialiased;
+
+        &:last-child {
+            margin-right: unset;
+        }
+    }
+
+    .search-button {
+        color: $color-lightgrey;
+        transition: $transition;
+
+        &:hover {
+            color: $color-hover;
+            cursor: pointer;
+        }
+    }
 }
 
-@media(max-width: 800px) {
 
-    .post-template .site-header,
-    .tag-template .site-header {
+
+.post-template .site-header,
+.tag-template .site-header {
+    @media(max-width: $tablet-breakpoint) {
         margin-bottom: 0;
     }
 }
@@ -48,18 +117,9 @@
     color: #fff;
 }
 
-body:not(.has-cover) .site-header-content:not(.left-aligned) {
-    padding-bottom: max(4.8vmin, 24px);
-}
-
 .site-header-content.left-aligned {
     padding-bottom: 0;
     text-align: left;
-}
-
-.has-cover .site-header-content.left-aligned {
-    align-items: flex-end;
-    padding-bottom: 6.4vmin;
 }
 
 .site-header-content.no-content {
@@ -100,45 +160,18 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     padding: 20px;
     background-color: #fff;
     border-bottom: 0.5px solid $color-border;
+
+    .nav {
+        display: flex;
+        align-items: center;
+
+        ul {
+            padding-left: unset;
+            padding-right: unset;
+        }
+    }
 }
 
-.site-header .nav-wrapper {
-    max-width: 1000px;
-    margin: auto;
-}
-
-.site-header .nav-wrapper.nav-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.site-header .nav.right {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.site-header .nav.left a {
-    color: $color-lightgrey;
-    font-family: $body-font-medium;
-    transition: $transition;
-    line-height: 1;
-}
-
-.site-header .nav.left a:hover {
-    color: $color-hover;
-    cursor: pointer;
-}
-
-.site-header .nav.right a {
-    font-family: $body-font-bold;
-    transition: $transition;
-}
-
-.site-header .nav.left li {
-    margin-right: 25px;
-    line-height: 1;
-}
 
 .site-header .nav-link {
     color: $color-lightgrey;
@@ -161,74 +194,31 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     transition: $transition;
 }
 
-.nav-btn.outline {
-    color: $color-theme;
-    background-color: white;
-    box-shadow: inset 0 0 0 1px $color-theme;
-    transition: $transition;
-}
+.nav-btn {
 
-.nav-btn.outline:hover {
-    color: white;
-    background-color: $color-theme;
-    cursor: pointer;
-}
+    > .outline {
+        color: $color-theme;
+        background-color: white;
+        box-shadow: inset 0 0 0 1px $color-theme;
+        transition: $transition;
 
-.nav-btn.filled {
-    color: white !important;
-    background-color: $color-theme;
-    box-shadow: inset 0 0 0 1px $color-theme;
-    transition: $transition;
-}
+        &:hover {
+            color: white;
+            background-color: $color-theme;
+            cursor: pointer;
+        }
+    }
 
-.nav-btn.filled:hover {
-    cursor: pointer;
-    background-color: white;
-    color: $color-hover !important;
-    box-shadow: inset 0 0 0 1px $color-hover;
-}
-
-.site-header .search-button {
-    color: $color-lightgrey;
-    transition: $transition;
-}
-
-.site-header .search-button:hover {
-    color: $color-hover;
-    cursor: pointer;
+    > .filled:hover {
+        cursor: pointer;
+        background-color: white;
+        color: $color-hover !important;
+        box-shadow: inset 0 0 0 1px $color-hover;
+    }
 }
 
 .tags-navigation {
     border-bottom: 0.5px solid $color-border;
-}
-
-
-.site-navigation .nav {
-    display: flex;
-    align-items: center;
-}
-
-.site-navigation .nav ul {
-    padding-left: unset;
-    padding-right: unset;
-}
-
-.site-header li {
-    display: inline;
-    padding-left: unset;
-    margin-top: unset;
-    margin-right: 15px;
-    white-space: nowrap;
-    font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    line-height: 1;
-    text-rendering: optimizelegibility;
-    -webkit-font-smoothing: antialiased;
-}
-
-.site-header li:last-child {
-    margin-right: unset;
 }
 
 .site-header ul {
@@ -250,43 +240,44 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
     white-space: nowrap;
     font-size: .8em;
     font-family: $body-font-bold;
+
+    &:hover {
+        cursor: pointer;
+        color: $color-hover;
+    }
 }
 
-.tag-link:hover {
-    cursor: pointer;
-    color: $color-hover;
-}
 
 .logo {
     height: 40px;
     margin-right: 25px;
     transition: $transition;
     width: 40px;
-}
 
-.logo.mobile {
-    display: none;
-}
+    > .mobile {
+        display: none;
 
-.logo.mobile a {
-    display: flex;
-    align-items: center;
-}
+        a {
+            display: flex;
+            align-items: center;
+        }
+    }
 
-.logo.mobile img {
-    margin-right: 10px;
-}
+    img {
+        margin-right: 10px;
+    }
 
-.logo.mobile .icon.title {
-    color: $color-theme;
-    font-size: 1em;
-    margin: unset;
-    white-space: nowrap;
-}
+    .icon.title {
+        color: $color-theme;
+        font-size: 1em;
+        margin: unset;
+        white-space: nowrap;
 
-.logo.mobile .icon.title:hover {
-    color: $color-hover;
-    cursor: pointer;
+        &:hover {
+            color: $color-hover;
+            cursor: pointer;
+        }
+    }
 }
 
 .logo.mobile:hover * {

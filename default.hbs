@@ -36,6 +36,11 @@
     <script src="{{asset 'built/post.js'}}"></script>
     {{/if}}
 
+    {{#if page}}
+    <link rel="stylesheet" type="text/css" href="{{asset 'built/page.js'}}" />
+    {{/if}}
+
+
     {{!-- Theme JS --}}
     <script src="{{asset 'built/main.js'}}"></script>
 

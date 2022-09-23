@@ -1,0 +1,54 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.page-template {
+
+    .post-header {
+        padding-bottom: max(3.2vmin, 28px);
+    }
+
+    .main-content {
+        background: white;
+        box-shadow: $card-shadow;
+    }
+
+    .main-content>p {
+        -webkit-font-smoothing: antialiased;
+        color: #414d5a;
+        font-family: var(--body-font);
+        font-size: 1em;
+        line-height: 1.8em;
+        margin: 0 0 25px;
+    }
+}
+
+.tag-template {
+    .post-card-large .post-card-content {
+        order: 1;
+    }
+
+    .post-feed {
+        display: block;
+
+        .post-card {
+            margin-bottom: 20px;
+        }
+    }
+
+    .tag-image {
+        height: min-content;
+        width: 125px;
+        margin-right: 25px;
+        max-width: 30%;
+    }
+}
+
+
+.page-title {
+    font-family: $header-font-medium;
+    color: $color-header-grey;
+}
+
+
+
+

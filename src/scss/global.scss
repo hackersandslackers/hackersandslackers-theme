@@ -4,7 +4,25 @@
 @import "layout.scss";
 @import "header.scss";
 @import "post-card.scss";
+@import "feed.scss";
+@import "sidebar.scss";
 
+
+.sidebar-container {
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 2.1fr 1fr;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1000px;
+    @media (max-width: 950px) {
+        grid-gap: 20px;
+    }
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+}
 
 .post-title {
     color: $color-header-grey;
@@ -17,4 +35,47 @@
     max-width: 720px;
     order: 2;
     width: -webkit-fill-available;
+}
+
+/* Now the content typography styles */
+.post-content a,
+.content-body a {
+    border-bottom: 1px solid $color-theme;
+    text-decoration: underline;
+    word-break: break-word;
+    transition: $transition;
+    text-decoration: none;
+}
+
+.post-content a,
+.content-body a {
+    border-color: $color-theme;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-hover;
+    }
+}
+
+.page-template iframe,
+.post-template iframe {
+    width: 100%;
+}
+
+.about-template iframe {
+    height: 368px;
+}
+
+.page-template a,
+.post-template a {
+    @include content-link;
+    transition: $transition;
+}
+
+.page-template h2,
+.post-content h2 {
+    font-family: $body-font;
+    font-size: 2em;
+    margin: 40px 0 5px;
+    color: $color-header-grey;
 }

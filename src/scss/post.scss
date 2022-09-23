@@ -12,6 +12,11 @@
         width: 850px;
         margin: 20px auto;
         max-width: 100%;
+
+        @media(max-width: $mobile-breakpoint) {
+            width: 100%;
+            margin: 0;
+        }
     }
 
     .post {
@@ -149,17 +154,19 @@
     margin-right: 20px;
     color: #7e8da3;
     line-height: 1;
+
+    i {
+        margin-right: 5px;
+    }
+
+    * {
+        color: #7e8da3;
+        font-family: $body-font-bold;
+        line-height: 1;
+    }
 }
 
-.post-meta-item i {
-    margin-right: 5px;
-}
 
-.post-meta-item * {
-    color: #7e8da3;
-    font-family: $body-font-bold;
-    line-height: 1;
-}
 
 .page-template .post-header {
     padding-bottom: max(3.2vmin, 28px);
@@ -217,19 +224,35 @@
     font-size: 1em;
 }
 
-.post-content>ol,
-.post-content>ul,
-.post-content ol,
-.post-content ul {
-    padding-left: 1em;
-    padding-right: 1em;
-}
+.post-content {
+     ol,
+     ul {
+        padding-left: 1em;
+        padding-right: 1em;
+        margin-bottom: 10px;
+    }
 
-.post-content>ol li,
-.post-content>ul li,
-.post-content ol li,
-.post-content ul li {
-    margin-bottom: 10px;
+    hr,
+    blockquote {
+        position: relative;
+        margin-top: max(4.8vmin, 32px);
+    }
+
+    hr+*,
+    blockquote+* {
+        margin-top: max(4.8vmin, 32px) !important;
+    }
+
+    pre {
+        overflow: auto;
+        padding: 16px 20px;
+        color: $color-wash;
+        font-size: 1.4rem;
+        line-height: 1.5em;
+        background: $color-darkgrey;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
+    }
 }
 
 .gh-canvas .post-image img {
@@ -265,19 +288,6 @@
     }
 }
 
-
-/* A larger margin before/after HRs and blockquotes */
-.post-content>hr,
-.post-content>blockquote {
-    position: relative;
-    margin-top: max(4.8vmin, 32px);
-}
-
-.post-content>hr+*,
-.post-content>blockquote+* {
-    margin-top: max(4.8vmin, 32px) !important;
-}
-
 /* Now the content typography styles */
 .post-content a,
 .content-body a {
@@ -301,6 +311,41 @@
 
 .post-content .kg-toggle-card .kg-toggle-heading-text {
     font-size: 2.0rem;
+}
+
+
+
+.post-content .kg-product-card .kg-product-card-description>p,
+.post-content .kg-product-card .kg-product-card-description>ol,
+.post-content .kg-product-card .kg-product-card-description>ul {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+}
+
+.post-content .kg-callout-card .kg-callout-emoji {
+    font-size: 2.1rem;
+    line-height: 1.4;
+}
+
+.post-content .kg-toggle-card .kg-toggle-heading-text {
+    font-size: 2.0rem;
+}
+
+
+.post-content>blockquote:not([class]) {
+    position: relative;
+    font-style: italic;
+    padding: 0;
+}
+
+.post-content>blockquote:not([class])::before {
+    content: "";
+    position: absolute;
+    left: -1.5em;
+    top: 0;
+    bottom: 0;
+    width: 0.3rem;
+    background: white;
 }
 
 .post-content :not(pre)>code {

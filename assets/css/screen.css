@@ -99,20 +99,6 @@ production stylesheet in assets/built/screen.css
 
 
 
-@media(max-width: 800px) {
-
-    .post-template .site-header,
-    .tag-template .site-header {
-        margin-bottom: 0;
-    }
-}
-
-@media(max-width: 600px) {
-    .site-header {
-        margin-bottom: 20px;
-    }
-}
-
 .site-header-cover {
     position: absolute;
     top: 0;
@@ -219,57 +205,6 @@ body:not(.has-cover) .site-header-content:not(.left-aligned) {
 .site-title+.site-description {
     color: var(--color-secondary-text);
 }
-
-.has-cover .site-description {
-    font-size: 3.2rem;
-    letter-spacing: -0.005em;
-    color: #fff;
-}
-
-.has-cover :is(.site-logo, .site-title)+.site-description {
-    font-size: 2.4rem;
-}
-
-.has-cover .site-header-content.left-aligned :is(.site-logo, .site-title)+.site-description {
-    font-size: 2.2rem;
-}
-
-.page-title {
-    font-family: var(--header-font-medium);
-    color: var(--color-header-grey);
-}
-
-.page-template h2,
-.post-content h2 {
-    font-family: var(--body-font);
-    font-size: 2em;
-    margin: 40px 0 5px;
-    color: var(--color-header-grey);
-}
-
-.post-template h3 {
-    color: var(--color-header-grey);
-}
-
-.page-template a,
-.post-template a {
-    transition: var(--transition);
-}
-
-.page-template a:hover,
-.post-template a:hover {
-    color: var(--color-hover);
-}
-
-.page-template iframe,
-.post-template iframe {
-    width: 100%;
-}
-
-.about-template iframe {
-    height: 368px;
-}
-
 
 
 @media (max-width: 767px) {
@@ -702,47 +637,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
     background: white;
 }
 
-
-/* 6. Post Feed
-/* ---------------------------------------------------------- */
-
-.post-feed {
-    grid-gap: 30px;
-    display: grid;
-    grid-auto-rows: -webkit-min-content;
-    grid-auto-rows: min-content;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-}
-
-.post-feed .pagination {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-.post-feed .pagination i {
-    font-size: 1.3em;
-    transition: var(--transition);
-    color: var(--color-lightgrey);
-}
-
-.post-feed .pagination i:hover {
-    color: var(--color-hover);
-    cursor: pointer;
-}
-
-.post-feed .pagination .hidden {
-    visibility: hidden;
-}
-
-@media(max-width: 600px) {
-    .post-feed {
-        grid-gap: 20px;
-    }
-}
-
-
 .post-card.keep-ratio:not(.post-card-large):not(.post-card-full) .post-card-image {
     position: static;
 }
@@ -777,8 +671,6 @@ body:not(.gh-head-open) .gh-burger:hover .gh-burger-inner::after {
 .no-image .post-card-header {
     margin-top: 0;
 }
-
-
 
 .post-card-featured {
     position: relative;
@@ -856,11 +748,6 @@ make sure this only happens on large viewports / desktop-ish devices.
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
-.post-template .site-content {
-    width: 850px;
-    margin: 20px auto;
-    max-width: 100%;
-}
 
 @media(max-width: 600px) {
     .post-header-details {
@@ -909,23 +796,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     line-height: 1;
 }
 
-.page-template .post-header {
-    padding-bottom: max(3.2vmin, 28px);
-}
-
-.page-template .main-content {
-    background: white;
-    box-shadow: var(--card-shadow);
-}
-
-.page-template .main-content>p {
-    -webkit-font-smoothing: antialiased;
-    color: #414d5a;
-    font-family: var(--body-font);
-    font-size: 1em;
-    line-height: 1.8em;
-    margin: 0 0 25px;
-}
 
 .post-tag {
     margin-bottom: 16px;
@@ -951,21 +821,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-family: var(--body-font);
     line-height: 1.7em;
     font-size: 1em;
-}
-
-.post-content>ol,
-.post-content>ul,
-.post-content ol,
-.post-content ul {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.post-content>ol li,
-.post-content>ul li,
-.post-content ol li,
-.post-content ul li {
-    margin-bottom: 10px;
 }
 
 .gh-canvas .post-image {
@@ -1054,94 +909,6 @@ created within the Ghost editor. The main content handles
 headings, text, images and lists. We deal with cards lower down. */
 
 
-.has-serif-title .post-content>[id] {
-    font-family: var(--font-serif);
-}
-
-
-/* A larger margin before/after HRs and blockquotes */
-.post-content>hr,
-.post-content>blockquote {
-    position: relative;
-    margin-top: max(4.8vmin, 32px);
-}
-
-.post-content>hr+*,
-.post-content>blockquote+* {
-    margin-top: max(4.8vmin, 32px) !important;
-}
-
-/* Now the content typography styles */
-.post-content a,
-.content-body a {
-    border-bottom: 1px solid var(--color-theme);
-    text-decoration: underline;
-    word-break: break-word;
-    transition: var(--transition);
-    text-decoration: none;
-}
-
-.post-content a:hover,
-.content-body a:hover {
-    color: var(--color-theme);
-    cursor: pointer;
-}
-
-.post-content .kg-product-card .kg-product-card-description>p,
-.post-content .kg-product-card .kg-product-card-description>ol,
-.post-content .kg-product-card .kg-product-card-description>ul {
-    font-size: 1.7rem;
-    line-height: 1.6em;
-}
-
-.post-content .kg-callout-card .kg-callout-emoji {
-    font-size: 2.1rem;
-    line-height: 1.4epost
-}
-
-.post-content .kg-toggle-card .kg-toggle-heading-text {
-    font-size: 2.0rem;
-}
-
-
-.post-content>blockquote:not([class]) {
-    position: relative;
-    font-style: italic;
-    padding: 0;
-}
-
-.post-content>blockquote:not([class])::before {
-    content: "";
-    position: absolute;
-    left: -1.5em;
-    top: 0;
-    bottom: 0;
-    width: 0.3rem;
-    background: white;
-}
-
-.post-content :not(pre)>code {
-    vertical-align: middle;
-    padding: 0.15em 0.4em 0.15em;
-    border: #e1eaef 1px solid;
-    font-weight: 400 !important;
-    font-size: 0.9em;
-    line-height: 1em;
-    color: #15171A;
-    background: #f0f6f9;
-    border-radius: 0.25em;
-}
-
-.post-content pre {
-    overflow: auto;
-    padding: 16px 20px;
-    color: var(--color-wash);
-    font-size: 1.4rem;
-    line-height: 1.5em;
-    background: var(--color-darkgrey);
-    border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
-}
 
 
 /* Cards
@@ -1153,61 +920,6 @@ specially styled bookmark links. We add extra styling here to
 make sure they look good, and are given a bit of extra spacing. */
 
 /* This keeps small embeds centered */
-.kg-embed-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.kg-card {
-    margin: 30px 0;
-}
-
-.kg-image-card {
-    border-radius: 3px;
-    margin: 30px auto;
-    transition: var(--transition);
-}
-
-/* This keeps small image centered */
-.kg-image-card img {
-    margin: auto;
-    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
-    border-radius: 3px;
-}
-
-.kg-code-card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    margin: 30px 0;
-    border-radius: 5px 5px 0 0;
-}
-
-.kg-code-card pre,
-pre[class*="language-"] {
-    margin: 0 !important;
-    order: 1;
-}
-
-.kg-code-card figcaption {
-    order: 1;
-    width: stretch;
-    width: -moz-available;
-    margin: 0 auto;
-    padding: 14px 15px 10px;
-    border-radius: 4px 4px 0 0;
-    background: #20242c;
-    color: #d2d7e1;
-    font-family: var(--body-font-medium);
-    font-size: 0.95em;
-    line-height: 1;
-    text-align: left;
-    white-space: normal;
-    order: 0;
-}
 
 @media(max-width: 600px) {
 
@@ -1261,24 +973,6 @@ pre[class*="language-"] {
 }
 
 
-/* Captions */
-figcaption {
-    text-align: center;
-    color: rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
-    line-height: 1.1em;
-    padding-top: 5px;
-    font-family: var(--body-font-medium);
-}
-
-figcaption strong {
-    color: rgba(0, 0, 0, 0.8);
-}
-
-figcaption a {
-    text-decoration: underline;
-}
-
 
 /* Highly specific styles for traditional Instagram embeds */
 iframe.instagram-media {
@@ -1318,35 +1012,10 @@ iframe.instagram-media+script+ :not([id]) {
     width: 850px;
     margin: 20px auto;
     max-width: 100%;
-}
 
-@media(max-width: 600px) {
-    .post-comments {
+    @media(max-width: $mobile-breakpoint) {
         padding: 0 30px;
     }
-
-
-}
-
-/* -----old------ */
-
-.footnotes-sep {
-    margin-bottom: 30px;
-}
-
-.footnotes {
-    font-size: 1.5rem;
-}
-
-.footnotes p {
-    margin: 0;
-}
-
-.footnote-backref {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-decoration: none !important;
-    box-shadow: none !important;
 }
 
 /* 7.1. Post Byline
@@ -1772,29 +1441,14 @@ iframe.instagram-media+script+ :not([id]) {
     }
 }
 
-.tag-image {
-    height: min-content;
-    width: 125px;
-    margin-right: 25px;
-    max-width: 30%;
-}
+
 
 .tag-template .post-card-large .post-card-image-link {
     grid-column: 2 / span 2;
     order: 2;
 }
 
-.tag-template .post-card-large .post-card-content {
-    order: 1;
-}
 
-.tag-template .post-feed {
-    display: block;
-}
-
-.tag-template .post-feed .post-card {
-    margin-bottom: 20px;
-}
 
 
 /* 9. Error Template
@@ -1962,262 +1616,7 @@ iframe.instagram-media+script+ :not([id]) {
     }
 }
 
-/* 12. Sidebar
-/* ---------------------------------------------------------- */
 
-.sidebar-container {
-    grid-gap: 30px;
-    display: grid;
-    grid-template-columns: 2.1fr 1fr;
-    margin: 0 auto;
-    max-width: 100%;
-    width: 1000px;
-}
-
-@media (max-width: 950px) {
-    .sidebar-container {
-        grid-gap: 20px;
-    }
-}
-
-@media (max-width: 800px) {
-
-    .sidebar {
-        display: none;
-    }
-
-
-    .sidebar-container {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
-}
-
-.sidebar .widget {
-    background-color: white;
-    padding: 20px;
-    box-shadow: var(--card-shadow);
-    margin-bottom: 20px;
-}
-
-.sidebar .widget input[type="email"],
-.sidebar .widgetinput[type="text"] {
-    width: 100%;
-}
-
-.sidebar-input-field {
-    color: #4e5869;
-    font-family: var(--body-font);
-    font-size: .9em;
-    margin: 0 0 10px;
-    padding: 12px 10px 10px !important;
-    transition: var(--transition);
-    width: 100%;
-}
-
-.sidebar-btn {
-    color: #6c8095;
-    text-align: right;
-    width: 100%;
-    background: none;
-    font-family: var(--body-font-bold);
-    transition: var(--transition);
-}
-
-.sidebar-btn:hover {
-    cursor: pointer;
-    color: var(--color-hover);
-}
-
-.widget-title {
-    color: var(--color-lightgrey);
-    font-family: var(--body-font-medium);
-    font-size: 1.1em;
-    letter-spacing: .6px;
-    line-height: 1;
-    margin: 0 0 10px;
-    padding: 0;
-    text-align: left;
-}
-
-/* 12.1. Sidebar About Widget
-/* ---------------------------------------------------------- */
-
-.widget.about .widget-logo {
-    display: block;
-    margin: 0 auto 15px;
-    transition: var(--transition);
-    width: 230px;
-}
-
-.widget.about .widget-logo:hover {
-    opacity: .7;
-    cursor: pointer;
-}
-
-.widget.about .description {
-    font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
-    font-size: .9em;
-    line-height: 1.4;
-    margin: 15px 0 0;
-    text-align: center;
-}
-
-/* 12.2. Sidebar Tag Widget
-/* ---------------------------------------------------------- */
-
-.widget .tag-cloud {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.widget .tag-cloud .tag-cloud-link {
-    border: 1px solid #d7dee7;
-    color: #78849c;
-    display: inline-block;
-    flex-grow: 1;
-    font-family: CamphorPro-Medium, HelveticaNeue, sans-serif;
-    font-size: .8em !important;
-    line-height: 1.5em;
-    margin: 0 2px 4px;
-    padding: 4px 10px;
-    text-align: center;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
-}
-
-.widget .tag-cloud .tag-cloud-link:hover {
-    background: var(--color-hover);
-    border: 1px solid var(--color-hover);
-    color: white;
-    cursor: pointer;
-}
-
-/* 12.3. Sidebar Social Widget
-/* ---------------------------------------------------------- */
-
-.widget.social {
-    display: flex;
-    justify-content: space-between;
-    overflow: visible;
-    height: 70px;
-    align-items: center;
-}
-
-.widget.social .social-media-button {
-    color: var(--color-social-btn);
-    fill: var(--color-social-btn);
-    width: 1.5em;
-    background: unset;
-    padding: 0;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.widget.social .social-media-button:hover {
-    cursor: pointer;
-    width: 2em;
-    height: 70px;
-}
-
-.widget.social .social-media-button i {
-    font-size: 1.6em;
-    color: var(--color-social-btn);
-    transition: var(--transition);
-    line-height: 1;
-}
-
-.widget.social .social-media-button i:hover {
-    font-size: 1.9em;
-    color: var(--color-hover);
-}
-
-.widget.social a {
-    line-height: 1;
-}
-
-@media(max-width: 900px) {
-    .widget.social {
-        height: 60px;
-    }
-
-    .widget.social .social-media-button i {
-        font-size: 1.4em;
-    }
-
-    .widget.social .social-media-button i:hover {
-        font-size: 1.7em;
-        color: var(--color-hover);
-    }
-}
-
-/* 12.4. Sidebar Newsletter Widget
-/* ---------------------------------------------------------- */
-
-.widget.newsletter p {
-    line-height: 1.3;
-    font-size: 1em;
-    margin-bottom: 15px;
-    font-family: var(--body-font);
-}
-
-.widget .alert {
-    display: none;
-}
-
-/* 12.5 Sidebar Series Widget
-/* ---------------------------------------------------------- */
-
-.widget.series .series-widget-list .series-list-link {
-    font-family: var(--body-font-medium);
-    padding: 10px;
-    border-bottom: 1px solid #dee1e7;
-    font-size: .9em;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.widget.series .series-widget-list .series-list-link * {
-    transition: var(--transition);
-}
-
-.widget.series .series-widget-list .series-list-link:hover {
-    background-color: var(--color-hover);
-    border-bottom: 1px solid var(--color-hover);
-    cursor: pointer;
-}
-
-.widget.series .series-widget-list .series-list-link:hover * {
-    color: white;
-    cursor: pointer;
-}
-
-.widget.series .series-widget-list .series-list-link:last-of-type {
-    border-bottom: unset;
-    padding: 10px 10px 0;
-}
-
-.widget.series .series-widget-list .series-list-link a {
-    color: var(--color-lightgrey);
-}
-
-.widget.series .series-widget-list .series-list-link a,
-.widget.series .series-widget-list .series-list-link span,
-.widget.series .series-list-count {
-    display: block;
-    font-weight: bold;
-}
-
-.widget.series .series-list-count {
-    font-family: var(--body-font);
-}
 
 
 /* 13. Footer
