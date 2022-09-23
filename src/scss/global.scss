@@ -6,6 +6,7 @@
 @import "post-card.scss";
 @import "feed.scss";
 @import "sidebar.scss";
+@import "footer.scss";
 
 
 .sidebar-container {
@@ -18,7 +19,7 @@
     @media (max-width: 950px) {
         grid-gap: 20px;
     }
-    @media (max-width: 800px) {
+    @media (max-width: $tablet-breakpoint) {
         grid-template-columns: 1fr;
         max-width: 100%;
     }

@@ -1,3 +1,6 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
 /* 4. Site Header
 /* ---------------------------------------------------------- */
 
@@ -14,8 +17,11 @@
     .nav-wrapper {
         max-width: 1000px;
         margin: auto;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
 
-        > .nav-links {
+        &.nav-links {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -48,6 +54,12 @@
         li {
             margin-right: 25px;
             line-height: 1;
+        }
+
+        ul {
+            @media(max-width: $mobile-breakpoint) {
+                display: none;
+            }
         }
     }
 
@@ -160,6 +172,9 @@
     padding: 20px;
     background-color: #fff;
     border-bottom: 0.5px solid $color-border;
+    @media(max-width: $mobile-breakpoint) {
+        padding: 20px 15px;
+    }
 
     .nav {
         display: flex;
@@ -196,7 +211,7 @@
 
 .nav-btn {
 
-    > .outline {
+    &.outline {
         color: $color-theme;
         background-color: white;
         box-shadow: inset 0 0 0 1px $color-theme;
@@ -209,11 +224,18 @@
         }
     }
 
-    > .filled:hover {
-        cursor: pointer;
-        background-color: white;
-        color: $color-hover !important;
-        box-shadow: inset 0 0 0 1px $color-hover;
+    &.filled {
+        background-color: $color-theme;
+        box-shadow: inset 0 0 0 1px $color-theme;
+        color: #fff !important;
+        transition: $transition;
+
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $color-hover !important;
+            box-shadow: inset 0 0 0 1px $color-hover;
+        }
     }
 }
 
@@ -253,14 +275,8 @@
     margin-right: 25px;
     transition: $transition;
     width: 40px;
-
-    > .mobile {
-        display: none;
-
-        a {
-            display: flex;
-            align-items: center;
-        }
+    @media(max-width: $mobile-breakpoint) {
+        margin-right: 20px;
     }
 
     img {
@@ -280,14 +296,21 @@
     }
 }
 
-.logo.mobile:hover * {
-    color: $color-hover;
-    cursor: pointer;
-    transition: $transition;
-}
+.logo.mobile {
+    display: none;
+    @media (max-width: $mobile-breakpoint) {
+        display: block;
+    }
 
-.logo.mobile:hover img {
-    opacity: 0.7;
+    &:hover * {
+        color: $color-hover;
+        cursor: pointer;
+        transition: $transition;
+    }
+
+    &:hover img {
+        opacity: 0.7;
+    }
 }
 
 .site-title {
@@ -296,4 +319,34 @@
     padding: 0;
     font-size: 5rem;
     font-weight: 800;
+}
+
+
+@media (max-width: 600px) {
+
+    .site-navigation .nav.left ul {
+        display: none;
+    }
+
+    .tags-navigation {
+        display: none;
+    }
+
+    .site-navigation .nav-item.login {
+        display: none;
+    }
+}
+
+@media (max-width: 1020px) {
+    .tags-list {
+        padding: 20px;
+    }
+}
+
+
+
+.logo.desktop {
+    @media (max-width: 600px) {
+        display: none;
+    }
 }

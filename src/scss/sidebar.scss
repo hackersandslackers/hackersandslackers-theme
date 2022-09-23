@@ -1,8 +1,8 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
 /* 12. Sidebar
 /* ---------------------------------------------------------- */
-
-
-
 .sidebar {
     @media (max-width: $tablet-breakpoint) {
         display: none;
@@ -23,11 +23,11 @@
 
 .sidebar-input-field {
     color: #4e5869;
-    font-family: var(--body-font);
+    font-family: $body-font;
     font-size: .9em;
     margin: 0 0 10px;
     padding: 12px 10px 10px !important;
-    transition: var(--transition);
+    transition: $transition;
     width: 100%;
 }
 
@@ -41,14 +41,14 @@
 
     &:hover {
         cursor: pointer;
-        color: var(--color-hover);
+        color: $color-hover;
     }
 }
 
 
 .widget-title {
-    color: var(--color-lightgrey);
-    font-family: var(--body-font-medium);
+    color: $color-lightgrey;
+    font-family: $body-font-medium;
     font-size: 1.1em;
     letter-spacing: .6px;
     line-height: 1;
@@ -63,7 +63,7 @@
 .widget.about .widget-logo {
     display: block;
     margin: 0 auto 15px;
-    transition: var(--transition);
+    transition: $transition;
     width: 230px;
 
     &:hover {
@@ -109,8 +109,8 @@
 }
 
 .widget .tag-cloud .tag-cloud-link:hover {
-    background: var(--color-hover);
-    border: 1px solid var(--color-hover);
+    background: $color-hover;
+    border: 1px solid $color-hover;
     color: white;
     cursor: pointer;
 }
@@ -125,56 +125,49 @@
     height: 70px;
     align-items: center;
     @media(max-width: 900px) {
-
-    }
-}
-
-.widget.social .social-media-button {
-    color: var(--color-social-btn);
-    fill: var(--color-social-btn);
-    width: 1.5em;
-    background: unset;
-    padding: 0;
-    align-items: center;
-    transition: var(--transition);
-}
-
-.widget.social .social-media-button:hover {
-    cursor: pointer;
-    width: 2em;
-    height: 70px;
-}
-
-.widget.social .social-media-button i {
-    font-size: 1.6em;
-    color: var(--color-social-btn);
-    transition: var(--transition);
-    line-height: 1;
-}
-
-.widget.social .social-media-button i:hover {
-    font-size: 1.9em;
-    color: var(--color-hover);
-}
-
-.widget.social a {
-    line-height: 1;
-}
-
-@media(max-width: 900px) {
-    .widget.social {
         height: 60px;
     }
 
-    .widget.social .social-media-button i {
-        font-size: 1.4em;
-    }
+    .social-media-button {
+        color: $color-social-btn;
+        fill: $color-social-btn;
+        width: 1.5em;
+        background: unset;
+        padding: 0;
+        align-items: center;
+        transition: $transition;
 
-    .widget.social .social-media-button i:hover {
-        font-size: 1.7em;
-        color: var(--color-hover);
+        &:hover {
+            cursor: pointer;
+            width: 2em;
+            height: 70px;
+        }
+
+        a {
+            line-height: 1;
+        }
+
+        i {
+            font-size: 1.6em;
+            color: $color-social-btn;
+            transition: $transition;
+            line-height: 1;
+            @media(max-width: 900px) {
+                font-size: 1.4em;
+            }
+
+            &:hover {
+                font-size: 1.9em;
+                color: $color-hover;
+                @media(max-width: 900px) {
+                    font-size: 1.7em;
+                    color: $color-hover;
+                }
+            }
+        }
     }
 }
+
 
 /* 12.4. Sidebar Newsletter Widget
 /* ---------------------------------------------------------- */
@@ -183,7 +176,7 @@
     line-height: 1.3;
     font-size: 1em;
     margin-bottom: 15px;
-    font-family: var(--body-font);
+    font-family: $body-font;
 }
 
 .widget .alert {
@@ -194,7 +187,7 @@
 /* ---------------------------------------------------------- */
 
 .widget.series .series-widget-list .series-list-link {
-    font-family: var(--body-font-medium);
+    font-family: $body-font-medium;
     padding: 10px;
     border-bottom: 1px solid #dee1e7;
     font-size: .9em;
@@ -202,16 +195,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: var(--transition);
+    transition: $transition;
 }
 
 .widget.series .series-widget-list .series-list-link * {
-    transition: var(--transition);
+    transition: $transition;
 }
 
 .widget.series .series-widget-list .series-list-link:hover {
-    background-color: var(--color-hover);
-    border-bottom: 1px solid var(--color-hover);
+    background-color: $color-hover;
+    border-bottom: 1px solid $color-hover;
     cursor: pointer;
 }
 
@@ -226,7 +219,7 @@
 }
 
 .widget.series .series-widget-list .series-list-link a {
-    color: var(--color-lightgrey);
+    color: $color-lightgrey;
 }
 
 .widget.series .series-widget-list .series-list-link a,
@@ -237,5 +230,5 @@
 }
 
 .widget.series .series-list-count {
-    font-family: var(--body-font);
+    font-family: $body-font;
 }

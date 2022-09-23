@@ -15,7 +15,7 @@
     .main-content>p {
         -webkit-font-smoothing: antialiased;
         color: #414d5a;
-        font-family: var(--body-font);
+        font-family: $body-font;
         font-size: 1em;
         line-height: 1.8em;
         margin: 0 0 25px;
