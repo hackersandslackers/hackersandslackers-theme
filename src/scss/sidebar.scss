@@ -7,19 +7,116 @@
     @media (max-width: $tablet-breakpoint) {
         display: none;
     }
-}
 
-.sidebar .widget {
-    background-color: white;
-    padding: 20px;
-    box-shadow: $card-shadow;
-    margin-bottom: 20px;
+    .widget {
+        background-color: white;
+        padding: 20px;
+        box-shadow: $card-shadow;
+        margin-bottom: 20px;
+    
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+        }
 
-    input[type="email"],
-    input[type="text"] {
-        width: 100%;
+        .alert {
+            display: none;
+        }
+    }
+
+    &.newsletter p {
+        line-height: 1.3;
+        font-size: 1em;
+        margin-bottom: 15px;
+        font-family: $body-font;
+    }
+
+    &.tag-cloud {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .tag-cloud-link {
+            border: 1px solid #d7dee7;
+            color: #78849c;
+            display: inline-block;
+            flex-grow: 1;
+            font-family: CamphorPro-Medium, HelveticaNeue, sans-serif;
+            font-size: .8em !important;
+            line-height: 1.5em;
+            margin: 0 2px 4px;
+            padding: 4px 10px;
+            text-align: center;
+            -webkit-transition: all .2s ease;
+            -moz-transition: all .2s ease;
+            -o-transition: all .2s ease;
+            transition: all .2s ease;
+
+            &:hover {
+                background: $color-hover;
+                border: 1px solid $color-hover;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.series {
+        .series-list-count {
+            font-family: $body-font;
+        }
+
+        .series-widget-list {
+            .series-list-link {
+                font-family: $body-font-medium;
+                padding: 10px;
+                border-bottom: 1px solid #dee1e7;
+                font-size: .9em;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: $transition;
+
+                &:last-of-type {
+                    border-bottom: unset;
+                    padding: 10px 10px 0;
+                }
+
+                &:hover {
+                    background-color: $color-hover;
+                    border-bottom: 1px solid $color-hover;
+                    cursor: pointer;
+
+                    * {
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                * {
+                    transition: $transition;
+                }
+
+                a {
+                    color: $color-lightgrey;
+                }
+
+                a,
+                span,
+                .series-list-count {
+                    display: block;
+                    font-weight: bold;
+                }                
+            }
+        }
     }
 }
+
+/* 12.1. Global Widget Styles
+/* ---------------------------------------------------------- */
+
 
 .sidebar-input-field {
     color: #4e5869;
@@ -57,7 +154,7 @@
     text-align: left;
 }
 
-/* 12.1. Sidebar About Widget
+/* 12.2. Sidebar About Widget
 /* ---------------------------------------------------------- */
 
 .widget.about .widget-logo {
@@ -72,47 +169,12 @@
     }
 }
 
-
 .widget.about .description {
     font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
     font-size: .9em;
     line-height: 1.4;
     margin: 15px 0 0;
     text-align: center;
-}
-
-/* 12.2. Sidebar Tag Widget
-/* ---------------------------------------------------------- */
-
-.widget .tag-cloud {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.widget .tag-cloud .tag-cloud-link {
-    border: 1px solid #d7dee7;
-    color: #78849c;
-    display: inline-block;
-    flex-grow: 1;
-    font-family: CamphorPro-Medium, HelveticaNeue, sans-serif;
-    font-size: .8em !important;
-    line-height: 1.5em;
-    margin: 0 2px 4px;
-    padding: 4px 10px;
-    text-align: center;
-    -webkit-transition: all .2s ease;
-    -moz-transition: all .2s ease;
-    -o-transition: all .2s ease;
-    transition: all .2s ease;
-}
-
-.widget .tag-cloud .tag-cloud-link:hover {
-    background: $color-hover;
-    border: 1px solid $color-hover;
-    color: white;
-    cursor: pointer;
 }
 
 /* 12.3. Sidebar Social Widget
@@ -166,69 +228,4 @@
             }
         }
     }
-}
-
-
-/* 12.4. Sidebar Newsletter Widget
-/* ---------------------------------------------------------- */
-
-.widget.newsletter p {
-    line-height: 1.3;
-    font-size: 1em;
-    margin-bottom: 15px;
-    font-family: $body-font;
-}
-
-.widget .alert {
-    display: none;
-}
-
-/* 12.5 Sidebar Series Widget
-/* ---------------------------------------------------------- */
-
-.widget.series .series-widget-list .series-list-link {
-    font-family: $body-font-medium;
-    padding: 10px;
-    border-bottom: 1px solid #dee1e7;
-    font-size: .9em;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: $transition;
-}
-
-.widget.series .series-widget-list .series-list-link * {
-    transition: $transition;
-}
-
-.widget.series .series-widget-list .series-list-link:hover {
-    background-color: $color-hover;
-    border-bottom: 1px solid $color-hover;
-    cursor: pointer;
-}
-
-.widget.series .series-widget-list .series-list-link:hover * {
-    color: white;
-    cursor: pointer;
-}
-
-.widget.series .series-widget-list .series-list-link:last-of-type {
-    border-bottom: unset;
-    padding: 10px 10px 0;
-}
-
-.widget.series .series-widget-list .series-list-link a {
-    color: $color-lightgrey;
-}
-
-.widget.series .series-widget-list .series-list-link a,
-.widget.series .series-widget-list .series-list-link span,
-.widget.series .series-list-count {
-    display: block;
-    font-weight: bold;
-}
-
-.widget.series .series-list-count {
-    font-family: $body-font;
 }
