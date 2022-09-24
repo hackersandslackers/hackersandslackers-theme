@@ -49,45 +49,39 @@ body {
     width: -webkit-fill-available;
 }
 
-/* Now the content typography styles */
-.post-content a,
-.content-body a {
-    border-bottom: 1px solid $color-theme;
-    text-decoration: underline;
-    word-break: break-word;
-    transition: $transition;
-    text-decoration: none;
-}
-
-.post-content a,
-.content-body a {
-    border-color: $color-theme;
-    cursor: pointer;
-
-    &:hover {
-        color: $color-hover;
+.page-template,
+.post-content,
+.content-body {
+    a {
+        border-bottom: 1px solid $color-theme;
+        text-decoration: underline;
+        word-break: break-word;
+        transition: $transition;
+        text-decoration: none;
+    
+        &:hover {
+            color: $color-hover;
+            cursor: pointer;
+        }
     }
-}
 
-.page-template iframe,
-.post-template iframe {
-    width: 100%;
+    iframe {
+        width: 100%;
+    }
+
+    a {
+        @include content-link;
+        transition: $transition;
+    }
+
+    h2 {
+        font-family: $body-font;
+        font-size: 2em;
+        margin: 40px 0 5px;
+        color: $color-header-grey;
+    }
 }
 
 .about-template iframe {
     height: 368px;
-}
-
-.page-template a,
-.post-template a {
-    @include content-link;
-    transition: $transition;
-}
-
-.page-template h2,
-.post-content h2 {
-    font-family: $body-font;
-    font-size: 2em;
-    margin: 40px 0 5px;
-    color: $color-header-grey;
 }

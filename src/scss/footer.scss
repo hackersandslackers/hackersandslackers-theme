@@ -139,7 +139,7 @@
         @media (max-width: $tablet-breakpoint) {
             width: 100%;
             margin-bottom: 40px;
-            max-width: unset;
+            max-width: unset !important;
 
             &:last-of-type {
                 margin-bottom: 0;

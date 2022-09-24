@@ -90,6 +90,15 @@
             cursor: pointer;
         }
     }
+
+    .mobile-logo {
+        display: flex;
+        align-items: center;
+
+        .icon.title {
+            font-family: $header-font;
+        }
+    }
 }
 
 
