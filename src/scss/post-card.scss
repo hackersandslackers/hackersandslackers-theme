@@ -86,13 +86,16 @@
     -webkit-box-orient: vertical;
     color: #5e6877;
     display: -webkit-box;
-    font-family: CamphorPro-Medium, HelveticaNeue, sans-serif;
+    font-family: $body-font;
     font-size: 1.2em;
     letter-spacing: -.5px;
     line-height: 1.2;
     margin: 10px auto 20px;
     overflow-y: hidden;
     text-overflow: ellipsis;
+    @media(max-width: $mobile-breakpoint) {
+        font-size: 1em;
+    }
 }
 
 .post-card-meta {
@@ -172,8 +175,11 @@
     font-family: $body-font-bold;
     font-size: .95em;
     transition: $transition;
-    @media(max-width: 800px) {
+    @media(max-width: $tablet-breakpoint) {
         font-size: 1em;
+    }
+    @media(max-width: $mobile-breakpoint) {
+        font-size: .9em;
     }
 
     &:hover {
