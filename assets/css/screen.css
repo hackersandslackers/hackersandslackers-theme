@@ -784,11 +784,6 @@ make sure this only happens on large viewports / desktop-ish devices.
     font-size: 1em;
 }
 
-.gh-canvas .post-image {
-    grid-column: wide-start / wide-end;
-    width: 100%;
-}
-
 .image-full .post-image {
     grid-column: full-start / full-end;
 }
@@ -1104,20 +1099,7 @@ iframe.instagram-media+script+ :not([id]) {
     margin-top: max(12vmin, 72px);
 }
 
-.related-posts {
-    grid-gap: 2vmin;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
 
-.related-posts .post-card .post-card-title {
-    font-size: 1.3em;
-    line-height: 1.2;
-}
-
-.related-posts .post-card .post-card-excerpt {
-    font-size: 1em;
-}
 
 .read-more .post-card-tags {
     display: none;

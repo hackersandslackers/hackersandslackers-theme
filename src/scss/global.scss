@@ -1,6 +1,5 @@
 @import "_variables.scss";
 @import "_mixins.scss";
-@import "nord.scss";
 @import "layout.scss";
 @import "header.scss";
 @import "post-card.scss";
@@ -11,7 +10,7 @@
 body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    background: $color-background-grey;
+    background: #f4f8fb !important;
     font-family: $body-font;
     font-size: 1.6rem;
     font-style: normal;

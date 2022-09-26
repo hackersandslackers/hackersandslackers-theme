@@ -8,7 +8,7 @@
     border-radius: 3px;
     border-spacing: 0;
     @media (max-width: $mobile-breakpoint) {
-      @include kg-fullwidth-mobile;
+      @include mobile-full-width;
       @include mobile-horizontal-scroll;
       width: 120%;
       min-width: 120%;

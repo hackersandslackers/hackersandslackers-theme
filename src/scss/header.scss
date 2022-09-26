@@ -54,6 +54,9 @@
         li {
             margin-right: 25px;
             line-height: 1;
+            @media(max-width: $tablet-breakpoint) {
+                margin-right: 20px;
+            }
         }
 
         ul {

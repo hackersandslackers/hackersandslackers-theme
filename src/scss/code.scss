@@ -1,0 +1,240 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+
+.content-body > pre,
+.kg-code-card > pre,
+.kg-code-card > code[class*="language-"] {
+  -moz-tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  padding: 15px 20px 20px;
+  overflow-x: scroll;
+  background: $nord0;
+  color: $nord6;
+  font-family: $monospace-font !important;
+  font-size: 0.85em !important;
+  hyphens: none;
+  line-height: 1.5;
+  direction: ltr;
+  text-align: left;
+  text-shadow: none;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  tab-size: 4;
+  @media (max-width: $mobile-breakpoint) {
+    @include mobile-horizontal-scroll();
+    @include mobile-full-width();
+    padding: 15px 15px 20px;
+    border-radius: 0 !important;
+    font-size: 0.8em !important;
+    white-space: pre-wrap;
+  }
+
+  &::selection,
+  &::mozselection {
+    background: none;
+    text-shadow: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  code {
+    white-space: pre-wrap !important;
+    @media (max-width: $mobile-breakpoint) {
+      border-radius: 0;
+      white-space: pre !important;
+      @include mobile-horizontal-scroll;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: lighten($nord3, 30%);
+    }
+
+    .token.punctuation {
+      color: $nord9;
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+      color: $nord15;
+      font-weight: bold;
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.inserted {
+      color: lighten($nord14, 10%);
+    }
+
+    .token.builtin {
+      color: $nord13;
+    }
+
+    .token.triple-quoted-string {
+      color: lighten($nord3, 30%);
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string {
+      background: none;
+      color: $nord9;
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+      color: $nord9;
+      font-weight: bold;
+    }
+
+    .token.function {
+      color: $nord7;
+      font-weight: bold;
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+      color: $nord13;
+    }
+
+    .token.important,
+    .token.bold {
+      font-weight: bold;
+    }
+
+    .token.italic {
+      font-style: italic;
+    }
+
+    .token.entity {
+      cursor: help;
+    }
+
+    .token.decorator {
+      font-weight: bold;
+    }
+  }
+
+  // jinja2
+  &.language-jinja2,
+  &.language-html {
+    .token.variable {
+      color: $nord6;
+    }
+
+    .token.attr-name {
+      color: $nord13;
+    }
+
+    .token.attr-value {
+      color: lighten($nord14, 10%);
+      font-weight: normal;
+    }
+
+    .token.doctype .name {
+      color: $nord5;
+    }
+  }
+
+  // JSON
+  &.language-json {
+    .token.property {
+      color: $nord14;
+    }
+  }
+}
+
+@media print {
+  pre[class*="language-"],
+  code[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+.content-body > pre[class*="language-"] {
+  margin: 0;
+  padding: 20px;
+  overflow: auto;
+  background: $nord0;
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  background: $nord0;
+  color: $nord4;
+}
+
+/*********************************************************
+* Tokens
+*/
+.namespace {
+  opacity: 0.7;
+}
+
+/*********************************************************
+* Line highlighting
+*/
+pre[data-line] {
+  position: relative;
+}
+
+pre[class*="language-"] > code[class*="language-"] {
+  z-index: 1;
+  position: relative;
+}
+
+pre[class*="language-shell"] > code[class*="language-shell"] {
+  white-space: pre !important;
+}
+
+code[class*="language-ini"] {
+  .token.selector {
+    color: #8fbcbb !important;
+    font-weight: 700 !important;
+  }
+
+  .token.attr-value {
+    color: #d7e6f4 !important;
+    font-weight: unset !important;
+  }
+}
+
+.line-highlight {
+  z-index: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: 1em;
+  padding: inherit 0;
+  background: $nord1;
+  box-shadow: inset 5px 0 0 $nord4;
+  line-height: inherit;
+  white-space: pre;
+  pointer-events: none;
+}
+
+.site-content > pre {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+  border-radius: 4px;
+  background: $nord0;
+}

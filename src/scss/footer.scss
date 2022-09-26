@@ -70,26 +70,6 @@
             margin-left: 10px;
         }
     }
-
-    .copyright {
-        margin-bottom: 16px;
-        font-size: .9em;
-        color: $color-lightgrey;
-        font-family: $body-font;
-        @media(max-width: $mobile-breakpoint) {
-            text-align: center;
-        }
-
-        a {
-            color: #fff;
-            letter-spacing: -0.015em;
-            font-weight: 500;
-            @media (max-width: 767px) {
-                color: #fff;
-                font-size: 1.5rem;
-            }
-        }
-    }
 }
 
 .footer {
@@ -124,13 +104,35 @@
     }
 
     .subfooter {
-        margin: 20px auto 0;
+        margin: 0 auto;
+        padding: 20px 0;
+        align-items: center;
         @media(max-width: $tablet-breakpoint) {
-            margin: 40px auto 0;
-            align-items: center;
+            margin: 40px auto 20px;
         }
         @media(max-width: $mobile-breakpoint) {
             display: block;
+        }
+
+        .copyright {
+            margin-bottom: unset;
+            font-size: .9em;
+            color: $color-lightgrey;
+            font-family: $body-font;
+            @media(max-width: $mobile-breakpoint) {
+                text-align: center;
+                margin: 0 auto 10px;
+            }
+    
+            a {
+                color: #fff;
+                letter-spacing: -0.015em;
+                font-weight: 500;
+                @media (max-width: 767px) {
+                    color: #fff;
+                    font-size: 1.5rem;
+                }
+            }
         }
     }
 
@@ -144,6 +146,10 @@
             &:last-of-type {
                 margin-bottom: 0;
             }
+        }
+
+        &.social {
+            height: unset;
         }
 
         .footer-title {
@@ -166,8 +172,10 @@
         }
 
         .footer-description {
-            line-height: 1.4;
             font-size: 1.05em;
+            font-family: $body-font;
+            color: #4c5c71;
+            line-height: 1.5;
             @media(max-width: 950px) {
                 font-size: 1em;
             }
@@ -220,10 +228,8 @@
             margin-bottom: 0;
             max-width: unset;
             width: 250px;
+            height: unset;
             @media(max-width: $tablet-breakpoint) {
-                display: none;
-            }
-            @media(max-width: $mobile-breakpoint) {
                 display: none;
             }
         }
