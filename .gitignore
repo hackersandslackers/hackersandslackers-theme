@@ -79,5 +79,9 @@ typings/
 public
 yarn-error.log
 
+# Style Maps & Licenses
+*/*.map
+*/*.LICENSE.txt
+
 # Yarn
 .yarn

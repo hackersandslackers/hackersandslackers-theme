@@ -19,8 +19,8 @@
     font-family: $header-font;
     transition: $transition;
     @media (max-width: 600px) {
-        font-size: 1.8em;
-        letter-spacing: -.3px;
+        font-size: 1.7em;
+        letter-spacing: -.5px;
     }
 
     svg {
@@ -87,7 +87,7 @@
     color: #5e6877;
     display: -webkit-box;
     font-family: $body-font-medium;
-    opacity: .8;
+    opacity: .7;
     font-size: 1.1em;
     letter-spacing: -.5px;
     line-height: 1.3;
@@ -96,6 +96,9 @@
     text-overflow: ellipsis;
     @media(max-width: $mobile-breakpoint) {
         font-size: 1em;
+        font-weight: 600;
+        letter-spacing: unset;
+        line-height: 1.2;
     }
 }
 
@@ -138,6 +141,10 @@
     border-radius: 50%;
     height: 38px;
     min-width: 38px;
+    @media(max-width: $mobile-breakpoint) {
+        height: 42px;
+        min-width: 42px;
+    }
 
     i {
         font-size: 1.5em;
@@ -160,6 +167,9 @@
     font-size: 1em;
     line-height: 1;
     transition: $transition;
+    @media (max-width: $mobile-breakpoint) {
+        margin-bottom: 2px;
+    }
 
     &:hover {
         color: $color-hover;
@@ -175,6 +185,7 @@
     line-height: 1;
     font-family: $body-font-bold;
     font-size: .95em;
+    text-align: center;
     transition: $transition;
     @media(max-width: $tablet-breakpoint) {
         font-size: 1em;
@@ -193,12 +204,27 @@
 
 .post-card-meta-details {
     line-height: 1;
+    @media(max-width: $mobile-breakpoint) {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .post-card-meta-item {
     font-size: .8em;
     font-family: $body-font-medium;
     line-height: 1;
+    @media(max-width: $mobile-breakpoint) {
+        line-height: 1.2;
+        display: block;
+    }
+    
+    &.separator {
+        @media(max-width: $mobile-breakpoint) {
+            display: none;
+        }
+
+    }
 }
 
 .post-card-tags {
@@ -216,7 +242,7 @@
 
 .post-excerpt {
     color: #8c96a4;
-    font-family: $body-font-medium;
+    font-family: $body-font-bold;
     font-size: 1.2em;
     line-height: 1.1em;
     margin: 15px 0;

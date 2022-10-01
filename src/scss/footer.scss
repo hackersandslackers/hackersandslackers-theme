@@ -86,6 +86,7 @@
     }
     @media (max-width: $mobile-breakpoint) {
         padding: 30px 0;
+        margin: 20px auto 0;
     }
 
     .footer-wrapper,
@@ -109,9 +110,13 @@
         align-items: center;
         @media(max-width: $tablet-breakpoint) {
             margin: 40px auto 20px;
+            padding: 20px 0 0;
         }
         @media(max-width: $mobile-breakpoint) {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            margin: 30px auto 0;
+            padding: unset;
         }
 
         .copyright {
@@ -121,7 +126,7 @@
             font-family: $body-font;
             @media(max-width: $mobile-breakpoint) {
                 text-align: center;
-                margin: 0 auto 10px;
+                margin: 10px auto 0;
             }
     
             a {
@@ -150,6 +155,18 @@
 
         &.social {
             height: unset;
+            @media (max-width: $mobile-breakpoint) {
+                height: 40px !important;
+                width: 80% !important;
+
+                i {
+                    font-size: 1.8em;
+
+                    &:hover {
+                        font-size: 2em;
+                    }
+                }
+            }
         }
 
         .footer-title {
@@ -229,9 +246,6 @@
             max-width: unset;
             width: 250px;
             height: unset;
-            @media(max-width: $tablet-breakpoint) {
-                display: none;
-            }
         }
     }
 }

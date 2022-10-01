@@ -19,7 +19,6 @@ module.exports = {
   mode: process.env.ENVIRONMENT,
   resolve: {
     alias: {
-      Fonts: path.resolve(__dirname, './assets/fonts/'),
       Styles: path.resolve(__dirname, './src/scss/')
     }
   },

@@ -39,8 +39,11 @@ clean:
 	find . -name 'yarn-error.log' -delete
 	find . -name '.pnp.cjs' -delete
 	find . -wholename '*.lock' -delete
+	find . -name '*.map'  -delete
+	find . -name '*.LICENSE.txt' -delete
 	find . -type d -wholename './.yarn' -exec rm -rf {} +
 	find . -type d -wholename '**/node_modules' -exec rm -rf {} +
+
 
 .PHONY: update
 update:

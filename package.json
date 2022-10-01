@@ -46,9 +46,9 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
-        "@babel/core": "^7.19.1",
+        "@babel/core": "^7.19.3",
         "@babel/eslint-parser": "^7.19.1",
-        "@babel/preset-env": "^7.19.1",
+        "@babel/preset-env": "^7.19.3",
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.12",
         "babel-loader": "^8.2.5",
@@ -63,7 +63,7 @@
         "gscan": "4.34.0",
         "inquirer": "8.2.4",
         "mini-css-extract-plugin": "^2.6.1",
-        "postcss": "8.4.16",
+        "postcss": "8.4.17",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
@@ -185,6 +185,6 @@
         ]
     },
     "dependencies": {
-        "dotenv": "^16.0.2"
+        "dotenv": "^16.0.3"
     }
 }

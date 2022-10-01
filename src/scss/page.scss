@@ -1,5 +1,8 @@
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "author.scss";
+@import "tag.scss";
+
 
 .page-template {
 
@@ -49,6 +52,52 @@
     color: $color-header-grey;
 }
 
+
+@media (max-width: 950px) {
+
+    .author-template .author-card,
+    .tag-template .info-card {
+        margin-bottom: 20px !important;
+    }
+
+    .author-template .site-content {
+        margin: unset;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .author-template .site-header,
+    .tag-template .site-header {
+        margin: unset;
+        box-shadow: unset;
+    }
+
+    .author-template .author-card,
+    .tag-template .info-card {
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        padding: 25px;
+    }
+
+    .author-template .author-card .author-avatar-wrapper {
+        margin-right: 15px !important;
+
+    }
+}
+
+@media (max-width: $mobile-breakpoint) {
+    .author-template .author-card .author-avatar-wrapper,
+    .author-template .author-card .author-profile-pic {
+        height: 70px;
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .author-template .author-card .author-meta {
+        margin: 10px 0;
+    }
+}
 
 
 

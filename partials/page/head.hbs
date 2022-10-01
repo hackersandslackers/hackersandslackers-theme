@@ -1,5 +1,5 @@
 {{!-- Page template dependencies. --}}
 
-    {{#if page}}
-    <link rel="stylesheet" type="text/css" href="{{asset 'built/page.js'}}" />
-    {{/if}}
+{{#is "page, author, tag"}}
+<script src="{{asset 'built/page.js'}}"></script>
+{{/is}}

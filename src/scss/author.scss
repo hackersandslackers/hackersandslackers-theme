@@ -1,0 +1,122 @@
+/* 8.1. Author Card
+/* ---------------------------------------------------------- */
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+.author-card {
+    background: white;
+    padding: 30px;
+    display: flex;
+    box-shadow: $card-shadow;
+
+    .author-avatar-link {
+        border-radius: 50%;
+        height: 80px;
+        min-width: 80px;
+        overflow: hidden;
+        width: 80px;
+    }
+
+    .author-avatar-wrapper {
+        min-width: 80px;
+        height: auto;
+        margin-right: 20px;
+    }
+
+    .author-card-excerpt {
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        color: #5e6877;
+        display: -webkit-box;
+        font-family: $body-font-medium;
+        font-size: 1em;
+        letter-spacing: -.5px;
+        line-height: 1.4;
+        margin: 20px auto 0;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .author-card-name-wrapper {
+        line-height: 1;
+    }
+
+    .author-card-title {
+        color: #666c70;
+        font-family: $body-font-bold;
+        font-size: 1.6em;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .author-name {
+        color: #666c70;
+        font-family: $header-font-medium;
+        font-size: 1.3em;
+        font-weight: unset;
+        margin: 0 0 0.3em;
+        transition: $transition;
+    }
+
+    .author-meta .author {
+        color: $color-secondary-text;
+        font-family: $body-font-bold;
+    }
+
+    .author-meta-item {
+        color: #4d525d;
+        font-family: $body-font-bold;
+        font-size: .95em !important;
+        line-height: 1;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+
+        i {
+            margin-right: 3px;
+        }
+    }
+
+    a,
+    span {
+        color: #4d525d;
+    }
+
+    .author-meta {
+        display: flex;
+        gap: 10px;
+        margin: 15px 0;
+
+        a {
+            transition: $transition;
+    
+            &:hover {
+                color: $color-hover;
+                cursor: pointer;
+            }
+        }
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .author-profile-pic {
+        display: block;
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        background: color-mod($color-lightgrey) l(+10%);
+        border-radius: 50%;
+    }
+
+    .author-avatar-link {
+        margin-right: 15px;
+    }
+
+}
+
