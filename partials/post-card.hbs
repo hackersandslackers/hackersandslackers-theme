@@ -1,6 +1,3 @@
-{{!-- This is a partial file used to generate a post "card"
-which templates loop over to generate a list of posts. --}}
-
 <article class="post-card">
 
     {{#if feature_image}}
@@ -8,85 +5,53 @@ which templates loop over to generate a list of posts. --}}
 
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-        <img class="post-card-image"
-             srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
-             sizes="(max-width: 1000px) 400px, 800px"
-             src="{{img_url feature_image size="m"}}"
-             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-             loading="lazy"
-        />
-
-        {{#unless access}}
-            {{^has visibility="public"}}
-                <div class="post-card-access">
-                    {{> "icons/lock"}}
-                    {{#has visibility="members"}}
-                        Members only
-                    {{else}}
-                        Paid-members only
-                    {{/has}}
-                </div>
-            {{/has}}
-        {{/unless}}
-    {{/if}}
+        <img class="post-card-image" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m"
+            }} 600w, {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+            sizes="(max-width: 1000px) 400px, 800px" src="{{img_url feature_image size=" m"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" loading="lazy" />
+        {{/if}}
 
     </a>
 
-
     <div class="post-card-content">
-
         <a class="post-card-content-link" href="{{url}}">
             <header class="post-card-header">
                 <h2 class="post-card-title">
-                    {{#unless access}}
-                        {{^has visibility="public"}}
-                            {{#unless feature_image}}
-                                {{> "icons/lock"}}
-                            {{/unless}}
-                        {{/has}}
-                    {{/unless}}
                     {{title}}
                 </h2>
             </header>
             {{#if excerpt}}
-                <div class="post-card-excerpt">{{excerpt}}</div>
+            <div class="post-card-excerpt">{{excerpt}}</div>
             {{/if}}
         </a>
 
         <footer class="post-card-meta">
             <div class="meta-items-left">
                 {{#primary_author}}
-                    {{#if profile_image}}
-                        <a href="{{url}}" class="post-card-author-avatar">
-                            <img
-                                 class="post-card-author-image"
-                                 src="{{img_url profile_image}}"
-                                 alt="{{name}}"
-                            />
-                        </a>
-                    {{else}}
-                        <a href="{{url}}" class="post-card-author-avatar">
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                    {{/if}}
+                {{#if profile_image}}
+                <a href="{{url}}" class="post-card-author-avatar">
+                    <img class="post-card-author-image" src="{{img_url profile_image}}" alt="{{name}}" />
+                </a>
+                {{else}}
+                <a href="{{url}}" class="post-card-author-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+                {{/if}}
                 {{/primary_author}}
 
                 <div>
                     {{#primary_author}}
-                        <a href="{{url}}" class="post-card-author-name">
-                            {{name}}
-                        </a>
+                    <a href="{{url}}" class="post-card-author-name">
+                        {{name}}
+                    </a>
                     {{/primary_author}}
                     <div class="post-card-meta-details">
                         <span class="post-card-meta-item date">
-                            <time class="post-card-meta-date" datetime="{{date format="DD-MMM-YYYY"}}">{{date}}</time>
+                            <time class="post-card-meta-date" datetime="{{date format=" DD-MMM-YYYY"}}">{{date}}</time>
                         </span>
                         {{#if reading_time}}
-                            <span class="post-card-meta-item separator">•</span>
-                            <span class="post-card-meta-item reading-time">{{reading_time}}</span>
+                        <span class="post-card-meta-item separator">•</span>
+                        <span class="post-card-meta-item reading-time">{{reading_time}}</span>
                         {{/if}}
                     </div>
                 </div>
@@ -94,13 +59,10 @@ which templates loop over to generate a list of posts. --}}
             </div>
 
             {{#primary_tag}}
-                <a
-                    href="{{url}}"
-                    style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};"
-                    class="post-card-primary-tag"
-                >
-                    {{name}}
-                </a>
+            <a href="{{url}}" style="background:{{accent_color}}; box-shadow: inset 0 0 0 1px {{accent_color}};"
+                class="post-card-primary-tag">
+                {{name}}
+            </a>
             {{/primary_tag}}
         </footer>
 

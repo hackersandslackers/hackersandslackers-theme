@@ -4,24 +4,6 @@
 <head>
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
     <title>{{meta_title}}</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{meta_description}}" />
-
-    {{!-- OG meta --}}
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="{{@site.title}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{meta_title}}" />
-    <meta property="og:description" content="{{meta_description}}" />
-    <meta property="og:url" content="{{canonical_url}}" />
-
-    {{!-- Twitter meta --}}
-    <meta name="twitter:title" content="{{meta_title}}" />
-    <meta name="twitter:description" content="{{meta_description}}" />
-    <meta name="twitter:url" content="{{canonical_url}}" />
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
@@ -44,9 +26,7 @@
 
 </head>
 
-<body class="{{body_class}}{{#match @custom.title_font "=" " Elegant serif"}} has-serif-title{{/match}}{{#match
-    @custom.body_font "=" "Modern sans-serif" }} has-sans-body{{/match}}{{#if @custom.show_publication_cover}}
-    has-cover{{/if}}{{#is "home" }}{{#unless @custom.show_logo_in_navigation}} no-logo{{/unless}}{{/is}}">
+<body class="{{body_class}}">
     {{> "site-navigation" }}
     <div class="viewport">
 
