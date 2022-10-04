@@ -1,7 +1,7 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-.content-body > pre,
+.post-content > pre,
 .kg-code-card > pre,
 .kg-code-card > code[class*="language-"] {
   -moz-tab-size: 4;
@@ -10,7 +10,7 @@
   -ms-hyphens: none;
   padding: 15px 20px 20px;
   overflow-x: scroll;
-  background: $nord0;
+  background: #2e3440;
   color: $nord6;
   font-family: $monospace-font !important;
   font-size: 0.85em !important;
@@ -169,7 +169,7 @@
   }
 }
 
-.content-body > pre[class*="language-"] {
+.post-content > pre[class*="language-"] {
   margin: 0;
   padding: 20px;
   overflow: auto;

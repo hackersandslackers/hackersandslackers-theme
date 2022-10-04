@@ -1,0 +1,56 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": [">1%", "not dead"]
+        }
+      }
+    ]
+  ],
+    "plugins": [
+      ["prismjs", {
+          "plugins": ["normalize-whitespace", "custom-class"],
+          "languages": [
+            "markup",
+            "css",
+            "javascript",
+            "typescript",
+            "shell",
+            "json",
+            "python",
+            "java",
+            "groovy",
+            "html",
+            "yaml",
+            "toml",
+            "jsx",
+            "graphql",
+            "sql",
+            "jinja2",
+            "handlebars",
+            "ini",
+            "less",
+            "nginx",
+            "go",
+            "hcl",
+            "vim",
+            "makefile",
+            "markdown"
+          ],
+          "theme": "default",
+          "css": false
+      }],
+      [
+        "module-resolver",
+        {
+          "root": ["./src"],
+          "alias": {
+            "Fonts": "./assets/fonts/",
+            "Styles": "./src/scss/"
+          }
+        }
+      ]
+    ]
+  }

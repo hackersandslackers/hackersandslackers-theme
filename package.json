@@ -2,9 +2,6 @@
     "name": "hackersandslackers",
     "description": "A clean, minimal default theme for the Ghost publishing platform",
     "version": "0.0.1",
-    "engines": {
-        "ghost": ">=5.0.0"
-    },
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg",
@@ -57,8 +54,8 @@
         "beeper": "3.0.0",
         "css-loader": "^6.7.1",
         "cssnano": "5.1.13",
-        "dotenv-webpack": "^8.0.1",
         "dotenv": "^16.0.3",
+        "dotenv-webpack": "^8.0.1",
         "eslint": "^8.24.0",
         "font-config-webpack-plugin": "^2.0.3",
         "gscan": "4.34.0",
@@ -106,5 +103,9 @@
         "extends": [
             "@tryghost:theme"
         ]
+    },
+    "dependencies": {
+        "babel-plugin-prismjs": "^2.1.0",
+        "prismjs": "^1.29.0"
     }
 }
