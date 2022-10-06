@@ -112,7 +112,7 @@
             margin: 40px auto 20px;
             padding: 20px 0 0;
         }
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: 700px) {
             display: flex;
             flex-direction: column;
             margin: 30px auto 0;

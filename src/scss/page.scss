@@ -57,7 +57,7 @@
 
     .author-template .author-card,
     .tag-template .info-card {
-        margin-bottom: 20px !important;
+        margin: 0 auto 20px !important;
     }
 
     .author-template .site-content {
@@ -96,6 +96,7 @@
 
     .author-template .author-card .author-meta {
         margin: 10px 0;
+        flex-direction: column;
     }
 }
 

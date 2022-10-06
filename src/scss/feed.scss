@@ -14,27 +14,6 @@
         grid-gap: 20px;
     }
 
-    .pagination {
-        align-items: center;
-        display: flex;
-        justify-content: space-between;
-        width: 98%;
-        margin: 0 auto;
-
-        i {
-            font-size: 1.3em;
-            transition: $transition;
-            color: $color-lightgrey;
-
-            &:hover {
-                color: $color-hover;
-                cursor: pointer;
-            }
-        }
-
-        .hidden {
-            visibility: hidden;
-        }
-    }
+    
 
 }

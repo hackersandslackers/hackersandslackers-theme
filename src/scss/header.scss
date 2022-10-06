@@ -78,6 +78,9 @@
         line-height: 1;
         text-rendering: optimizelegibility;
         -webkit-font-smoothing: antialiased;
+        @media(max-width: $mobile-breakpoint) {
+            margin: unset;
+        }
 
         &:last-child {
             margin-right: unset;

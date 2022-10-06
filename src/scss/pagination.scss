@@ -1,0 +1,31 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+.pagination {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    margin: 10px auto;
+
+    i {
+        font-size: 1.3em;
+        transition: $transition;
+        color: $color-lightgrey;
+
+        &:hover {
+            color: $color-hover;
+            cursor: pointer;
+        }
+    }
+
+    .hidden {
+        visibility: hidden;
+    }
+
+    .page-number {
+        font-family: $body-font-bold;
+        opacity: .5;
+    }
+}
