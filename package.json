@@ -1,24 +1,22 @@
 {
-    "name": "HackersAndSlackers",
+    "name": "hackersandslackers",
     "description": "A clean, minimal default theme for the Ghost publishing platform",
     "version": "0.0.1",
-    "engines": {
-        "ghost": ">=5.0.0"
-    },
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg",
         "mobile": "assets/screenshot-mobile.jpg"
     },
     "scripts": {
-        "dev": "gulp",
+        "dev": "webpack --mode=development",
         "zip": "gulp zip",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
-        "pretest": "gulp build",
+        "pretest": "webpack --mode=production",
         "preship": "yarn test",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
-        "postship": "git fetch && gulp release"
+        "postship": "git fetch && webpack --mode=production",
+        "build": "webpack --mode=production"
     },
     "author": {
         "name": "Hackers And Slackers",
@@ -45,22 +43,34 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
+        "@babel/core": "^7.19.3",
+        "@babel/eslint-parser": "^7.19.1",
+        "@babel/preset-env": "^7.19.3",
         "@tryghost/release-utils": "0.8.1",
-        "autoprefixer": "10.4.11",
+        "autoprefixer": "10.4.12",
+        "babel-loader": "^8.2.5",
+        "babel-plugin-import": "^1.13.5",
+        "babel-plugin-module-resolver": "^4.1.0",
         "beeper": "3.0.0",
+        "css-loader": "^6.7.1",
         "cssnano": "5.1.13",
+        "dotenv": "^16.0.3",
+        "dotenv-webpack": "^8.0.1",
+        "eslint": "^8.24.0",
+        "font-config-webpack-plugin": "^2.0.3",
         "gscan": "4.34.0",
-        "gulp": "4.0.2",
-        "gulp-concat": "2.6.1",
-        "gulp-livereload": "4.0.2",
-        "gulp-postcss": "9.0.1",
-        "gulp-uglify": "3.0.2",
-        "gulp-zip": "5.1.0",
         "inquirer": "8.2.4",
-        "postcss": "8.4.16",
+        "mini-css-extract-plugin": "^2.6.1",
+        "postcss": "8.4.17",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0"
+        "pump": "3.0.0",
+        "sass": "^1.55.0",
+        "sass-loader": "^13.0.2",
+        "style-loader": "^3.3.1",
+        "terser-webpack-plugin": "^5.3.6",
+        "webpack": "^5.74.0",
+        "webpack-cli": "^4.10.0"
     },
     "browserslist": [
         "defaults"
@@ -87,89 +97,15 @@
                 "width": 2000
             }
         },
-        "card_assets": true,
-        "custom": {
-            "title_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Modern sans-serif"
-            },
-            "body_font": {
-                "type": "select",
-                "options": [
-                    "Modern sans-serif",
-                    "Elegant serif"
-                ],
-                "default": "Elegant serif"
-            },
-            "show_publication_cover": {
-                "type": "boolean",
-                "default": true,
-                "group": "homepage"
-            },
-            "header_style": {
-                "type": "select",
-                "options": [
-                    "Center aligned",
-                    "Left aligned",
-                    "Hidden"
-                ],
-                "default": "Center aligned",
-                "group": "homepage"
-            },
-            "show_logo_in_navigation": {
-                "type": "boolean",
-                "default": false,
-                "group": "homepage"
-            },
-            "feed_layout": {
-                "type": "select",
-                "options": [
-                    "Classic",
-                    "Grid",
-                    "List"
-                ],
-                "default": "Classic",
-                "group": "homepage"
-            },
-            "color_scheme": {
-                "type": "select",
-                "options": [
-                    "Light",
-                    "Dark",
-                    "Auto"
-                ],
-                "default": "Light"
-            },
-            "post_image_style": {
-                "type": "select",
-                "options": [
-                    "Wide",
-                    "Full",
-                    "Small",
-                    "Hidden"
-                ],
-                "default": "Wide",
-                "group": "post"
-            },
-            "email_signup_text": {
-                "type": "text",
-                "default": "Sign up for more like this.",
-                "group": "post"
-            },
-            "show_recent_posts_footer": {
-                "type": "boolean",
-                "default": true,
-                "group": "post"
-            }
-        }
+        "card_assets": true
     },
     "renovate": {
         "extends": [
             "@tryghost:theme"
         ]
+    },
+    "dependencies": {
+        "babel-plugin-prismjs": "^2.1.0",
+        "prismjs": "^1.29.0"
     }
 }

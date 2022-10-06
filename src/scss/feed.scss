@@ -1,0 +1,40 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+/* 6. Post Feed
+/* ---------------------------------------------------------- */
+.post-feed {
+    grid-gap: 30px;
+    display: grid;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    @media(max-width: $mobile-breakpoint) {
+        grid-gap: 20px;
+    }
+
+    .pagination {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 98%;
+        margin: 0 auto;
+
+        i {
+            font-size: 1.3em;
+            transition: $transition;
+            color: $color-lightgrey;
+
+            &:hover {
+                color: $color-hover;
+                cursor: pointer;
+            }
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+    }
+
+}

@@ -1,0 +1,21 @@
+/* 2. Layout - Page building blocks
+/* ---------------------------------------------------------- */
+
+.viewport {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.home-template .viewport,
+.author-template .viewport,
+.tag-template .viewport,
+.about-template .viewport,
+.paged .viewport {
+    max-width: 93%;
+}
+
+.site-content {
+    flex-grow: 1;
+}

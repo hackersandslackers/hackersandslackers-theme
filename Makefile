@@ -23,7 +23,7 @@ all help:
 
 .PHONY: build
 build:
-	gulp
+	npm run build
 
 .PHONY: dev
 dev:
@@ -31,7 +31,7 @@ dev:
 	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
 	cd $(DEV_GHOST_THEME_PATH)
-	gulp
+	npm run dev
 
 .PHONY: clean
 clean:
@@ -39,15 +39,18 @@ clean:
 	find . -name 'yarn-error.log' -delete
 	find . -name '.pnp.cjs' -delete
 	find . -wholename '*.lock' -delete
+	find . -name '*.map'  -delete
+	find . -name '*.LICENSE.txt' -delete
 	find . -type d -wholename './.yarn' -exec rm -rf {} +
 	find . -type d -wholename '**/node_modules' -exec rm -rf {} +
+
 
 .PHONY: update
 update:
 	npm install npm@latest -g
 	npm install -g npm-check-updates@latest
 	ncu -u
-	npm i
+	yarn i
 
 .PHONY: reset
 reset: clean

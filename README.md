@@ -2,77 +2,62 @@
 
 ![Ghost](https://img.shields.io/badge/Ghost-^v5.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
 ![Node](https://img.shields.io/badge/NodeJS-v^16.0.0-green.svg?longCache=true&style=flat-square&logo=node.js&logoColor=white&colorB=a3be8c&colorA=4c566a)
-![Babel](https://img.shields.io/badge/@babel/core-v7.3.4-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=ebcb8b&colorA=4c566a)
+![Babel](https://img.shields.io/badge/@babel/core-v7.19.1-yellow.svg?longCache=true&style=flat-square&logo=JavaScript&logoColor=white&colorB=ebcb8b&colorA=4c566a)
+![Webpack](https://img.shields.io/badge/Webpack-v5.74.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c&logo=GitHub)
 [![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/hackersandslackers-theme.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-theme/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/hackersandslackers-theme.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-theme/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/hackersandslackers/hackersandslackers-theme.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-theme/network)
 
+Hand-crafted Ghost theme created by & for [HackersAndSlackers](https://hackersandslackers.com/). Clean design & usability balanced with novel theme features.
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/). This is the latest development version of Casper! If you're just looking to download the latest release, head over to the [releases](https://github.com/TryGhost/Casper/releases) page.
+🛠 This theme is in active development 🛠
 
-&nbsp;
+## Features
 
-![screenshot-desktop](https://user-images.githubusercontent.com/353959/66987533-40eae100-f0c1-11e9-822e-cbaf38fb8e3f.png)
+The HackersAndSlackers theme includes custom widgets, integrations, and features beyond the breath of Ghost’s core functionality:
 
-&nbsp;
+### Posts
 
-# First time using a Ghost theme?
+- **Series’**: Collections of posts intended to be read in sequential order. Posts belonging to a series are easily navigated via “table of contents” and “next/previous” modules, as well as a series overview page.
+- **Related Posts**: Intelligent post suggestions for readers.
+- **Data Tables**: The ability to cleanly present and navigate datasets within a post via a clean interface.
+- **Code**: PrismJS highlighting for ~50 programming languages. 
 
-Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes.
+### Authors
 
-This theme has lots of code comments to help explain what's going on just by reading the code. Once you feel comfortable with how everything works, we also have full [theme API documentation](https://ghost.org/docs/themes/) which explains every possible Handlebars helper and template.
+- **Author List**: An overview of blog contributors with brief contexts.
+- **Github**: Github activity widgets visible from an Author’s detail page.
+- **Website**: Embedded preview of  authors’ personal websites accessible from an Author’s detail page.
 
-**The main files are:**
+### Accounts
 
-- `default.hbs` - The parent template file, which includes your global header/footer
-- `index.hbs` - The main template to generate a list of posts, usually the home page
-- `post.hbs` - The template used to render individual posts
-- `page.hbs` - Used for individual pages
-- `tag.hbs` - Used for tag archives, eg. "all posts tagged with `news`"
-- `author.hbs` - Used for author archives, eg. "all posts written by Jamie"
+- **Accounts**: User account creation and management. 
+- **Comments**: Native implementation of Ghost comments.
+- **Newsletter**: Simple opt-in for newsletter subscriptions.
 
-One neat trick is that you can also create custom one-off templates by adding the slug of a page to a template file. For example:
+### Developers
 
-- `page-about.hbs` - Custom template for an `/about/` page
-- `tag-news.hbs` - Custom template for `/tag/news/` archive
-- `author-ali.hbs` - Custom template for `/author/ali/` archive
+- **Webpack**: Deprecates Gulp in favor of Webpack with associated plugins such as SASS rendering.
+- **Automations**: Integrations such as automatic post optimization, image caching, etc. are served by a [corresponding API](https://github.com/toddbirchard/jamstack-api)
 
 
-# Development
+## Getting Started (For Developers)
 
-Casper styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need [Node](https://nodejs.org/), [Yarn](https://yarnpkg.com/) and [Gulp](https://gulpjs.com) installed globally. After that, from the theme's root directory:
+For developers interested in contributing or other usage, this theme is openly available:
 
-```bash
-# install dependencies
-yarn install
-
-# run development server
-yarn dev
+```shell
+$ git clone https://github.com/hackersandslackers/hackersandslackers-theme.git
+$ cd hackersandslackers-theme
+$ yarn i
+$ make dev
 ```
 
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-The `zip` Gulp task packages the theme files into `dist/<theme-name>.zip`, which you can then upload to your site.
-
-```bash
-# create .zip file
-yarn zip
-```
-
-# PostCSS Features Used
-
-- Autoprefixer - Don't worry about writing browser prefixes of any kind, it's all done automatically with support for the latest 2 major versions of every browser.
-- [Color Mod](https://github.com/jonathantneal/postcss-color-mod-function)
+For information on installing the Ghost platform, please reference the [Ghost CLI](https://docs.ghost.org/docs/cli-install).
 
 
-# SVG Icons
+### Integrations
 
-Casper uses inline SVG icons, included via Handlebars partials. You can find all icons inside `/partials/icons`. To use an icon just include the name of the relevant file, eg. To include the SVG icon in `/partials/icons/rss.hbs` - use `{{> "icons/rss"}}`.
+This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don’t forget to include `.env` in `.gitignore`)!
 
-You can add your own SVG icons in the same manner.
-
-
-# Copyright & License
-
-Copyright (c) 2013-2022 Ghost Foundation - Released under the [MIT license](LICENSE).
+Replace the values in this configuration file with your own. Additional details to be added here soon.

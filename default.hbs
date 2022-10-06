@@ -4,35 +4,21 @@
 <head>
     {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
     <title>{{meta_title}}</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="{{meta_description}}" />
-
-    {{!-- OG meta --}}
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="{{@site.title}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{meta_title}}" />
-    <meta property="og:description" content="{{meta_description}}" />
-    <meta property="og:url" content="{{canonical_url}}" />
-
-    {{!-- Twitter meta --}}
-    <meta name="twitter:title" content="{{meta_title}}" />
-    <meta name="twitter:description" content="{{meta_description}}" />
-    <meta name="twitter:url" content="{{canonical_url}}" />
 
     {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
     this will take care of caching and cache-busting automatically --}}
-    <link rel="stylesheet" type="text/css" href="{{asset 'built/fonts.css'}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset 'built/screen.css'}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset 'built/prism.css'}}" />
-    <link rel="stylesheet" type="text/css" href="{{asset 'built/nord.css'}}" />
 
-    {{!-- Icons via Font Awesome --}}
-    <script src="https://kit.fontawesome.com/5b4eea6520.js" crossorigin="anonymous"> </script>
-    <script src="{{asset 'built/prism.js'}}"></script>
+    {{!-- Theme JS --}}
+    <script src="https://kit.fontawesome.com/5b4eea6520.js" crossorigin="anonymous"></script>
+    <script src="{{asset 'built/main.js'}}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
+
+    {{!-- Post meta, scripts and styles. --}}
+    {{> "post/head" }}
+
+    {{!-- Page meta, scripts and styles. --}}
+    {{> "page/head" }}
 
     {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
     it should always be the last tag before the closing head tag --}}
@@ -40,9 +26,7 @@
 
 </head>
 
-<body class="{{body_class}}{{#match @custom.title_font "=" " Elegant serif"}} has-serif-title{{/match}}{{#match
-    @custom.body_font "=" "Modern sans-serif" }} has-sans-body{{/match}}{{#if @custom.show_publication_cover}}
-    has-cover{{/if}}{{#is "home" }}{{#unless @custom.show_logo_in_navigation}} no-logo{{/unless}}{{/is}}">
+<body class="{{body_class}}">
     {{> "site-navigation" }}
     <div class="viewport">
 
@@ -59,7 +43,8 @@
 
 
     {{!-- Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries --}}
-    <script src="{{asset " built/casper.js"}}"></script>
+    {{!--
+    <script src="{{asset " built/casper.js"}}"></script> --}}
 
     {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the
     closing body tag --}}

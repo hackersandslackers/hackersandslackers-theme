@@ -1,76 +1,20 @@
-{{!< default}} {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template
-    --}} <main id="site-main" class="site-main">
+{{!< default}} <main id="site-main" class="site-main">
     <div class="sidebar-container">
 
         <div class="main-feed">
 
-
-            {{#author}}
-            <section class="author-card">
-
-                <div class="author-avatar-wrapper">
-                    {{#if profile_image}}
-                    <img class="author-profile-pic" src="{{profile_image}}" alt="{{name}}" />
-                    {{else}}
-                    <i class="fa-solid fa-user"></i>
-                    {{/if}}
-                </div>
-
-
-                <div class="author-details">
-                    <h1 class="author-card-title">{{name}}</h1>
-
-                    <div class="author-meta">
-
-                        {{#if location}}
-                        <div class="author-meta-item">
-                            <i class="fa-light fa-location-dot"></i>
-                            <span class="author-profile-location">{{location}}</span>
-                        </div>
-                        {{/if}}
-
-                        {{#if website}}
-                        <div class="author-meta-item">
-                            <i class="fa-regular fa-link"></i>
-                            <a class="author-profile-social-link" href="{{website}}" target="_blank"
-                                rel="noopener">Website</a>
-                        </div>
-                        {{/if}}
-
-                        {{#if twitter}}
-                        <div class="author-meta-item">
-                            <i class="fa-brands fa-twitter"></i>
-                            <a class="author-profile-social-link" href="{{twitter_url}}" target="_blank" rel="noopener">
-                                Twitter
-                            </a>
-                        </div>
-                        {{/if}}
-
-                        {{#if facebook}}
-                        <div class="author-meta-item">
-                            <i class="fa-brands fa-github"></i>
-                            <a class="author-profile-social-link" href="{{facebook_url}}" target="_blank"
-                                rel="noopener">
-                                Github
-                            </a>
-                        </div>
-                        {{/if}}
-                    </div>
-
-                    {{#if bio}}
-                    <div class="author-card-excerpt">{{bio}}</div>
-                    {{/if}}
-
-            </section>
-            {{/author}}
-
-
             <div class="post-feed">
+
+                {{#author}}
+                {{> "page/author-card"}}
+                {{/author}}
 
                 {{#foreach posts}}
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
                 {{/foreach}}
+
+                {{pagination}}
 
             </div>
         </div>
