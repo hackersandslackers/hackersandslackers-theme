@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     background: #fff;
-    box-shadow: var(--card-shadow);
+    box-shadow: $card-shadow;
     padding: 30px;
     grid-column: span 2;
     margin-bottom: 20px;
@@ -19,14 +19,15 @@
     .info-card-title {
         margin: 0 0 10px;
         line-height: 1;
-        color: var(--color-header-grey);
-        font-family: var(--body-font-medium);
+        color: $color-header-grey;
+        font-family: $body-font-medium;
         font-size: 2em;
         @media(max-width: 900px) {
             margin: 0 0 5px;
         }
         @media(max-width: $mobile-breakpoint) {
-            font-size: 3rem;
+            font-size: 1.8em;
+            margin: 0 0 5px;
         }
     }
 
@@ -36,34 +37,14 @@
             line-height: 1.5;
         }
     }
-}
-
-@media(max-width: 900px) {
-
-    .info-card .tag-image {
-        width: 110px;
-        margin-right: 20px;
-    }
-}
-
-@media(max-width: 600px) {
-    .info-card .tag-image {
-        margin-right: 15px;
-    }
-
-    .info-card .info-card-title {
-        font-size: 1.8em;
-        margin: 0 0 5px;
-    }
-}
-
-
-
-
-
-@media(max-width: 600px) {
 
     .tag-image {
-        margin-right: 20px;
+        @media(max-width: 900px) {
+            width: 110px;
+            margin-right: 20px;
+        }
+        @media(max-width: 600px) {
+            margin-right: 15px;
+        }
     }
 }
