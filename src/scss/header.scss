@@ -123,11 +123,13 @@
 }
 
 
-
+.page-template .site-header,
+.about-template .site-header,
 .post-template .site-header,
 .tag-template .site-header {
     @media(max-width: $tablet-breakpoint) {
         margin-bottom: 0;
+        box-shadow: none;
     }
 }
 

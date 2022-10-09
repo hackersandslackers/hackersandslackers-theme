@@ -52,16 +52,9 @@ body {
 .page-template,
 .post-content,
 .content-body {
-    a {
-        border-bottom: 1px solid $color-theme;
-        text-decoration: underline;
-        word-break: break-word;
-        transition: $transition;
-        text-decoration: none;
-    
-        &:hover {
-            color: $color-hover;
-            cursor: pointer;
+    p {
+        a {
+            @include content-link;
         }
     }
 
@@ -70,7 +63,6 @@ body {
     }
 
     a {
-        @include content-link;
         transition: $transition;
     }
 
