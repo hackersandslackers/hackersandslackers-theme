@@ -276,10 +276,31 @@
     @media (max-width: $mobile-breakpoint) {
         display: none;
     }
+
+    .dragscroll {
+        cursor: grab;
+        flex-wrap: nowrap;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+          }
+
+        &.active {
+            cursor: grabbing;
+        }
+    
+        &[data-dragging="true"] a {
+            pointer-events: none;
+        }
+    }
 }
 
 .site-header ul {
-    overflow-x: hidden;
+    overflow-x: auto;
     display: flex;
     align-items: center;
     list-style: none;

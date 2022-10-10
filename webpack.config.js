@@ -4,7 +4,6 @@ const FontConfigWebpackPlugin = require("font-config-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require(`terser-webpack-plugin`);
 
-
 module.exports = {
   entry: {
     'main':  path.resolve(__dirname, `./src/js/index.js`),
