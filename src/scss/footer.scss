@@ -93,9 +93,11 @@
     .subfooter {
         display: flex;
         justify-content: space-between;
-        max-width: 1000px;
         margin: 0 auto;
-        max-width: 85%;
+        max-width: 1000px;
+        @media (max-width: $tablet-breakpoint) {
+            max-width: 85%;
+        }
     }
 
     .footer-wrapper {

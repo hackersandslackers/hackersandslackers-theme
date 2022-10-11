@@ -18,7 +18,7 @@
     color: $color-header-grey;
     font-family: $header-font;
     transition: $transition;
-    @media (max-width: 600px) {
+    @media (max-width: $mobile-breakpoint) {
         font-size: 1.7em;
         letter-spacing: -.5px;
     }

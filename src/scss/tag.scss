@@ -43,7 +43,7 @@
             width: 110px;
             margin-right: 20px;
         }
-        @media(max-width: 600px) {
+        @media(max-width: $mobile-breakpoint) {
             margin-right: 15px;
         }
     }

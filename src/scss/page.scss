@@ -91,7 +91,7 @@
 }
 
 
-@media (max-width: 950px) {
+@media (max-width: $smallscreen-breakpoint) {
 
     .author-template .author-card,
     .tag-template .info-card {
@@ -103,7 +103,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: $tablet-breakpoint) {
 
     .author-template .site-header,
     .tag-template .site-header {
