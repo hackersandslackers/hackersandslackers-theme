@@ -43,34 +43,34 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
-        "@babel/core": "^7.19.3",
-        "@babel/eslint-parser": "^7.19.1",
-        "@babel/preset-env": "^7.19.4",
+        "@babel/core": "7.19.3",
+        "@babel/eslint-parser": "7.19.1",
+        "@babel/preset-env": "7.19.4",
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.12",
-        "babel-loader": "^8.2.5",
-        "babel-plugin-import": "^1.13.5",
-        "babel-plugin-module-resolver": "^4.1.0",
+        "babel-loader": "8.2.5",
+        "babel-plugin-import": "1.13.5",
+        "babel-plugin-module-resolver": "4.1.0",
         "beeper": "3.0.0",
         "css-loader": "^6.7.1",
         "cssnano": "5.1.13",
-        "dotenv": "^16.0.3",
-        "dotenv-webpack": "^8.0.1",
-        "eslint": "^8.25.0",
-        "font-config-webpack-plugin": "^2.0.3",
+        "dotenv": "16.0.3",
+        "dotenv-webpack": "8.0.1",
+        "eslint": "8.25.0",
+        "font-config-webpack-plugin": "2.0.3",
         "gscan": "4.34.0",
         "inquirer": "8.2.4",
-        "mini-css-extract-plugin": "^2.6.1",
+        "mini-css-extract-plugin": "2.6.1",
         "postcss": "8.4.17",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "sass": "^1.55.0",
-        "sass-loader": "^13.1.0",
-        "style-loader": "^3.3.1",
-        "terser-webpack-plugin": "^5.3.6",
-        "webpack": "^5.74.0",
-        "webpack-cli": "^4.10.0"
+        "sass": "1.55.0",
+        "sass-loader": "13.1.0",
+        "style-loader": "3.3.1",
+        "terser-webpack-plugin": "5.3.6",
+        "webpack": "5.74.0",
+        "webpack-cli": "4.10.0"
     },
     "browserslist": [
         "defaults"
@@ -105,7 +105,7 @@
         ]
     },
     "dependencies": {
-        "babel-plugin-prismjs": "^2.1.0",
-        "prismjs": "^1.29.0"
+        "babel-plugin-prismjs": "2.1.0",
+        "prismjs": "1.29.0"
     }
 }
