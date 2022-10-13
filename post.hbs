@@ -1,11 +1,9 @@
-{{!< default}} {{!-- The tag above means: insert everything in this file into the {body} tag of the default.hbs template
-    --}} {{#post}} {{!-- Everything inside the #post block pulls data from the post --}} <main id="site-main"
-    class="post-wrapper">
+{{!< default}} {{#post}} <main id="site-main" class="post-wrapper">
     <article class="post {{post_class}} {{#match @custom.post_image_style
                                                      " Full"}}image-full{{else match
         @custom.post_image_style "=" "Small" }}image-small{{/match}}">
 
-        <header class="post-header gh-canvas">
+        <header class="post-header">
 
             <div class="post-header-details">
 
@@ -64,6 +62,11 @@
             {{/if}}
             {{/match}}
 
+            {{#foreach tags filter="visibility:internal" limit="1" as |series|}}
+            {{#series}}
+            {{> "series/toc" }}
+            {{/series}}
+            {{/foreach}}
         </header>
 
         <section class="post-content">

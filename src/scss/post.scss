@@ -94,6 +94,36 @@
                 }
             }
         }
+
+        .series-toc {
+            ol {
+                counter-reset: my-awesome-counter;
+                list-style-type: upper-roman!important;
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                color: #687f99;
+                counter-increment: my-awesome-counter;
+                counter-increment: li -1;
+                display: flex;
+                justify-content: left;
+                line-height: 1;
+                margin: 10px 0;
+                padding-left: 0;
+
+                &::before {
+                    content: counter(my-awesome-counter) ". ";
+                    color: darken($color-theme, 20%);
+                    font-family: $body-font;
+                    font-size: 15px;
+                    font-weight: bold;
+                    display: inline-block;
+                    margin-right: 8px;
+                }
+            }
+        }
     }
 
     .post-content {
@@ -226,12 +256,6 @@
     font-family: $font-serif;
 }
 
-.post p {
-    font-family: $body-font;
-    line-height: 1.7em;
-    font-size: 1em;
-}
-
 .post-content {
      ol,
      ul {
@@ -260,6 +284,23 @@
         background: $color-code-bg;
         border-radius: 0 0 5px 5px;
         box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
+    }
+
+    p {
+        margin: 0 0 25px;
+    }
+
+    code {
+        display: inline;
+        font-family: $monospace-font;
+        vertical-align: middle;
+        font-weight: 600;
+        padding: 0.15em 0.4em 0.15em;
+        font-size: 0.9em;
+        line-height: 1em;
+        color: #517aa1;
+        background: rgba(144,181,223,.1);
+        border-radius: 3px;
     }
 }
 
@@ -331,17 +372,4 @@
     bottom: 0;
     width: 0.3rem;
     background: white;
-}
-
-.post-content p > code {
-    display: inline;
-    font-family: $monospace-font;
-    vertical-align: middle;
-    font-weight: 600;
-    padding: 0.15em 0.4em 0.15em;
-    font-size: 0.9em;
-    line-height: 1em;
-    color: #517aa1;
-    background: rgba(144,181,223,.1);
-    border-radius: 3px;
 }
