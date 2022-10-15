@@ -28,6 +28,7 @@ build:
 .PHONY: dev
 dev:
 	if [ -d $(DEV_GHOST_THEME_PATH) ]; then rm -rf $(DEV_GHOST_THEME_PATH); fi
+	pkill -9 node
 	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
 	cd $(DEV_GHOST_THEME_PATH)

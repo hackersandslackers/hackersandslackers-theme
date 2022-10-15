@@ -33,12 +33,7 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     figcaption {
-        text-align: center;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 1.1em;
-        padding-top: 5px;
-        font-family: $body-font-medium;
+      @include kg-card-figcaption;
     }
 }
 
@@ -136,8 +131,12 @@ make sure they look good, and are given a bit of extra spacing. */
 
 .kg-table-card {
     margin: 20px 0;
-  
+
     .tableContainer {
       margin: 0;
+    }
+
+    figcaption {
+      @include kg-card-figcaption;
     }
   }

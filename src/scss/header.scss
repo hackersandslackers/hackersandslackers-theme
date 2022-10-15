@@ -292,7 +292,7 @@
         &.active {
             cursor: grabbing;
         }
-    
+
         &[data-dragging="true"] a {
             pointer-events: none;
         }
@@ -384,4 +384,8 @@
     @media (max-width: $mobile-breakpoint) {
         display: none;
     }
+}
+
+.post-template .nav-wrapper {
+  max-width: 850px;
 }
