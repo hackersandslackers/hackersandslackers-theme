@@ -36,12 +36,12 @@
     .post-header {
         align-items: center;
         display: flex !important;
-        flex-direction: column-reverse;
+        flex-direction: column;
         padding: 0;
 
         .post-header-details {
             margin: 0 auto;
-            padding: 40px 65px;
+            padding: 40px 65px 30px;
             width: 100%;
             @media(max-width: $mobile-breakpoint) {
                 padding: 30px;
@@ -81,11 +81,11 @@
                         margin-bottom: 10px;
                         font-size: .9em;
                     }
-                
+
                     i {
                         margin-right: 5px;
                     }
-                
+
                     * {
                         color: #7e8da3;
                         font-family: $body-font-bold;
@@ -96,8 +96,26 @@
         }
 
         .series-toc {
+          border-bottom: 1px solid #eaeaea;
+          margin: 0 65px 20px;
+          overflow: hidden;
+          padding: 0 0 20px;
+          position: relative;
+          min-width: -webkit-fill-available;
+          @media(max-width: $mobile-breakpoint) {
+            margin: 20px 8%;
+          }
+          @media(max-width: $tablet-breakpoint) {
+            margin: 30px 8%;
+            padding: 0 0 15px;
+          }
+          @media(max-width: $mobile-breakpoint) {
+            margin: 30px;
+            padding: 0 0 30px;
+          }
+
             ol {
-                counter-reset: my-awesome-counter;
+                counter-reset: li 3;
                 list-style-type: upper-roman!important;
                 margin: 0;
                 padding: 0;
@@ -105,7 +123,6 @@
 
             li {
                 color: #687f99;
-                counter-increment: my-awesome-counter;
                 counter-increment: li -1;
                 display: flex;
                 justify-content: left;
@@ -114,13 +131,23 @@
                 padding-left: 0;
 
                 &::before {
-                    content: counter(my-awesome-counter) ". ";
+                    content: counter(li,upper-roman) "."!important;
                     color: darken($color-theme, 20%);
                     font-family: $body-font;
                     font-size: 15px;
                     font-weight: bold;
                     display: inline-block;
                     margin-right: 8px;
+                }
+
+                a {
+                  color: #687f99;
+                  font-family: $body-font-bold;
+
+                  &:hover {
+                    color: $color-hover;
+                    cursor: pointer;
+                  }
                 }
             }
         }
@@ -145,7 +172,7 @@
 
         iframe {
             margin: 30px 0;
-        
+
             &:last-child {
                 margin: 30px 0 0;
             }
