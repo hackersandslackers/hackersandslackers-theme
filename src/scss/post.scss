@@ -11,10 +11,14 @@
 /* ---------------------------------------------------------- */
 
 .post-template {
+
+    body {
+      background: white !important;
+    }
+
     .site-content {
-        width: 850px;
         margin: 20px auto 0;
-        max-width: 100%;
+        width: $tablet-breakpoint;
         @media(max-width: $smallscreen-breakpoint) {
             width: 100%;
             margin: 0 auto;
@@ -28,24 +32,31 @@
     }
 
     .post {
-        background: white;
         word-break: break-word;
-        box-shadow: $card-shadow;
     }
 
     .post-header {
         align-items: center;
         display: flex !important;
         flex-direction: column;
-        padding: 0;
+        width: $tablet-breakpoint;
+        margin: auto;
+        @media(max-width: $tablet-breakpoint) {
+          width: 100%;
+        }
+
+        .post-image {
+          width: 100%;
+          margin-bottom: 30px;
+        }
 
         .post-header-details {
             margin: 0 auto;
-            padding: 40px 65px 20px;
+            padding: 40px 0 20px;
             width: 100%;
             @media(max-width: $tablet-breakpoint) {
               padding: 40px 40px 20px;
-          }
+            }
             @media(max-width: $mobile-breakpoint) {
               padding: 30px 30px 0;
             }
@@ -101,7 +112,7 @@
 
         .series-toc {
           border-bottom: 1px solid #eaeaea;
-          margin: 0 65px 20px;
+          margin: 0 0 20px;
           overflow: hidden;
           padding: 0 0 20px;
           position: relative;
@@ -156,7 +167,7 @@
     }
 
     .post-content {
-        padding: 0 60px 60px;
+        padding: 0 0 60px;
         @media(max-width: $tablet-breakpoint) {
           padding: 0 40px 40px;
       }
@@ -258,11 +269,6 @@
     padding-bottom: max(3.2vmin, 28px);
 }
 
-.page-template .main-content {
-    background: white;
-    box-shadow: $card-shadow;
-}
-
 .page-template .main-content>p {
     -webkit-font-smoothing: antialiased;
     color: #414d5a;
@@ -336,7 +342,7 @@
 
         code {
           @include inline-code;
-          
+
       }
     }
 }
@@ -409,4 +415,13 @@
     bottom: 0;
     width: 0.3rem;
     background: white;
+}
+
+.post-after {
+  background-color: $color-background-grey;
+  width: 100%;
+}
+
+#ghost-comments-root {
+
 }

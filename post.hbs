@@ -79,21 +79,27 @@
   </article>
   </main>
 
-  {{> "post/post-comments"}}
+  <div class="post-after">
+    {{> "post/post-comments"}}
 
-  {{!-- The {#get} helper below fetches some of the latest posts here
-  so that people have something else to read when they finish this one.
+    {{!-- The {#get} helper below fetches some of the latest posts here
+    so that people have something else to read when they finish this one.
 
-  This query gets the latest 3 posts on the site, but adds a filter to
-  exclude the post we're currently on from being included. --}}
-  <section class="related-posts">
-    {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
-    {{#if more_posts}}
-    {{#foreach more_posts}}
-    {{> "post-card"}}
-    {{/foreach}}
-    {{/if}}
-    {{/get}}
-  </section>
+    This query gets the latest 3 posts on the site, but adds a filter to
+    exclude the post we're currently on from being included. --}}
+    <section class="related-posts">
+      {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
+      {{#if more_posts}}
+      {{#foreach more_posts}}
+      {{> "post-card"}}
+      {{/foreach}}
+      {{/if}}
+      {{/get}}
+    </section>
+  </div>
+
+
+
+
 
   {{/post}}

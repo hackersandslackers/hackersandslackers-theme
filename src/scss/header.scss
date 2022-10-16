@@ -133,6 +133,10 @@
     }
 }
 
+.post-template .site-header {
+  box-shadow: none;
+}
+
 .site-header-cover {
     position: absolute;
     top: 0;
@@ -387,5 +391,5 @@
 }
 
 .post-template .nav-wrapper {
-  max-width: 850px;
+  max-width: $tablet-breakpoint;
 }
