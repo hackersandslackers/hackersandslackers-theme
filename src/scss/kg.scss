@@ -44,7 +44,9 @@ make sure they look good, and are given a bit of extra spacing. */
     border-radius: 3px;
     margin: 30px auto;
     transition: $transition;
+    max-width: 90%;
     @media(max-width: $mobile-breakpoint) {
+        max-width: unset;
         @include mobile-full-width;
     }
 

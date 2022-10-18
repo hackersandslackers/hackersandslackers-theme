@@ -16,12 +16,11 @@
       background: white !important;
     }
 
-    .site-content {
-        margin: 20px auto 0;
+    main {
+        margin: 0 auto 0;
         width: $tablet-breakpoint;
         @media(max-width: $smallscreen-breakpoint) {
             width: 100%;
-            margin: 0 auto;
         }
         @media(max-width: $tablet-breakpoint) {
             margin: 0;
@@ -47,7 +46,10 @@
 
         .post-image {
           width: 100%;
-          margin-bottom: 30px;
+
+          img {
+              width: 100%;
+          }
         }
 
         .post-header-details {
@@ -306,8 +308,8 @@
 .post-content {
      ol,
      ul {
-        padding-left: 1em;
-        padding-right: 1em;
+        padding-left: 2em;
+        padding-right: 2em;
         margin-bottom: 10px;
 
         li code {
@@ -344,18 +346,6 @@
           @include inline-code;
 
       }
-    }
-}
-
-.post-image {
-    grid-column: wide-start / wide-end;
-    width: 100%;
-
-    img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
     }
 }
 
@@ -420,6 +410,12 @@
 .post-after {
   background-color: $color-background-grey;
   width: 100%;
+  padding: 50px 0;
+
+  .post-after-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 #ghost-comments-root {

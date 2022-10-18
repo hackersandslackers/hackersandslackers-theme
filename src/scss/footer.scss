@@ -75,9 +75,8 @@
 .footer {
     width: 100%;
     padding: 60px 0 0;
-    border-top: 0.5px solid $color-border;
     background-color: #fff;
-    margin: 40px auto 0;
+    margin: 0 auto 0;
     @media (max-width: 1020px) {
         padding: 60px 0 20px;
     }
@@ -130,7 +129,7 @@
                 text-align: center;
                 margin: 10px auto 0;
             }
-    
+
             a {
                 color: #fff;
                 letter-spacing: -0.015em;
