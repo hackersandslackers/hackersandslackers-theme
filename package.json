@@ -43,7 +43,7 @@
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
     "contributors": "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors",
     "devDependencies": {
-        "@babel/core": "^7.19.3",
+        "@babel/core": "7.19.6",
         "@babel/eslint-parser": "^7.19.1",
         "@babel/preset-env": "^7.19.4",
         "@tryghost/release-utils": "0.8.1",
