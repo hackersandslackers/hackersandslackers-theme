@@ -175,6 +175,9 @@
           width: unset;
           margin: 0 40px 40px;
       }
+      @media(max-width: $mobile-breakpoint) {
+        margin: 0 30px 30px;
+    }
 
         h2 {
             font-family: $body-font;
