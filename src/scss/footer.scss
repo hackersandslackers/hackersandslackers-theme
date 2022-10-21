@@ -11,6 +11,7 @@
     padding-bottom: 140px;
     color: #fff;
     background: color-mod($color-darkgrey l(-5%));
+    box-shadow: $card-shadow;
 
     .inner {
         display: grid;
@@ -78,7 +79,7 @@
     background-color: #fff;
     margin: 0 auto 0;
     @media (max-width: 1020px) {
-        padding: 60px 0 20px;
+        padding: 60px 40px 20px;
     }
     @media (max-width: $tablet-breakpoint) {
         padding: 40px 0 20px;
@@ -106,12 +107,10 @@
     }
 
     .subfooter {
-        margin: 0 auto;
-        padding: 20px 0;
+        margin: 40px auto 0;
         align-items: center;
         @media(max-width: $tablet-breakpoint) {
             margin: 40px auto 20px;
-            padding: 20px 0 0;
         }
         @media(max-width: 700px) {
             display: flex;
