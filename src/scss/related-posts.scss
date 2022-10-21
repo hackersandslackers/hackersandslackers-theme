@@ -3,26 +3,28 @@
 
 
 .related-posts {
-    grid-gap: 2vmin;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 850px;
-    margin: 0 auto;
-    @media(max-width: $smallscreen-breakpoint) {
-        max-width: 90%;
-    }
-    @media(max-width: $mobile-breakpoint) {
-        grid-template-columns: 1fr;
-        max-width: 90%;
-        grid-gap: 6vmin;
-    }
+  grid-gap: 2vmin;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 850px;
+  margin: 0 auto;
 
-    .post-card .post-card-title {
-        font-size: 1.3em;
-        line-height: 1.2;
-    }
+  @media(max-width: $smallscreen-breakpoint) {
+    max-width: 90%;
+  }
 
-    .post-card .post-card-excerpt {
-        font-size: 1em;
-    }
+  @media(max-width: $mobile-breakpoint) {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+    grid-gap: 6vmin;
+  }
+
+  .post-card .post-card-title {
+    font-size: 1.3em;
+    line-height: 1.2;
+  }
+
+  .post-card .post-card-excerpt {
+    font-size: 1em;
+  }
 }

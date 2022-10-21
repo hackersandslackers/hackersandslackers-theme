@@ -1,225 +1,235 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-  .tableContainer {
-    overflow-x: scroll;
-    margin: 30px 0;
-    border: 1px solid #e3ecf3;
-    border-radius: 3px;
-    border-spacing: 0;
-    @media (max-width: $mobile-breakpoint) {
-      @include mobile-full-width;
-      @include mobile-horizontal-scroll;
-      width: 120%;
-      min-width: 120%;
-      max-width: 115%;
-    }
+.tableContainer {
+  overflow-x: scroll;
+  margin: 30px 0;
+  border: 1px solid #e3ecf3;
+  border-radius: 3px;
+  border-spacing: 0;
 
-    table {
-      margin-bottom: 0;
-      border-spacing: 0;
-      background-color: #fff;
-      table-layout: fixed;
-
-      @media (max-width: $mobile-breakpoint) {
-        width: unset;
-        min-width: 100%;
-      }
-
-      * {
-        font-family: $table-font !important;
-      }
-
-      tr {
-        max-width: 150px;
-        padding: 10px;
-        overflow: hidden;
-        border-top: 0;
-        border-bottom: 0;
-        text-align: left;
-        text-overflow: ellipsis;
-        vertical-align: top;
-        white-space: nowrap;
-        transition: all 0.3s ease-out;
-      }
-
-      thead {
-        tr {
-          padding: 15px 10px;
-          background: none;
-          background: #f4f8fb;
-          font-size: 1em;
-          vertical-align: top;
-
-          td,
-          th {
-            padding: 10px !important;
-            border-bottom: 1px solid #e3ecf3;
-            color: #585a61;
-            font-size: 0.8em;
-            font-weight: 700;
-            text-align: left;
-            text-transform: uppercase;
-            @media (max-width: $mobile-breakpoint) {
-              padding: 12px 8px;
-              font-size: 0.75em;
-            }
-          }
-
-          &:nth-of-type(2) {
-            font-size: 0.8em;
-          }
-        }
-      }
-
-      tbody {
-        td,
-        th {
-          max-width: 150px;
-          padding: 12px 10px;
-          overflow: hidden;
-          border-top: 0;
-          border-bottom: 0;
-          border-bottom: 1px solid #e8eef2;
-          font-size: 0.8em;
-          line-height: 1.4;
-          text-align: left;
-          vertical-align: top;
-          transition: all 0.3s ease-out;
-          @media (max-width: $mobile-breakpoint) {
-            padding: 12px 8px;
-            font-size: 0.8em;
-            min-width: 150px;
-            max-width: unset;
-          }
-
-          a {
-            border-bottom: 1px solid $color-theme;
-            color: #585a61;
-            font-weight: 500;
-          }
-        }
-
-        tr:last-of-type td {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    .table-wrap {
-      table-layout: fixed;
-
-      td {
-        word-wrap: break-word;
-        overflow: unset;
-        white-space: normal;
-      }
-    }
+  @media (max-width: $mobile-breakpoint) {
+    @include mobile-full-width;
+    @include mobile-horizontal-scroll;
+    width: 120%;
+    min-width: 120%;
+    max-width: 115%;
   }
 
+  table {
+    margin-bottom: 0;
+    border-spacing: 0;
+    background-color: #fff;
+    table-layout: fixed;
 
+    @media (max-width: $mobile-breakpoint) {
+      width: unset;
+      min-width: 100%;
+    }
 
-  .sideTableContainer {
-    margin: 30px 0;
-    border: 1px solid #e3ecf3;
-
-    tbody {
-      @media (max-width: $tablet-breakpoint) {
-        margin-left: 0 !important;
-      }
+    * {
+      font-family: $table-font !important;
     }
 
     tr {
-      @media (max-width: $tablet-breakpoint) {
-        width: 200px !important;
-        padding: 0 !important;
+      max-width: 150px;
+      padding: 10px;
+      overflow: hidden;
+      border-top: 0;
+      border-bottom: 0;
+      text-align: left;
+      text-overflow: ellipsis;
+      vertical-align: top;
+      white-space: nowrap;
+      transition: all 0.3s ease-out;
+    }
 
-        &:first-child td {
-          max-width: stretch !important;
-        }
-      }
+    thead {
+      tr {
+        padding: 15px 10px;
+        background: none;
+        background: #f4f8fb;
+        font-size: 1em;
+        vertical-align: top;
 
-      td {
-        line-height: 1.6;
-        text-align: left;
-        white-space: normal !important;
-        @media (max-width: $tablet-breakpoint) {
-          margin: 0 !important;
+        td,
+        th {
           padding: 10px !important;
-        }
-
-        &:first-child {
-          max-width: 55px;
-          font-family: $table-font;
+          border-bottom: 1px solid #e3ecf3;
+          color: #585a61;
           font-size: 0.8em;
-          font-weight: 600;
-          text-align: top;
-          @media (max-width: $tablet-breakpoint) {
-            max-width: none;
-            padding: 10px !important;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+          font-weight: 700;
+          text-align: left;
+          text-transform: uppercase;
+
+          @media (max-width: $mobile-breakpoint) {
+            padding: 12px 8px;
+            font-size: 0.75em;
           }
         }
 
         &:nth-of-type(2) {
-          padding: 12px 15px !important;
-          @media (max-width: $tablet-breakpoint) {
-            width: 100%;
-            line-height: 1.5;
-            white-space: inherit;
-          }
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    tbody {
+
+      td,
+      th {
+        max-width: 150px;
+        padding: 12px 10px;
+        overflow: hidden;
+        border-top: 0;
+        border-bottom: 0;
+        border-bottom: 1px solid #e8eef2;
+        font-size: 0.8em;
+        line-height: 1.4;
+        text-align: left;
+        vertical-align: top;
+        transition: all 0.3s ease-out;
+
+        @media (max-width: $mobile-breakpoint) {
+          padding: 12px 8px;
+          font-size: 0.8em;
+          min-width: 150px;
+          max-width: unset;
         }
 
         a {
-          color: $color-theme;
-          font-weight: 600;
-        }
-
-        p {
-          margin-bottom: 15px !important;
+          border-bottom: 1px solid $color-theme;
+          color: #585a61;
+          font-weight: 500;
         }
       }
-    }
 
-    ul {
-      @media (max-width: $tablet-breakpoint) {
-        margin: 0 0 0 !important;
-      }
-
-      li {
-        margin: 0 0 5px !important;
-        font-size: 1em;
-      }
-
-      li:last-child {
-        margin: 0;
+      tr:last-of-type td {
+        border-bottom: 0;
       }
     }
   }
 
-  // Side-by-side table comparison
-  .compare-tables {
-    display: flex;
-    justify-content: space-between;
+  .table-wrap {
+    table-layout: fixed;
+
+    td {
+      word-wrap: break-word;
+      overflow: unset;
+      white-space: normal;
+    }
+  }
+}
+
+
+
+.sideTableContainer {
+  margin: 30px 0;
+  border: 1px solid #e3ecf3;
+
+  tbody {
     @media (max-width: $tablet-breakpoint) {
-      display: block !important;
-      margin-right: calc(-50vw + 50%) !important;
-      margin-left: calc(-50vw + 50%) !important;
+      margin-left: 0 !important;
+    }
+  }
+
+  tr {
+    @media (max-width: $tablet-breakpoint) {
+      width: 200px !important;
+      padding: 0 !important;
+
+      &:first-child td {
+        max-width: stretch !important;
+      }
     }
 
-    .tableContainer.compare {
-      max-width: 49%;
-      height: fit-content;
-      max-height: unset;
+    td {
+      line-height: 1.6;
+      text-align: left;
+      white-space: normal !important;
+
       @media (max-width: $tablet-breakpoint) {
-        width: -webkit-fit-content !important;
-        max-width: unset;
-        margin: 0 40px 40px !important;
+        margin: 0 !important;
+        padding: 10px !important;
       }
-      @media (max-width: $mobile-breakpoint) {
-        min-width: 100% !important;
-        margin: 0 0 40px !important;
+
+      &:first-child {
+        max-width: 55px;
+        font-family: $table-font;
+        font-size: 0.8em;
+        font-weight: 600;
+        text-align: top;
+
+        @media (max-width: $tablet-breakpoint) {
+          max-width: none;
+          padding: 10px !important;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      &:nth-of-type(2) {
+        padding: 12px 15px !important;
+
+        @media (max-width: $tablet-breakpoint) {
+          width: 100%;
+          line-height: 1.5;
+          white-space: inherit;
+        }
+      }
+
+      a {
+        color: $color-theme;
+        font-weight: 600;
+      }
+
+      p {
+        margin-bottom: 15px !important;
       }
     }
   }
+
+  ul {
+    @media (max-width: $tablet-breakpoint) {
+      margin: 0 0 0 !important;
+    }
+
+    li {
+      margin: 0 0 5px !important;
+      font-size: 1em;
+    }
+
+    li:last-child {
+      margin: 0;
+    }
+  }
+}
+
+// Side-by-side table comparison
+.compare-tables {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-breakpoint) {
+    display: block !important;
+    margin-right: calc(-50vw + 50%) !important;
+    margin-left: calc(-50vw + 50%) !important;
+  }
+
+  .tableContainer.compare {
+    max-width: 49%;
+    height: fit-content;
+    max-height: unset;
+
+    @media (max-width: $tablet-breakpoint) {
+      width: -webkit-fit-content !important;
+      max-width: unset;
+      margin: 0 40px 40px !important;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      min-width: 100% !important;
+      margin: 0 0 40px !important;
+    }
+  }
+}

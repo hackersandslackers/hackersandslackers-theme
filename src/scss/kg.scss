@@ -142,3 +142,31 @@ make sure they look good, and are given a bit of extra spacing. */
       @include kg-card-figcaption;
     }
   }
+
+/* Product Cards */
+/* ---------------------------------------------------------- */
+
+.kg-product-card .kg-product-card-description {
+  p,
+  ol,
+  u {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+  }
+
+}
+
+/* Callout Cards */
+/* ---------------------------------------------------------- */
+
+.kg-callout-emoji {
+    font-size: 2.1rem;
+    line-height: 1.4;
+}
+
+/* Toggle Heading Text (?) */
+/* ---------------------------------------------------------- */
+
+.kg-toggle-heading-text {
+  font-size: 2.0rem;
+}

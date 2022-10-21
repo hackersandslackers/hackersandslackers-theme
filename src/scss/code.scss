@@ -1,9 +1,9 @@
 @import "_mixins.scss";
 @import "_variables.scss";
 
-.post-content > pre,
-.kg-code-card > pre,
-.kg-code-card > code[class*="language-"] {
+.post-content>pre,
+.kg-code-card>pre,
+.kg-code-card>code[class*="language-"] {
   -moz-tab-size: 4;
   -webkit-hyphens: none;
   -moz-hyphens: none;
@@ -23,6 +23,7 @@
   word-break: normal;
   word-spacing: normal;
   tab-size: 4;
+
   @media (max-width: $mobile-breakpoint) {
     @include mobile-horizontal-scroll();
     @include mobile-full-width();
@@ -44,6 +45,7 @@
 
   code {
     white-space: pre-wrap !important;
+
     @media (max-width: $mobile-breakpoint) {
       border-radius: 0;
       white-space: pre !important;
@@ -163,20 +165,21 @@
 }
 
 @media print {
+
   pre[class*="language-"],
   code[class*="language-"] {
     text-shadow: none;
   }
 }
 
-.post-content > pre[class*="language-"] {
+.post-content>pre[class*="language-"] {
   margin: 0;
   padding: 20px;
   overflow: auto;
   background: $nord0;
 }
 
-:not(pre) > code[class*="language-"] {
+:not(pre)>code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
   background: $nord0;
@@ -197,12 +200,12 @@ pre[data-line] {
   position: relative;
 }
 
-pre[class*="language-"] > code[class*="language-"] {
+pre[class*="language-"]>code[class*="language-"] {
   z-index: 1;
   position: relative;
 }
 
-pre[class*="language-shell"] > code[class*="language-shell"] {
+pre[class*="language-shell"]>code[class*="language-shell"] {
   white-space: pre !important;
 }
 
@@ -232,7 +235,7 @@ code[class*="language-ini"] {
   pointer-events: none;
 }
 
-.site-content > pre {
+.site-content>pre {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
   border-radius: 4px;

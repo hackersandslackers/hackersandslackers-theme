@@ -9,75 +9,77 @@
 @import "pagination.scss";
 
 body {
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    background-color: $color-background-grey;
-    font-family: $body-font;
-    font-size: 1.6rem;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.6em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: $color-background-grey;
+  font-family: $body-font;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6em;
 }
 
 .sidebar-container {
-    grid-gap: 30px;
-    display: grid;
-    grid-template-columns: 2.1fr 1fr;
-    margin: 0 auto;
+  grid-gap: 30px;
+  display: grid;
+  grid-template-columns: 2.1fr 1fr;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+
+  @media (max-width: 950px) {
+    grid-gap: 20px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    grid-template-columns: 1fr;
     max-width: 100%;
-    width: 1000px;
-    @media (max-width: 950px) {
-        grid-gap: 20px;
-    }
-    @media (max-width: $tablet-breakpoint) {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-    }
+  }
 }
 
 .post-title {
-    color: $color-header-grey;
-    display: block;
-    font-family: $header-font;
-    font-size: 2.3em;
-    margin: unset;
-    font-weight: unset;
-    line-height: 1.1;
-    max-width: 720px;
-    order: 2;
-    width: -webkit-fill-available;
+  color: $color-header-grey;
+  display: block;
+  font-family: $header-font;
+  font-size: 2.3em;
+  margin: unset;
+  font-weight: unset;
+  line-height: 1.1;
+  max-width: 720px;
+  order: 2;
+  width: -webkit-fill-available;
 }
 
 .page-template,
 .post-content,
 .content-body {
-    p {
-        a {
-            @include content-link;
-        }
-    }
-
-    iframe {
-        width: 100%;
-    }
-
+  p {
     a {
-        transition: $transition;
+      @include content-link;
     }
+  }
 
-    h2 {
-        font-family: $body-font;
-        font-size: 2em;
-        margin: 40px 0 5px;
-        color: $color-header-grey;
-    }
+  iframe {
+    width: 100%;
+  }
+
+  a {
+    transition: $transition;
+  }
+
+  h2 {
+    font-family: $body-font;
+    font-size: 2em;
+    margin: 40px 0 5px;
+    color: $color-header-grey;
+  }
 }
 
 .about-template iframe {
-    height: 368px;
+  height: 368px;
 }
 
 .home-template {
-    background: $color-background-grey;
+  background: $color-background-grey;
 }

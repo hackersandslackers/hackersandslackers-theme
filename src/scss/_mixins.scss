@@ -6,6 +6,7 @@
     text-decoration: none;
 }
 
+
 @mixin mobile-full-width {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
@@ -41,6 +42,7 @@
   font-family: $body-font;
   font-size: 1em;
   line-height: 1.8em;
+  margin: 0 0 25px;
 }
 
 @mixin inline-code {
