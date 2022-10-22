@@ -19,12 +19,26 @@
     grid-gap: 6vmin;
   }
 
-  .post-card .post-card-title {
-    font-size: 1.3em;
-    line-height: 1.2;
-  }
+  .post-card {
+    flex-direction: column;
+    display: flex;
 
-  .post-card .post-card-excerpt {
-    font-size: 1em;
+    .post-card-image-link {
+      overflow: unset;
+    }
+
+    .post-card-title {
+      font-size: 1.3em;
+      line-height: 1.1;
+    }
+
+    .post-card-excerpt {
+      font-size: 1em;
+    }
+
+    .post-card-content {
+      height: 100%;
+      justify-content: space-between;
+    }
   }
 }
