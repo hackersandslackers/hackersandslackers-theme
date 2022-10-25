@@ -8,7 +8,7 @@
   </section>
 
   <main class="series-feed">
-    {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
+    {{#get "tags" limit="all" filter="feature_image:-null" include="count.posts" order="count.posts desc" }}
     {{#foreach tags visibility="internal"}}
     {{> "series/series-card" }}
     {{/foreach}}

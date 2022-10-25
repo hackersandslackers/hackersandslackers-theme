@@ -1,0 +1,97 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.page-series {
+  background: $color-background-grey;
+
+  .info-card {
+    display: block;
+  }
+
+  .series-archive {
+    margin: auto;
+    max-width: 95%;
+    width: 950px;
+
+    .series-feed {
+      grid-gap: 15px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 20px 0 0;
+
+      .series-card {
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: $card-shadow;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        transition: all .2s ease-out;
+        padding: 20px;
+
+        &:hover {
+          cursor: pointer;
+          background: $color-theme;
+
+          * {
+            color: #fff;
+          }
+        }
+
+        .series-image-wrapper {
+          align-content: center;
+          display: flex;
+          height: 155px;
+
+          .series-image {
+            height: auto;
+            margin: auto;
+            max-height: 70%;
+            max-width: 70%;
+          }
+        }
+
+        .series-title {
+          color: #3d4b6a;
+          font-family: $body-font-bold;
+          font-size: 1.3em;
+          font-weight: unset;
+          line-height: 1.2;
+          margin-bottom: 5px;
+          margin-top: 0;
+          transition: $transition;
+        }
+
+        .series-description {
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          color: #464a54;
+          display: -webkit-box;
+          font-family: $body-font-medium;
+          font-size: .9em;
+          line-height: 1.35 !important;
+          margin: 10px 0 !important;
+          overflow-y: hidden;
+          text-align: left;
+          text-overflow: ellipsis;
+          transition: all .2s ease-out;
+          width: -webkit-fill-available;
+        }
+
+        .series-post-count {
+          color: #787f90;
+          display: flex;
+          font-family: $header-font;
+          line-height: 1;
+          margin-top: 15px;
+          text-align: right;
+
+          i {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+  }
+}
