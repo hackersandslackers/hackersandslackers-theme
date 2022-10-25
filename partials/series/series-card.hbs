@@ -1,0 +1,16 @@
+<a class="series-card" href="{{url}}">
+  {{#if feature_image}}
+  <img class="series-image" src="{{img_url feature_image}}" alt="{{title}}" />
+  {{/if}}
+  <div class="series-info">
+    <h3>{{meta_title}}</h3>
+
+    {{#if meta_description}}
+    <p>{{meta_description}}</p>
+    {{/if}}
+
+    <span class="post-count">
+      {{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}
+    </span>
+  </div>
+</a>

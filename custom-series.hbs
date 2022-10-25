@@ -1,23 +1,20 @@
-{{!< default}}
+{{!< default}} {{#page}} <div class="series-archive">
 
-{{#page}}
-    <div class="page">
-
-        <section class="page-head">
-            <h1 class="title">{{{title}}}</h1>
-            <div class="content">
-                {{content}}
-            </div>
-        </section>
-
-        <main class="series-container">
-            {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
-                {{#foreach tags visibility="internal"}}
-                    {{> "series/series-summary-card" }}
-                {{/foreach}}
-            {{/get}}
-        </main>
-
+  <section class="info-card">
+    <h1 class="title">{{{title}}}</h1>
+    <div class="content">
+      {{content}}
     </div>
+  </section>
 
-{{/page}}
+  <main class="series-feed">
+    {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
+    {{#foreach tags visibility="internal"}}
+    {{> "series/series-card" }}
+    {{/foreach}}
+    {{/get}}
+  </main>
+
+  </div>
+
+  {{/page}}
