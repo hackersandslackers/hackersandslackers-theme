@@ -9,7 +9,7 @@
   }
 
   .series-archive {
-    margin: auto;
+    margin: auto auto 40px;
     max-width: 95%;
     width: 950px;
 
@@ -35,7 +35,7 @@
           background: $color-theme;
 
           * {
-            color: #fff;
+            color: #fff !important;
           }
         }
 
