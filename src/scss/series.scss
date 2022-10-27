@@ -8,6 +8,10 @@
     display: block;
   }
 
+  .series-section-title {
+    margin: 40px 0 0;
+  }
+
   .series-archive {
     margin: auto auto 40px;
     max-width: 95%;
@@ -17,7 +21,7 @@
       grid-gap: 15px;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      margin: 20px 0 0;
+      margin: 10px 0 0;
 
       .series-card {
         background: #fff;
