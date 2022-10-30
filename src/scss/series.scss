@@ -31,8 +31,12 @@
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
-        transition: all .2s ease-out;
+        transition: $transition;
         padding: 20px;
+
+        * {
+          transition: $transition;
+        }
 
         &:hover {
           cursor: pointer;
@@ -91,7 +95,8 @@
           margin-top: 15px;
           text-align: right;
 
-          i {
+          i,
+          svg {
             margin-right: 8px;
           }
         }
@@ -103,10 +108,26 @@
 .series-detail {
   background: #fff !important;
   box-shadow: $card-shadow;
-  margin: auto;
+  margin: 20px auto 60px;
   max-width: 100%;
   width: 900px !important;
   padding: 50px;
+
+  @media(max-width: 900px) {
+    margin: 0 auto 30px;
+    width: 100% !important;
+    padding: 30px;
+  }
+
+  .series-feature-image {
+    overflow: hidden;
+    margin: 50px auto;
+    width: 50%;
+
+    @media(max-width: $mobile-breakpoint) {
+      margin: 0 auto 40px;
+    }
+  }
 
   .post-content {
     margin-bottom: 30px;
@@ -121,16 +142,21 @@
     display: flex;
     margin-bottom: 10px;
     overflow: hidden;
-    transition: all .2s ease-out;
+    transition: $transition;
 
 
     &:hover {
       cursor: pointer;
       background: $color-hover;
+      border-color: $color-hover;
 
       * {
         color: white;
       }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
 
     .series-title {
@@ -174,13 +200,14 @@
         -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        font-family: TTNormsPro-Medium, HelveticaNeue, sans-serif;
+        font-family: $header-font-medium;
         font-size: 1.2em;
         font-weight: unset;
         line-height: 1.1;
         margin: 0 0 7px;
         overflow-y: hidden;
         text-overflow: ellipsis;
+        transition: $transition;
       }
 
       .excerpt {
@@ -194,21 +221,23 @@
         text-overflow: ellipsis;
         transition: all .2s ease-out;
         width: -webkit-fill-available;
-        width: -moz-available;
         width: stretch;
+        transition: $transition;
       }
 
       .reading-time {
         align-items: center;
         color: #6c7888;
         display: flex;
-        font-family: CamphorPro-Bold, HelveticaNeue, sans-serif;
+        font-family: $body-font-bold;
         font-size: .8em;
         line-height: 1;
         opacity: .8;
+        transition: $transition;
 
         svg {
           margin-right: 5px;
+          transition: $transition;
         }
       }
     }

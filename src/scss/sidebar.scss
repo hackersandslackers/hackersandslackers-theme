@@ -208,7 +208,8 @@
       line-height: 1;
     }
 
-    i {
+    i,
+    svg {
       font-size: 1.6em;
       color: $color-social-btn;
       transition: $transition;

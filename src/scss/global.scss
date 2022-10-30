@@ -51,13 +51,41 @@ body {
   width: -webkit-fill-available;
 }
 
-.page-template,
-.post-content,
-.content-body {
+.site-content {
+
+  h2 {
+    font-family: $body-font;
+    font-weight: normal;
+    font-size: 2em;
+    margin: 40px 0 5px;
+  }
+
+  h3 {
+    color: $color-header-grey;
+  }
+
   p {
-    a {
-      @include content-link;
+    @include body-font;
+    margin: 0 0 25px;
+
+    code {
+      @include inline-code;
     }
+  }
+
+  a {
+    @include content-link;
+
+    &:hover {
+      color: $color-theme;
+      cursor: pointer;
+    }
+  }
+
+  li {
+    @include body-font;
+    line-height: 1.6em;
+    padding: unset;
   }
 
   iframe {
