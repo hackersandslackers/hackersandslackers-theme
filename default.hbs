@@ -18,10 +18,7 @@
 
   {{#is "post"}}
   {{> "post/head" }}
-  {{/is}}
-
-  {{!-- Page meta, scripts and styles. --}}
-  {{#is "page, series, tag, author, paged"}}
+  {{else}}
   {{> "page/head" }}
   {{/is}}
 

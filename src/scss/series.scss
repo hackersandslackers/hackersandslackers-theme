@@ -106,4 +106,111 @@
   margin: auto;
   max-width: 100%;
   width: 900px !important;
+  padding: 50px;
+
+  .post-content {
+    margin-bottom: 30px;
+  }
+
+  .series-post-card {
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+    border-left: 4px solid #e6e6e6;
+    border-radius: 4px;
+    box-shadow: 0 0 0 1px #e6e6e6;
+    display: flex;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all .2s ease-out;
+
+
+    &:hover {
+      cursor: pointer;
+      background: $color-hover;
+
+      * {
+        color: white;
+      }
+    }
+
+    .series-title {
+      font-family: TTNormsPro-Medium, HelveticaNeue, sans-serif;
+      font-size: 2.2em;
+      font-weight: unset;
+      margin: 0 0 20px;
+    }
+
+    h3 {
+      color: #414d5a;
+      font-size: 1.25em;
+      line-height: 1;
+      margin: 35px 0 5px;
+    }
+
+    ul {
+      font-size: .95em;
+      line-height: 1.7;
+      margin: 0 0 0 20px;
+    }
+
+    .series-post-number {
+      color: #414d5a;
+      font-size: 2.6em;
+      padding: 20px 0;
+      text-align: center;
+      width: 100px;
+      height: 113px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .series-post-card-detail {
+      color: #414d5a;
+      padding: 20px 20px 20px 0;
+      width: 100%;
+
+      .series-post-card-title {
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        font-family: TTNormsPro-Medium, HelveticaNeue, sans-serif;
+        font-size: 1.2em;
+        font-weight: unset;
+        line-height: 1.1;
+        margin: 0 0 7px;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .excerpt {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        font-size: .9em;
+        line-height: 1.35;
+        margin-bottom: 12px;
+        overflow-y: hidden;
+        text-overflow: ellipsis;
+        transition: all .2s ease-out;
+        width: -webkit-fill-available;
+        width: -moz-available;
+        width: stretch;
+      }
+
+      .reading-time {
+        align-items: center;
+        color: #6c7888;
+        display: flex;
+        font-family: CamphorPro-Bold, HelveticaNeue, sans-serif;
+        font-size: .8em;
+        line-height: 1;
+        opacity: .8;
+
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
 }

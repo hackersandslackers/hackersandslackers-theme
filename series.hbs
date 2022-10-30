@@ -1,10 +1,30 @@
 {{!< default}} <div class="series-detail">
-  {{#foreach posts}}
-  <div class="series-post-card">
-    <h1>{{title}}</h1>
-    <p>{{slug}}</p>
-    <p>{{name}} {{count.posts}}</p>
-  </div>
-  {{/foreach}}
+  {{#page}}
+  <h1 class="series-title">{{title}}</h1>
 
-  </div>
+  {{#if feature_image}}
+  <figure class="page-image">
+
+    <img srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w, {{img_url
+      feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+      sizes="(min-width: 1400px) 1400px, 92vw" src="{{img_url feature_image size=" xl"}}"
+      alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+    {{/if}}
+
+    <div class="post-content">
+      {{content}}
+    </div>
+    {{/page}}
+
+    {{#foreach posts}}
+    <div class="series-post-card">
+      <div class="series-post-number">{{@number}}</div>
+      <div class="series-post-card-detail">
+        <h2 class="series-post-card-title">{{title}}</h2>
+        <div class="excerpt">{{excerpt}}</div>
+        <div class="reading-time"><i class="fa-sharp fa-solid fa-clock"></i> <span>{{reading_time}}</span></div>
+      </div>
+    </div>
+    {{/foreach}}
+
+    </div>
