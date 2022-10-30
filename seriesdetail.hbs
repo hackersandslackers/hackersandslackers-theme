@@ -1,5 +1,4 @@
-{{!< default}} <div class="series-detail">
-  {{#page}}
+{{!< default}} {{#page}} <div class="series-detail">
 
   {{#if feature_image}}
   <figure class="page-image">
@@ -15,8 +14,8 @@
     <div class="post-content">
       {{content}}
     </div>
-    {{/page}}
 
+    {{#get "posts" filter="tags:[{{slug}}]" include="tags" order="published_at asc" limit="all"}}
     {{#foreach posts}}
     <div class="series-post-card">
       <div class="series-post-number">{{@number}}</div>
@@ -27,5 +26,8 @@
       </div>
     </div>
     {{/foreach}}
+    {{/get}}
 
     </div>
+
+    {{/page}}
