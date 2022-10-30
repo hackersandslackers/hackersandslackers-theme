@@ -53,7 +53,7 @@
         "babel-plugin-module-resolver": "^4.1.0",
         "beeper": "3.0.0",
         "css-loader": "^6.7.1",
-        "cssnano": "5.1.13",
+        "cssnano": "5.1.14",
         "dotenv": "^16.0.3",
         "dotenv-webpack": "^8.0.1",
         "eslint": "^8.26.0",

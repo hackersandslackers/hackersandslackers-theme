@@ -15,11 +15,15 @@
   <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
 
   {{!-- Post meta, scripts and styles. --}}
-  
+
+  {{#is "post"}}
   {{> "post/head" }}
+  {{/is}}
 
   {{!-- Page meta, scripts and styles. --}}
+  {{#is "page, series, tag, author, paged"}}
   {{> "page/head" }}
+  {{/is}}
 
   {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
   it should always be the last tag before the closing head tag --}}
