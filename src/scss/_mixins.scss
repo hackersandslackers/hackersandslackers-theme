@@ -4,6 +4,12 @@
   word-break: break-word;
   transition: $transition;
   text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $color-theme;
+    cursor: pointer;
+  }
 }
 
 

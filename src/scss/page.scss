@@ -11,17 +11,20 @@
     padding-bottom: max(3.2vmin, 28px);
   }
 
-  .main-content,
-  .about-content {
+  .main-content {
+    padding: 40px;
+    max-width: 658px;
+    background: white;
+    box-shadow: $card-shadow;
+
     @media(max-width: $tablet-breakpoint) {
       width: 100%;
       max-width: unset;
     }
 
-    padding: 40px;
-    max-width: 658px;
-    background: white;
-    box-shadow: $card-shadow;
+    a {
+      @include content-link;
+    }
 
     &>p {
       -webkit-font-smoothing: antialiased;
@@ -34,6 +37,7 @@
   }
 
   .about-content {
+    margin-bottom: 40px;
 
     .author-card {
       padding: 0 0 30px 0;
@@ -89,6 +93,7 @@
 .page-title {
   font-family: $header-font-medium;
   color: $color-header-grey;
+  line-height: 1;
 }
 
 

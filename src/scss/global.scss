@@ -73,15 +73,6 @@ body {
     }
   }
 
-  a {
-    @include content-link;
-
-    &:hover {
-      color: $color-theme;
-      cursor: pointer;
-    }
-  }
-
   li {
     @include body-font;
     line-height: 1.6em;
@@ -105,7 +96,9 @@ body {
 }
 
 .about-template iframe {
-  height: 368px;
+  height: 332px;
+  margin-bottom: 40px;
+  border: 1px solid #d7dee7;
 }
 
 .home-template {
