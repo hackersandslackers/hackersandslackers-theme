@@ -33,12 +33,7 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     figcaption {
-        text-align: center;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 1.1em;
-        padding-top: 5px;
-        font-family: $body-font-medium;
+      @include kg-card-figcaption;
     }
 }
 
@@ -49,7 +44,9 @@ make sure they look good, and are given a bit of extra spacing. */
     border-radius: 3px;
     margin: 30px auto;
     transition: $transition;
+    max-width: 90%;
     @media(max-width: $mobile-breakpoint) {
+        max-width: unset;
         @include mobile-full-width;
     }
 
@@ -136,8 +133,40 @@ make sure they look good, and are given a bit of extra spacing. */
 
 .kg-table-card {
     margin: 20px 0;
-  
+
     .tableContainer {
       margin: 0;
     }
+
+    figcaption {
+      @include kg-card-figcaption;
+    }
   }
+
+/* Product Cards */
+/* ---------------------------------------------------------- */
+
+.kg-product-card .kg-product-card-description {
+  p,
+  ol,
+  u {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+  }
+
+}
+
+/* Callout Cards */
+/* ---------------------------------------------------------- */
+
+.kg-callout-emoji {
+    font-size: 2.1rem;
+    line-height: 1.4;
+}
+
+/* Toggle Heading Text (?) */
+/* ---------------------------------------------------------- */
+
+.kg-toggle-heading-text {
+  font-size: 2.0rem;
+}

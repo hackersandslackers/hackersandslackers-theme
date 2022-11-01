@@ -29,9 +29,8 @@ build:
 dev:
 	if [ -d $(DEV_GHOST_THEME_PATH) ]; then rm -rf $(DEV_GHOST_THEME_PATH); fi
 	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
+	cd $(DEV_GHOST_THEME_PATH) && npm run dev
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
-	cd $(DEV_GHOST_THEME_PATH)
-	npm run dev
 
 .PHONY: clean
 clean:
@@ -43,7 +42,6 @@ clean:
 	find . -name '*.LICENSE.txt' -delete
 	find . -type d -wholename './.yarn' -exec rm -rf {} +
 	find . -type d -wholename '**/node_modules' -exec rm -rf {} +
-
 
 .PHONY: update
 update:

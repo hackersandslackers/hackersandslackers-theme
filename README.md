@@ -41,7 +41,6 @@ The HackersAndSlackers theme includes custom widgets, integrations, and features
 - **Webpack**: Deprecates Gulp in favor of Webpack with associated plugins such as SASS rendering.
 - **Automations**: Integrations such as automatic post optimization, image caching, etc. are served by a [corresponding API](https://github.com/toddbirchard/jamstack-api)
 
-
 ## Getting Started (For Developers)
 
 For developers interested in contributing or other usage, this theme is openly available:
@@ -54,7 +53,6 @@ $ make dev
 ```
 
 For information on installing the Ghost platform, please reference the [Ghost CLI](https://docs.ghost.org/docs/cli-install).
-
 
 ### Integrations
 

@@ -1,36 +1,80 @@
 @mixin content-link {
-    border-bottom: 1px solid $color-theme;
-    text-decoration: underline;
-    word-break: break-word;
-    transition: $transition;
-    text-decoration: none;
+  border-bottom: 1px solid $color-theme;
+  text-decoration: underline;
+  word-break: break-word;
+  transition: $transition;
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+    color: $color-theme;
+    cursor: pointer;
+  }
 }
 
+
 @mixin mobile-full-width {
-    margin-left: calc(-50vw + 50%) !important;
-    margin-right: calc(-50vw + 50%) !important;
-    border-radius: unset !important;
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0;
-    position: relative;
-    width: unset;
-    border-radius: 0;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  border-radius: unset !important;
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0;
+  position: relative;
+  width: unset;
+  border-radius: 0;
 }
 
 @mixin mobile-horizontal-scroll {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-  
-    &:hover {
-      cursor: grab;
-    }
-  
-    &::-webkit-scrollbar {
-      width: 0px;
-      height: 0px;
-      background: transparent;
-    }
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  &:hover {
+    cursor: grab;
   }
+
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent;
+  }
+}
+
+@mixin body-font {
+  -webkit-font-smoothing: antialiased;
+  color: #414d5a;
+  font-family: $body-font;
+  font-size: 1em;
+  line-height: 1.8em;
+}
+
+@mixin inline-code {
+  display: inline;
+  font-family: $monospace-font;
+  vertical-align: middle;
+  font-weight: 600;
+  padding: 0.15em 0.4em 0.15em;
+  font-size: 0.85em;
+  line-height: 1em;
+  color: #517aa1;
+  background: rgba(144, 181, 223, .1);
+  border-radius: 3px;
+}
+
+@mixin kg-card-figcaption {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+  line-height: 1.1em;
+  padding-top: 10px;
+  font-family: $body-font-medium;
+
+  a {
+    border-bottom: 1px solid $color-theme;
+    color: #737883;
+    transition: $transition;
+    word-break: break-word;
+  }
+}

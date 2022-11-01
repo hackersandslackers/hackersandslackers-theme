@@ -3,48 +3,56 @@
 
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
+.tag-template {
+  background: $color-background-grey;
+}
 
 .info-card {
-    display: flex;
-    justify-content: space-between;
-    background: #fff;
-    box-shadow: $card-shadow;
-    padding: 30px;
-    grid-column: span 2;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: $card-shadow;
+  padding: 30px;
+  grid-column: span 2;
+  margin-bottom: 20px;
+
+  @media(max-width: $mobile-breakpoint) {
+    padding: 25px;
+  }
+
+  .info-card-title {
+    margin: 0 0 10px;
+    line-height: 1;
+    color: $color-header-grey;
+    font-family: $body-font-medium;
+    font-size: 2em;
+
+    @media(max-width: 900px) {
+      margin: 0 0 5px;
+    }
+
     @media(max-width: $mobile-breakpoint) {
-        padding: 25px;
+      font-size: 1.8em;
+      margin: 0 0 5px;
+    }
+  }
+
+  .info-card-excerpt {
+    line-height: 1.4;
+
+    @media(max-width: $mobile-breakpoint) {
+      line-height: 1.5;
+    }
+  }
+
+  .tag-image {
+    @media(max-width: 900px) {
+      width: 110px;
+      margin-right: 20px;
     }
 
-    .info-card-title {
-        margin: 0 0 10px;
-        line-height: 1;
-        color: $color-header-grey;
-        font-family: $body-font-medium;
-        font-size: 2em;
-        @media(max-width: 900px) {
-            margin: 0 0 5px;
-        }
-        @media(max-width: $mobile-breakpoint) {
-            font-size: 1.8em;
-            margin: 0 0 5px;
-        }
+    @media(max-width: $mobile-breakpoint) {
+      margin-right: 15px;
     }
-
-    .info-card-excerpt {
-        line-height: 1.4;
-        @media(max-width: $mobile-breakpoint) {
-            line-height: 1.5;
-        }
-    }
-
-    .tag-image {
-        @media(max-width: 900px) {
-            width: 110px;
-            margin-right: 20px;
-        }
-        @media(max-width: $mobile-breakpoint) {
-            margin-right: 15px;
-        }
-    }
+  }
 }

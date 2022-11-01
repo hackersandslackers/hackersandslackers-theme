@@ -1,23 +1,57 @@
-{{!< default}}
+{{!< default}} {{#page}} <div class="series-archive">
 
-{{#page}}
-    <div class="page">
+  <section class="info-card">
+    <h1 class="title">{{{title}}}</h1>
+    <p>{{content}}</p>
+  </section>
 
-        <section class="page-head">
-            <h1 class="title">{{{title}}}</h1>
-            <div class="content">
-                {{content}}
-            </div>
-        </section>
+  <main>
 
-        <main class="series-container">
-            {{#get "tags" filter="feature_image:-null" include="count.posts,meta_title" order="count.posts desc" }}
-                {{#foreach tags visibility="internal"}}
-                    {{> "series/series-summary-card" }}
-                {{/foreach}}
-            {{/get}}
-        </main>
-
+    <h2 class="series-section-title">Data Science & Engineering</h2>
+    <div class="series-feed">
+      {{#get "tags" limit="all"
+      filter="slug:[data-analysis-pandas,learning-apache-spark,mapping-data-with-mapbox,code-snippet-corner,web-scraping-with-python,welcome-to-sql]"
+      include="count.posts" order="count.posts desc" }}
+      {{#foreach tags visibility="internal"}}
+      {{> "series/series-card" }}
+      {{/foreach}}
+      {{/get}}
     </div>
 
-{{/page}}
+    <h2 class="series-section-title">Software Engineering</h2>
+    <div class="series-feed">
+      {{#get "tags" limit="all"
+      filter="slug:[build-flask-apps,graphql-hype,mastering-sqlalchemy,working-with-mysql,starting-django,python-concurrency-with-asyncio]"
+      include="count.posts" order="count.posts desc" }}
+      {{#foreach tags visibility="internal"}}
+      {{> "series/series-card" }}
+      {{/foreach}}
+      {{/get}}
+    </div>
+
+    <h2 class="series-section-title">Data Analysis</h2>
+    <div class="series-feed">
+      {{#get "tags" limit="all"
+      filter="slug:[adventures-in-excel,hacking-tableau-server,microsoft-powerpivot]"
+      include="count.posts" order="count.posts desc" }}
+      {{#foreach tags visibility="internal"}}
+      {{> "series/series-card" }}
+      {{/foreach}}
+      {{/get}}
+    </div>
+
+    <h2 class="series-section-title">Cloud Architecture</h2>
+    <div class="series-feed">
+      {{#get "tags" limit="all"
+      filter="slug:[create-an-aws-api,mongodb-cloud]"
+      include="count.posts" order="count.posts desc" }}
+      {{#foreach tags visibility="internal"}}
+      {{> "series/series-card" }}
+      {{/foreach}}
+      {{/get}}
+    </div>
+
+  </main>
+  </div>
+
+  {{/page}}

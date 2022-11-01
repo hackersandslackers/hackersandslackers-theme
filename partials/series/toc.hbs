@@ -1,0 +1,17 @@
+{{#foreach tags filter="visibility:internal" limit="1" as |series|}}
+{{#series}}
+
+<div class="series-toc">
+  <ol>
+    {{#get "posts" limit="all" filter="tag:{{slug}}" as |series-post|}}
+    {{#foreach series-post}}
+    <li class="series-toc-item">
+      <a href="{{url}}">{{title}}</a>
+    </li>
+    {{/foreach}}
+    {{/get}}
+  </ol>
+</div>
+
+{{/series}}
+{{/foreach}}
