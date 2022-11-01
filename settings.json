@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "[handlebars]": {
+    "editor.formatOnSave": false
+  },
+  "html.format.wrapLineLength": 0,
+  "html.format.enable": true
+}

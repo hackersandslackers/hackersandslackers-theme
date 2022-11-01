@@ -1,63 +1,60 @@
 <header class="site-header">
 
-    <div class="site-navigation">
-        <div class="nav-wrapper nav-links">
-            <div class="nav left">
-                <div class="logo desktop">
-                    {{#if @site.icon}}
-                    <a href="{{ @site.url }}">
-                        <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
-                    </a>
-                    {{else}}
-                    <a class="nav-link" href="{{ @site.url }}">{{ @site.title }}</a>
-                    {{/if}}
-                </div>
-                <div class="logo mobile">
-                    {{#if @site.icon}}
-                    <a href="{{ @site.url }}" class="mobile-logo">
-                        <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
-                        <h1 class="icon title">{{ @site.title }}</h1>
-                    </a>
-                    {{else}}
-                    <a class="nav-link" href="{{ @site.url }}">
-                        <h1 class="icon title">{{ @site.title }}</h1>
-                    </a>
-                    {{/if}}
-                </div>
-                {{ navigation }}
-            </div>
-
-            <ul class="nav right">
-                <li class="nav-item">
-                    <a href="#/search" data-ghost-search class="search-button" aria-label="{{t 'Search' }}">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
-                </li>
-                {{#if @member}}
-                <li class="nav-item account"><a href="#/portal/account" class="nav-link">{{t 'Account' }}</a></li>
-                {{else}}
-                <li class="nav-item login"><a href="#/portal/signin" class="nav-btn outline">{{t 'Log in' }}</a></li>
-                <li class="nav-item signup"><a href="#/portal/signup" class="nav-btn filled">{{t 'Subscribe' }}</a></li>
-                {{/if}}
-            </ul>
+  <div class="site-navigation">
+    <div class="nav-wrapper nav-links">
+      <div class="nav left">
+        <div class="logo desktop">
+          {{#if @site.icon}}
+            <a href="{{ @site.url }}">
+              <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
+            </a>
+          {{else}}
+            <a class="nav-link" href="{{ @site.url }}">{{ @site.title }}</a>
+          {{/if}}
         </div>
-    </div>
-
-    <div class="tags-navigation">
-        <div class="nav-wrapper tag-links">
-            {{#get "tags" limit="20" include="count.posts" order="count.posts DESC" filter="slug:-Latest" }}
-            <ul class="tags-list dragscroll">
-                <li class="tag-item">
-                    <a href="/" class="tag-link">{{t "Latest" }}</a>
-                </li>
-                {{#foreach tags}}
-                <li class="tag-item">
-                    <a href="{{ url }}" class="tag-link">{{ name }}</a>
-                </li>
-                {{/foreach}}
-            </ul>
-            {{/get}}
+        <div class="logo mobile">
+          {{#if @site.icon}}
+            <a href="{{ @site.url }}" class="mobile-logo">
+              <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
+              <h1 class="icon title">{{ @site.title }}</h1>
+            </a>
+          {{else}}
+            <a class="nav-link" href="{{ @site.url }}">
+              <h1 class="icon title">{{ @site.title }}</h1>
+            </a>
+          {{/if}}
         </div>
+        {{ navigation }}
+      </div>
+
+      <ul class="nav right">
+        <li class="nav-item">
+          <a href="#/search" data-ghost-search class="search-button" aria-label="{{t 'Search' }}">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+        </li>
+        {{#if @member}}
+          <li class="nav-item account"><a href="#/portal/account" class="nav-link">{{t 'Account' }}</a></li>
+        {{else}}
+          <li class="nav-item login"><a href="#/portal/signin" class="nav-btn outline">{{t 'Log in' }}</a></li>
+          <li class="nav-item signup"><a href="#/portal/signup" class="nav-btn filled">{{t 'Subscribe' }}</a></li>
+        {{/if}}
+      </ul>
     </div>
+  </div>
+
+  <div class="tags-navigation">
+    <div class="nav-wrapper tag-links">
+      {{#get "tags" limit="25" include="count.posts" filter="slug:-[excel,terraform,tableau,frameworks,haproxy,codesnippetcorner,mapbox,powerbi,powerpivot,business-intelligence,saas,expressjs,hashicorp]" order="count.posts DESC"  }}
+        <ul class="tags-list dragscroll">
+          {{#foreach tags}}
+            <li class="tag-item">
+              <a href="{{ url }}" class="tag-link">{{ name }}</a>
+            </li>
+          {{/foreach}}
+        </ul>
+      {{/get}}
+    </div>
+  </div>
 
 </header>
