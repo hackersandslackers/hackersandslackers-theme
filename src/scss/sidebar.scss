@@ -53,7 +53,7 @@
         color: #78849c;
         display: inline-block;
         flex-grow: 1;
-        font-family: CamphorPro-Medium, HelveticaNeue, sans-serif;
+        font-family: $body-font-medium;
         font-size: .8em !important;
         line-height: 1.5em;
         margin: 0 2px 4px;
@@ -168,8 +168,7 @@
 }
 
 .widget.about .description {
-  font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
-  font-size: .9em;
+  font-family: $body-font;
   line-height: 1.4;
   margin: 15px 0 0;
   text-align: center;
@@ -192,7 +191,7 @@
   .social-media-button {
     color: $color-social-btn;
     fill: $color-social-btn;
-    width: 1.5em;
+    font-size: 1.1em;
     background: unset;
     padding: 0;
     align-items: center;
@@ -200,8 +199,8 @@
 
     &:hover {
       cursor: pointer;
-      width: 2em;
-      height: 70px;
+      font-size: 1.3em;
+      fill: $color-hover;
     }
 
     a {

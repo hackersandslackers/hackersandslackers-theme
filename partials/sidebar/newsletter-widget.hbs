@@ -3,7 +3,7 @@
 
   <div class='subscribe'>
     <h3 class="widget-title">Newsletter</h3>
-    <p>{{t 'Join the newsletter to receive the latest updates in your inbox.' }}</p>
+    <p>{{t 'Create an account to receive occasional updates and interact with the community.' }}</p>
 
     <form data-members-form='signup' class='subscribe-form {{ formClass }}'>
       <input data-members-name type='text' name='name' id='{{ inputLabel }}' placeholder='{{t ' Your name' }}'
@@ -16,47 +16,7 @@
         {{t 'Sign Up' }}
         <i class="fa-sharp fa-solid fa-arrow-right"></i>
       </button>
-
-      <p data-members-error>
-        <!-- error message will appear here -->
-      </p>
     </form>
   </div>
 </div>
-
-{{!--
-<div class="gh-portal-logged-out-form-container">
-  <section class="gh-portal-input-section">
-    <div class="gh-portal-input-labelcontainer"><label for="input-name" class="gh-portal-input-label"> Name </label>
-    </div><input id="input-name" class="gh-portal-input" type="text" name="name" placeholder="Name McName"
-      autocomplete="off" autocorrect="off" autocapitalize="" aria-label="Name" value="">
-  </section>
-
-  <section class="gh-portal-input-section">
-    <div class="gh-portal-input-labelcontainer"><label for="input-email" class="gh-portal-input-label"> Email </label>
-    </div><input id="input-email" class="gh-portal-input" type="email" name="email" placeholder="name@example.com"
-      autocomplete="off" autocorrect="off" autocapitalize="off" aria-label="Email" value="">
-  </section>
-</div>
-
-<div>
-  <section class="gh-portal-products">
-    <div class="gh-portal-products-grid"></div>
-  </section>
-  <div class="gh-portal-btn-container">
-    <div class="gh-portal-logged-out-form-container"><button
-        class="gh-portal-btn gh-portal-btn-main gh-portal-btn-primary" type="submit"
-        style="color: rgb(255, 255, 255); background-color: rgb(9, 123, 255); opacity: 1; pointer-events: auto; width: 100%;">Sign
-        up</button>
-      <div>
-        <div class="gh-portal-signup-message">
-          <div>Already a member?</div><button class="gh-portal-btn gh-portal-btn-link"
-            style="color: rgb(9, 123, 255);"><span>Sign in</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
---}}
 {{/unless}}

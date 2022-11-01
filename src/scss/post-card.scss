@@ -11,9 +11,9 @@
 
   .post-card-title {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.2em;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.1;
     color: $color-header-grey;
     font-family: $header-font;
     transition: $transition;
@@ -78,7 +78,7 @@
   font-size: 1.2em;
   letter-spacing: -.5px;
   line-height: 1.1em;
-  margin: 15px 0;
+  margin: 10px 0 20px;
   overflow-y: hidden;
   text-overflow: ellipsis;
   max-width: 720px;
@@ -100,7 +100,7 @@
 .post-card-meta {
   -webkit-line-clamp: 1;
   align-items: center;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid #ebebeb;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -163,7 +163,7 @@
   color: #646f7d;
   display: block;
   font-family: $body-font-bold;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1;
   transition: $transition;
 
@@ -213,7 +213,7 @@
 }
 
 .post-card-meta-item {
-  font-size: .8em;
+  font-size: .9em;
   font-family: $body-font-medium;
   line-height: 1;
 
