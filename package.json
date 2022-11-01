@@ -9,7 +9,6 @@
     },
     "scripts": {
         "dev": "webpack --mode=development",
-        "zip": "gulp zip",
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "webpack --mode=production",
