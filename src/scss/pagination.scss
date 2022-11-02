@@ -3,29 +3,31 @@
 
 
 .pagination {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 98%;
-    margin: 10px auto 40px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin: 10px auto 40px;
 
-    i {
-        font-size: 1.3em;
-        transition: $transition;
-        color: $color-lightgrey;
+  i,
+  svg,
+  .pagination-arrow {
+    font-size: 1.2em;
+    transition: $transition;
+    color: $color-lightgrey;
 
-        &:hover {
-            color: $color-hover;
-            cursor: pointer;
-        }
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
     }
+  }
 
-    .hidden {
-        visibility: hidden;
-    }
+  .hidden {
+    visibility: hidden;
+  }
 
-    .page-number {
-        font-family: $body-font-bold;
-        opacity: .5;
-    }
+  .page-number {
+    font-family: $body-font-bold;
+    opacity: .5;
+  }
 }

@@ -105,6 +105,8 @@
   .search-button {
     color: $color-lightgrey;
     transition: $transition;
+    font-size: 1.2em;
+    display: block;
 
     @media(max-width: $mobile-breakpoint) {
       font-size: 1.3em;

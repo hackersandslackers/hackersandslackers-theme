@@ -101,6 +101,9 @@ body {
   border: 1px solid #d7dee7;
 }
 
-.home-template {
+.home-template,
+.author-template,
+.tag-template,
+.paged {
   background: $color-background-grey;
 }
