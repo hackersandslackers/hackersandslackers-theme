@@ -115,6 +115,7 @@
   .subfooter {
     margin: 40px auto 0;
     align-items: center;
+    padding-bottom: 20px;
 
     @media(max-width: $tablet-breakpoint) {
       margin: 40px auto 20px;
@@ -167,11 +168,20 @@
     &.social {
       height: unset;
 
+      .social-media-button {
+        font-size: 1em;
+
+        &:hover {
+          font-size: 1.2em;
+        }
+      }
+
       @media (max-width: $mobile-breakpoint) {
         height: 40px !important;
         width: 80% !important;
 
-        i {
+        i,
+        svg {
           font-size: 1.8em;
 
           &:hover {
@@ -183,7 +193,7 @@
 
     .footer-title {
       color: $color-header-grey;
-      font-family: $header-font-bold;
+      font-family: $header-font;
       text-transform: uppercase;
       text-rendering: optimizelegibility;
       font-size: 1.1em;

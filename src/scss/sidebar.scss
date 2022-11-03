@@ -127,7 +127,6 @@
 /* 12.1. Global Widget Styles
 /* ---------------------------------------------------------- */
 
-
 .sidebar-input-field {
   color: #4e5869;
   font-family: $body-font;
@@ -194,6 +193,7 @@
     font-size: 1.1em;
     background: unset;
     padding: 0;
+    display: flex;
     align-items: center;
     transition: $transition;
 
@@ -201,6 +201,11 @@
       cursor: pointer;
       font-size: 1.3em;
       fill: $color-hover;
+
+      @media(max-width: 900px) {
+        font-size: 1.7em;
+        color: $color-hover;
+      }
     }
 
     a {
@@ -216,16 +221,6 @@
 
       @media(max-width: 900px) {
         font-size: 1.4em;
-      }
-
-      &:hover {
-        font-size: 1.9em;
-        color: $color-hover;
-
-        @media(max-width: 900px) {
-          font-size: 1.7em;
-          color: $color-hover;
-        }
       }
     }
   }
