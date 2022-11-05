@@ -12,6 +12,7 @@
         "test": "gscan .",
         "test:ci": "gscan --fatal --verbose .",
         "pretest": "webpack --mode=production",
+        "lint": "eslint . --ext .js --cache",
         "preship": "yarn test",
         "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
         "postship": "git fetch && webpack --mode=production",
@@ -105,6 +106,7 @@
     },
     "dependencies": {
         "babel-plugin-prismjs": "^2.1.0",
+        "eslint-plugin-ghost": "^2.16.0",
         "prismjs": "^1.29.0"
     }
 }
