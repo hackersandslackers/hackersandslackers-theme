@@ -35,6 +35,24 @@
 
   .post {
     word-break: break-word;
+
+    .series-nextprev {
+      display: flex;
+      justify-content: space-between;
+
+      .series-nextprev-button {
+        border-right: 1px solid #dedede;
+        border-top: 1px solid #dedede;
+        color: #414d5a;
+        max-width: 43%;
+        min-width: 43%;
+        padding: 15px;
+
+        h6 {
+          margin: unset;
+        }
+      }
+    }
   }
 
   .post-header {

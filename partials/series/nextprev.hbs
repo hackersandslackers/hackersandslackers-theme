@@ -1,0 +1,30 @@
+<div class="series-nextprev">
+
+  {{#get "posts" filter="published_at:<'{{published_at}}'+id:-'{{id}}'" include="tags" limit="1"}}
+
+    {{#if posts}}
+      {{#foreach posts}}
+        <div class="series-nextprev-button">
+          <h6>Next Post</h6>
+          <p>{{title}}</p>
+        </div>
+      {{/foreach}}
+    {{/if}}
+
+  {{/get}}
+
+
+  {{#get "posts" filter="published_at:>'{{published_at}}'+id:-'{{id}}'" include="tags" limit="1"}}
+
+    {{#if posts}}
+      {{#foreach posts}}
+        <div class="series-nextprev-button">
+          <h6>Previous Post</h6>
+          <p>{{title}}</p>
+        </div>
+      {{/foreach}}
+    {{/if}}
+
+  {{/get}}
+
+</div>
