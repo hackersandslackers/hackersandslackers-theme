@@ -1,57 +1,42 @@
 <!DOCTYPE html>
 <html lang="{{@site.locale}}">
 
-<head>
-  {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
-  <title>{{meta_title}}</title>
+  <head>
+    {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
+    <title>{{meta_title}}</title>
 
-  {{!-- Theme assets - use the {asset} helper to reference styles & scripts,
-  this will take care of caching and cache-busting automatically --}}
-
-  {{!-- Theme JS --}}
-  <script src="https://kit.fontawesome.com/5b4eea6520.js" crossorigin="anonymous"></script>
-  <script src="{{asset 'built/main.js'}}"></script>
-
-  <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
-
-  {{!-- Post meta, scripts and styles. --}}
-
-  {{#is "post"}}
-  {{> "post/head" }}
-  {{else}}
-  {{> "page/head" }}
-  {{/is}}
-
-  {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
+    {{!-- Theme JS --}}
+    <script src="https://kit.fontawesome.com/5b4eea6520.js" crossorigin="anonymous"></script>
+    <script src="{{asset 'built/main.js'}}"></script>
+    <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
+    {{!-- Post meta, scripts and styles. --}}
+    {{#is "post"}}
+      {{> "post/head" }}
+      {{else}}
+        {{> "page/head" }}
+    {{/is}}
+    {{!-- This tag outputs all your advanced SEO meta, structured data, and other important settings,
   it should always be the last tag before the closing head tag --}}
-  {{ghost_head}}
+    {{ghost_head}}
+  </head>
 
-</head>
-
-<body class="{{body_class}}">
-  {{> "site-navigation" }}
-  <div class="viewport">
-
-    <div class="site-content">
-      {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
-      {{{body}}}
+  <body class="{{body_class}}">
+    {{> "site-navigation" }}
+    <div class="viewport">
+      <div class="site-content">
+        {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
+        {{{body}}}
+      </div>
     </div>
-
-  </div>
-  {{!-- /.viewport --}}
-
-  {{!-- The global footer at the very bottom of the screen --}}
-  {{> "footer/footer" }}
-
-
-  {{!-- Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries --}}
-  {{!--
+    {{!-- /.viewport --}}
+    {{!-- The global footer at the very bottom of the screen --}}
+    {{> "footer/footer" }}
+    {{!-- Scripts - handle member signups, responsive videos, infinite scroll, floating headers, and galleries --}}
+    {{!--
   <script src="{{asset " built/casper.js"}}"></script> --}}
-
-  {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the
+    {{!-- Ghost outputs required functional scripts with this tag - it should always be the last thing before the
   closing body tag --}}
-  {{ghost_foot}}
-
-</body>
+    {{ghost_foot}}
+  </body>
 
 </html>

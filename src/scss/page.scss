@@ -144,3 +144,45 @@
     flex-direction: column;
   }
 }
+
+.error-template {
+  background-color: $color-background-grey;
+
+  .error-content {
+    width: 900px;
+    padding: 40px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: $card-shadow;
+
+    .error-code {
+      font-family: $header-font;
+      color: $color-header-grey;
+      font-size: 3em;
+      line-height: 1;
+      margin: unset;
+    }
+
+    .error-description {
+      font-family: $body-font-medium;
+      color: $color-post-blurb-grey;
+    }
+
+    p {
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $color-border;
+    }
+
+    .error-link {
+      font-family: $body-font-bold;
+      color: $color-lightgrey;
+      transition: $transition;
+
+      &:hover {
+        color: $color-hover;
+        cursor: pointer;
+      }
+    }
+  }
+}

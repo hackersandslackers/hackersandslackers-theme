@@ -1,30 +1,25 @@
 <div class="series-nextprev">
-
+  <p>{{tags visibility="internal"}}</p>
   {{#get "posts" filter="published_at:<'{{published_at}}'+id:-'{{id}}'" include="tags" limit="1"}}
-
     {{#if posts}}
-      {{#foreach posts}}
-        <div class="series-nextprev-button">
-          <h6>Next Post</h6>
-          <p>{{title}}</p>
-        </div>
+      {{#foreach tags visibility="internal"}}
+        {{#foreach posts}}
+          <div class="series-nextprev-button">
+            <h6>Next Post</h6>
+            <p>{{tags visibility="internal"}}</p>
+          </div>
+        {{/foreach}}
       {{/foreach}}
     {{/if}}
-
   {{/get}}
-
-
   {{#get "posts" filter="published_at:>'{{published_at}}'+id:-'{{id}}'" include="tags" limit="1"}}
-
     {{#if posts}}
       {{#foreach posts}}
         <div class="series-nextprev-button">
           <h6>Previous Post</h6>
-          <p>{{title}}</p>
+          <p>{{tags visibility="internal"}}</p>
         </div>
       {{/foreach}}
     {{/if}}
-
   {{/get}}
-
 </div>
