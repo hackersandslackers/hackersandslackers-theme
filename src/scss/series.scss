@@ -4,8 +4,16 @@
 .page-series {
   background: $color-background-grey;
 
-  .info-card {
-    display: block;
+  header {
+
+    h1 {
+      font-family: $header-font-medium;
+      color: $color-header-grey
+    }
+
+    p {
+      line-height: 1.6;
+    }
   }
 
   .series-section-title {
@@ -17,6 +25,8 @@
     margin: auto auto 40px;
     max-width: 95%;
     width: 950px;
+    background: white;
+    padding: 40px;
 
     .series-feed {
       grid-gap: 15px;

@@ -36,7 +36,7 @@
               {{/primary_tag}}
               <div class="post-meta-item">
                 <i class="fa-regular fa-calendar"></i>
-                <time datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
               </div>
               {{#if reading_time}}
                 <div class="post-meta-item">
@@ -52,11 +52,6 @@
         <section class="post-content">
           {{content}}
         </section>
-        {{!--
-    <section class="post-comments gh-canvas">
-      If you want to embed comments, this is a good place to paste your code!
-    </section>
-    --}}
         {{> "series/nextprev" }}
       </article>
     </main>
