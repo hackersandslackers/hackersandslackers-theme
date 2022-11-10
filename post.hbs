@@ -1,89 +1,70 @@
 {{!< default}} {{#post}}
-  <main id="site-main" class="post-wrapper">
-    <article class="post {{post_class}}">
-
-      <header class="post-header">
-
-        {{!-- Post Image --}}
-        {{#if feature_image}}
-          <div class="post-image">
-            <img src="{{img_url feature_image}}"
-              alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-            {{#if feature_image_caption}}
-              <figcaption>{{feature_image_caption}}</figcaption>
-            {{/if}}
-          </div>
-        {{/if}}
-
-        <div class="post-header-details">
-
-          {{!-- Post Title --}}
-          <h1 class="post-title">{{title}}</h1>
-
-          {{!-- Post Excerpt --}}
-          {{#if custom_excerpt}}
-            <p class="post-excerpt">{{custom_excerpt}}</p>
-          {{/if}}
-
-          {{!-- Post Meta --}}
-          <div class="post-meta">
-
-            {{#primary_author}}
-              <div class="post-meta-item">
-                <i class="fa-regular fa-user-pen"></i>
-                <a href="{{url}}" class="author-name">{{name}}</a>
-              </div>
-            {{/primary_author}}
-
-            {{#primary_tag}}
-              <div class="post-meta-item">
-                <i class="fa-regular fa-tag"></i>
-                <a href="{{url}}">{{name}}</a>
-              </div>
-            {{/primary_tag}}
-
-            <div class="post-meta-item">
-              <i class="fa-regular fa-calendar"></i>
-              <time datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
+  <div class="post-wrapper">
+    <main id="site-main">
+      <article class="post {{post_class}}">
+        <header class="post-header">
+          {{!-- Post Image --}}
+          {{#if feature_image}}
+            <div class="post-image">
+              <img src="{{img_url feature_image}}"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+              {{#if feature_image_caption}}
+                <figcaption>{{feature_image_caption}}</figcaption>
+              {{/if}}
             </div>
-
-            {{#if reading_time}}
-              <div class="post-meta-item">
-                <i class="fa-regular fa-eye"></i>
-                <span class="reading-time">{{reading_time}}</span>
-              </div>
+          {{/if}}
+          <div class="post-header-details">
+            {{!-- Post Title --}}
+            <h1 class="post-title">{{title}}</h1>
+            {{!-- Post Excerpt --}}
+            {{#if custom_excerpt}}
+              <p class="post-excerpt">{{custom_excerpt}}</p>
             {{/if}}
-
+            {{!-- Post Meta --}}
+            <div class="post-meta">
+              {{#primary_author}}
+                <div class="post-meta-item">
+                  <i class="fa-regular fa-user-pen"></i>
+                  <a href="{{url}}" class="author-name">{{name}}</a>
+                </div>
+              {{/primary_author}}
+              {{#primary_tag}}
+                <div class="post-meta-item">
+                  <i class="fa-regular fa-tag"></i>
+                  <a href="{{url}}">{{name}}</a>
+                </div>
+              {{/primary_tag}}
+              <div class="post-meta-item">
+                <i class="fa-regular fa-calendar"></i>
+                <time datetime="{{date format=" YYYY-MM-DD"}}">{{date}}</time>
+              </div>
+              {{#if reading_time}}
+                <div class="post-meta-item">
+                  <i class="fa-regular fa-eye"></i>
+                  <span class="reading-time">{{reading_time}}</span>
+                </div>
+              {{/if}}
+            </div>
           </div>
-        </div>
-
-        {{!-- Post Series TOC --}}
-        {{> "series/toc" }}
-      </header>
-
-      <section class="post-content">
-        {{content}}
-      </section>
-
-      {{!--
+          {{!-- Post Series TOC --}}
+          {{> "series/toc" }}
+        </header>
+        <section class="post-content">
+          {{content}}
+        </section>
+        {{!--
     <section class="post-comments gh-canvas">
       If you want to embed comments, this is a good place to paste your code!
     </section>
     --}}
-
-      {{> "series/nextprev" }}
-
-    </article>
-
-
-
-    {{!-- Post Footer --}}
-  </main>
-
+        {{> "series/nextprev" }}
+      </article>
+    </main>
+  </div>
+  {{!-- Post Footer --}}
   <div class="post-after">
     <div class="post-after-wrapper">
       {{> "post/post-comments"}}
-
       {{!-- The {#get} helper below fetches some of the latest posts here
       so that people have something else to read when they finish this one.
 

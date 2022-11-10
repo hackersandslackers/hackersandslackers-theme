@@ -12,7 +12,7 @@
   justify-content: space-between;
   background: #fff;
   box-shadow: $card-shadow;
-  padding: 30px;
+  padding: 40px;
   grid-column: span 2;
   margin-bottom: 20px;
 
@@ -35,6 +35,12 @@
       font-size: 1.8em;
       margin: 0 0 5px;
     }
+  }
+
+  p {
+    line-height: 1.6em;
+    margin: 0;
+    font-size: 1.05em;
   }
 
   .info-card-excerpt {

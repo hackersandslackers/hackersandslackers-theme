@@ -11,13 +11,21 @@
 /* ---------------------------------------------------------- */
 
 .post-template {
+  background: $color-background-grey;
 
-  body {
-    background: white !important;
+  .site-header {
+    margin-bottom: 0;
+  }
+
+  .post-wrapper {
+    margin-bottom: unset;
+    box-shadow: $card-shadow;
+    background: white;
   }
 
   main {
     margin: 0 auto 0;
+    padding-top: 30px;
     width: $tablet-breakpoint;
 
     @media(max-width: $smallscreen-breakpoint) {
@@ -35,6 +43,8 @@
 
   .post {
     word-break: break-word;
+    margin: 0 auto 0;
+    width: 800px;
 
     .series-nextprev {
       display: flex;
@@ -178,7 +188,7 @@
       }
 
       ol {
-        counter-reset: li 3;
+        counter-reset: li 2;
         list-style-type: upper-roman !important;
         margin: 0;
         padding: 0;
@@ -200,12 +210,13 @@
           font-size: 15px;
           font-weight: bold;
           display: inline-block;
-          margin-right: 8px;
+          margin-right: 5px;
+          min-width: 30px;
         }
 
         a {
           color: #687f99;
-          font-family: $body-font-bold;
+          font-family: $body-font-medium;
           transition: $transition;
 
           &:hover {
@@ -297,6 +308,14 @@
       }
     }
   }
+
+  .footer-wrapper {
+    width: 800px;
+
+    .widget.info {
+      max-width: 32%;
+    }
+  }
 }
 
 .page-template .post-header {
@@ -375,7 +394,7 @@
 .post-after {
   background-color: $color-background-grey;
   width: 100%;
-  padding: 50px 0;
+  padding: 30px 0 50px;
 
   .post-after-wrapper {
     max-width: 800px;
