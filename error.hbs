@@ -9,6 +9,8 @@
     <script src="{{asset 'built/main.js'}}"></script>
     <script src="{{asset 'built/page.js'}}"></script>
     <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
+    {{!-- Advanced SEO meta data --}}
+    {{ghost_head}}
   </head>
 
   <body class="error-template">
@@ -17,8 +19,20 @@
       <main class="error-content error-{{statusCode}}">
         <section class="error-message">
           <h1 class="error-code">{{statusCode}}</h1>
-          <p class="error-description">{{message}}</p>
-          <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
+          <p class="error-description">{{#match statusCode "=" 404}} <i class="fa-sharp fa-solid fa-file-circle-xmark"></i> {{/match}} {{message}}.</p>
+          <p class="error-suggestion">Feeling lost? <a class="error-link" href="{{@site.url}}">Go to the front page →</a></p>
+          <footer class="error-footer">
+            <p class="error-explanation">Perhaps you'd be interested in some of our latest posts:</p>
+            {{#match statusCode "=" 404}}
+              <div class="suggested-posts">
+                {{#get "posts" order="published_at desc" include="authors,tags" limit="3"}}
+                  {{#foreach posts}}
+                    {{> "post-card"}}
+                  {{/foreach}}
+                {{/get}}
+              </div>
+            {{/match}}
+          </footer>
         </section>
         {{#if errorDetails}}
           <section class="error-stack">
