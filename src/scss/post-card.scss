@@ -18,6 +18,10 @@
     font-family: $header-font;
     transition: $transition;
 
+    @media (max-width: $smallscreen-breakpoint) {
+      font-size: 2em;
+    }
+
     @media (max-width: $mobile-breakpoint) {
       font-size: 1.7em;
       letter-spacing: -.5px;
@@ -205,11 +209,6 @@
 
 .post-card-meta-details {
   line-height: 1;
-
-  @media(max-width: $mobile-breakpoint) {
-    display: flex;
-    flex-direction: column;
-  }
 }
 
 .post-card-meta-item {

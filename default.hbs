@@ -2,31 +2,36 @@
 <html lang="{{@site.locale}}">
 
   <head>
-    {{!-- Basic meta - advanced meta is output with {ghost_head} below --}}
+    {{! Basic metadata }}
     <title>{{meta_title}}</title>
-    {{!-- Theme JS --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#5eb9d7" />
+    {{! Theme JS }}
     <script src="https://kit.fontawesome.com/5b4eea6520.js" crossorigin="anonymous"></script>
     <script src="{{asset 'built/main.js'}}"></script>
+    {{! Theme CSS }}
     <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
+    <link rel="shortcut icon" href="{{@site.icon}}" />
     {{!-- Post meta, scripts and styles. --}}
     {{#is "post"}}
-      {{> "post/head" }}
+      <script src="{{asset 'built/post.js'}}"></script>
       {{else}}
-        {{> "page/head" }}
+        <script src="{{asset 'built/page.js'}}"></script>
     {{/is}}
-    {{!-- Advanced SEO meta data --}}
+    {{! Advanced SEO meta data}}
     {{ghost_head}}
   </head>
 
   <body class="{{body_class}}">
     {{> "site-navigation" }}
     <div class="viewport">
-      <div class="site-content" >
-        {{!-- All other templates get inserted here, index.hbs, post.hbs, etc --}}
+      <div class="site-content">
+        {{! All other templates get inserted here, index.hbs, post.hbs, etc}}
         {{{body}}}
       </div>
     </div>
-    {{!-- The global footer at the very bottom of the screen --}}
+    {{! The global footer at the very bottom of the screen }}
     {{> "footer/footer" }}
     {{ghost_foot}}
   </body>
