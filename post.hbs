@@ -24,23 +24,23 @@
             <div class="post-meta">
               {{#primary_author}}
                 <div class="post-meta-item">
-                  <i class="fa-regular fa-user-pen"></i>
+                  <i class="fa-sharp fa-solid fa-user-pen"></i>
                   <a href="{{url}}" class="author-name">{{name}}</a>
                 </div>
               {{/primary_author}}
               {{#primary_tag}}
                 <div class="post-meta-item">
-                  <i class="fa-regular fa-tag"></i>
+                  <i class="fa-sharp fa-solid fa-tag"></i>
                   <a href="{{url}}">{{name}}</a>
                 </div>
               {{/primary_tag}}
               <div class="post-meta-item">
-                <i class="fa-regular fa-calendar"></i>
+                <i class="fa-sharp fa-solid fa-calendar"></i>
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
               </div>
               {{#if reading_time}}
                 <div class="post-meta-item">
-                  <i class="fa-regular fa-eye"></i>
+                  <i class="fa-sharp fa-solid fa-eye"></i>
                   <span class="reading-time">{{reading_time}}</span>
                 </div>
               {{/if}}
