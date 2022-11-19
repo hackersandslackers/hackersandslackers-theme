@@ -119,8 +119,9 @@
 
   .meta-items-left {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     white-space: nowrap;
+
 
     * {
       transition: $transition;

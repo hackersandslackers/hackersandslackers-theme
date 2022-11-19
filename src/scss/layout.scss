@@ -2,20 +2,21 @@
 /* ---------------------------------------------------------- */
 
 .viewport {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: auto;
 }
 
 .home-template .viewport,
 .author-template .viewport,
 .tag-template .viewport,
 .about-template .viewport,
+.page-about .viewport,
 .paged .viewport {
-    max-width: 93%;
+  max-width: 93%;
 }
 
 .site-content {
-    flex-grow: 1;
+  flex-grow: 1;
 }

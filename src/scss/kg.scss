@@ -1,5 +1,3 @@
-
-
 /* Cards
 /* ---------------------------------------------------------- */
 
@@ -10,143 +8,151 @@ make sure they look good, and are given a bit of extra spacing. */
 
 /* This keeps small embeds centered */
 .kg-embed-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* General Card Styles */
 /* ---------------------------------------------------------- */
 .kg-card {
-    margin: 30px 0;
+  margin: 30px 0;
 
-    &:last-child {
-        margin: 30px 0 0;
-    }
+  &:last-child {
+    margin: 30px 0 0;
+  }
 
-    &.kg-embed-card {
-        display: block;
-        width: 100%;
-        border: 1px solid #d0d8df;
-        margin-bottom: 20px;
-    }
+  &.kg-embed-card {
+    display: block;
+    width: 100%;
+    border: 1px solid #d0d8df;
+    margin-bottom: 20px;
+  }
 
-    figcaption {
-      @include kg-card-figcaption;
-    }
+  figcaption {
+    @include kg-card-figcaption;
+  }
 }
 
 /* Image Card */
 /* ---------------------------------------------------------- */
 
 .kg-image-card {
+  border-radius: 3px;
+  margin: 30px auto;
+  transition: $transition;
+  max-width: 90%;
+
+  @media(max-width: $mobile-breakpoint) {
+    max-width: unset;
+    @include mobile-full-width;
+  }
+
+  img {
+    margin: auto;
+    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
     border-radius: 3px;
-    margin: 30px auto;
-    transition: $transition;
-    max-width: 90%;
-    @media(max-width: $mobile-breakpoint) {
-        max-width: unset;
-        @include mobile-full-width;
-    }
+  }
 
-    img {
-        margin: auto;
-        box-shadow: 0 0 3px rgb(0 0 0 / 20%);
-        border-radius: 3px;
-    }
-
-    figcaption {
-        line-height: 1.4;
-        margin: 0 auto;
-        padding: 8px 0 0;
-    }
+  figcaption {
+    line-height: 1.4;
+    margin: 0 auto;
+    padding: 8px 0 0;
+  }
 }
 
 /* Code Card */
 /* ---------------------------------------------------------- */
 .kg-code-card {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    width: 100%;
-    margin: 30px 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  margin: 30px 0;
+
+  @media(max-width: $mobile-breakpoint) {
+    @include mobile-full-width;
+  }
+
+  pre,
+  pre[class*="language-"] {
+    margin: 0 !important;
+    order: 1;
+    border-radius: 0 0 5px 5px;
+
     @media(max-width: $mobile-breakpoint) {
-        @include mobile-full-width;
+      border-radius: unset;
+      font-size: .8em !important;
+    }
+  }
+
+  figcaption {
+    order: 1;
+    width: 100%;
+    width: -moz-available;
+    margin: 0 auto;
+    padding: 14px 15px 10px;
+    border-radius: 4px 4px 0 0 !important;
+    background: #20242c;
+    color: #d2d7e1;
+    font-family: $body-font-medium;
+    font-size: 0.95em;
+    line-height: 1;
+    text-align: left;
+    white-space: normal;
+    order: 0;
+
+    @media(max-width: $mobile-breakpoint) {
+      min-width: 100%;
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
+      border-right: 0;
+      border-left: 0;
+      border-radius: unset;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
-    pre,
-    pre[class*="language-"] {
-        margin: 0 !important;
-        order: 1;
-        border-radius: 0 0 5px 5px;
-        @media(max-width: $mobile-breakpoint) {
-            border-radius: unset;
-            font-size: .8em !important;
-        }
+    code {
+      font-family: $monospace-font;
     }
-
-    figcaption {
-        order: 1;
-        width: 100%;
-        width: -moz-available;
-        margin: 0 auto;
-        padding: 14px 15px 10px;
-        border-radius: 4px 4px 0 0 !important;
-        background: #20242c;
-        color: #d2d7e1;
-        font-family: $body-font-medium;
-        font-size: 0.95em;
-        line-height: 1;
-        text-align: left;
-        white-space: normal;
-        order: 0;
-        @media(max-width: $mobile-breakpoint) {
-            min-width: 100%;
-            margin-left: calc(-50vw + 50%) !important;
-            margin-right: calc(-50vw + 50%) !important;
-            border-right: 0;
-            border-left: 0;
-            border-radius: unset;
-        }
-
-        code {
-            font-family: $monospace-font;
-        }
-    }
+  }
 }
 
 /* Product Card */
 /* ---------------------------------------------------------- */
 
 .kg-product-card .kg-product-card-description {
-    p,
-    ol,
-    ul {
-        font-size: 1.7rem;
-        line-height: 1.6em;
-    }
+
+  p,
+  ol,
+  ul {
+    font-size: 1.7rem;
+    line-height: 1.6em;
+  }
 }
 
 /* Table Card */
 /* ---------------------------------------------------------- */
 
 .kg-table-card {
-    margin: 20px 0;
+  margin: 20px 0;
 
-    .tableContainer {
-      margin: 0;
-    }
-
-    figcaption {
-      @include kg-card-figcaption;
-    }
+  .tableContainer {
+    margin: 0;
   }
+
+  figcaption {
+    @include kg-card-figcaption;
+  }
+}
 
 /* Product Cards */
 /* ---------------------------------------------------------- */
 
 .kg-product-card .kg-product-card-description {
+
   p,
   ol,
   u {
@@ -160,8 +166,8 @@ make sure they look good, and are given a bit of extra spacing. */
 /* ---------------------------------------------------------- */
 
 .kg-callout-emoji {
-    font-size: 2.1rem;
-    line-height: 1.4;
+  font-size: 2.1rem;
+  line-height: 1.4;
 }
 
 /* Toggle Heading Text (?) */

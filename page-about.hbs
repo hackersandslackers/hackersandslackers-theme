@@ -1,40 +1,32 @@
-{{!< default}} {{#post}} <div class="sidebar-container about-template">
-
+{{!< default}} {{#post}}
+  <div class="sidebar-container about-template">
     <main class="about-content main-content">
-
-        <h1 class="page-title">{{title}}</h1>
-
-        {{#if feature_image}}
+      <h1 class="page-title">{{title}}</h1>
+      {{#if feature_image}}
         <figure class="page-image">
-            {{!-- This is a responsive image, it loads different sizes depending on device
+          {{!-- This is a responsive image, it loads different sizes depending on device
             https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-            <img srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w, {{img_url
+          <img srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w, {{img_url
                 feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
-                sizes="(min-width: 1400px) 1400px, 92vw" src="{{img_url feature_image size=" xl"}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-            {{#if feature_image_caption}}
+            sizes="(min-width: 1400px) 1400px, 92vw" src="{{img_url feature_image size=" xl"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+          {{#if feature_image_caption}}
             <figcaption>{{feature_image_caption}}</figcaption>
-            {{/if}}
+          {{/if}}
         </figure>
-        {{/if}}
-
-        {{content}}
-
-        <section class="authors-list">
-            <h2 class="authors-list-title">Authors</h2>
-            {{#get "authors" include="count.posts" order="count.posts DESC" limit="all"}}
-            {{#foreach authors}}
-            {{> author-card}}
-            {{/foreach}}
-            {{/get}}
-        </section>
-
+      {{/if}}
+      {{content}}
+      <section class="authors-list">
+        <h2 class="authors-list-title">Authors</h2>
+        {{#get "authors" include="count.posts" order="count.posts DESC" limit="all"}}
+          {{#foreach authors}}
+            {{> about-author-card}}
+          {{/foreach}}
+        {{/get}}
+      </section>
     </main>
-
     <div class="sidebar">
-        {{> "sidebar/sidebar" }}
+      {{> "sidebar/sidebar" }}
     </div>
-
-    </div>
-
-    {{/post}}
+  </div>
+{{/post}}

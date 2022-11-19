@@ -22,10 +22,6 @@
       max-width: unset;
     }
 
-    a {
-      @include content-link;
-    }
-
     &>p {
       -webkit-font-smoothing: antialiased;
       color: #414d5a;
@@ -33,34 +29,15 @@
       font-size: 1em;
       line-height: 1.8em;
       margin: 0 0 25px;
+
+      a {
+        @include content-link;
+      }
     }
   }
 
   .about-content {
     margin-bottom: 40px;
-
-    .author-card {
-      padding: 0 0 30px 0;
-      margin-bottom: 30px !important;
-      border-bottom: 1px solid $color-border;
-      overflow: hidden;
-      box-shadow: none;
-
-      &:last-of-type {
-        border-bottom: none;
-        margin-bottom: 0 !important;
-        padding: 0;
-      }
-
-      .author-meta {
-        flex-wrap: wrap;
-        margin: 20px 0;
-
-        .author-meta-item {
-          font-size: 9em;
-        }
-      }
-    }
 
     .authors-list-title {
       margin: 40px 0 15px;
@@ -94,12 +71,11 @@
   font-family: $header-font-medium;
   color: $color-header-grey;
   line-height: 1;
+  margin-bottom: 10px;
 }
 
 
 @media (max-width: $smallscreen-breakpoint) {
-
-  .author-template .author-card,
   .tag-template .info-card {
     margin: 0 auto 20px !important;
   }
@@ -130,6 +106,7 @@
   }
 }
 
+// About page author card
 @media (max-width: $mobile-breakpoint) {
 
   .author-template .author-card .author-avatar-wrapper,
@@ -137,11 +114,6 @@
     height: 70px;
     width: 70px;
     min-width: 70px;
-  }
-
-  .author-template .author-card .author-meta {
-    margin: 10px 0;
-    flex-direction: column;
   }
 }
 

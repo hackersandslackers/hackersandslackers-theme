@@ -8,7 +8,6 @@
 .author-card {
   background: white;
   padding: 30px;
-  display: flex;
   box-shadow: $card-shadow;
 
   @media(max-width: $tablet-breakpoint) {
@@ -16,7 +15,14 @@
   }
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 20px;
+    padding: 15px;
+    background: unset;
+    box-shadow: none;
+    padding: 25px 25px 0 25px !important;
+  }
+
+  .author-card-wrapper {
+    display: flex;
   }
 
   .author-card-name-wrapper {
@@ -43,7 +49,7 @@
   .author-avatar-wrapper {
     min-width: 80px;
     height: auto;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 
   .author-card-excerpt {
@@ -53,14 +59,10 @@
     display: -webkit-box;
     font-family: $body-font-medium;
     font-size: 1em;
-    letter-spacing: -.5px;
     line-height: 1.4;
     overflow-y: hidden;
     text-overflow: ellipsis;
-
-    @media(max-width: $mobile-breakpoint) {
-      margin-top: 20px;
-    }
+    margin-top: 20px;
   }
 
   .author-name {
@@ -82,10 +84,6 @@
     gap: 10px;
     margin: 15px 0;
 
-    @media(max-width: $mobile-breakpoint) {
-      flex-direction: column;
-    }
-
     a {
       transition: $transition;
 
@@ -103,7 +101,7 @@
     .author-meta-item {
       color: #4d525d;
       font-family: $body-font-medium;
-      font-size: .95em !important;
+      font-size: 1.1em !important;
       line-height: 1;
       white-space: nowrap;
       display: flex;
@@ -119,8 +117,8 @@
 
   .author-profile-pic {
     display: block;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     object-fit: cover;
     background: color-mod($color-lightgrey) l(+10%);
     border-radius: 50%;

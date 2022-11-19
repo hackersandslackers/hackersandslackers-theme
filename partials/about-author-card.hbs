@@ -1,0 +1,52 @@
+<div class="author-card {{slug}}">
+  <div class="author-card-wrapper">
+    {{#if profile_image}}
+      <a href="{{url}}" class="author-avatar-link">
+        <img src="{{img_url profile_image}}" alt="{{name}}'s' avatar" loading="lazy" class="lazy author-image" />
+      </a>
+    {{else}}
+      <a href="{{url}}" class="author-avatar-link">
+        <img src="{{asset " default-user-image.jpg"}}" alt="{{name}}'s' avatar" class="author-image" />
+      </a>
+    {{/if}}
+    <div class="author-details">
+      <div class="author-card-name-wrapper">
+        <a class="author-name" href="{{url}}">{{name}}</a>
+        <span class="post-count">
+          {{#get "posts" include="count.posts"}}{{plural count.posts empty=(t "0 Posts") singular=(t "%Post") plural=(t "% Posts")}}{{/get}}
+        </span>
+      </div>
+      <div class="author-meta">
+        <div class="post-count author-meta-item">
+          <i class="fa-sharp fa-solid fa-files"></i>
+          <a href="{{url}}">{{plural count.posts empty=(t "0 Posts") singular=(t "% Post")
+                                        plural=(t "% Posts")}}</a>
+        </div>
+        {{#if location}}
+          <div class="author-meta-item">
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
+            <span>{{location}}</span>
+          </div>
+        {{/if}}
+        {{#if website}}
+          <div class="author-meta-item">
+            <a href="{{website}}" target="_BLANK"><i class="fa-sharp fa-solid fa-link"></i></a>
+          </div>
+        {{/if}}
+        {{#if twitter}}
+          <div class="author-meta-item">
+            <a href="{{twitter_url}}"><i class="fab fa-twitter"></i></a>
+          </div>
+        {{/if}}
+        {{#if facebook}}
+          <div class="author-meta-item">
+            <a href="{{facebook_url}}"><i class="fa-brands fa-github"></i></a>
+          </div>
+        {{/if}}
+      </div>
+      {{#if bio}}
+        <p class="author-card-excerpt">{{bio}}</p>
+      {{/if}}
+    </div>
+  </div>
+</div>
