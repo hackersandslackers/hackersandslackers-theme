@@ -58,11 +58,11 @@
     color: #5e6877;
     display: -webkit-box;
     font-family: $body-font-medium;
-    font-size: 1em;
+    font-size: 1.1em;
     line-height: 1.4;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    margin-top: 20px;
+    margin-top: 15px;
   }
 
   .author-name {
@@ -111,6 +111,7 @@
       i,
       svg {
         margin-right: 5px;
+        font-size: 1.2em;
       }
     }
   }
@@ -126,5 +127,15 @@
 
   .author-avatar-link {
     margin-right: 15px;
+  }
+
+  .post-card {
+    .post-card-author-avatar {
+      display: none;
+    }
+
+    .post-card-author-name {
+      display: none;
+    }
   }
 }
