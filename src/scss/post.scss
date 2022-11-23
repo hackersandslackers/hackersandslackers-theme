@@ -101,13 +101,13 @@
       font-size: 2.3em;
       margin: unset;
       font-weight: unset;
-      line-height: 1.1;
+      line-height: 1.05;
       max-width: 720px;
       order: 2;
       width: -webkit-fill-available;
 
       @media (max-width: $mobile-breakpoint) {
-        font-size: 2em;
+        font-size: 1.8em;
       }
     }
 
@@ -130,12 +130,13 @@
         order: 1;
 
         @media (max-width: 767px) {
-          font-size: 1.7rem;
+          font-size: 1.8rem;
         }
       }
 
       .post-meta {
         display: flex;
+        flex-wrap: wrap;
 
         .post-meta-item {
           margin-right: 25px;
@@ -144,13 +145,14 @@
 
           @media(max-width: $mobile-breakpoint) {
             font-size: 0.9em;
-            margin-right: 20px;
+            margin-right: 15px;
             white-space: nowrap;
+            margin-bottom: 5px;
           }
 
           i,
           svg {
-            margin-right: 5px;
+            margin-right: 2px;
           }
         }
 
