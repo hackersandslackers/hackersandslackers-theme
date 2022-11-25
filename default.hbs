@@ -16,8 +16,9 @@
     {{!-- Post meta, scripts and styles. --}}
     {{#is "post"}}
       <script src="{{asset 'built/post.js'}}"></script>
-      {{else}}
-        <script src="{{asset 'built/page.js'}}"></script>
+    {{/is}}
+    {{#is "page, author, tag"}}
+      <script src="{{asset 'built/page.js'}}"></script>
     {{/is}}
     {{! Advanced SEO meta data}}
     {{ghost_head}}

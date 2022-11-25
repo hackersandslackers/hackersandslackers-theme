@@ -20,7 +20,7 @@
         <h2 class="authors-list-title">Authors</h2>
         {{#get "authors" include="count.posts" order="count.posts DESC" limit="all"}}
           {{#foreach authors}}
-            {{> about-author-card}}
+            {{> "about/author-card"}}
           {{/foreach}}
         {{/get}}
       </section>

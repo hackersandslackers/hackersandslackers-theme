@@ -31,11 +31,19 @@
 
     .author-card-title {
       color: $color-header-grey;
-      font-family: $body-font-bold;
+      font-family: $header-font;
       font-size: 1.6em;
       font-weight: 600;
       margin: 0;
       line-height: 1;
+    }
+
+    .author-post-count {
+      font-family: $body-font-medium;
+      font-size: .8em;
+      margin-left: 10px;
+      color: $color-header-grey;
+      opacity: .8;
     }
 
     .author-avatar-link {
@@ -62,7 +70,6 @@
       line-height: 1.4;
       overflow-y: hidden;
       text-overflow: ellipsis;
-      margin-top: 15px;
     }
 
     .author-name {

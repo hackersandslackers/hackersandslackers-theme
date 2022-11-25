@@ -19,24 +19,83 @@
       padding: 0;
     }
 
-    .author-image {
-      border-radius: 50%;
-      height: 80px;
-      min-width: 80px;
-      overflow: hidden;
-      width: 80px;
-    }
+    .author-card-wrapper {
+      display: flex;
+      justify-content: space-between;
 
-    .author-meta {
-      flex-wrap: wrap;
+      .author-image {
+        border-radius: 50%;
+        height: 70px;
+        min-width: 70px;
+        overflow: hidden;
+        width: 70px;
+        margin-right: 15px;
+      }
 
-      .author-meta-item {
-        font-size: 9em;
+      .author-name {
+        font-size: 1.3em;
+        font-family: $header-font-medium;
+        color: #666c70;
+      }
+
+      .author-post-count {
+        font-size: .9em;
+        margin-left: 10px;
+        color: $color-body-font;
+        opacity: .8;
+        font-family: $header-font-medium;
+      }
+
+      .author-profile-social-link {
+
+        &.website {
+          color: #8d99b2;
+        }
+
+        &.twitter {
+          color: #1DA1F2;
+        }
+
+        &.github {
+          color: #333;
+        }
+      }
+
+      .author-meta {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0;
+
+        .author-meta-item {
+          font-family: $body-font-medium;
+          margin-right: 15px;
+          color: $color-secondary-text;
+          line-height: 1;
+
+          &:last-of-type {
+            margin-right: unset;
+          }
+
+          .fa-location-dot {
+            margin-right: 5px;
+          }
+
+          a {
+            transition: $transition;
+
+            &:hover {
+              color: $color-hover;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
 
     .author-card-excerpt {
       margin: 15px 0 0;
+      line-height: 1.4em;
+      font-size: .9em;
     }
   }
 
