@@ -7,8 +7,8 @@
   }
 
   .author-card {
-    padding: 0 0 30px 0;
-    margin-bottom: 30px !important;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
     border-bottom: 1px solid $color-border;
     overflow: hidden;
     box-shadow: none;
@@ -32,70 +32,86 @@
         margin-right: 15px;
       }
 
-      .author-name {
-        font-size: 1.3em;
-        font-family: $header-font-medium;
-        color: #666c70;
-      }
+      .author-details {
+        width: 100%;
 
-      .author-post-count {
-        font-size: .9em;
-        margin-left: 10px;
-        color: $color-body-font;
-        opacity: .8;
-        font-family: $header-font-medium;
-      }
-
-      .author-profile-social-link {
-
-        &.website {
-          color: #8d99b2;
+        .author-name {
+          font-size: 1.3em;
+          font-family: $header-font-medium;
+          color: #666c70;
         }
 
-        &.twitter {
-          color: #1DA1F2;
+        .author-post-count {
+          font-size: .9em;
+          margin-left: 10px;
+          color: $color-body-font;
+          opacity: .8;
+          font-family: $header-font-medium;
         }
 
-        &.github {
-          color: #333;
-        }
-      }
+        .author-profile-social-link {
+          font-size: 1.1em;
+          transition: $transition;
 
-      .author-meta {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 10px 0;
-
-        .author-meta-item {
-          font-family: $body-font-medium;
-          margin-right: 15px;
-          color: $color-secondary-text;
-          line-height: 1;
-
-          &:last-of-type {
-            margin-right: unset;
+          &.website {
+            color: #8d99b2;
           }
 
-          .fa-location-dot {
-            margin-right: 5px;
+          &.twitter {
+            color: #1DA1F2;
           }
 
-          a {
-            transition: $transition;
+          &.github {
+            color: #333;
+          }
 
-            &:hover {
-              color: $color-hover;
-              cursor: pointer;
+          &::hover {
+            color: $color-hover;
+            cursor: pointer;
+          }
+        }
+
+        .author-meta {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 10px 0;
+
+          .author-meta-item {
+            font-family: $body-font-medium;
+            margin-right: 15px;
+            color: $color-secondary-text;
+            line-height: 1;
+
+            &:last-of-type {
+              margin-right: unset;
+            }
+
+            .fa-location-dot {
+              margin-right: 2px;
+              color: #a78396;
+            }
+
+            .author-location {
+              color: $color-lightgrey;
+
+              a {
+                transition: $transition;
+
+                &:hover {
+                  color: $color-hover;
+                  cursor: pointer;
+                }
+              }
             }
           }
         }
-      }
-    }
 
-    .author-card-excerpt {
-      margin: 15px 0 0;
-      line-height: 1.4em;
-      font-size: .9em;
+        .author-card-excerpt {
+          margin: 15px 0 0;
+          line-height: 1.4em;
+          font-size: .9em;
+        }
+      }
     }
   }
 

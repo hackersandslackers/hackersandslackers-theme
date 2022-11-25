@@ -7,6 +7,12 @@
 .page-template {
   background: $color-background-grey;
 
+  .page-title {
+    @media(max-width: $mobile-breakpoint) {
+      font-size: 2.2em;
+    }
+  }
+
   .post-header {
     padding-bottom: max(3.2vmin, 28px);
   }

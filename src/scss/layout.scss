@@ -17,6 +17,12 @@
   max-width: 93%;
 }
 
+.page-about .viewport {
+  @media(max-width: $mobile-breakpoint) {
+    max-width: 100%;
+  }
+}
+
 .site-content {
   flex-grow: 1;
 }
