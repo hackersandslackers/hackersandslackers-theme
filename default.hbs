@@ -20,6 +20,9 @@
     {{#is "page, author, tag"}}
       <script src="{{asset 'built/page.js'}}"></script>
     {{/is}}
+    {{#is "author"}}
+      <script src="{{asset 'built/author.js'}}"></script>
+    {{/is}}
     {{! Advanced SEO meta data}}
     {{ghost_head}}
   </head>
