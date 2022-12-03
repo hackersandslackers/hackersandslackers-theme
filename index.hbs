@@ -1,16 +1,14 @@
-{{!< default}} {{!-- The main content area --}} <main id="site-main" class="site-main">
-    <div class="inner posts sidebar-container">
-
-        <div class="post-feed">
-            {{#foreach posts}}
-            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
-            {{> "post-card"}}
-            {{/foreach}}
-
-            {{pagination}}
-        </div>
-
-        {{> "sidebar/sidebar" }}
+{{!< default}}
+{{!-- The main content area --}}
+<main id="site-main" class="site-main">
+  <div class="inner posts sidebar-container">
+    <div class="post-feed">
+      {{#foreach posts}}
+        {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+        {{> "post-card"}}
+      {{/foreach}}
+      {{pagination}}
     </div>
-
-    </main>
+    {{> "sidebar/sidebar" }}
+  </div>
+</main>

@@ -4,6 +4,7 @@
 @import "table.scss";
 @import "code.scss";
 @import "related-posts.scss";
+@import "author.scss";
 
 
 
@@ -80,7 +81,7 @@
     flex-direction: column;
     width: $tablet-breakpoint;
     margin: auto;
-    margin: 0 auto 40px;
+    margin: 0 auto 50px;
 
     @media(max-width: $tablet-breakpoint) {
       width: 100%;
@@ -125,7 +126,7 @@
         font-family: $header-font-medium;
         font-size: 1.2em;
         line-height: 1.2;
-        margin: 15px 0;
+        margin: 20px 0;
         max-width: 720px;
         order: 1;
 
@@ -314,6 +315,33 @@
 
     .widget.info {
       max-width: 32%;
+    }
+  }
+
+  .post-tags {
+    display: block;
+    height: fit-content;
+    justify-content: space-between;
+    margin: 40px 0 0;
+    max-width: 100%;
+    width: 100%;
+
+    .post-tag-footer {
+      @include post-tag;
+      font-size: .95em;
+    }
+  }
+
+  .author-card {
+    @include author-card;
+    border-top: 2px dotted #eaeaea;
+    border-bottom: unset;
+    padding: 30px 0 0 0;
+    margin: 30px 0 0 0;
+
+    .author-card-excerpt {
+      line-height: 1.5em !important;
+      font-size: unset !important;
     }
   }
 }

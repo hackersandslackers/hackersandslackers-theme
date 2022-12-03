@@ -1,4 +1,5 @@
-{{!< default}} {{#post}}
+{{!< default}}
+{{#post}}
   <div class="post-wrapper">
     <main id="site-main">
       <article class="post {{post_class}}">
@@ -52,6 +53,8 @@
         <section class="post-content">
           {{content}}
         </section>
+        {{> "post/post-tags"}}
+        {{> "post/author-info"}}
         {{> "series/nextprev" }}
       </article>
     </main>
