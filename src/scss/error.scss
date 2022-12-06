@@ -1,0 +1,102 @@
+
+
+
+.error-template {
+  background-color: $color-background-grey;
+
+  .error-content {
+    width: 900px;
+    padding: 40px;
+    background: white;
+    margin: 0 auto;
+    box-shadow: $card-shadow;
+
+    .error-code {
+      font-family: $header-font;
+      color: $color-header-grey;
+      font-size: 4em;
+      line-height: 1;
+      margin: 0;
+    }
+
+    .error-description {
+      font-family: $header-font-medium;
+      color: $color-post-blurb-grey;
+      margin: 0 0 15px;
+      font-size: 1.4em;
+      line-height: 1;
+
+      .svg-inline--fa {
+        height: 0.9em;
+        margin-right: 3px;
+      }
+    }
+
+    .error-suggestion {
+      @include body-font;
+    }
+
+    .error-explanation {
+      @include body-font;
+      font-family: $body-font-medium;
+      font-size: 1.2em;
+      line-height: 1;
+    }
+
+    .suggested-posts {
+      column-gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 15px;
+
+      .post-card {
+
+        .post-card-title {
+          font-size: 1.3em;
+        }
+
+        .post-card-excerpt {
+          font-size: 1em;
+          margin: 10px 0 0;
+        }
+
+        .post-card-content {
+          padding: 15px;
+        }
+
+        .post-card-meta {
+          display: none;
+        }
+
+        &:hover {
+          * {
+            background: $color-hover;
+            color: $color-hover;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .error-footer {
+      border-top: 1px solid #eaecee;
+      margin-top: 40px;
+      padding-top: 40px;
+    }
+
+    .error-link {
+      font-family: $body-font-bold;
+      color: $color-lightgrey;
+      transition: $transition;
+
+      &:hover {
+        color: $color-hover;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer-wrapper {
+    max-width: 800px;
+  }
+}

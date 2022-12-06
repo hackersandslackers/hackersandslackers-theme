@@ -1,9 +1,9 @@
-/* 8.1. Author Card
-/* ---------------------------------------------------------- */
-
 @import "_variables.scss";
 @import "_mixins.scss";
 
+
+/* 8.1. Author Card
+/* ---------------------------------------------------------- */
 .author-template {
   .author-card {
     background: white;
@@ -130,6 +130,7 @@
       object-fit: cover;
       background: color-mod($color-lightgrey) l(+10%);
       border-radius: 50%;
+      
     }
 
     .author-avatar-link {

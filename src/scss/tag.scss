@@ -5,60 +5,78 @@
 /* ---------------------------------------------------------- */
 .tag-template {
   background: $color-background-grey;
-}
 
-.info-card {
-  display: flex;
-  justify-content: space-between;
-  background: #fff;
-  box-shadow: $card-shadow;
-  padding: 40px;
-  grid-column: span 2;
-  margin-bottom: 20px;
-
-  @media(max-width: $mobile-breakpoint) {
-    padding: 25px;
+  .post-card-large .post-card-content {
+    order: 1;
   }
 
-  .info-card-title {
-    margin: 0 0 10px;
-    line-height: 1;
-    color: $color-header-grey;
-    font-family: $body-font-medium;
-    font-size: 2em;
+  .post-feed {
+    display: block;
 
-    @media(max-width: 900px) {
-      margin: 0 0 5px;
-    }
-
-    @media(max-width: $mobile-breakpoint) {
-      font-size: 1.8em;
-      margin: 0 0 5px;
+    .post-card {
+      margin-bottom: 20px;
     }
   }
 
-  p {
-    line-height: 1.6em;
-    margin: 0;
-    font-size: 1.05em;
-  }
+  .info-card {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: $card-shadow;
+    padding: 40px;
+    grid-column: span 2;
+    margin-bottom: 20px;
 
-  .info-card-excerpt {
-    line-height: 1.4;
+    @media (max-width: $smallscreen-breakpoint) {
+      margin: 0 auto 20px !important;
+    }
 
     @media(max-width: $mobile-breakpoint) {
+      padding: 25px;
+    }
+
+    .info-card-title {
+      margin: 0 0 10px;
+      line-height: 1;
+      color: $color-header-grey;
+      font-family: $body-font-medium;
+      font-size: 2em;
+
+      @media(max-width: 900px) {
+        margin: 0 0 5px;
+      }
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.8em;
+        margin: 0 0 5px;
+      }
+    }
+
+    p {
+      line-height: 1.6em;
+      margin: 0;
+      font-size: 1.05em;
+    }
+
+    .info-card-excerpt {
       line-height: 1.5;
+      font-family: $body-font;
+      color: $color-body-font;
     }
-  }
 
-  .tag-image {
-    @media(max-width: 900px) {
+    .tag-image {
       width: 110px;
-      margin-right: 20px;
-    }
+      height: min-content;
+      margin-right: 25px;
+      max-width: 30%;
 
-    @media(max-width: $mobile-breakpoint) {
-      margin-right: 15px;
+      @media(max-width: 900px) {
+        margin-right: 20px;
+      }
+
+      @media(max-width: $mobile-breakpoint) {
+        margin-right: 15px;
+      }
     }
   }
 }
