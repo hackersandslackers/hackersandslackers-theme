@@ -168,13 +168,6 @@
     &.social {
       height: unset;
 
-      .social-media-button {
-
-        &:hover {
-          font-size: 1.2em;
-        }
-      }
-
       @media (max-width: $mobile-breakpoint) {
         height: 40px !important;
         width: 90% !important;
@@ -188,6 +181,13 @@
           }
         }
       }
+
+      .social-media-button {
+
+        &:hover {
+          font-size: 1.2em;
+        }
+      }
     }
 
     .footer-title {
@@ -197,6 +197,8 @@
       text-rendering: optimizelegibility;
       font-size: 1.1em;
       margin: 0 0 20px;
+      font-size: 1em;
+      opacity: .88;
     }
 
     .footer-logo {
