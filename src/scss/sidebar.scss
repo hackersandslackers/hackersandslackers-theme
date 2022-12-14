@@ -42,6 +42,10 @@
       font-family: $body-font;
     }
 
+    &.twitter {
+      padding: 10px;
+    }
+
     .tag-cloud {
       display: flex;
       flex-direction: row;

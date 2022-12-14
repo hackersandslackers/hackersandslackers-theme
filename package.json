@@ -41,7 +41,9 @@
         "url": "https://github.com/hackersandslackers/hackersandslackers-theme.git"
     },
     "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
-    "contributors": ["https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors"],
+    "contributors": [
+        "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors"
+    ],
     "devDependencies": {
         "@babel/core": "^7.20.5",
         "@babel/eslint-parser": "^7.19.1",
