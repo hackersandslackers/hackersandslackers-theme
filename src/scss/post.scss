@@ -438,6 +438,48 @@
     max-width: 800px;
     margin: 0 auto;
   }
+
+  .support-us {
+    grid-gap: 8%;
+    border-top: 1px solid #d8d8d8;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 15px 30px;
+    padding: 40px 0 0;
+    text-align: center;
+
+    .support-us-title {
+      color: #5d6b7b;
+      display: block;
+      font-family: $header-font-medium;
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .support-input-field {
+      appearance: none;
+      background: #f7f8fa;
+      border: 1px solid #d6dde9;
+      border-radius: 3px !important;
+      display: block;
+      font-family: $body-font-medium;
+      font-size: .9em;
+      height: 45px;
+      line-height: 1;
+      margin: 0 auto 10px;
+      padding: 10px !important;
+      transition: all .2s ease-out;
+      width: -webkit-fill-available;
+    }
+
+    .support-description {
+      color: #4c5a69;
+      font-size: .9em;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+  }
 }
 
 // #ghost-comments-root {}
