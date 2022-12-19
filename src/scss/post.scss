@@ -53,6 +53,16 @@
     margin: 0 auto 0;
     width: 800px;
     max-width: 100%;
+    margin: 0 auto;
+
+    @media(max-width: $tablet-breakpoint) {
+      width: unset;
+      margin: 0 40px 40px;
+    }
+
+    @media(max-width: $mobile-breakpoint) {
+      margin: 0 30px 30px;
+    }
 
     .series-nextprev {
       display: flex;
@@ -230,16 +240,6 @@
 
   .post-content {
     width: $tablet-breakpoint;
-    margin: 0 auto;
-
-    @media(max-width: $tablet-breakpoint) {
-      width: unset;
-      margin: 0 40px 40px;
-    }
-
-    @media(max-width: $mobile-breakpoint) {
-      margin: 0 30px 30px;
-    }
 
     iframe {
       margin: 30px 0;
