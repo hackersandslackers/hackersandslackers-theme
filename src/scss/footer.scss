@@ -112,6 +112,17 @@
     }
   }
 
+  .footer-title {
+    color: $color-header-grey;
+    font-family: $header-font;
+    text-transform: uppercase;
+    text-rendering: optimizelegibility;
+    font-size: 1.1em;
+    margin: 0 0 20px;
+    font-size: 1em;
+    opacity: .88;
+  }
+
   .subfooter {
     margin: 40px auto 0;
     align-items: center;
@@ -190,17 +201,6 @@
       }
     }
 
-    .footer-title {
-      color: $color-header-grey;
-      font-family: $header-font;
-      text-transform: uppercase;
-      text-rendering: optimizelegibility;
-      font-size: 1.1em;
-      margin: 0 0 20px;
-      font-size: 1em;
-      opacity: .88;
-    }
-
     .footer-logo {
       width: 220px;
       margin-bottom: 20px;
@@ -247,8 +247,10 @@
         color: #414d5a;
 
         a {
-          font-family: $body-font-medium;
           transition: $transition;
+          font-family: $body-font-medium;
+          color: $color-header-grey;
+          opacity: .8;
 
           &:hover {
             cursor: pointer;
@@ -256,12 +258,6 @@
             opacity: 1;
           }
         }
-      }
-
-      a {
-        color: $color-header-grey;
-        opacity: .8;
-        transition: $transition;
       }
     }
 

@@ -1,16 +1,16 @@
 {{#if 'authors'}}
-    <div class='widget authors'>
-        <h4 class='footer-title'>{{t 'Authors' }}</h4>
-        <ul class='footer-list'>
-            {{#get 'authors' limit='8' order="posts.count desc"}}
-                {{#foreach authors}}
-                    <li>
-                        <a href="/authors/{{slug}}" title="{{name}}" class="author-{{slug}} {{slug}}" >
-                            {{name}}
-                        </a>
-                    </li>
-                {{/foreach}}
-            {{/get}}
-        </ul>
-    </div>
+  <div class='widget authors'>
+    <h4 class='footer-title'>{{t 'Authors' }}</h4>
+    <ul class='footer-list'>
+      {{#get 'authors' limit='8' order="posts.count desc"}}
+        {{#foreach authors}}
+          <li>
+            <a href="/authors/{{slug}}" title="{{name}}" class="author-{{slug}} {{slug}} footer-navigation-link">
+              {{name}}
+            </a>
+          </li>
+        {{/foreach}}
+      {{/get}}
+    </ul>
+  </div>
 {{/if}}

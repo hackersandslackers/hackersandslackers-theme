@@ -1,17 +1,17 @@
-{{#if 'tags'}}
-    <div class="widget series">
-        <h4 class='footer-title'>{{t "Series'" }}</h4>
-        <ul class='footer-list'>
-            {{#get "tags"
-                   limit="60"
-                   include="count.posts"
-                   filter="feature_image:-null+slug:-[adventures-in-excel,microsoft-powerpivot,code-snippet-corner,mongodb-cloud]"
-                   order="count.posts DESC"
-            }}
-                {{#foreach tags visibility='internal'}}
-                    <li><a href="/series/{{slug}}">{{meta_title}}</a></li>
-                {{/foreach}}
-            {{/get}}
-        </ul>
-    </div>
-{{/if}}
+<div class="widget series">
+  <h4 class='footer-title'>{{t "Series'" }}</h4>
+  <ul class='footer-list'>
+    {{#get "tags"
+        limit="all"
+        include="count.posts,meta_title"
+        filter="slug:-[adventures-in-excel,newsletter,code-snippet-corner,hacking-tableau-server,microsoft-powerpivot,mongodb-cloud,create-an-aws-api]"
+        order="count.posts DESC"
+      }}
+      {{#foreach tags visibility="internal"}}
+        <li>
+          <a href="/series/{{slug}}" class="footer-navigation-link">{{meta_title}}</a>
+        </li>
+      {{/foreach}}
+    {{/get}}
+  </ul>
+</div>

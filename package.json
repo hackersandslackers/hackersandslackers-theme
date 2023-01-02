@@ -1,6 +1,6 @@
 {
     "name": "hackersandslackers",
-    "description": "A clean, minimal default theme for the Ghost blog CMS",
+    "description": "A clean, minimal theme for Ghost CMS",
     "version": "0.0.1",
     "license": "MIT",
     "screenshots": {
