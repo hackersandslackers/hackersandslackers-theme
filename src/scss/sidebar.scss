@@ -79,13 +79,18 @@
   }
 
   .series-list-count {
-    font-family: $body-font-bold;
+    font-family: $header-font;
+    width: 25px;
+    text-align: center;
+    // border: 1px solid black;
+    border-radius: 2px;
+    line-height: 1.5;
   }
 
   .series-widget-list {
     .series-list-link {
-      font-family: $body-font-medium;
-      padding: 10px;
+      font-family: $body-font-medium !important;
+      padding: 9px 6px;
       border-bottom: 1px solid #dee1e7;
       font-size: .9em;
       width: 100%;
@@ -96,7 +101,7 @@
 
       &:last-of-type {
         border-bottom: unset;
-        padding: 10px 10px 0;
+        padding: 9px 6px;
       }
 
       &:hover {
@@ -118,11 +123,14 @@
         color: $color-lightgrey;
       }
 
+      .series-list-link-title {
+        font-family: $body-font-bold;
+      }
+
       a,
       span,
       .series-list-count {
         display: block;
-        font-weight: bold;
       }
     }
   }

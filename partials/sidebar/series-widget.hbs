@@ -9,8 +9,8 @@
           }}
       {{#foreach tags visibility="internal"}}
         <div class="series-list-link">
-          <a href="{{url}}">{{meta_title}}</a>
-          <span class="series-list-count" style="color:{{accent_color}};">{{count.posts}}</span>
+          <a href="{{url}}" class="series-list-link-title">{{meta_title}}</a>
+          <span class="series-list-count" style="color:{{accent_color}};border-color:{{accent_color}};">{{count.posts}}</span>
         </div>
       {{/foreach}}
     {{/get}}

@@ -5,7 +5,7 @@
       {{#get 'authors' limit='8' order="posts.count desc"}}
         {{#foreach authors}}
           <li>
-            <a href="/authors/{{slug}}" title="{{name}}" class="author-{{slug}} {{slug}} footer-navigation-link">
+            <a href="/author/{{slug}}" title="{{name}}" class="author-{{slug}} {{slug}} footer-navigation-link">
               {{name}}
             </a>
           </li>
