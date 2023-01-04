@@ -187,7 +187,6 @@
 
 /* 12.3. Sidebar Social Widget
 /* ---------------------------------------------------------- */
-
 .widget.social {
   display: flex;
   justify-content: space-between;
@@ -200,18 +199,12 @@
   }
 
   .social-media-button {
-    color: $color-social-btn;
-    fill: $color-social-btn;
-    font-size: 1.1em;
-    background: unset;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    transition: $transition;
+    @include social-media-icon;
+    font-size: 1.7em;
 
     &:hover {
       cursor: pointer;
-      font-size: 1.3em;
+      font-size: 1.9em;
       fill: $color-hover;
 
       @media(max-width: 900px) {
@@ -222,18 +215,6 @@
 
     a {
       line-height: 1;
-    }
-
-    i,
-    svg {
-      font-size: 1.5em;
-      color: $color-social-btn;
-      transition: $transition;
-      line-height: 1;
-
-      @media(max-width: 900px) {
-        font-size: 1.4em;
-      }
     }
   }
 }
