@@ -410,6 +410,10 @@
   max-width: $tablet-breakpoint;
 }
 
+.post-template .tags-navigation {
+  display: none;
+}
+
 .error-template .nav-wrapper {
   max-width: 900px;
 }

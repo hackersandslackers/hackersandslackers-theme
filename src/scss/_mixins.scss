@@ -94,7 +94,11 @@
   &:hover {
     background: $color-hover;
     cursor: pointer;
-    color: white;
+
+    * {
+      color: white;
+    }
+
   }
 }
 

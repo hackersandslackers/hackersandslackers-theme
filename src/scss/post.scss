@@ -67,18 +67,57 @@
     .series-nextprev {
       display: flex;
       justify-content: space-between;
-      margin: 40px 0 20px;
+      margin: 40px 0 0;
 
       .series-nextprev-button {
         border-right: 1px solid #dedede;
         border-top: 1px solid #dedede;
         color: #414d5a;
-        max-width: 43%;
-        min-width: 43%;
+        max-width: 48%;
+        min-width: 48%;
         padding: 15px;
+        transition: $transition;
 
-        h6 {
+        &.next {
+          text-align: right;
+
+          .series-nextprev-label svg {
+            margin-left: 5px;
+          }
+        }
+
+        &.prev {
+          .series-nextprev-label svg {
+            margin-right: 5px;
+          }
+        }
+
+        &:hover {
+          background: $color-theme;
+          cursor: pointer;
+
+          * {
+            color: white;
+          }
+        }
+
+        .series-nextprev-label {
+          font-size: 1.2em;
           margin: unset;
+        }
+
+        .series-nextprev-post-title {
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2;
+          display: -webkit-box;
+          font-family: $body-font-medium;
+          font-size: .8em;
+          font-weight: 400;
+          line-height: 1.5;
+          overflow-y: hidden;
+          text-overflow: ellipsis;
+          width: -webkit-fill-available;
+          margin: 10px 0;
         }
       }
     }
@@ -90,7 +129,7 @@
     flex-direction: column;
     width: $tablet-breakpoint;
     margin: auto;
-    margin: 0 auto 50px;
+    margin: 0 auto 20px;
 
     @media(max-width: $tablet-breakpoint) {
       width: 100%;
@@ -147,6 +186,7 @@
       .post-meta {
         display: flex;
         flex-wrap: wrap;
+        margin: 20px 0;
 
         .post-meta-item {
           margin-right: 25px;
@@ -249,6 +289,13 @@
       }
     }
 
+    h3 {
+      color: #6c7888;
+      font-family: $body-font-bold;
+      font-size: 1.2em;
+      margin: 40px 0 5px;
+    }
+
     a {
       @include content-link;
     }
@@ -327,7 +374,6 @@
 
     .post-tag-footer {
       @include post-tag;
-      font-size: .95em;
     }
   }
 
@@ -337,6 +383,10 @@
     border-bottom: unset;
     padding: 30px 0 0 0;
     margin: 30px 0 0 0;
+
+    .author-card-wrapper {
+      padding: 30px 0;
+    }
 
     .author-card-excerpt {
       line-height: 1.5em !important;
@@ -358,8 +408,8 @@
 
   ol,
   ul {
-    padding: 0 1.5em;
-    margin: 10px 0 -10px;
+    margin: 0 10px 30px;
+    padding-left: 1em;
 
     @media(max-width: $mobile-breakpoint) {
       margin: 10px 10px 25px;
@@ -367,6 +417,8 @@
     }
 
     li {
+      margin: 0 0 10px;
+
       &::marker {
         font-weight: 600;
       }
@@ -440,12 +492,11 @@
   }
 
   .support-us {
-    grid-gap: 8%;
-    border-top: 1px solid #d8d8d8;
+    grid-gap: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 15px 30px;
-    padding: 40px 0 0;
+    padding: 20px 0 0;
     text-align: center;
 
     .support-us-title {

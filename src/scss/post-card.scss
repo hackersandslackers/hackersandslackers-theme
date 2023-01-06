@@ -89,15 +89,14 @@
   order: 1;
 
   @media (max-width: 767px) {
-    margin-top: 14px;
-    font-size: 1.7rem;
+    margin: 5px 0 15px;
   }
 
   @media(max-width: $mobile-breakpoint) {
     font-size: 1em;
-    font-weight: 600;
     letter-spacing: unset;
-    line-height: 1.2;
+    line-height: 1.3;
+    opacity: 1;
   }
 }
 
@@ -145,6 +144,10 @@
   font-size: 1.5em;
   color: $color-header-grey;
   opacity: .8;
+
+  @media(max-width: $mobile-breakpoint) {
+    margin-right: 7px;
+  }
 }
 
 .post-card-author-image {
@@ -153,8 +156,8 @@
   min-width: 38px;
 
   @media(max-width: $mobile-breakpoint) {
-    height: 42px;
-    min-width: 42px;
+    height: 38px;
+    min-width: 38px;
   }
 
   i {
@@ -173,7 +176,8 @@
   transition: $transition;
 
   @media (max-width: $mobile-breakpoint) {
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    font-size: 1em;
   }
 
   &:hover {
@@ -218,8 +222,8 @@
   line-height: 1;
 
   @media(max-width: $mobile-breakpoint) {
-    line-height: 1.2;
     display: block;
+    font-size: 0.85em;
   }
 
   &.separator,

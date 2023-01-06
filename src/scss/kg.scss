@@ -71,6 +71,15 @@ make sure they look good, and are given a bit of extra spacing. */
   width: 100%;
   margin: 30px 0;
 
+  &:hover {
+    background: $color-theme;
+    cursor: pointer;
+
+    * {
+      color: white;
+    }
+  }
+
   @media(max-width: $mobile-breakpoint) {
     @include mobile-full-width;
   }
@@ -175,4 +184,39 @@ make sure they look good, and are given a bit of extra spacing. */
 
 .kg-toggle-heading-text {
   font-size: 2.0rem;
+}
+
+.kg-bookmark-card {
+  .kg-bookmark-title {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    color: #4e576a;
+    display: -webkit-box;
+    font-family: $body-font-bold;
+    font-size: 1em;
+    line-height: 1.3;
+    overflow-y: hidden;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    width: -webkit-fill-available;
+  }
+
+  .kg-bookmark-description {
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
+    font-size: .9em;
+    line-height: 1.5;
+    margin: 15px 0;
+    max-width: 475px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    width: -webkit-fill-available;
+  }
+
+  .kg-bookmark-metadata {
+    margin-top: unset;
+  }
 }
