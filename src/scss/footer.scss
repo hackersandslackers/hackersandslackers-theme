@@ -131,10 +131,6 @@
     margin: 40px auto 0;
     align-items: center;
 
-    @media(max-width: $tablet-breakpoint) {
-      margin: 40px auto 20px;
-    }
-
     @media(max-width: 700px) {
       display: flex;
       flex-direction: column;
@@ -196,17 +192,15 @@
 
       .social-media-button {
 
-        @media(max-width: $tablet-breakpoint) {
-          font-size: 1.7em;
+        i,
+        svg {
+          font-size: 1.5em;
 
           &:hover {
-            font-size: 1.9em;
-
-            svg {
-              fill: $color-hover;
-              color: $color-hover;
-            }
-
+            cursor: pointer;
+            fill: $color-hover;
+            font-size: 1.7em;
+            color: $color-hover;
           }
         }
       }

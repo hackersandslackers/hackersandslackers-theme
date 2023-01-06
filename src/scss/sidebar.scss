@@ -201,17 +201,15 @@
   .social-media-button {
     @include social-media-icon;
 
+    i,
     svg {
       font-size: 1.5em;
 
       &:hover {
         cursor: pointer;
         fill: $color-hover;
-
-        @media(max-width: 900px) {
-          font-size: 1.7em;
-          color: $color-hover;
-        }
+        font-size: 1.7em;
+        color: $color-hover;
       }
     }
 
