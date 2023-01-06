@@ -47,7 +47,7 @@ For developers interested in contributing or other usage, this theme is openly a
 ```shell
 $ git clone https://github.com/hackersandslackers/hackersandslackers-theme.git
 $ cd hackersandslackers-theme
-$ yarn i
+$ yarn
 $ make dev
 ```
 
