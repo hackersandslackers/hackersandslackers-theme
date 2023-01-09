@@ -64,7 +64,7 @@
         "gscan": "4.35.1",
         "inquirer": "8.2.4",
         "mini-css-extract-plugin": "^2.7.2",
-        "postcss": "8.4.20",
+        "postcss": "8.4.21",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
