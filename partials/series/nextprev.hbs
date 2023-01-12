@@ -1,12 +1,5 @@
 <div class="series-nextprev">
   {{#foreach tags visibility="internal" limit="1"}}
-    {{!--
-    <div>
-      <p>{{slug}}</p>
-      <p>{{name}}</p>
-      <p>{{published_at}}</p>
-    </div>
-    --}}
     {{#get "posts" filter="tags:[{{slug}}]" limit="1" order="published_at asc"}}
       {{#foreach posts}}
         <a href="{{url}}" class="series-nextprev-button prev">

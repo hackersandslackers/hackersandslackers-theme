@@ -57,12 +57,8 @@
 
     @media(max-width: $tablet-breakpoint) {
       width: unset;
-      margin: 0 40px 40px;
     }
 
-    @media(max-width: $mobile-breakpoint) {
-      margin: 0 30px 30px;
-    }
 
     .series-nextprev {
       display: flex;
@@ -156,7 +152,7 @@
       width: -webkit-fill-available;
 
       @media (max-width: $mobile-breakpoint) {
-        font-size: 1.8em;
+        font-size: 2em;
       }
     }
 
@@ -180,6 +176,7 @@
 
         @media (max-width: 767px) {
           font-size: 1.8rem;
+          margin: 15px 0;
         }
       }
 
@@ -281,6 +278,10 @@
   .post-content {
     width: $tablet-breakpoint;
 
+    @media(max-width: $tablet-breakpoint) {
+      width: 100%;
+    }
+
     iframe {
       margin: 30px 0;
 
@@ -372,6 +373,10 @@
     max-width: 100%;
     width: 100%;
 
+    @media(max-width: $mobile-breakpoint) {
+      padding: 0 30px;
+    }
+
     .post-tag-footer {
       @include post-tag;
     }
@@ -386,6 +391,11 @@
 
     .author-card-wrapper {
       padding: 30px 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        padding: 30px;
+        margin: 0;
+      }
     }
 
     .author-card-excerpt {
@@ -405,6 +415,8 @@
 }
 
 .post-content {
+  width: 100%;
+  padding: 0 30px;
 
   ol,
   ul {
@@ -533,4 +545,8 @@
   }
 }
 
-// #ghost-comments-root {}
+#ghost-comments-root {
+  @media(max-width: $mobile-breakpoint) {
+    padding: 0 30px;
+  }
+}

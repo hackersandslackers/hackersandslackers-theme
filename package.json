@@ -19,7 +19,7 @@
         "build": "webpack --mode=production"
     },
     "author": {
-        "name": "Hackers And Slackers",
+        "name": "hackersandslackers",
         "email": "hello@hackersandslackers.com",
         "url": "https://hackersandslackers.com/"
     },
@@ -45,14 +45,14 @@
         "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors"
     ],
     "devDependencies": {
-        "@babel/core": "^7.20.7",
+        "@babel/core": "^7.20.12",
         "@babel/eslint-parser": "^7.19.1",
         "@babel/preset-env": "^7.20.2",
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.13",
-        "babel-loader": "^9.1.0",
-        "babel-plugin-import": "^1.13.5",
-        "babel-plugin-module-resolver": "^4.1.0",
+        "babel-loader": "^9.1.2",
+        "babel-plugin-import": "^1.13.6",
+        "babel-plugin-module-resolver": "^5.0.0",
         "beeper": "3.0.0",
         "css-loader": "^6.7.3",
         "cssnano": "5.1.14",
@@ -61,10 +61,10 @@
         "eslint": "^8.31.0",
         "eslint-plugin-ghost": "^2.16.0",
         "font-config-webpack-plugin": "^2.0.3",
-        "gscan": "4.35.1",
+        "gscan": "4.36.0",
         "inquirer": "8.2.4",
         "mini-css-extract-plugin": "^2.7.2",
-        "postcss": "8.4.20",
+        "postcss": "8.4.21",
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
