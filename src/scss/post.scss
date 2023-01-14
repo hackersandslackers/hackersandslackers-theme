@@ -189,6 +189,7 @@
           margin-right: 25px;
           color: #7e8da3;
           line-height: 1;
+          font-family: $body-font-bold;
 
           @media(max-width: $mobile-breakpoint) {
             font-size: 0.9em;
@@ -197,21 +198,19 @@
             margin-bottom: 5px;
           }
 
-          i,
-          svg {
-            margin-right: 2px;
-          }
-        }
-
-        * {
-          color: #7e8da3;
-          font-family: $body-font-bold;
-          line-height: 1;
-          transition: $transition;
-
-          a:hover {
+          &:hover {
             color: $color-hover;
             cursor: pointer;
+              color: $color-hover;
+              cursor: pointer;
+          }
+
+          i,
+          svg {
+            margin-right: 4px;
+            font-size: .9em;
+            color: #7e8da3;
+            transition: $transition;
           }
         }
       }

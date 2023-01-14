@@ -187,6 +187,17 @@ make sure they look good, and are given a bit of extra spacing. */
 }
 
 .kg-bookmark-card {
+
+  &:hover {
+    cursor: pointer;
+    background: $color-theme;
+
+    * {
+      color: white;
+    }
+
+  }
+
   .kg-bookmark-title {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
