@@ -87,6 +87,11 @@
   max-width: 720px;
   order: 1;
 
+  @media (max-width: $smallscreen-breakpoint) {
+    font-size: 1.1em;
+    line-height: 1.2;
+  }
+
   @media (max-width: 767px) {
     margin: 5px 0 15px;
   }
