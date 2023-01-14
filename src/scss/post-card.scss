@@ -13,7 +13,7 @@
     margin: 0;
     font-size: 2.2em;
     font-weight: 800;
-    line-height: 1.1;
+    opacity: 0.9;
     color: $color-header-grey;
     font-family: $header-font;
     transition: $transition;
@@ -78,7 +78,6 @@
   color: #8c96a4;
   display: -webkit-box;
   font-family: $body-font-medium;
-  opacity: .9;
   font-size: 1.2em;
   letter-spacing: -.5px;
   line-height: 1.2em;

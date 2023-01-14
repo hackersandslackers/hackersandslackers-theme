@@ -194,12 +194,10 @@
 
         i,
         svg {
-          font-size: 1.5em;
 
           &:hover {
             cursor: pointer;
             fill: $color-hover;
-            font-size: 1.7em;
             color: $color-hover;
           }
         }
