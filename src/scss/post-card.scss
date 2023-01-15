@@ -13,7 +13,8 @@
     margin: 0;
     font-size: 2.2em;
     font-weight: 800;
-    opacity: 0.9;
+    opacity: 0.95;
+    line-height: 0.95;
     color: $color-header-grey;
     font-family: $header-font;
     transition: $transition;
@@ -26,8 +27,12 @@
       font-size: 1.9em;
       letter-spacing: -.5px;
     }
-  }
 
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
 
   svg {
     margin-top: -3px;
@@ -130,122 +135,123 @@
       transition: $transition;
     }
 
-    &:hover * {
-      color: $color-hover;
-      cursor: pointer;
-    }
-
     &:hover {
+      * {
+        color: $color-hover;
+        cursor: pointer;
+      }
+
       .post-card-author-avatar {
         opacity: .7;
       }
     }
   }
-}
 
-.post-card-author-avatar {
-  margin-right: 10px;
-  font-size: 1.5em;
-  color: $color-header-grey;
-  opacity: .8;
-
-  @media(max-width: $mobile-breakpoint) {
-    margin-right: 7px;
-  }
-}
-
-.post-card-author-image {
-  border-radius: 50%;
-  height: 38px;
-  min-width: 38px;
-
-  @media(max-width: $mobile-breakpoint) {
-    height: 38px;
-    min-width: 38px;
-  }
-
-  i {
-    font-size: 1.5em;
+  .post-card-author-avatar {
     margin-right: 10px;
+    font-size: 1.5em;
     color: $color-header-grey;
-  }
-}
+    opacity: .8;
 
-.post-card-author-name {
-  color: #646f7d;
-  display: block;
-  font-family: $body-font-bold;
-  font-size: 1.1em;
-  line-height: 1;
-  transition: $transition;
-
-  @media (max-width: $mobile-breakpoint) {
-    margin-bottom: 4px;
-    font-size: 1em;
-  }
-
-  &:hover {
-    color: $color-hover;
-    cursor: pointer;
-  }
-}
-
-.post-card-primary-tag {
-  color: white;
-  padding: 6px 8px 4px;
-  border-radius: 2px;
-  line-height: 1;
-  font-family: $body-font-bold;
-  font-size: .95em;
-  text-align: center;
-  transition: $transition;
-
-  @media(max-width: $tablet-breakpoint) {
-    font-size: 1em;
-  }
-
-  @media(max-width: $mobile-breakpoint) {
-    font-size: .9em;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background: white !important;
-    color: $color-hover;
-    box-shadow: inset 0 0 0 1px $color-hover !important;
-  }
-}
-
-.post-card-meta-details {
-  line-height: 1;
-}
-
-.post-card-meta-item {
-  font-size: .9em;
-  font-family: $body-font-medium;
-  line-height: 1;
-
-  @media(max-width: $mobile-breakpoint) {
-    display: block;
-    font-size: 0.85em;
-  }
-
-  &.separator,
-  &.reading-time {
     @media(max-width: $mobile-breakpoint) {
-      display: none;
+      margin-right: 7px;
     }
   }
-}
 
-.post-card-tags {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 10px;
-  color: $color-secondary-text;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: -0.005em;
-  line-height: 1;
+  .post-card-author-image {
+    border-radius: 50%;
+    height: 38px;
+    min-width: 38px;
+
+    @media(max-width: $mobile-breakpoint) {
+      height: 38px;
+      min-width: 38px;
+    }
+
+    i {
+      font-size: 1.5em;
+      margin-right: 10px;
+      color: $color-header-grey;
+    }
+  }
+
+  .post-card-author-name {
+    color: #646f7d;
+    display: block;
+    font-family: $body-font-bold;
+    font-size: 1.1em;
+    line-height: 1;
+    margin-bottom: 1px;
+    transition: $transition;
+
+    @media (max-width: $mobile-breakpoint) {
+      margin-bottom: 4px;
+      font-size: 1em;
+    }
+
+    &:hover {
+      color: $color-hover;
+      cursor: pointer;
+    }
+  }
+
+  .post-card-primary-tag {
+    color: white;
+    padding: 6px 8px 4px;
+    border-radius: 2px;
+    line-height: 1;
+    font-family: $body-font-bold;
+    font-size: .95em;
+    text-align: center;
+    transition: $transition;
+
+    @media(max-width: $tablet-breakpoint) {
+      font-size: 1em;
+    }
+
+    @media(max-width: $mobile-breakpoint) {
+      font-size: .9em;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background: white !important;
+      color: $color-hover;
+      box-shadow: inset 0 0 0 1px $color-hover !important;
+    }
+  }
+
+  .post-card-meta-details {
+    line-height: 1;
+  }
+
+  .post-card-meta-item {
+    font-size: .9em;
+    font-family: $body-font-medium;
+    line-height: 1;
+
+    @media(max-width: $mobile-breakpoint) {
+      display: block;
+      font-size: 0.85em;
+    }
+
+    &.separator,
+    &.reading-time {
+      @media(max-width: $mobile-breakpoint) {
+        display: none;
+      }
+    }
+  }
+
+  .post-card-tags {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 10px;
+    color: $color-secondary-text;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    line-height: 1;
+  }
 }
