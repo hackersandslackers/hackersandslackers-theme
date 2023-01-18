@@ -34,11 +34,59 @@
 
     .post-card-excerpt {
       font-size: 1em;
+      margin: 10px 0;
+    }
+
+    .post-card-meta {
+      padding: unset;
+    }
+
+    .post-card-meta-details {
+      padding: 15px 0 0;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      width: 100%
     }
 
     .post-card-content {
       height: 100%;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
       justify-content: space-between;
+
+
+      .post-card-meta {
+        width: 100%;
+
+        .meta-items-left {
+          display: block;
+          white-space: unset;
+          width: 100%;
+        }
+
+        .post-card-meta-item {
+          display: block;
+
+          &.separator {
+            display: none !important;
+          }
+
+          &.reading-time {
+            display: block !important;
+          }
+        }
+      }
+
+      &:hover {
+        background: $color-hover;
+        cursor: pointer;
+
+        * {
+          color: white;
+        }
+      }
     }
   }
 }

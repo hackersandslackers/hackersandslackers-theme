@@ -12,7 +12,8 @@
   box-shadow: $card-shadow;
 
   @media(max-width: $mobile-breakpoint) {
-    margin-bottom: 20px;
+    margin-bottom: unset;
+    grid-gap: 5vw;
   }
 
   .nav-wrapper {

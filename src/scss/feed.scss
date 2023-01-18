@@ -4,13 +4,15 @@
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
 .post-feed {
-    grid-gap: 30px;
-    display: grid;
-    grid-auto-rows: -webkit-min-content;
-    grid-auto-rows: min-content;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-    @media(max-width: $mobile-breakpoint) {
-        grid-gap: 20px;
-    }
+  grid-gap: 30px;
+  display: grid;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+
+  @media(max-width: $mobile-breakpoint) {
+    grid-gap: 5vw;
+    margin: 5vw;
+  }
 }

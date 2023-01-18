@@ -298,6 +298,10 @@
       width: 100%;
     }
 
+    @media(max-width: $mobile-breakpoint) {
+      padding: 0 6vw;
+    }
+
     iframe {
       margin: 30px 0;
 
