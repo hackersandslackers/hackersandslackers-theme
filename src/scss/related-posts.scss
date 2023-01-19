@@ -28,7 +28,7 @@
     }
 
     .post-card-title {
-      font-size: 1.3em;
+      font-size: 1.5em;
       line-height: 1.1;
     }
 
@@ -80,11 +80,16 @@
       }
 
       &:hover {
-        background: $color-hover;
+        background: $color-theme;
         cursor: pointer;
 
         * {
           color: white;
+        }
+
+        .meta-items-left * {
+          color: white;
+          cursor: pointer;
         }
       }
     }

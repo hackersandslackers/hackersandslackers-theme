@@ -19,7 +19,11 @@
     transition: $transition;
 
     @media (max-width: $smallscreen-breakpoint) {
-      font-size: 2em;
+      font-size: 1.9em;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      font-size: 1.8em;
     }
 
     @media (max-width: $mobile-breakpoint) {

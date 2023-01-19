@@ -227,6 +227,10 @@
       @media(max-width: $tablet-breakpoint) {
         width: 50%;
       }
+
+      @media(max-width: $mobile-breakpoint) {
+        width: 100%;
+      }
     }
 
     &.info {
