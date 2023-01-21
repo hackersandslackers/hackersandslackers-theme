@@ -69,10 +69,10 @@
         transition: all .2s ease;
 
         &:hover {
-          background: $color-hover;
-          border: 1px solid $color-hover;
-          color: white;
+          border: 1px solid #6b7583;
+          background-color: #6b7583;
           cursor: pointer;
+          color: white !important;
         }
       }
     }
