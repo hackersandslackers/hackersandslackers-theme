@@ -117,9 +117,8 @@
     font-family: $header-font;
     text-transform: uppercase;
     text-rendering: optimizelegibility;
-    font-size: 1.1em;
+    font-size: 1.15em;
     margin: 0 0 20px;
-    font-size: 1em;
     opacity: .88;
 
     @media(max-width: $tablet-breakpoint) {
@@ -215,7 +214,7 @@
     }
 
     .footer-description {
-      font-size: 1.05em;
+      font-size: 1.1em;
       font-family: $body-font;
       color: #4c5c71;
       line-height: 1.5;
@@ -230,6 +229,7 @@
 
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
+        font-size: 1.1em;
       }
     }
 
@@ -251,7 +251,6 @@
         display: block;
         margin-bottom: 18px;
         padding: 0;
-        font-size: .95em;
         font-weight: 400;
         line-height: 1;
         text-rendering: optimizelegibility;

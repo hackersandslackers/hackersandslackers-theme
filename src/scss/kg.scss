@@ -109,7 +109,7 @@ make sure they look good, and are given a bit of extra spacing. */
       margin-right: calc(-50vw + 50%) !important;
       border-right: 0;
       border-left: 0;
-      border-radius: unset;
+      border-radius: unset !important;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
@@ -206,6 +206,12 @@ make sure they look good, and are given a bit of extra spacing. */
     overflow-y: hidden;
     text-overflow: ellipsis;
     width: -webkit-fill-available;
+  }
+
+  .kg-bookmark-thumbnail {
+    @media(max-width: $mobile-breakpoint) {
+      display: none;
+    }
   }
 
   .kg-bookmark-content * {

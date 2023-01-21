@@ -47,7 +47,7 @@
   }
 
   .nav.left {
-    a {
+    li a {
       color: $color-lightgrey;
       font-family: $body-font-bold;
       transition: $transition;
@@ -62,6 +62,7 @@
     li {
       margin-right: 25px;
       line-height: 1;
+      padding: 0;
 
       @media(max-width: $tablet-breakpoint) {
         margin-right: 20px;
@@ -75,7 +76,7 @@
     }
   }
 
-  li {
+  .nav-item {
     display: inline;
     padding-left: unset;
     margin-top: unset;
@@ -87,6 +88,10 @@
     line-height: 1;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
+
+    @media(max-width: $tablet-breakpoint) {
+      margin-right: 10px;
+    }
 
     @media(max-width: $mobile-breakpoint) {
       margin: unset;
@@ -146,8 +151,22 @@
   }
 }
 
-.post-template .site-header {
-  box-shadow: none;
+.post-template {
+
+  .nav-wrapper.nav-links {
+    @media(max-width: $tablet-breakpoint) {
+      padding: 0 2vw;
+      max-width: 100%;
+    }
+
+    @media(max-width: $tablet-breakpoint) {
+      padding: 0;
+    }
+  }
+
+  .site-header {
+    box-shadow: none;
+  }
 }
 
 .site-header-cover {
@@ -214,7 +233,6 @@
   font-size: 5rem;
   font-weight: 800;
 }
-
 
 .site-navigation {
   position: relative;
@@ -326,6 +344,12 @@
 .tags-list {
   padding: 20px 0;
   margin: 0 auto;
+
+  .tag-item {
+    margin-right: 15px;
+    padding: 0;
+    line-height: 1em;
+  }
 }
 
 
@@ -350,7 +374,7 @@
   transition: $transition;
   width: 40px;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: $tablet-breakpoint) {
     margin-right: 20px;
   }
 
@@ -369,7 +393,6 @@
     white-space: nowrap;
 
     &:hover {
-      color: $color-hover;
       cursor: pointer;
     }
   }
@@ -382,13 +405,12 @@
     display: block;
   }
 
-  &:hover * {
-    color: $color-hover;
-    cursor: pointer;
+  * {
     transition: $transition;
   }
 
-  &:hover img {
+  &:hover * {
+    cursor: pointer;
     opacity: 0.7;
   }
 }
