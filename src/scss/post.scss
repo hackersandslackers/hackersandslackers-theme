@@ -331,9 +331,7 @@
     }
 
     h3 {
-      font-family: $body-font-bold;
-      font-size: 1.2em;
-      margin: 40px 0 5px;
+      @include header-third;
     }
 
     a {

@@ -2,14 +2,14 @@
 @import "_mixins.scss";
 
 .page-about {
-  .authors-list-title {
-    font-family: $body-font-bold;
+
+  h3 {
+    @include header-third;
   }
 
   .author-card {
     @include author-card;
   }
-
 
   iframe {
     height: 332px;

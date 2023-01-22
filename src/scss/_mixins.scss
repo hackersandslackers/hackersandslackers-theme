@@ -12,6 +12,13 @@
   }
 }
 
+@mixin header-third {
+  font-family: $body-font-bold;
+  font-size: 1.2em;
+  margin: 40px 0 5px;
+  color: #4e576a;
+}
+
 
 @mixin mobile-full-width {
   margin-left: calc(-50vw + 50%) !important;
@@ -119,6 +126,17 @@
   .author-card-wrapper {
     display: flex;
     justify-content: space-between;
+
+    .author-avatar-link {
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      height: 70px;
+      min-width: 70px;
+      overflow: hidden;
+      width: 70px;
+      margin-right: 15px;
+    }
 
     .author-image {
       border-radius: 50%;
