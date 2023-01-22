@@ -18,6 +18,11 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.6em;
+
+  &::selection {
+    color: white;
+    background: $color-theme;
+  }
 }
 
 .sidebar-container {
