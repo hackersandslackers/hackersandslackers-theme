@@ -1,0 +1,6 @@
+/*!
+ * 
+ * github-profile-card - 3.1.0 | MIT
+ * (c) 2014 - 2020 Piotr Lewandowski | https://github-profile.com/
+ * 
+ */
