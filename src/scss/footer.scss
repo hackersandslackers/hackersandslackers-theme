@@ -208,6 +208,10 @@
       margin-bottom: 15px;
       transition: $transition;
 
+      @media(max-width: $mobile-breakpoint) {
+        width: 230px;
+      }
+
       &:hover {
         opacity: 0.7;
       }
@@ -257,7 +261,7 @@
         color: #414d5a;
 
         @media(max-width: $tablet-breakpoint) {
-          font-size: 1em;
+          font-size: 1.1em;
         }
 
         a {

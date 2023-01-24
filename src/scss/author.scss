@@ -27,15 +27,22 @@
 
     .author-card-name-wrapper {
       line-height: 1;
+
+      @media(max-width: $mobile-breakpoint) {
+        margin-right: 0;
+      }
     }
 
     .author-card-title {
       color: $color-header-grey;
       font-family: $header-font;
-      font-size: 1.6em;
-      font-weight: 600;
+      font-size: 1.4em;
       margin: 0;
       line-height: 1;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.4em;
+      }
     }
 
     .author-post-count {
@@ -58,6 +65,10 @@
       min-width: 80px;
       height: auto;
       margin-right: 15px;
+
+      @media(max-width: $mobile-breakpoint) {
+        margin-right: 10px;
+      }
     }
 
     .author-card-excerpt {
@@ -70,6 +81,10 @@
       line-height: 1.4;
       overflow-y: hidden;
       text-overflow: ellipsis;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1em;
+      }
     }
 
     .author-name {
@@ -115,6 +130,11 @@
         align-items: center;
         margin-right: 10px;
 
+        @media(max-width: $mobile-breakpoint) {
+          font-size: .95em !important;
+          line-height: 1;
+        }
+
         i,
         svg {
           margin-right: 5px;
@@ -130,7 +150,6 @@
       object-fit: cover;
       background: color-mod($color-lightgrey) l(+10%);
       border-radius: 50%;
-
     }
 
     .author-avatar-link {

@@ -17,6 +17,7 @@
     grid-template-columns: 1fr;
     max-width: 90%;
     grid-gap: 6vmin;
+    margin-bottom: 20px;
   }
 
   .post-card {
@@ -68,6 +69,12 @@
 
         .post-card-meta-item {
           display: block;
+          font-family: $body-font-bold;
+
+          * {
+            font-family: $body-font-bold;
+          }
+
 
           &.separator {
             display: none !important;

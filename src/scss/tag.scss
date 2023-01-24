@@ -6,6 +6,12 @@
 .tag-template {
   background: $color-background-grey;
 
+  .site-header {
+    @media(max-width: $mobile-breakpoint) {
+      box-shadow: -1px 1px 0 rgb(39 44 49 / 10%) !important;
+    }
+  }
+
   .post-card-large .post-card-content {
     order: 1;
   }
@@ -32,7 +38,7 @@
     }
 
     @media(max-width: $mobile-breakpoint) {
-      padding: 25px;
+      padding: 20px 6vw !important;
     }
 
     .info-card-title {
@@ -60,8 +66,13 @@
 
     .info-card-excerpt {
       line-height: 1.5;
-      font-family: $body-font;
+      font-size: 1.1em;
+      font-family: $body-font-medium;
       color: $color-body-font;
+
+      @media(max-width: $mobile-breakpoint) {
+        padding: 30px 25px 20px;
+      }
     }
 
     .tag-image {

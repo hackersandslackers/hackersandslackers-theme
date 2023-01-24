@@ -25,10 +25,6 @@
     margin: 0 auto;
     max-width: 93%;
 
-    @media(max-width: $mobile-breakpoint) {
-      width: 90%;
-    }
-
     &.nav-links {
       display: flex;
       justify-content: space-between;
@@ -240,6 +236,11 @@
   background-color: #fff;
   border-bottom: 0.5px solid $color-border;
 
+  @media(max-width: $mobile-breakpoint) {
+    padding: 20px 4vw;
+    width: unset;
+  }
+
   .nav {
     display: flex;
     align-items: center;
@@ -388,7 +389,7 @@
 
   .icon.title {
     color: $color-theme;
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin: unset;
     white-space: nowrap;
 
