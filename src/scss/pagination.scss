@@ -9,16 +9,20 @@
   width: 98%;
   margin: 10px auto;
 
-  i,
-  svg,
   .pagination-arrow {
     font-size: 1.2em;
     transition: $transition;
     color: $color-lightgrey;
 
     &:hover {
-      color: white !important;
-      cursor: pointer;
+
+      i,
+      svg {
+        color: $color-hover !important;
+        cursor: pointer;
+        fill: $color-hover !important;
+      }
+
     }
   }
 
@@ -29,5 +33,6 @@
   .page-number {
     font-family: $body-font-bold;
     opacity: .5;
+    line-height: 1;
   }
 }
