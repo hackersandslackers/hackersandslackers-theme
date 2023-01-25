@@ -340,6 +340,7 @@
       @media(max-width: $mobile-breakpoint) {
         font-size: 1.7em;
         line-height: 1.2;
+        margin: 40px 0 0;
       }
     }
 
@@ -471,6 +472,14 @@
     .author-card-excerpt {
       line-height: 1.5em !important;
       font-size: unset !important;
+
+      @media(max-width: $mobile-breakpoint) {
+        width: 95vw;
+        margin-top: 26px;
+        display: block;
+        margin-left: calc(-52vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+      }
     }
   }
 }
