@@ -12,6 +12,11 @@ make sure they look good, and are given a bit of extra spacing. */
   flex-direction: column;
   align-items: center;
   width: 100%;
+
+  iframe {
+    margin: 0;
+    
+  }
 }
 
 /* General Card Styles */
