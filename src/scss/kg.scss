@@ -7,17 +7,7 @@ specially styled bookmark links. We add extra styling here to
 make sure they look good, and are given a bit of extra spacing. */
 
 /* This keeps small embeds centered */
-.kg-embed-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  iframe {
-    margin: 0;
-    
-  }
-}
+.kg-embed-card {}
 
 /* General Card Styles */
 /* ---------------------------------------------------------- */
@@ -29,10 +19,17 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 
   &.kg-embed-card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    border: 1px solid #d0d8df;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+
+    iframe {
+      margin: 0;
+      height: 40vw;
+      border: 1px solid #d0d8df;
+    }
   }
 
   figcaption {
@@ -180,10 +177,13 @@ make sure they look good, and are given a bit of extra spacing. */
 }
 
 .kg-callout-card {
-
   &.kg-callout-card-grey {
-    color: #545a69;
     background: rgb(125 164 203 / 13%);
+
+    .kg-callout-text {
+      color: #545a69;
+
+    }
   }
 }
 

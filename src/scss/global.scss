@@ -73,6 +73,11 @@ body {
     @include body-font;
     margin: 0 0 25px;
 
+    &::selection {
+      background: $color-theme;
+      color: white;
+    }
+
     code {
       @include inline-code;
     }

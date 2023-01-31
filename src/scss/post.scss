@@ -320,7 +320,6 @@
     }
 
     iframe {
-      margin: 30px 0;
 
       @media(max-width: $mobile-breakpoint) {
         width: 100vw;
@@ -527,11 +526,10 @@
   hr,
   blockquote {
     position: relative;
-    margin-top: max(4.8vmin, 32px);
   }
 
   hr+*,
-  blockquote+* {
+  +* {
     margin-top: max(4.8vmin, 32px) !important;
   }
 
@@ -560,20 +558,24 @@
   }
 }
 
-.post-content>blockquote:not([class]) {
+.post-content>blockquote {
   position: relative;
+  padding: 7px 20px;
+  background: rgb(128 128 128 / 12%);
+  font-size: .95em;
+  line-height: 1.5;
+  border-radius: 4px;
+  left: -2em;
   font-style: italic;
-  padding: 0;
-}
+  font-weight: 700;
+  color: grey;
+  display: block;
+  border-left: 2px solid #949ba2;
 
-.post-content>blockquote:not([class])::before {
-  content: "";
-  position: absolute;
-  left: -1.5em;
-  top: 0;
-  bottom: 0;
-  width: 0.3rem;
-  background: white;
+  * {
+    font-style: italic;
+    font-weight: 700;
+  }
 }
 
 .post-after {

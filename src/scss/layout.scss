@@ -22,7 +22,7 @@
 }
 
 .page-about .viewport {
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: $tablet-breakpoint) {
     max-width: 100%;
   }
 }

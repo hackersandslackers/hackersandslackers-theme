@@ -58,7 +58,7 @@
         "cssnano": "5.1.14",
         "dotenv": "^16.0.3",
         "dotenv-webpack": "^8.0.1",
-        "eslint": "^8.32.0",
+        "eslint": "^8.33.0",
         "eslint-plugin-ghost": "^2.16.0",
         "font-config-webpack-plugin": "^2.0.3",
         "gscan": "4.36.0",
