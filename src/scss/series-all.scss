@@ -4,7 +4,12 @@
 .page-series {
   background: $color-background-grey;
 
-  header {
+  .series-all-info-card {
+    background: white;
+    box-shadow: $card-shadow;
+    padding: 40px;
+    margin: 0 auto 50px;
+    width: 950px;
 
     h1 {
       font-family: $header-font-medium;
@@ -13,20 +18,14 @@
 
     p {
       line-height: 1.6;
+      margin-bottom: 0;
     }
   }
 
-  .series-section-title {
-    margin: 40px 0 5px;
-    border-bottom: 1px solid $color-border;
-  }
-
-  .series-archive {
-    margin: auto auto 40px;
+  .series-all {
+    margin: 0 auto 40px;
     max-width: 95%;
     width: 950px;
-    background: white;
-    padding: 40px;
 
     .series-feed {
       grid-gap: 15px;

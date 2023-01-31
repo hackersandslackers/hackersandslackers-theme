@@ -1,13 +1,13 @@
 {{!< default}} {{#page}}
-  <main class="series-archive">
-    <header>
-      <h1 class="title">{{{title}}}</h1>
-      {{content}}
-    </header>
+  <header class="series-all-info-card">
+    <h1 class="title">{{{title}}}</h1>
+    {{content}}
+  </header>
+  <main class="series-all">
     <h2 class="series-section-title">Data Science & Engineering</h2>
     <div class="series-feed">
       {{#get "tags" limit="all"
-      filter="slug:[data-analysis-pandas,learning-apache-spark,mapping-data-with-mapbox,code-snippet-corner,web-scraping-with-python,welcome-to-sql]"
+      filter="slug:[data-analysis-pandas,learning-apache-spark,mapping-data-with-mapbox,web-scraping-with-python,welcome-to-sql]"
       include="count.posts" order="count.posts desc" }}
         {{#foreach tags visibility="internal"}}
           {{> "series/series-card" }}
