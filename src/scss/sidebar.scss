@@ -13,6 +13,7 @@
     padding: 20px;
     box-shadow: $card-shadow;
     margin-bottom: 20px;
+    position: relative;
 
     .widget-title {
       color: $color-lightgrey;
@@ -139,27 +140,100 @@
 /* 12.1. Global Widget Styles
 /* ---------------------------------------------------------- */
 
-.sidebar-input-field {
-  color: #4e5869;
-  font-family: $body-font;
-  font-size: .9em;
-  margin: 0 0 10px;
-  padding: 12px 10px 10px !important;
-  transition: $transition;
-  width: 100%;
-}
+.subscribe-form {
+  .sidebar-input-field {
+    color: #4e5869;
+    font-family: $body-font;
+    font-size: .9em;
+    margin: 0 0 10px;
+    padding: 12px 10px 10px !important;
+    transition: $transition;
+    width: 100%;
+  }
 
-.sidebar-btn {
-  color: #6c8095;
-  text-align: right;
-  width: 100%;
-  background: none;
-  font-family: $body-font-bold;
-  transition: $transition;
+  .newsletter-messages {
+    @include message-overlay;
+    display: none;
 
-  &:hover {
-    cursor: pointer;
-    color: $color-hover;
+    .message {
+      @include message-overlay;
+      padding: 20px;
+      display: none;
+    }
+
+    * {
+      font-family: $body-font-bold;
+    }
+  }
+
+  &.success {
+    .newsletter-messages {
+      display: block;
+      z-index: 101;
+
+      .message.success {
+        background: #8bcfb6;
+        display: block;
+      }
+
+      .success-title {
+        display: block;
+        font-size: 2em;
+        font-family: $header-font;
+        margin-bottom: 10px;
+      }
+
+      * {
+        color: #094509;
+      }
+    }
+  }
+
+  &.error {
+    .newsletter-messages {
+      display: block;
+      z-index: 100;
+
+      .message.error {
+        background: #c86464;
+        display: block;
+
+        .error-title {
+          display: block;
+          font-size: 2em;
+          font-family: $header-font;
+          margin-bottom: 10px;
+        }
+
+        * {
+          color: #570000;
+        }
+      }
+    }
+  }
+
+  &.loading {
+    .newsletter-messages {
+      display: none;
+
+      .message.loading {
+        display: none;
+      }
+    }
+  }
+
+  .sidebar-btn {
+    color: #6c8095;
+    text-align: right;
+    width: 100%;
+    background: none;
+    font-family: $body-font-bold;
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
   }
 }
 
