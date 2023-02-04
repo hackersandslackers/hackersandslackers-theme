@@ -127,14 +127,19 @@
   }
 
   .subfooter {
-    margin: 40px auto 0;
+    margin: 30px auto 0;
     align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid $color-border;
 
     @media(max-width: 700px) {
       display: flex;
       flex-direction: column;
-      margin: 35px auto 0;
-      padding: unset;
+    }
+
+    @media(max-width: $mobile-breakpoint) {
+      margin: 20px auto 0;
+      padding-top: 20px;
     }
 
     .copyright {
@@ -218,7 +223,7 @@
     }
 
     .footer-description {
-      font-size: 1.1em;
+      font-size: 1em;
       font-family: $body-font;
       color: #4c5c71;
       line-height: 1.5;
