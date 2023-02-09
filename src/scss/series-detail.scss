@@ -1,0 +1,43 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+
+
+.series-detail {
+  background: #fff !important;
+  box-shadow: $card-shadow;
+  margin: 20px auto 60px;
+  max-width: 100%;
+  width: 900px !important;
+  padding: 40px;
+
+  .series-title {
+    font-family: $header-font-medium;
+    color: $color-header-grey;
+    line-height: 1;
+  }
+
+  h3 {
+    font-family: $body-font-bold;
+    margin: 1.5em 0 0.2em;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  .reading-time {
+    * {
+      line-height: 1;
+      display: inline-block;
+    }
+
+    span {
+      font-size: 1.2em;
+    }
+
+    svg,
+    i {
+      font-size: 1.1em;
+    }
+  }
+}

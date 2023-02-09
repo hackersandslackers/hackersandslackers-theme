@@ -7,9 +7,10 @@
   .series-all-info-card {
     background: white;
     box-shadow: $card-shadow;
-    padding: 40px;
+    padding: 30px;
     margin: 0 auto 50px;
     width: 950px;
+    max-width: 95%;
 
     h1 {
       font-family: $header-font-medium;
@@ -117,12 +118,7 @@
 }
 
 .series-detail {
-  background: #fff !important;
-  box-shadow: $card-shadow;
-  margin: 20px auto 60px;
-  max-width: 100%;
-  width: 900px !important;
-  padding: 50px;
+  
 
   @media(max-width: 900px) {
     margin: 0 auto 30px;
