@@ -9,7 +9,6 @@ module.exports = {
     main: path.resolve(__dirname, `./src/js/index.js`),
     post: path.resolve(__dirname, `./src/js/post.js`),
     page: path.resolve(__dirname, `./src/js/page.js`),
-    series: path.resolve(__dirname, `./src/js/series.js`),
     author: path.resolve(__dirname, `./src/js/author.js`),
   },
   plugins: [

@@ -1,5 +1,6 @@
 import "../scss/page.scss";
 import "../scss/series-all.scss";
+import "../scss/series-detail.scss";
 import "../scss/about.scss";
 
 window.addEventListener("load", function () {

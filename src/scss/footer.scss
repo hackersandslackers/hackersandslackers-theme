@@ -238,7 +238,8 @@
 
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
-        font-size: 1.1em;
+        font-size: 1em;
+        line-height: 1.3;
       }
     }
 

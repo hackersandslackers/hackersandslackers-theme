@@ -1,0 +1,17 @@
+{{!< default}}
+<div class="series-detail">
+  <h1 class="series-title">{{page.title}}</h1>
+  <div class="post-content">
+    {{#page}}{{content}}{{/page}}
+  </div>
+  {{#foreach posts}}
+    <a class="series-post-card" href="{{url}}">
+      <div class="series-post-number">{{@number}}</div>
+      <div class="series-post-card-detail">
+        <h2 class="series-post-card-title">{{title}}</h2>
+        <div class="excerpt">{{excerpt}}</div>
+        <div class="reading-time"><i class="fa-sharp fa-solid fa-clock"></i> <span>{{reading_time}}</span></div>
+      </div>
+    </a>
+  {{/foreach}}
+</div>
