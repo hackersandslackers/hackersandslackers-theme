@@ -37,9 +37,11 @@ clean:
 	find . -name 'package-lock.json' -delete
 	find . -name 'yarn-error.log' -delete
 	find . -name '.pnp.cjs' -delete
-	find . -wholename '*.lock' -delete
 	find . -name '*.map'  -delete
 	find . -name '*.LICENSE.txt' -delete
+	find . -wholename 'assets/built/*.js' -exec rm -rf {} +
+	find . -wholename 'assets/built/*.css' -exec rm -rf {} +
+	find . -wholename '*.lock' -delete
 	find . -type d -wholename './.yarn' -exec rm -rf {} +
 	find . -type d -wholename '**/node_modules' -exec rm -rf {} +
 
