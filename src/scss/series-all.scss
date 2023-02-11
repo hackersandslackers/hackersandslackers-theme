@@ -12,6 +12,7 @@
     width: 950px;
     max-width: 95%;
 
+
     h1 {
       font-family: $header-font-medium;
       color: $color-header-grey
@@ -34,6 +35,10 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       margin: 10px 0 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        grid-template-columns: 1fr;
+      }
 
       .series-card {
         background: #fff;
