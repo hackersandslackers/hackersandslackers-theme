@@ -5,7 +5,7 @@
         {{#get "posts" limit="all" filter="tag:{{slug}}" as |series-post|}}
           {{#foreach series-post}}
             <li class="series-toc-item">
-              <a href="{{url}}">{{title}}</a>
+              <a href="{{url}}" class="series-toc-item-link">{{title}}</a>
             </li>
           {{/foreach}}
         {{/get}}

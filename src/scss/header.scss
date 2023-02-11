@@ -241,7 +241,7 @@
   border-bottom: 0.5px solid $color-border;
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 20px 4vw;
+    padding: 20px 5vw;
     width: unset;
   }
 
@@ -380,6 +380,8 @@
   width: 40px;
 
   @media(max-width: $tablet-breakpoint) {
+    height: 30px;
+    width: 30px;
     margin-right: 20px;
   }
 
@@ -396,6 +398,8 @@
 
     @media(max-width: $mobile-breakpoint) {
       margin-right: 5px;
+      height: 30px;
+      width: 30px;
     }
 
   }
