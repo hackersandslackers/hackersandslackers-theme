@@ -27,7 +27,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
     iframe {
       margin: 0;
-      height: 40vw;
+      height: 60vw;
       border: 1px solid #d0d8df;
     }
   }
@@ -171,18 +171,25 @@ make sure they look good, and are given a bit of extra spacing. */
 /* Callout Cards */
 /* ---------------------------------------------------------- */
 
-.kg-callout-emoji {
-  font-size: 2.1rem;
-  line-height: 1.4;
-}
+
 
 .kg-callout-card {
+  font-family: $body-font;
+
+  @media(max-width: $mobile-breakpoint) {
+    padding: 1em 1.2em !important;
+  }
+
+  .kg-callout-emoji {
+    font-size: 1.5em !important;
+    padding-right: 0.4em !important;
+  }
+
   &.kg-callout-card-grey {
     background: rgb(125 164 203 / 13%);
 
     .kg-callout-text {
       color: #545a69;
-
     }
   }
 }

@@ -160,7 +160,7 @@
       width: -webkit-fill-available;
 
       @media (max-width: $mobile-breakpoint) {
-        font-size: 1.9em;
+        font-size: 1.8em;
       }
     }
 
@@ -188,7 +188,7 @@
         }
 
         @media(max-width: $mobile-breakpoint) {
-          font-size: 1.1em;
+          font-size: 1.05em;
           margin: 10px 0;
         }
       }
@@ -217,6 +217,7 @@
 
           * {
             color: #7e8da3;
+            display: inline-block;
             transition: $transition;
           }
 
@@ -345,6 +346,7 @@
 
     h3 {
       @include header-third;
+      line-height: 1;
     }
 
     a {
@@ -458,6 +460,15 @@
         margin: 0;
       }
 
+      .author-avatar-link,
+      .author-image {
+        @media(max-width: $mobile-breakpoint) {
+          height: 60px;
+          width: 60px;
+          min-width: 60px;
+        }
+      }
+
       .author-name {
         font-size: 1.4em;
 
@@ -507,6 +518,7 @@
 
     li {
       margin: 0 0 10px;
+      line-height: 1.5;
 
       &::marker {
         font-weight: 600;

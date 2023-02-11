@@ -31,10 +31,14 @@
     .post-card-title {
       font-size: 1.4em;
       line-height: 1.1;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.5em;
+      }
     }
 
     .post-card-excerpt {
-      font-size: 1em;
+      font-size: 1em !important;
       margin: 10px 0;
     }
 
