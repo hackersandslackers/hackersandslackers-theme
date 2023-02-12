@@ -85,13 +85,16 @@
         &.next {
           text-align: right;
 
-          .series-nextprev-label svg {
+          .series-nextprev-label svg,
+          .series-nextprev-label i {
             margin-left: 5px;
           }
         }
 
         &.prev {
-          .series-nextprev-label svg {
+
+          .series-nextprev-label svg,
+          .series-nextprev-label i {
             margin-right: 5px;
           }
         }
@@ -537,6 +540,10 @@
     position: relative;
   }
 
+  blockquote {
+    @include blockquote;
+  }
+
   hr+*,
   +* {
     margin-top: max(4.8vmin, 32px) !important;
@@ -564,26 +571,6 @@
       color: $color-theme;
       cursor: pointer;
     }
-  }
-}
-
-.post-content>blockquote {
-  position: relative;
-  padding: 7px 20px;
-  background: rgb(128 128 128 / 12%);
-  font-size: .95em;
-  line-height: 1.5;
-  border-radius: 4px;
-  left: -2em;
-  font-style: italic;
-  font-weight: 700;
-  color: grey;
-  display: block;
-  border-left: 2px solid #949ba2;
-
-  * {
-    font-style: italic;
-    font-weight: 700;
   }
 }
 
