@@ -213,6 +213,10 @@
       margin-bottom: 15px;
       transition: $transition;
 
+      @media(max-width: $tablet-breakpoint) {
+        width: 240px;
+      }
+
       @media(max-width: $mobile-breakpoint) {
         width: 230px;
       }
@@ -233,7 +237,7 @@
       }
 
       @media(max-width: $tablet-breakpoint) {
-        width: 50%;
+        width: 60vw;
       }
 
       @media(max-width: $mobile-breakpoint) {
@@ -265,10 +269,6 @@
         line-height: 1;
         text-rendering: optimizelegibility;
         color: #414d5a;
-
-        @media(max-width: $tablet-breakpoint) {
-          font-size: 1.1em;
-        }
 
         a {
           transition: $transition;

@@ -484,7 +484,7 @@
       font-size: unset !important;
 
       @media(max-width: $mobile-breakpoint) {
-        width: 95vw;
+        width: 90vw;
         margin-top: 26px;
         display: block;
         margin-left: calc(-52vw + 50%) !important;
@@ -592,9 +592,13 @@
     grid-gap: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 15px 30px;
+    margin: 0 15px 60px;
     padding: 20px 0 0;
     text-align: center;
+
+    @media(max-width: $tablet-breakpoint) {
+      margin: 0 4vw 60px;
+    }
 
     @media(max-width: $mobile-breakpoint) {
       display: none;

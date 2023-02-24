@@ -15,9 +15,9 @@
 
   @media(max-width: $mobile-breakpoint) {
     grid-template-columns: 1fr;
-    max-width: 90%;
+    max-width: 90% !important;
     grid-gap: 6vmin;
-    margin-bottom: 20px;
+    margin-bottom: 20px !important;
   }
 
   .post-card {
@@ -31,6 +31,10 @@
     .post-card-title {
       font-size: 1.4em;
       line-height: 1.1;
+
+      @media(max-width: $tablet-breakpoint) {
+        font-size: 1.3em;
+      }
 
       @media(max-width: $mobile-breakpoint) {
         font-size: 1.5em;

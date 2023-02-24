@@ -159,7 +159,7 @@
       max-width: 100%;
     }
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: $mobile-breakpoint) {
       padding: 0;
     }
   }

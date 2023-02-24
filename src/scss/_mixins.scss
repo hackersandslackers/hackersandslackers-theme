@@ -272,11 +272,15 @@
   font-weight: 900;
   line-height: 1.6em;
   margin: 1.1em -4em;
-  padding: 1em 2em;
+  padding: 0.4em 1.5em;
   position: relative;
   font-size: 1.2em;
   font-style: italic;
   max-width: 100%;
+
+  @media(max-width: $tablet-breakpoint) {
+    margin: 1.5em auto !important;
+  }
 
   &::before {
     content: "";
@@ -286,15 +290,15 @@
     height: 1.8em;
     background-color: white;
     width: 5px;
-    margin-top: -1.25vw;
+    margin-top: -1vw;
   }
 
   &::after {
     content: "\f10e";
     position: absolute;
     top: 50%;
-    left: -1vw;
-    color: $color-;
+    left: -0.9vw;
+    color: $color-theme;
     font-family: "Font Awesome 6 Sharp";
     text-rendering: auto;
     font-weight: 900;

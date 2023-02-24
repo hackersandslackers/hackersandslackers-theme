@@ -1,8 +1,8 @@
 # HackersAndSlackers Ghost Theme
 
 ![Ghost](https://img.shields.io/badge/Ghost-^v5.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
-![Webpack](https://img.shields.io/badge/Webpack-v5.74.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=5e81ac&colorA=4c566a)
-![Sass](https://img.shields.io/badge/Sass-^v1.55.0-pink.svg?longCache=true&style=flat-square&colorA=4c566a&colorB=b48ead&logo=sass&logoColor=ffffff)
+![Webpack](https://img.shields.io/badge/Webpack-v5.75.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=5e81ac&colorA=4c566a)
+![Sass](https://img.shields.io/badge/Sass-^v1.58.0-pink.svg?longCache=true&style=flat-square&colorA=4c566a&colorB=b48ead&logo=sass&logoColor=ffffff)
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square&colorA=4c566a&colorB=a3be8c&logo=GitHub)
 [![GitHub Issues](https://img.shields.io/github/issues/hackersandslackers/hackersandslackers-theme.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-theme/issues)
 [![GitHub Stars](https://img.shields.io/github/stars/hackersandslackers/hackersandslackers-theme.svg?style=flat-square&colorB=ebcb8b&colorA=4c566a&logo=GitHub)](https://github.com/hackersandslackers/hackersandslackers-theme/stargazers)
@@ -45,10 +45,10 @@ The HackersAndSlackers theme includes custom widgets, integrations, and features
 For developers interested in contributing or other usage, this theme is openly available:
 
 ```shell
-$ git clone https://github.com/hackersandslackers/hackersandslackers-theme.git
-$ cd hackersandslackers-theme
-$ yarn
-$ make dev
+git clone https://github.com/hackersandslackers/hackersandslackers-theme.git
+cd hackersandslackers-theme
+yarn
+make dev
 ```
 
 For information on installing the Ghost platform, please reference the [Ghost CLI](https://docs.ghost.org/docs/cli-install).
