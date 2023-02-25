@@ -45,14 +45,15 @@
         "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors"
     ],
     "dependencies": {
-      "babel-plugin-prismjs": "^2.1.0",
-      "dotenv": "^16.0.3",
-      "dotenv-webpack": "^8.0.1",
-      "github-profile-card": "^3.1.0",
-      "prismjs": "^1.29.0",
-      "webpack": "^5.75.0",
-      "webpack-cli": "^5.0.1"
-  },
+        "babel-plugin-prismjs": "^2.1.0",
+        "delicious-hamburgers": "^1.2.3",
+        "dotenv": "^16.0.3",
+        "dotenv-webpack": "^8.0.1",
+        "github-profile-card": "^3.1.0",
+        "prismjs": "^1.29.0",
+        "webpack": "^5.75.0",
+        "webpack-cli": "^5.0.1"
+    },
     "devDependencies": {
         "@babel/core": "^7.21.0",
         "@babel/eslint-parser": "^7.19.1",

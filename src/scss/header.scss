@@ -1,5 +1,7 @@
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "~delicious-hamburgers/scss/base";
+@import "~delicious-hamburgers/scss/animations/collapse";
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -43,6 +45,16 @@
     a {
       font-family: $body-font-bold;
       transition: $transition;
+    }
+
+    .hamburger {
+      display: none;
+      margin-left: 4px;
+      z-index: 100;
+
+      @media(max-width: $mobile-breakpoint) {
+        display: block;
+      }
     }
   }
 
@@ -116,6 +128,8 @@
   }
 
   .search-button {
+    display: flex;
+    align-items: center;
     color: $color-lightgrey;
     transition: $transition;
     font-size: 1.2em;

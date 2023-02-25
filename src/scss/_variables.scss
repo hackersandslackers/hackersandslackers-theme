@@ -39,20 +39,25 @@ $nord14: #a3be8c;
 $nord15: #b48ead;
 
 /* Fonts */
-$font-serif: Georgia, Times, serif;
-$font-mono: Menlo, Courier, monospace;
+$font-serif: "Georgia", "Times", serif;
+$font-mono: "Menlo", "Courier", monospace;
 $body-font: "CamphorPro-Regular", "HelveticaNeue", sans-serif;
 $body-font-medium: "CamphorPro-Medium", "HelveticaNeue", sans-serif;
 $body-font-bold: "CamphorPro-Bold", "HelveticaNeue", sans-serif;
 $header-font: "TTNormsPro-Bold", "HelveticaNeue", sans-serif;
 $header-font-medium: "TTNormsPro-Medium", "HelveticaNeue", sans-serif;
-$monospace-font: "dm", SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+$monospace-font: "dm", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $table-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
 
 /* Breakpoints */
 $smallscreen-breakpoint: 950px;
 $tablet-breakpoint: 800px;
 $mobile-breakpoint: 600px;
+
+/* Hamburger Menu */
+$hamburger-size: 30px;
+$hamburger-thickness: 3px;
+$hamburger-color: $color-lightgrey;
 
 /* Etc. */
 $card-shadow: 0 1px 4px rgba(39, 44, 49, .15);

@@ -27,4 +27,11 @@ window.addEventListener("load", function () {
     const walk = (x - startX) * 2; //scroll-fast
     slider.scrollLeft = scrollLeft - walk;
   });
+
+  const hamburger = document.querySelector("button.hamburger");
+  const mobilemenu = document.querySelector(".mobile-menu");
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    mobilemenu.classList.toggle("active");
+  });
 });
