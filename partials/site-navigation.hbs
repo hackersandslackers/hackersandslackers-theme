@@ -1,5 +1,4 @@
 <header class="site-header">
-
   <div class="site-navigation">
     <div class="nav-wrapper nav-links">
       <div class="nav left">
@@ -26,7 +25,6 @@
         </div>
         {{ navigation }}
       </div>
-
       <ul class="nav right">
         <li class="nav-item">
           <a href="#/search" data-ghost-search class="search-button" aria-label="{{t 'Search' }}">
@@ -35,6 +33,7 @@
         </li>
         {{#if @member}}
           <li class="nav-item account"><a href="#/portal/account" class="nav-link">{{t 'Account' }}</a></li>
+          <li class="nav-item account"><a href="javascript:" data-members-signout>{{t 'Sign out' }}</a></li>
         {{else}}
           <li class="nav-item login"><a href="#/portal/signin" class="nav-btn outline">{{t 'Log in' }}</a></li>
           <li class="nav-item signup"><a href="#/portal/signup" class="nav-btn filled">{{t 'Subscribe' }}</a></li>
@@ -42,7 +41,6 @@
       </ul>
     </div>
   </div>
-
   <div class="tags-navigation">
     <div class="nav-wrapper tag-links">
       {{#get "tags" limit="25" include="count.posts" filter="slug:-[excel,terraform,tableau,frameworks,haproxy,codesnippetcorner,mapbox,powerbi,powerpivot,business-intelligence,saas,expressjs,hashicorp]" order="count.posts DESC"  }}
@@ -56,5 +54,4 @@
       {{/get}}
     </div>
   </div>
-
 </header>
