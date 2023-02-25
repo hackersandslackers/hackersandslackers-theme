@@ -49,9 +49,10 @@
   .nav.left {
     li a {
       color: $color-lightgrey;
-      font-family: $body-font-bold;
+      font-family: $body-font-medium;
       transition: $transition;
       line-height: 1;
+      font-size: 1.1em;
 
       &:hover {
         color: $color-hover;

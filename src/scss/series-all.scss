@@ -12,6 +12,11 @@
     width: 950px;
     max-width: 95%;
 
+    @media(max-width: $mobile-breakpoint) {
+      width: 100%;
+      max-width: unset;
+    }
+
 
     h1 {
       font-family: $header-font-medium;
