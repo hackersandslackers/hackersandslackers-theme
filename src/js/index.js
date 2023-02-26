@@ -29,9 +29,17 @@ window.addEventListener("load", function () {
   });
 
   const hamburger = document.querySelector("button.hamburger");
-  const mobilemenu = document.querySelector(".mobile-menu");
+  const mobileMenuButton = document.querySelector(".mobile-menu");
+  const mobileSeriesNav = document.querySelector(".mobile-series-links");
+  let mobileSeriesNavIcon = document.querySelector("fa-angle-down");
   hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("active");
-    mobilemenu.classList.toggle("active");
+    mobileMenuButton.classList.toggle("active");
+  });
+
+  mobileMenuButton.addEventListener("click", function () {
+    mobileSeriesNavIcon = document.querySelector("fa-angle-down");
+    mobileSeriesNav.classList.toggle("active");
+    mobileSeriesNavIcon.classList.toggle("fa-flip");
   });
 });

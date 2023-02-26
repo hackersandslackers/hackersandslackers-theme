@@ -1,8 +1,25 @@
 <nav class="mobile-menu" aria-label="Mobile menu">
-  <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">Contact</a></li>
+  <ul class="mobile-menu-links">
+    <li class="nav-home mobile-nav-link">
+      <a href="{{@site.url}}">Home</a>
+    </li>
+    {{#foreach navigation}}
+      <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
+        {{#has slug="series"}}
+          <i class="fa-sharp fa-solid fa-angle-down"></i> <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
+          <ul class="mobile-series-links">
+            {{#get "tags" limit="all" filter="slug:-[adventures-in-excel,microsoft-powerpivot,hash-newsletter,code-snippet-corner,mongodb-cloud]" include="count.posts" order="count.posts desc"}}
+              {{#foreach tags visibility="internal"}}
+                <li class="mobile-nav-series-link">
+                  <a href="/series/{{slug}}" title="{{meta_title}}">{{meta_title}}</a>
+                </li>
+              {{/foreach}}
+            {{/get}}
+          </ul>
+          {{else}}
+            <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
+        {{/has}}
+      </li>
+    {{/foreach}}
   </ul>
 </nav>
