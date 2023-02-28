@@ -29,39 +29,45 @@
       &:hover {
         cursor: pointer;
 
-        &>a {
+        svg,
+        span {
           color: $color-hover;
         }
       }
     }
+  }
 
-    .nav-series {
-      margin-left: -21px;
+  .nav-series,
+  .nav-tags {
+    margin-left: -21px;
+    padding: 0;
+
+    .active {
+      display: block;
     }
   }
 
-  .mobile-series-links {
+  .mobile-series-links,
+  .mobile-tag-links {
     list-style-type: none;
     margin: 10px 0 0 0;
     padding: 0 0 0 20px;
     display: none;
 
-    .mobile-nav-series-link {
+    .mobile-nav-series-link,
+    .mobile-nav-tags-link {
       font-size: .8em;
       margin-bottom: 5px;
       margin-left: 5px;
 
       &:hover {
         cursor: pointer;
-
-        a {
-          color: $color-hover;
-        }
+        color: $color-hover;
       }
     }
+  }
 
-    &.active {
-      display: block;
-    }
+  .flip-vertically {
+    transform: scaleY(-1);
   }
 }

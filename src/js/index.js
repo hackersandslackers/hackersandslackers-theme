@@ -30,16 +30,25 @@ window.addEventListener("load", function () {
 
   const hamburger = document.querySelector("button.hamburger");
   const mobileMenuButton = document.querySelector(".mobile-menu");
-  const mobileSeriesNav = document.querySelector(".mobile-series-links");
-  let mobileSeriesNavIcon = document.querySelector("fa-angle-down");
+  const mobileSeriesLink = document.querySelector(".nav-series");
+  const mobileTagLink = document.querySelector(".nav-tags");
+  let mobileTagsNavIcon = document.querySelector(".nav-tags .fa-angle-up");
+  let mobileSeriesNavIcon = document.querySelector(".nav-series .fa-angle-up");
+
   hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("active");
     mobileMenuButton.classList.toggle("active");
   });
 
-  mobileMenuButton.addEventListener("click", function () {
-    mobileSeriesNavIcon = document.querySelector("fa-angle-down");
+  mobileSeriesLink.addEventListener("click", function () {
+    const mobileSeriesNav = document.querySelector(".mobile-series-links");
     mobileSeriesNav.classList.toggle("active");
-    mobileSeriesNavIcon.classList.toggle("fa-flip");
+    mobileSeriesNavIcon.classList.toggle("flip-vertically");
+  });
+
+  mobileTagLink.addEventListener("click", function () {
+    const mobileTagNav = document.querySelector(".mobile-tag-links");
+    mobileTagNav.classList.toggle("active");
+    mobileTagsNavIcon.classList.toggle("flip-vertically");
   });
 });

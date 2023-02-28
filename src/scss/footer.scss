@@ -82,7 +82,7 @@
   box-shadow: $card-shadow;
 
   @media (max-width: 1020px) {
-    padding: 60px 40px 20px;
+    padding: 50px 40px 20px;
   }
 
   @media (max-width: $tablet-breakpoint) {
@@ -101,6 +101,10 @@
     margin: 0 auto;
     max-width: 95vw;
     width: 1000px;
+
+    @media (max-width: 1020px) {
+      width: auto;
+    }
 
     @media (max-width: $tablet-breakpoint) {
       max-width: 88%;

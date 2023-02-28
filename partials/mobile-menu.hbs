@@ -5,19 +5,32 @@
     </li>
     {{#foreach navigation}}
       <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
-        {{#has slug="series"}}
-          <i class="fa-sharp fa-solid fa-angle-down"></i> <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
-          <ul class="mobile-series-links">
+        {{#has slug="tags"}}
+          {{!-- Tags --}}
+          <i class="fa-sharp fa-solid fa-angle-up"></i> <span>Tags</span>
+          <ul class="mobile-tag-links">
             {{#get "tags" limit="all" filter="slug:-[adventures-in-excel,microsoft-powerpivot,hash-newsletter,code-snippet-corner,mongodb-cloud]" include="count.posts" order="count.posts desc"}}
-              {{#foreach tags visibility="internal"}}
-                <li class="mobile-nav-series-link">
-                  <a href="/series/{{slug}}" title="{{meta_title}}">{{meta_title}}</a>
+              {{#foreach tags visibility="public"}}
+                <li class="mobile-nav-tags-link">
+                  <a href="{{url}}" title="{{name}}">{{name}}</a>
                 </li>
               {{/foreach}}
             {{/get}}
           </ul>
-          {{else}}
-            <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
+          {{else has slug="series"}}
+            {{!-- Series --}}
+            <i class="fa-sharp fa-solid fa-angle-up"></i> <span>{{label}}</span>
+            <ul class="mobile-series-links">
+              {{#get "tags" limit="all" filter="slug:-[adventures-in-excel,microsoft-powerpivot,hash-newsletter,code-snippet-corner,mongodb-cloud]" include="count.posts" order="count.posts desc"}}
+                {{#foreach tags visibility="internal"}}
+                  <li class="mobile-nav-series-link">
+                    <a href="/series/{{slug}}" title="{{meta_title}}">{{meta_title}}</a>
+                  </li>
+                {{/foreach}}
+              {{/get}}
+            </ul>
+            {{else}}
+              <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
         {{/has}}
       </li>
     {{/foreach}}

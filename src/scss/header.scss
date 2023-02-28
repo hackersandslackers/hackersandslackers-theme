@@ -120,8 +120,6 @@
       }
     }
 
-
-
     &.login {
       @media(max-width: $mobile-breakpoint) {
         display: none;
@@ -158,8 +156,10 @@
     display: flex;
     align-items: center;
 
-    .icon.title {
-      font-family: $header-font;
+    .icon {
+      @media(max-width: $mobile-breakpoint) {
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -404,8 +404,6 @@
   width: 40px;
 
   @media(max-width: $tablet-breakpoint) {
-    height: 30px;
-    width: 30px;
     margin-right: 20px;
   }
 
@@ -413,30 +411,12 @@
     opacity: .7;
   }
 
-  img {
-    margin-right: 10px;
-
-    @media(max-width: $tablet-breakpoint) {
-      margin-right: 8px;
-    }
-
-    @media(max-width: $mobile-breakpoint) {
-      margin-right: 5px;
-      height: 30px;
-      width: 30px;
-    }
-
-  }
-
   .icon.title {
     color: $color-theme;
+    font-family: $header-font;
     font-size: 1.1em;
     margin: unset;
     white-space: nowrap;
-
-    @media(max-width: $mobile-breakpoint) {
-      font-size: 1em;
-    }
 
     &:hover {
       cursor: pointer;
