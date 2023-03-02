@@ -19,6 +19,7 @@ body {
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.6em;
+  overflow-x: hidden;
 
   &::selection {
     color: white;

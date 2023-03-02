@@ -11,9 +11,9 @@
     {{! Theme JS }}
     <script src="{{asset 'built/main.js'}}"></script>
     <script defer data-domain="hackersandslackers.com" src="https://plausible.io/js/script.js"></script>
-    <script src="https://kit.fontawesome.com/0dae50f8a6.js" crossorigin="anonymous"></script>
     {{! Theme CSS }}
     <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
+    {{!--<link rel="stylesheet" href="https://kit.fontawesome.com/0dae50f8a6.css" crossorigin="anonymous">--}}
     {{!-- Post meta, scripts and styles. --}}
     {{#is "post"}}
       <script src="{{asset 'built/post.js'}}"></script>
@@ -24,6 +24,7 @@
     {{#is "author"}}
       <script src="{{asset 'built/author.js'}}"></script>
     {{/is}}
+    <script src="https://kit.fontawesome.com/0dae50f8a6.js" crossorigin="anonymous"></script>
     {{! Advanced SEO meta data}}
     {{ghost_head}}
   </head>
