@@ -25,6 +25,10 @@ body {
     color: white;
     background: $color-theme;
   }
+
+  i::before {
+    font-family: "Font Awesome 6 Sharp", "Font Awesome 6 Social";
+  }
 }
 
 .sidebar-container {
