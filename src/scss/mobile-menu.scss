@@ -7,6 +7,7 @@
   min-height: 100%;
   z-index: 3;
   padding: 40px;
+  overflow-y: scroll;
   top: 0;
   right: -100%;
   height: -webkit-fill-available;
@@ -54,7 +55,7 @@
     padding: 0 0 0 20px;
     display: none;
 
-    .mobile-nav-link {
+    .mobile-nav-link-nested {
       font-size: .8em;
       margin-bottom: 5px;
       margin-left: 5px;
@@ -66,6 +67,20 @@
           cursor: pointer;
           color: $color-hover;
         }
+      }
+    }
+  }
+
+  mobile-nav-link {
+    margin-bottom: 5px;
+    margin-left: 5px;
+
+    a {
+      transition: $transition;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-hover;
       }
     }
   }

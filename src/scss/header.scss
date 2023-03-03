@@ -8,7 +8,6 @@
 
 .site-header {
   position: relative;
-  color: #fff;
   background: white;
   margin-bottom: 30px;
   box-shadow: $card-shadow;
@@ -54,6 +53,11 @@
 
       @media(max-width: $mobile-breakpoint) {
         display: block;
+      }
+
+      &.active {
+        position: fixed !important;
+        right: 20px;
       }
     }
   }
@@ -262,7 +266,7 @@
   position: relative;
   padding: 20px 0;
   background-color: #fff;
-  border-bottom: 0.5px solid $color-border;
+  border-bottom: 0.5px solid $color-header-border-grey;
 
   @media(max-width: $mobile-breakpoint) {
     padding: 20px 5vw;
@@ -333,7 +337,7 @@
 }
 
 .tags-navigation {
-  border-bottom: 0.5px solid $color-border;
+  border-bottom: 0.5px solid $color-header-border-grey;
 
   @media (max-width: $mobile-breakpoint) {
     display: none;

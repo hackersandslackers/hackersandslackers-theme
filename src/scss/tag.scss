@@ -29,7 +29,7 @@
     justify-content: space-between;
     background: #fff;
     box-shadow: $card-shadow;
-    padding: 40px;
+    padding: 30px;
     grid-column: span 2;
     margin-bottom: 20px;
 
@@ -37,8 +37,12 @@
       margin: 0 auto 20px !important;
     }
 
+    @media(max-width: $tablet-breakpoint) {
+      padding: 40px 30px;
+    }
+
     @media(max-width: $mobile-breakpoint) {
-      padding: 20px 6vw !important;
+      padding: 8vw 6vw 5vw !important;
     }
 
     .info-card-title {
@@ -66,20 +70,15 @@
 
     .info-card-excerpt {
       line-height: 1.5;
-      font-size: 1.1em;
-      font-family: $body-font-medium;
+      font-size: 1em;
+      font-family: $body-font;
       color: $color-body-font;
-
-      @media(max-width: $mobile-breakpoint) {
-        padding: 30px 25px 20px;
-      }
     }
 
     .tag-image {
-      width: 110px;
+      max-width: 100px;
       height: min-content;
-      margin-right: 25px;
-      max-width: 30%;
+      margin-right: 20px;
 
       @media(max-width: 900px) {
         margin-right: 20px;
@@ -87,6 +86,7 @@
 
       @media(max-width: $mobile-breakpoint) {
         margin-right: 15px;
+        max-width: 18vw;
       }
     }
   }

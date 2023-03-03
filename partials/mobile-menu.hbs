@@ -13,7 +13,7 @@
           <ul class="mobile-nav-links-list">
             {{#get "tags" limit="20" filter="slug:-[adventures-in-excel,microsoft-powerpivot,hash-newsletter,code-snippet-corner,mongodb-cloud]" include="count.posts" order="count.posts desc"}}
               {{#foreach tags visibility="public"}}
-                <li class="mobile-nav-link">
+                <li class="mobile-nav-link-nested">
                   <a href="{{url}}" title="{{name}}">{{name}}</a>
                 </li>
               {{/foreach}}
@@ -29,7 +29,7 @@
             <ul class="mobile-nav-links-list">
               {{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
                 {{#foreach tags visibility="internal"}}
-                  <li class="mobile-nav-link">
+                  <li class="mobile-nav-link-nested">
                     <a href="/series/{{slug}}" title="{{meta_title}}">{{meta_title}}</a>
                   </li>
                 {{/foreach}}

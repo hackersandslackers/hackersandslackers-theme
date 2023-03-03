@@ -28,12 +28,15 @@ window.addEventListener("load", function () {
     slider.scrollLeft = scrollLeft - walk;
   });
 
+  // Hamburger button
   const hamburger = document.querySelector("button.hamburger");
   const mobileMenuButton = document.querySelector(".mobile-menu");
 
+  // Expandable sub-navigation
   const mobileSeriesLink = document.getElementById("mobile-nav-series-links");
   const mobileTagLink = document.getElementById("mobile-nav-tags-links");
 
+  // Icons of expandable sub-navigation elements
   let mobileTagsNavIcon = document.querySelector(".nav-tags .fa-angle-up");
   let mobileSeriesNavIcon = document.querySelector(".nav-series .fa-angle-up");
 

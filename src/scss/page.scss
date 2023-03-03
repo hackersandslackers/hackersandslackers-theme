@@ -78,14 +78,12 @@
   .info-card {
     @media (max-width: $tablet-breakpoint) {
       margin: unset;
-      box-shadow: unset;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
-      padding: 25px;
     }
 
     @media (max-width: $mobile-breakpoint) {
-      padding: 2vw 6vw !important;
+      padding: 2vw 6vw;
     }
   }
 }
