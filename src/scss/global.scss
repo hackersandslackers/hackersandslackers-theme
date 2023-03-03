@@ -8,6 +8,10 @@
 @import "footer.scss";
 @import "pagination.scss";
 @import "mobile-menu.scss";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/solid.scss";
+@import "./fontawesome/brands.scss";
+@import "./fontawesome/sharp-solid.scss";
 
 body {
   text-rendering: optimizeLegibility;
@@ -24,10 +28,6 @@ body {
   &::selection {
     color: white;
     background: $color-theme;
-  }
-
-  i::before {
-    font-family: "Font Awesome 6 Sharp", "Font Awesome 6 Social";
   }
 }
 

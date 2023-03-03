@@ -30,8 +30,10 @@ window.addEventListener("load", function () {
 
   const hamburger = document.querySelector("button.hamburger");
   const mobileMenuButton = document.querySelector(".mobile-menu");
-  const mobileSeriesLink = document.querySelector(".nav-series");
-  const mobileTagLink = document.querySelector(".nav-tags");
+
+  const mobileSeriesLink = document.getElementById("mobile-nav-series-links");
+  const mobileTagLink = document.getElementById("mobile-nav-tags-links");
+
   let mobileTagsNavIcon = document.querySelector(".nav-tags .fa-angle-up");
   let mobileSeriesNavIcon = document.querySelector(".nav-series .fa-angle-up");
 
@@ -41,13 +43,17 @@ window.addEventListener("load", function () {
   });
 
   mobileSeriesLink.addEventListener("click", function () {
-    const mobileSeriesNav = document.querySelector(".mobile-series-links");
+    const mobileSeriesNav = document.querySelector(
+      ".nav-series .mobile-nav-links-list"
+    );
     mobileSeriesNav.classList.toggle("active");
     mobileSeriesNavIcon.classList.toggle("flip-vertically");
   });
 
   mobileTagLink.addEventListener("click", function () {
-    const mobileTagNav = document.querySelector(".mobile-tag-links");
+    const mobileTagNav = document.querySelector(
+      ".nav-tags .mobile-nav-links-list"
+    );
     mobileTagNav.classList.toggle("active");
     mobileTagsNavIcon.classList.toggle("flip-vertically");
   });
