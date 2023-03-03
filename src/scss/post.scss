@@ -208,6 +208,8 @@
           color: #7e8da3;
           line-height: 1;
           font-family: $header-font-medium;
+          display: flex;
+          align-items: center;
 
           @media(max-width: $mobile-breakpoint) {
             margin-right: 15px;
@@ -215,19 +217,20 @@
             margin-bottom: 8px;
           }
 
-          * {
+          a,
+          span {
             color: #7e8da3;
             display: inline-block;
             font-family: $header-font-medium;
             transition: $transition;
+            display: block;
+            line-height: 1;
           }
 
           i,
           svg {
             margin-right: 4px;
-            font-size: .9em;
             color: #7e8da3;
-
           }
 
           &.link {

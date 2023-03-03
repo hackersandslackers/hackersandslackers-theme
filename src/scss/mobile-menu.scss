@@ -1,0 +1,75 @@
+@import "_variables.scss";
+
+.mobile-menu {
+  position: absolute;
+  width: 100%;
+  background: white;
+  height: 100%;
+  z-index: 3;
+  padding: 40px;
+  top: 0;
+  right: -100%;
+  transition: $transition;
+
+  &.active {
+    right: 0 !important;
+  }
+
+  .mobile-menu-links {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .mobile-nav-link {
+      font-family: $body-font-medium;
+      font-size: 1.2em;
+      transition: $transition;
+      margin-bottom: 10px;
+
+      &:hover {
+        cursor: pointer;
+
+        svg,
+        span {
+          color: $color-hover;
+        }
+      }
+    }
+  }
+
+  .nav-series,
+  .nav-tags {
+    margin-left: -16px;
+    padding: 0;
+
+    .active {
+      display: block;
+    }
+  }
+
+  .mobile-nav-links-list {
+    list-style-type: none;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 20px;
+    display: none;
+
+    .mobile-nav-link {
+      font-size: .8em;
+      margin-bottom: 5px;
+      margin-left: 5px;
+
+      a {
+        transition: $transition;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-hover;
+        }
+      }
+    }
+  }
+
+  .flip-vertically {
+    transform: scaleY(-1);
+  }
+}

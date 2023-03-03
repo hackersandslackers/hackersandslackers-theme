@@ -27,4 +27,34 @@ window.addEventListener("load", function () {
     const walk = (x - startX) * 2; //scroll-fast
     slider.scrollLeft = scrollLeft - walk;
   });
+
+  const hamburger = document.querySelector("button.hamburger");
+  const mobileMenuButton = document.querySelector(".mobile-menu");
+
+  const mobileSeriesLink = document.getElementById("mobile-nav-series-links");
+  const mobileTagLink = document.getElementById("mobile-nav-tags-links");
+
+  let mobileTagsNavIcon = document.querySelector(".nav-tags .fa-angle-up");
+  let mobileSeriesNavIcon = document.querySelector(".nav-series .fa-angle-up");
+
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    mobileMenuButton.classList.toggle("active");
+  });
+
+  mobileSeriesLink.addEventListener("click", function () {
+    const mobileSeriesNav = document.querySelector(
+      ".nav-series .mobile-nav-links-list"
+    );
+    mobileSeriesNav.classList.toggle("active");
+    mobileSeriesNavIcon.classList.toggle("flip-vertically");
+  });
+
+  mobileTagLink.addEventListener("click", function () {
+    const mobileTagNav = document.querySelector(
+      ".nav-tags .mobile-nav-links-list"
+    );
+    mobileTagNav.classList.toggle("active");
+    mobileTagsNavIcon.classList.toggle("flip-vertically");
+  });
 });

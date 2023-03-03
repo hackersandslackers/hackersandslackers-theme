@@ -1,5 +1,7 @@
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "~delicious-hamburgers/scss/base";
+@import "~delicious-hamburgers/scss/animations/collapse";
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -43,6 +45,16 @@
     a {
       font-family: $body-font-bold;
       transition: $transition;
+    }
+
+    .hamburger {
+      display: none;
+      margin-left: 6px;
+      z-index: 100;
+
+      @media(max-width: $mobile-breakpoint) {
+        display: block;
+      }
     }
   }
 
@@ -113,13 +125,22 @@
         display: none;
       }
     }
+
+    &.search {
+      @media(max-width: $mobile-breakpoint) {
+        margin: 0 5px 0 0;
+      }
+    }
   }
 
   .search-button {
+    display: flex;
+    align-items: center;
     color: $color-lightgrey;
     transition: $transition;
     font-size: 1.2em;
     display: block;
+    height: 20px;
 
     @media(max-width: $mobile-breakpoint) {
       font-size: 1.3em;
@@ -135,8 +156,10 @@
     display: flex;
     align-items: center;
 
-    .icon.title {
-      font-family: $header-font;
+    .icon {
+      @media(max-width: $mobile-breakpoint) {
+        margin-right: 5px;
+      }
     }
   }
 }
@@ -381,8 +404,6 @@
   width: 40px;
 
   @media(max-width: $tablet-breakpoint) {
-    height: 30px;
-    width: 30px;
     margin-right: 20px;
   }
 
@@ -390,30 +411,12 @@
     opacity: .7;
   }
 
-  img {
-    margin-right: 10px;
-
-    @media(max-width: $tablet-breakpoint) {
-      margin-right: 8px;
-    }
-
-    @media(max-width: $mobile-breakpoint) {
-      margin-right: 5px;
-      height: 30px;
-      width: 30px;
-    }
-
-  }
-
   .icon.title {
     color: $color-theme;
+    font-family: $header-font;
     font-size: 1.1em;
     margin: unset;
     white-space: nowrap;
-
-    @media(max-width: $mobile-breakpoint) {
-      font-size: 1em;
-    }
 
     &:hover {
       cursor: pointer;
