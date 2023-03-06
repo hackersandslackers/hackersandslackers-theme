@@ -15,10 +15,9 @@
     }
 
     @media(max-width: $mobile-breakpoint) {
-      padding: 15px;
       background: unset;
       box-shadow: unset;
-      padding: 25px 25px 0 25px !important;
+      padding: 2vw 6vw !important;
     }
 
     .author-card-wrapper {
@@ -35,10 +34,11 @@
 
     .author-card-title {
       color: $color-header-grey;
-      font-family: $header-font;
-      font-size: 1.4em;
+      font-family: $body-font-medium;
+      font-size: 1.8em;
       margin: 0;
       line-height: 1;
+      letter-spacing: 0.1px;
 
       @media(max-width: $mobile-breakpoint) {
         font-size: 1.4em;
@@ -81,6 +81,8 @@
       line-height: 1.4;
       overflow-y: hidden;
       text-overflow: ellipsis;
+      margin-top: 15px;
+
 
       @media(max-width: $mobile-breakpoint) {
         font-size: 1em;
@@ -104,7 +106,7 @@
     .author-meta {
       display: flex;
       gap: 10px;
-      margin: 15px 0;
+      margin: 10px 0;
 
       a {
         transition: $transition;
@@ -135,18 +137,23 @@
           line-height: 1;
         }
 
+        a,
+        span {
+          font-family: $body-font-medium;
+        }
+
         i,
         svg {
           margin-right: 5px;
-          font-size: 1.2em;
+          font-size: 1.1em;
         }
       }
     }
 
     .author-profile-pic {
       display: block;
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
       object-fit: cover;
       background: color-mod($color-lightgrey) l(+10%);
       border-radius: 50%;

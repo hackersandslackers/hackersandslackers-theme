@@ -8,6 +8,23 @@
   word-break: break-word;
   background: white;
   box-shadow: $card-shadow;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    background: $color-theme;
+
+    .post-card-title,
+    .post-card-excerpt,
+    .post-card-author-name,
+    .post-card-meta-details {
+      color: white !important;
+    }
+
+    .post-card-meta {
+      border-top: 1px solid white;
+    }
+  }
 
   .post-card-title {
     margin: 0;
@@ -32,11 +49,6 @@
       line-height: 1.05;
       font-weight: 100;
     }
-
-    &:hover {
-      color: $color-hover;
-      cursor: pointer;
-    }
   }
 
   i,
@@ -45,19 +57,11 @@
     margin-left: -1px;
   }
 
-  &:hover {
-    color: $color-hover;
-  }
-
   .post-card-image-link {
     position: relative;
     overflow: hidden;
     display: block;
     transition: $transition;
-
-    &:hover {
-      opacity: .8;
-    }
 
     &::after {
       content: "";
@@ -136,7 +140,6 @@
         display: flex;
         align-items: center;
         white-space: nowrap;
-
 
         * {
           transition: $transition;
@@ -262,19 +265,6 @@
         font-weight: 600;
         letter-spacing: -0.005em;
         line-height: 1;
-      }
-    }
-
-    &:hover {
-      background: $color-theme;
-      cursor: pointer;
-
-      * {
-        color: white;
-      }
-
-      .post-card-author-name {
-        color: white !important;
       }
     }
   }

@@ -23,7 +23,7 @@ all help:
 
 .PHONY: build
 build:
-	npm run build
+	yarn run build
 
 .PHONY: dev
 dev:
