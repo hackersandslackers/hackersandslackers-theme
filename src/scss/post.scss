@@ -73,6 +73,10 @@
       justify-content: space-between;
       margin: 40px 0 20px;
 
+      @media(max-width: $mobile-breakpoint) {
+        padding: 0 6vw;
+      }
+
       .series-nextprev-button {
         border-right: 1px solid #dedede;
         border-top: 1px solid #dedede;
@@ -163,6 +167,10 @@
       width: -webkit-fill-available;
 
       @media (max-width: $mobile-breakpoint) {
+        font-size: 2em;
+      }
+
+      @media (max-width: 450px) {
         font-size: 1.8em;
       }
     }
@@ -186,7 +194,7 @@
         order: 1;
 
         @media (max-width: 767px) {
-          font-size: 1.2em;
+          font-size: 1.25em;
           margin: 15px 0;
         }
 
@@ -207,7 +215,7 @@
           margin-right: 25px;
           color: #7e8da3;
           line-height: 1;
-          font-family: $header-font-medium;
+          font-family: $body-font-bold;
           display: flex;
           align-items: center;
 
@@ -275,8 +283,8 @@
       }
 
       .series-toc-item {
-        color: #687f99;
-        counter-increment: li -1;
+        color: $color-body-font;
+        counter-increment: step-counter;
         display: flex;
         justify-content: left;
         line-height: 1;
@@ -287,20 +295,24 @@
           margin: 0 0 10px;
         }
 
+        @media(max-width: $mobile-breakpoint) {
+          line-height: 1.2;
+        }
+
         &::before {
-          content: counter(li, upper-roman) "." !important;
-          color: darken($color-theme, 20%);
-          font-family: $body-font;
+          content: counter(step-counter, upper-roman) "." !important;
+          color: $color-body-font;
+          font-family: $body-font-medium;
           font-size: 15px;
           font-weight: bold;
           display: inline-block;
           margin-right: 5px;
-          min-width: 25px;
+          min-width: 30px;
         }
 
         .series-toc-item-link {
-          color: #687f99;
-          font-family: $body-font-bold;
+          color: $color-body-font;
+          font-family: $body-font-medium;
           transition: $transition;
 
           &:hover {
@@ -461,7 +473,6 @@
       }
 
       @media(max-width: $mobile-breakpoint) {
-        padding: 30px;
         margin: 0;
       }
 
