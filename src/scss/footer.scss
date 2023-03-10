@@ -107,7 +107,7 @@
     }
 
     @media (max-width: $tablet-breakpoint) {
-      max-width: 88%;
+      max-width: 85vw;
     }
   }
 
@@ -156,8 +156,12 @@
 
       @media(max-width: 767px) {
         text-align: center;
-        margin: 15px auto 0;
+        margin: 0 auto;
         font-size: .85em;
+      }
+
+      @media(max-width: $mobile-breakpoint) {
+        margin: 15px auto 0 !important;
       }
 
       a {
@@ -214,13 +218,9 @@
     }
 
     .footer-logo {
-      width: 220px;
+      width: 240px;
       margin-bottom: 15px;
       transition: $transition;
-
-      @media(max-width: $tablet-breakpoint) {
-        width: 240px;
-      }
 
       @media(max-width: $mobile-breakpoint) {
         width: 230px;

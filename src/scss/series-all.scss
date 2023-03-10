@@ -12,11 +12,10 @@
     width: 950px;
     max-width: 95%;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: $tablet-breakpoint) {
       width: 100%;
       max-width: unset !important;
     }
-
 
     h1 {
       font-family: $header-font-medium;
@@ -34,6 +33,10 @@
     margin: 0 auto 40px;
     max-width: 95%;
     width: 950px;
+
+    @media(max-width: $mobile-breakpoint) {
+      max-width: 90vw;
+    }
 
     .series-feed {
       grid-gap: 15px;
