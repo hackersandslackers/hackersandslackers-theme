@@ -59,6 +59,12 @@
       min-width: 80px;
       overflow: hidden;
       width: 80px;
+
+      @media(max-width: $mobile-breakpoint) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
 
     .author-avatar-wrapper {
@@ -161,6 +167,12 @@
 
     .author-avatar-link {
       margin-right: 15px;
+
+      @media(max-width: $mobile-breakpoint) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 

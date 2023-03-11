@@ -136,14 +136,44 @@
       overflow: hidden;
       width: 70px;
       margin-right: 15px;
-    }
 
-    .author-image {
-      border-radius: 50%;
-      height: 70px;
-      min-width: 70px;
-      overflow: hidden;
-      width: 70px;
+      @media(max-width: $mobile-breakpoint) {
+        height: 60px;
+        min-width: 60px;
+        width: 60px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .author-image {
+        border-radius: 50%;
+        height: 70px;
+        min-width: 70px;
+        overflow: hidden;
+        width: 70px;
+
+        @media(max-width: $mobile-breakpoint) {
+          height: 60px;
+          min-width: 60px;
+          width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      &.missing-avatar i {
+        width: 100%;
+        height: 100%;
+        font-size: 2em;
+        fill: $color-body-font;
+        color: $color-body-font;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
 
     .author-details {

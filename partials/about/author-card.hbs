@@ -5,8 +5,8 @@
         <img src="{{img_url profile_image}}" alt="{{name}}'s' avatar" loading="lazy" class="lazy author-image" />
       </a>
     {{else}}
-      <a href="{{url}}" class="author-avatar-link">
-        <img src="{{asset " default-user-image.jpg"}}" alt="{{name}}'s' avatar" class="author-image" />
+      <a href="{{url}}" class="author-avatar-link missing-avatar">
+        <i class="fa-sharp fa-solid fa-user-pen"></i>
       </a>
     {{/if}}
     <div class="author-details">

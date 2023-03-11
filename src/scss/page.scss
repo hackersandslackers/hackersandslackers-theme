@@ -3,6 +3,7 @@
 @import "author.scss";
 @import "tag.scss";
 @import "series-all.scss";
+@import "kg.scss";
 @import "series-detail.scss";
 @import "error.scss";
 
@@ -13,6 +14,13 @@
   .page-title {
     @media(max-width: $mobile-breakpoint) {
       font-size: 2.2em;
+    }
+  }
+
+  &.page-about .page-title {
+    @media(max-width: $mobile-breakpoint) {
+      font-size: 2.2em;
+      margin-bottom: unset;
     }
   }
 
@@ -27,6 +35,7 @@
     box-shadow: $card-shadow;
 
     @media(max-width: $tablet-breakpoint) {
+      padding: 30px;
       width: 100%;
       max-width: unset;
     }
