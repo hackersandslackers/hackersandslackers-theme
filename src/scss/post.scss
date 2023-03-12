@@ -186,8 +186,8 @@
 
       .post-excerpt {
         color: #8c96a4;
-        font-family: $header-font-medium;
-        font-size: 1.3em;
+        font-family: $body-font-semibold;
+        font-size: 1.3em !important;
         line-height: 1.2;
         margin: 15px 0;
         max-width: 720px;
@@ -230,10 +230,11 @@
           time {
             color: #7e8da3;
             display: inline-block;
-            font-family: $header-font-medium;
+            font-family: $body-font-semibold;
             transition: $transition;
             display: block;
             line-height: 1;
+            font-size: 1.1em;
           }
 
           i,
@@ -302,7 +303,7 @@
         &::before {
           content: counter(step-counter, upper-roman) "." !important;
           color: $color-body-font;
-          font-family: $body-font-medium;
+          font-family: $body-font-semibold;
           font-size: 15px;
           font-weight: bold;
           display: inline-block;
@@ -312,7 +313,7 @@
 
         .series-toc-item-link {
           color: $color-body-font;
-          font-family: $body-font-medium;
+          font-family: $body-font-semibold;
           transition: $transition;
 
           &:hover {
@@ -353,9 +354,10 @@
 
     h2 {
       line-height: 1;
+      font-family: $body-font-light;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.7em;
+        font-size: 2em;
         line-height: 1.2;
         margin: 40px 0 0;
       }
@@ -391,7 +393,6 @@
       border-radius: 5px;
       color: #6e7482;
       display: flex;
-      font-size: .95em;
       font-style: italic;
       justify-content: left;
       line-height: 1.6;
@@ -651,7 +652,8 @@
 
     .support-description {
       color: #4c5a69;
-      font-size: .9em;
+      font-size: 0.95em;
+      line-height: 1.5;
       margin: 0 auto 20px;
       text-align: left;
     }

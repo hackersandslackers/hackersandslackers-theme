@@ -178,8 +178,6 @@ make sure they look good, and are given a bit of extra spacing. */
 /* Callout Cards */
 /* ---------------------------------------------------------- */
 
-
-
 .kg-callout-card {
   font-family: $body-font;
 
@@ -196,6 +194,7 @@ make sure they look good, and are given a bit of extra spacing. */
     background: rgb(125 164 203 / 13%);
 
     .kg-callout-text {
+      font-size: 1em;
       color: #545a69;
     }
   }
