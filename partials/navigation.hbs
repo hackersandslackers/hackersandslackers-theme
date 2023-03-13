@@ -1,0 +1,11 @@
+<ul class="nav">
+  {{#foreach navigation}}
+    {{^has slug="tags"}}
+      <li class="{{link_class for=(url) class=(concat "nav-" slug)}}">
+        <a href="{{url absolute="true"}}">
+          {{label}}
+        </a>
+      </li>
+    {{/has}}
+  {{/foreach}}
+</ul>

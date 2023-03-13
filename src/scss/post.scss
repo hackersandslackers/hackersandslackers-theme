@@ -113,7 +113,7 @@
         }
 
         .series-nextprev-label {
-          font-size: 1.2em;
+          font-size: 1.3em;
           margin: unset;
         }
 
@@ -122,7 +122,7 @@
           -webkit-line-clamp: 2;
           display: -webkit-box;
           font-family: $body-font-medium;
-          font-size: .8em;
+          font-size: .9em;
           font-weight: 400;
           line-height: 1.5;
           overflow-y: hidden;
@@ -161,8 +161,7 @@
       font-size: 2.3em;
       margin: unset;
       font-weight: unset;
-      line-height: 1.05;
-      max-width: 720px;
+      line-height: 1.1;
       order: 2;
       width: -webkit-fill-available;
 
@@ -186,11 +185,10 @@
 
       .post-excerpt {
         color: #8c96a4;
-        font-family: $body-font-semibold;
-        font-size: 1.3em !important;
+        font-family: $body-font-medium;
+        font-size: 1.35em !important;
         line-height: 1.2;
-        margin: 15px 0;
-        max-width: 720px;
+        margin: 10px 0;
         order: 1;
 
         @media (max-width: 767px) {
@@ -313,8 +311,9 @@
 
         .series-toc-item-link {
           color: $color-body-font;
-          font-family: $body-font-semibold;
+          font-family: $body-font-medium;
           transition: $transition;
+          opacity: .8;
 
           &:hover {
             color: $color-hover;
@@ -357,9 +356,9 @@
       font-family: $body-font-light;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 2em;
+        font-size: 1.9em;
         line-height: 1.2;
-        margin: 40px 0 0;
+        margin: 40px 0 5px;
       }
     }
 
@@ -409,7 +408,7 @@
       }
 
       p {
-        font-family: $body-font-medium;
+        font-family: $body-font;
         color: $color-post-blurb-grey;
         letter-spacing: -.2px;
         line-height: 1.6em;
@@ -498,7 +497,7 @@
 
     .author-card-excerpt {
       line-height: 1.5em !important;
-      font-size: unset !important;
+      font-size: 1.1em !important;
 
       @media(max-width: $mobile-breakpoint) {
         width: -webkit-fill-available;

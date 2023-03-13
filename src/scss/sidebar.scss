@@ -253,10 +253,11 @@
 }
 
 .widget.about .description {
-  font-family: $body-font;
-  line-height: 1.4;
+  font-family: $body-font-light;
+  line-height: 1.3;
   margin: 15px 0 0;
   text-align: center;
+  font-size: .96em;
 }
 
 /* 12.3. Sidebar Social Widget
@@ -281,7 +282,7 @@
       font-size: 1.8em;
 
       i,
-      svg{
+      svg {
         fill: $color-hover;
         color: $color-hover;
       }
