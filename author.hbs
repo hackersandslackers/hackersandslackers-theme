@@ -1,5 +1,5 @@
 {{!< default}}
-<main id="site-main" class="site-main">
+<main class="site-main">
   <div class="sidebar-container">
     <div class="main-feed">
       <div class="post-feed">
@@ -7,7 +7,6 @@
           {{> "author/author-card"}}
         {{/author}}
         {{#foreach posts}}
-          {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
           {{> "post-card"}}
         {{/foreach}}
         {{pagination}}
