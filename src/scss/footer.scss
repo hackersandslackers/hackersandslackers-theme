@@ -232,14 +232,10 @@
     }
 
     .footer-description {
-      font-size: 1.05em;
+      font-size: 1.1em;
       font-family: $body-font-light;
       color: #4c5c71;
       line-height: 1.5;
-
-      @media(max-width: 950px) {
-        font-size: 1em;
-      }
 
       @media(max-width: $tablet-breakpoint) {
         width: 60vw;
@@ -247,13 +243,13 @@
 
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
-        font-size: 1.05em;
+        font-size: 1.1em;
         line-height: 1.4;
       }
     }
 
     &.info {
-      max-width: 28%;
+      max-width: 29%;
     }
 
     .footer-list {

@@ -36,15 +36,11 @@
     transition: $transition;
 
     @media (max-width: $smallscreen-breakpoint) {
-      font-size: 1.9em;
-    }
-
-    @media (max-width: $tablet-breakpoint) {
-      font-size: 1.8em;
+      font-size: 2em;
     }
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 1.6em;
+      font-size: 1.8em;
       letter-spacing: -.5px;
       line-height: 1.05;
       font-weight: 100;
@@ -92,9 +88,9 @@
       color: #8c96a4;
       display: -webkit-box;
       font-family: $body-font-medium;
-      font-size: 1.3em;
+      font-size: 1.4em;
       letter-spacing: -.5px;
-      line-height: 1.2em;
+      line-height: 1.1em;
       margin: 10px 0 20px;
       overflow-y: hidden;
       text-overflow: ellipsis;
@@ -103,8 +99,7 @@
       transition: $transition;
 
       @media (max-width: $smallscreen-breakpoint) {
-        font-size: 1.1em;
-        line-height: 1.2;
+        font-size: 1.3em;
       }
 
       @media (max-width: 767px) {
@@ -112,9 +107,8 @@
       }
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.1em;
+        font-size: 1.2em;
         letter-spacing: unset;
-        line-height: 1.1;
         opacity: 1;
         margin: 2vw 0;
       }

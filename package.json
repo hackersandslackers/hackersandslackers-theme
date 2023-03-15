@@ -55,8 +55,8 @@
         "webpack-cli": "^5.0.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.21.0",
-        "@babel/eslint-parser": "^7.19.1",
+        "@babel/core": "^7.21.3",
+        "@babel/eslint-parser": "^7.21.3",
         "@babel/preset-env": "^7.20.2",
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.14",
@@ -76,9 +76,9 @@
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "sass": "^1.59.2",
+        "sass": "^1.59.3",
         "sass-loader": "^13.2.0",
-        "style-loader": "^3.3.1",
+        "style-loader": "^3.3.2",
         "terser-webpack-plugin": "^5.3.7"
     },
     "browserslist": [
