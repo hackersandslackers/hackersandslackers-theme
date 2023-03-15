@@ -28,22 +28,20 @@
 
   .post-card-title {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 2.1em;
     opacity: 0.95;
-    line-height: 1;
+    line-height: 1.05;
     color: $color-header-grey;
     font-family: $header-font;
     transition: $transition;
 
     @media (max-width: $smallscreen-breakpoint) {
-      font-size: 2em;
+      font-size: 2.1em;
     }
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 1.8em;
+      font-size: 1.7em;
       letter-spacing: -.5px;
-      line-height: 1.05;
-      font-weight: 100;
     }
   }
 
@@ -88,7 +86,7 @@
       color: #8c96a4;
       display: -webkit-box;
       font-family: $body-font-medium;
-      font-size: 1.4em;
+      font-size: 1.3em;
       letter-spacing: -.5px;
       line-height: 1.1em;
       margin: 10px 0 20px;
@@ -99,6 +97,10 @@
       transition: $transition;
 
       @media (max-width: $smallscreen-breakpoint) {
+        font-size: 1.2em;
+      }
+
+      @media (max-width: $tablet-breakpoint) {
         font-size: 1.3em;
       }
 
@@ -107,7 +109,7 @@
       }
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.2em;
+        font-size: 1.13em;
         letter-spacing: unset;
         opacity: 1;
         margin: 2vw 0;
