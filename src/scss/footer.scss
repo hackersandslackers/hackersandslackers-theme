@@ -129,6 +129,10 @@
     @media(max-width: $tablet-breakpoint) {
       font-size: 1.2em;
     }
+
+    @media(max-width: $mobile-breakpoint) {
+      font-size: 1.15em;
+    }
   }
 
   .subfooter {

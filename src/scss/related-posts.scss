@@ -31,6 +31,7 @@
     .post-card-title {
       font-size: 1.3em;
       line-height: 1.1;
+      font-family: $header-font;
 
       @media(max-width: $tablet-breakpoint) {
         font-size: 1.3em;
@@ -44,6 +45,10 @@
     .post-card-excerpt {
       font-size: 1em !important;
       margin: 10px 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.1m !important;
+      }
     }
 
     .post-card-meta {

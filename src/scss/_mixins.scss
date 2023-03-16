@@ -13,10 +13,15 @@
 }
 
 @mixin header-third {
-  font-family: $body-font-bold;
+  font-family: $header-font;
   font-size: 1.4em;
+  line-height: 1.1;
   margin: 40px 0 5px;
   color: #4e576a;
+
+  @media(max-width: $mobile-breakpoint) {
+    font-size: 1.3em;
+  }
 }
 
 
@@ -243,6 +248,7 @@
 
           .author-location {
             color: $color-lightgrey;
+            font-family: $body-font-semibold;
 
             a {
               transition: $transition;

@@ -338,6 +338,7 @@
     }
 
     iframe {
+      margin: 0 0 25px;
 
       @media(max-width: $mobile-breakpoint) {
         width: 100vw;
@@ -504,7 +505,8 @@
         margin-top: 26px;
         max-width: 85vw;
         margin-top: 26px;
-        font-size: .9em !important;
+        font-size: .98em !important;
+        line-height: 1.4 !important;
         display: block;
         margin-left: calc(-52vw + 50%) !important;
         margin-right: calc(-50vw + 50%) !important;
