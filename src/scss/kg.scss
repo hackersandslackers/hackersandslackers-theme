@@ -63,6 +63,10 @@ make sure they look good, and are given a bit of extra spacing. */
     box-shadow: 0 0 3px rgb(0 0 0 / 20%);
     border-radius: 3px;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media(max-width: $mobile-breakpoint) {
       border-radius: unset;
     }

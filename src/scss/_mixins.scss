@@ -362,3 +362,11 @@
     }
   }
 }
+
+@mixin lightboxBody {
+  min-height: 100%;
+  margin: 0;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
