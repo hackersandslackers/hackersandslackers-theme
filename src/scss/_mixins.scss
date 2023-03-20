@@ -13,7 +13,7 @@
 }
 
 @mixin header-third {
-  font-family: $header-font;
+  font-family: $body-font-semibold;
   font-size: 1.4em;
   line-height: 1.1;
   margin: 40px 0 5px;
@@ -366,7 +366,7 @@
 @mixin lightboxBody {
   min-height: 100%;
   margin: 0;
-  color: white;
   text-align: center;
   overflow: hidden;
+  transition: $transition;
 }

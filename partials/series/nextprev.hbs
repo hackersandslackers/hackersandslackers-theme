@@ -3,7 +3,7 @@
     {{#get "posts" filter="tags:[{{slug}}]" limit="1" order="published_at asc"}}
       {{#foreach posts}}
         <a href="{{url}}" class="series-nextprev-button prev">
-          <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous Post</h6>
+          <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
           <span class="series-nextprev-post-title">{{title}}</span>
         </a>
       {{/foreach}}
@@ -11,7 +11,7 @@
     {{#get "posts" filter="tags:[{{slug}}]" limit="1" order="published_at asc"}}
       {{#foreach posts}}
         <a href="{{url}}" class="series-nextprev-button next">
-          <h6 class="series-nextprev-label">Next Post <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
+          <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
           <span class="series-nextprev-post-title">{{title}}</span>
         </a>
       {{/foreach}}

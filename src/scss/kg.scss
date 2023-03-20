@@ -64,7 +64,7 @@ make sure they look good, and are given a bit of extra spacing. */
     border-radius: 3px;
 
     &:hover {
-      cursor: pointer;
+      cursor: zoom-in;
     }
 
     @media(max-width: $mobile-breakpoint) {

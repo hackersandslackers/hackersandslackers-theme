@@ -299,10 +299,6 @@
         padding: 0 0 15px;
       }
 
-      @media(max-width: $mobile-breakpoint) {
-        margin: 0;
-      }
-
       ol {
         counter-reset: li 2;
         list-style-type: upper-roman !important;
@@ -381,7 +377,7 @@
       font-family: $body-font-light;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.9em;
+        font-size: 1.7em;
         line-height: 1.2;
         margin: 40px 0 5px;
       }
@@ -740,4 +736,8 @@
 
 .lightbox-wrapper {
   @include lightboxBody;
+
+  &:hover {
+    cursor: zoom-out;
+  }
 }
