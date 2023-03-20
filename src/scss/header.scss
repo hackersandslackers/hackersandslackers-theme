@@ -162,7 +162,7 @@
 
     .icon {
       @media(max-width: $mobile-breakpoint) {
-        margin-right: 5px;
+        margin-right: 3px;
       }
     }
   }
@@ -260,6 +260,10 @@
   padding: 0;
   font-size: 5rem;
   font-weight: 800;
+
+  @media(max-width: $mobile-breakpoint) {
+    font-size: 1.05em;
+  }
 }
 
 .site-navigation {
@@ -433,6 +437,8 @@
 
   @media (max-width: $mobile-breakpoint) {
     display: block;
+    height: 35px;
+    weight: 35px;
   }
 
   * {
@@ -443,14 +449,6 @@
     cursor: pointer;
     opacity: 0.7;
   }
-}
-
-.site-title {
-  z-index: 10;
-  margin: 0;
-  padding: 0;
-  font-size: 5rem;
-  font-weight: 800;
 }
 
 .logo.desktop {
