@@ -35,9 +35,13 @@
     box-shadow: $card-shadow;
 
     @media(max-width: $tablet-breakpoint) {
-      padding: 30px;
+      padding: 5vw;
       width: 100%;
       max-width: unset;
+    }
+
+    @media(max-width: $mobile-breakpoint) {
+      padding: 0 5vw 5vw;
     }
 
     &>p {

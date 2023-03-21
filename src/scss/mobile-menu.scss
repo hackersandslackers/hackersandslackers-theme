@@ -30,6 +30,13 @@
 
       &:hover {
         cursor: pointer;
+        color: $color-hover;
+
+        i,
+        span,
+        &>a {
+          color: $color-hover;
+        }
 
         svg,
         span {

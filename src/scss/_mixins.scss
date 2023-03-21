@@ -187,7 +187,7 @@
 
       .author-name {
         font-size: 1.3em;
-        font-family: $header-font-medium;
+        font-family: $header-font-semibold;
         color: #666c70;
       }
 
@@ -231,19 +231,30 @@
         flex-wrap: wrap;
         margin: 10px 0;
 
+        @media(max-width: $mobile-breakpoint) {
+          margin: 5px 0;
+        }
+
         .author-meta-item {
           font-family: $body-font-medium;
           margin-right: 15px;
           color: $color-secondary-text;
           line-height: 1;
+          display: flex;
+          align-items: center;
 
           &:last-of-type {
             margin-right: unset;
           }
 
-          .fa-location-dot {
-            margin-right: 2px;
-            color: #a78396;
+          i,
+          svg {
+            margin-right: 5px;
+            font-size: 1.2em;
+
+            &.fa-location-dot {
+              color: #a78396;
+            }
           }
 
           .author-location {
@@ -265,8 +276,11 @@
       .author-card-excerpt {
         margin: 15px 0 0;
         line-height: 1.4em;
-        font-size: .98em;
         font-family: $body-font-light;
+
+        @media(max-width: $mobile-breakpoint) {
+          margin: 10px 0 0;
+        }
       }
     }
   }

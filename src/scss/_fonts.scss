@@ -39,18 +39,26 @@
 
 /* TT Norms Pro */
 @font-face {
+  font-family: "TTNormsPro-Medium";
+  font-display: swap;
+  src: url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Medium.woff2") format("woff2"),
+    url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "TTNormsPro-SemiBold";
+  font-display: swap;
+  src: url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-SemiBold.woff2") format("woff2"),
+    url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-SemiBold.woff") format("woff");
+}
+
+@font-face {
   font-family: "TTNormsPro-Bold";
   font-display: swap;
   src: url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Bold.woff2") format("woff2"),
     url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Bold.woff") format("woff");
 }
 
-@font-face {
-  font-family: "TTNormsPro-Medium";
-  font-display: swap;
-  src: url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Medium.woff2") format("woff2"),
-    url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Medium.woff") format("woff");
-}
 
 @font-face {
   src: local("☺"),
