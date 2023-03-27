@@ -66,7 +66,7 @@
         "babel-plugin-module-resolver": "^5.0.0",
         "beeper": "3.0.0",
         "css-loader": "^6.7.3",
-        "cssnano": "5.1.15",
+        "cssnano": "6.0.0",
         "eslint": "^8.36.0",
         "eslint-plugin-ghost": "^2.16.0",
         "font-config-webpack-plugin": "^2.0.3",
