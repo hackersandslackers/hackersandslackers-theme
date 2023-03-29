@@ -4,8 +4,7 @@ import * as basicLightbox from "basiclightbox";
 
 Prism.highlightAll();
 
-window.addEventListener("load", function () {
-  // Lightbox functionality for post images
+function createLightboxImageListeners() {
   const postBody = document.querySelector(".post-template");
   let images = postBody.querySelectorAll(".kg-image-card img");
   if (images.length > 0) {
@@ -31,4 +30,9 @@ window.addEventListener("load", function () {
       }
     }
   }
+}
+
+window.addEventListener("load", function () {
+  // Lightbox functionality for post images
+  createLightboxImageListeners();
 });

@@ -209,6 +209,14 @@
 
       .social-media-button {
 
+        @media(max-width: $mobile-breakpoint) {
+          font-size: 1.7em;
+
+          &:hover {
+            font-size: 1.9em;
+          }
+        }
+
         i,
         svg {
 
@@ -280,7 +288,7 @@
           transition: $transition;
           font-family: $body-font-medium;
           color: $color-header-grey;
-          opacity: .8;
+          opacity: .7;
 
           &:hover {
             cursor: pointer;

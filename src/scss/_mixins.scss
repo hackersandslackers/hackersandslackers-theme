@@ -276,10 +276,10 @@
       .author-card-excerpt {
         margin: 15px 0 0;
         line-height: 1.4em;
-        font-family: $body-font-light;
+        font-family: $body-font;
 
         @media(max-width: $mobile-breakpoint) {
-          margin: 10px 0 0;
+          margin: 15px 0 0;
         }
       }
     }

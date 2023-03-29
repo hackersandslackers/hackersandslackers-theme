@@ -1,0 +1,15 @@
+{{!-- Series --}}
+<li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
+  <div id="mobile-nav-series-links">
+    <i class="fa-sharp fa-solid fa-angle-up"></i> <span>{{label}}</span>
+  </div>
+  <ul class="mobile-nav-links-list">
+    {{#get "tags" limit="all" filter="slug:-[adventures-in-excel,hacking-tableau-server,code-snippet-corner,create-an-aws-api,mongodb-cloud,microsoft-powerpivot]" include="count.posts" order="count.posts desc"}}
+      {{#foreach tags visibility="internal"}}
+        <li class="mobile-nav-link-nested">
+          <a href="/series/{{slug}}" title="{{meta_title}}">{{meta_title}}</a>
+        </li>
+      {{/foreach}}
+    {{/get}}
+  </ul>
+</li>

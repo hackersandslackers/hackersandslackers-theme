@@ -21,7 +21,7 @@
   }
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 30px 7vw;
+    padding: 30px 5vw;
   }
 
   .series-feature-image {
@@ -36,6 +36,33 @@
 
   .post-content {
     margin-bottom: 40px;
+
+    h3 {
+      color: #414d5a;
+      font-size: 1.25em;
+      line-height: 1;
+      margin: 35px 0 5px;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.4em !important;
+
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
+
+    ul {
+      font-size: .95em;
+      line-height: 1.7;
+      margin: 10px 0 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        &:last-of-type {
+          display: none;
+        }
+      }
+    }
   }
 
   .series-post-card {
@@ -66,23 +93,10 @@
     }
 
     .series-title {
-      font-family: TTNormsPro-Medium, HelveticaNeue, sans-serif;
+      font-family: $header-font-medium;
       font-size: 2.2em;
       font-weight: unset;
       margin: 0 0 20px;
-    }
-
-    h3 {
-      color: #414d5a;
-      font-size: 1.25em;
-      line-height: 1;
-      margin: 35px 0 5px;
-    }
-
-    ul {
-      font-size: .95em;
-      line-height: 1.7;
-      margin: 0 0 0 20px;
     }
 
     .series-post-number {
@@ -166,6 +180,10 @@
   h3 {
     font-family: $body-font-bold;
     margin: 1.5em 0 0.2em;
+
+    @media(max-width: $mobile-breakpoint) {
+      font-size: 1.4em !important;
+    }
   }
 
   p {

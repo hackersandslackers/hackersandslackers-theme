@@ -141,17 +141,16 @@
           transition: $transition;
         }
 
-        &:hover {
-          * {
-            color: $color-hover;
-            cursor: pointer;
-          }
+        .post-card-author-name:hover {
+          color: $color-hover;
+          cursor: pointer;
+        }
 
-          .post-card-author-avatar {
-            opacity: .7;
-          }
+        .post-card-author-avatar:hover {
+          opacity: .5;
         }
       }
+
 
       .post-card-author-avatar {
         margin-right: 10px;
@@ -191,8 +190,7 @@
         transition: $transition;
 
         @media (max-width: $mobile-breakpoint) {
-          margin-bottom: 4px;
-          font-size: 1em;
+          margin-bottom: 2px;
         }
 
         &:hover {

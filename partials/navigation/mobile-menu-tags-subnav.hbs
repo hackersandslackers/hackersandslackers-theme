@@ -1,0 +1,15 @@
+{{!-- Tags --}}
+<li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
+  <div id="mobile-nav-tags-links">
+    <i class="fa-sharp fa-solid fa-angle-up"></i> <span>Tags</span>
+  </div>
+  <ul class="mobile-nav-links-list">
+    {{#get "tags" limit="20" filter="slug:-[excel,codesnippetcorner,frontend]" include="count.posts" order="count.posts desc"}}
+      {{#foreach tags visibility="public"}}
+        <li class="mobile-nav-link-nested">
+          <a href="{{url}}" title="{{name}}">{{name}}</a>
+        </li>
+      {{/foreach}}
+    {{/get}}
+  </ul>
+</li>
