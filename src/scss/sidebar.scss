@@ -18,12 +18,20 @@
     .widget-title {
       color: $color-lightgrey;
       font-family: $body-font-medium;
-      font-size: 1.1em;
-      letter-spacing: .6px;
+      font-size: 1.3em;
+      letter-spacing: .8px;
       line-height: 1;
       margin: 0 0 10px;
       padding: 0;
       text-align: left;
+    }
+
+    label {
+      color: $color-darkgrey;
+      font-family: $body-font-medium;
+      opacity: .6;
+      display: block;
+      line-height: 1.5;
     }
 
     input[type="email"],
@@ -59,7 +67,7 @@
         display: inline-block;
         flex-grow: 1;
         font-family: $body-font-medium;
-        font-size: .8em !important;
+        font-size: .85em !important;
         line-height: 1.5em;
         margin: 0 2px 4px;
         padding: 4px 10px;
@@ -277,9 +285,17 @@
     @include social-media-icon;
     font-size: 1.5em;
 
+    @media(max-width: $smallscreen-breakpoint) {
+      font-size: 1.3em;
+    }
+
     &:hover {
       cursor: pointer;
       font-size: 1.8em;
+
+      @media(max-width: $smallscreen-breakpoint) {
+        font-size: 1.5em;
+      }
 
       i,
       svg {

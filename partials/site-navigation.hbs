@@ -25,21 +25,18 @@
         </div>
         {{ navigation }}
       </div>
-      <ul class="nav right">
-        <li class="nav-item search">
-          <a href="#/search" data-ghost-search class="search-button" aria-label="{{t 'Search' }}">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-        </li>
+      <div class="nav right">
+        <a href="#/search" data-ghost-search class="search-button" aria-label="{{t 'Search' }}">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </a>
         {{#if @member}}
-          <li class="nav-item account"><a href="#/portal/account" class="nav-link">{{t 'Account' }}</a></li>
-          <li class="nav-item account"><a href="javascript:" data-members-signout>{{t 'Sign out' }}</a></li>
+          <a href="javascript:" class="nav-item account" data-members-signout>Sign out</a>
         {{else}}
-          <li class="nav-item login"><a href="#/portal/signin" class="nav-btn outline">{{t 'Log in' }}</a></li>
-          <li class="nav-item signup"><a href="#/portal/signup" class="nav-btn filled">{{t 'Subscribe' }}</a></li>
+          <a href="#/portal/signin" class="nav-btn outline">{{t 'Sign in' }}</a>
+          <a href="#/portal/signup" class="nav-btn filled">{{t 'Subscribe' }}</a>
         {{/if}}
         {{> "navigation/hamburger" }}
-      </ul>
+      </div>
     </div>
   </div>
   <div class="tags-navigation">

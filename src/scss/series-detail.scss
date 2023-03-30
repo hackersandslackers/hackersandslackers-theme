@@ -135,8 +135,9 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        font-family: $body-font;
-        font-size: .9em;
+        font-family: $body-font-light;
+        color: $color-body-font;
+        font-size: .95em;
         line-height: 1.35;
         margin-bottom: 12px;
         overflow-y: hidden;

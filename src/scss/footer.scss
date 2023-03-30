@@ -159,12 +159,12 @@
       line-height: 1;
 
       @media(max-width: 767px) {
-        text-align: center;
         margin: 0 auto;
         font-size: .85em;
       }
 
       @media(max-width: $mobile-breakpoint) {
+        text-align: center;
         margin: 15px auto 0 !important;
       }
 
@@ -302,7 +302,7 @@
     &.social {
       margin-bottom: 0;
       max-width: unset;
-      width: 290px !important;
+      width: 260px !important;
       height: unset;
     }
   }

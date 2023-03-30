@@ -4,14 +4,34 @@
       <h3 class="widget-title">Newsletter</h3>
       <p>{{t 'Create an account to receive occasional updates and interact with the community.' }}</p>
       <form data-members-form="subscribe" class="subscribe-form {{ formClass }}">
+        <label for="input-name">Name</label>
+        <input
+          data-members-name
+          data-test-input="input-name"
+          id="input-name"
+          class="sidebar-input-field"
+          type="text"
+          name="name"
+          placeholder='{{t 'Bryan Adams'}}'
+          onfocus="this.placeholder = ''"
+          onblur='{{t 'Bryan Adams'}}'
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize=""
+          aria-label="Name"
+          value="" />
+        <label for="{{ inputLabel }}">Email</label>
         <input
           data-members-email
+          data-test-input="input-email"
           id="{{ inputLabel }}"
           class="sidebar-input-field"
           type='email'
           name='email'
           required="true"
-          placeholder='{{t ' Your email address'}}'
+          placeholder='{{t ' bryanadams@gmail.com'}}'
+          onfocus="this.placeholder = ''"
+          onblur='{{t ' bryanadams@gmail.com'}}'
           aria-label="Email" />
         <button type='submit' value='{{t ' Subscribe' }}' class='sidebar-btn filled'>
           {{t 'Sign Up' }}
@@ -24,7 +44,7 @@
           </div>
           <div class="message error">
             <span class="error-title">Error</span>
-            <p class="error-message">Please enter a valid email address.</p>
+            <p data-members-error><!-- error message will appear here --></p>
           </div>
           <div class="message loading">
             <span>Loading...</span>

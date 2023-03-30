@@ -52,7 +52,7 @@
         "dotenv-webpack": "^8.0.1",
         "github-profile-card": "^3.1.0",
         "prismjs": "^1.29.0",
-        "webpack": "^5.76.3",
+        "webpack": "^5.77.0",
         "webpack-cli": "^5.0.1"
     },
     "devDependencies": {

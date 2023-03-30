@@ -40,10 +40,22 @@
   .nav.right {
     padding-left: 0;
     padding-right: 0;
+    display: flex;
+    width: 215px;
+    justify-content: space-between;
+
+    @media(max-width: $mobile-breakpoint) {
+      justify-content: left;
+      width: unset
+    }
 
     a {
       font-family: $body-font-bold;
       transition: $transition;
+
+      @media(max-width: $mobile-breakpoint) {
+        display: none;
+      }
     }
 
     .hamburger {
