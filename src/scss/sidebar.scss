@@ -182,6 +182,7 @@
       .message.success {
         background: #8bcfb6;
         display: block;
+        opacity: 1;
       }
 
       .success-title {
@@ -205,6 +206,7 @@
       .message.error {
         background: #c86464;
         display: block;
+        opacity: 1;
 
         .error-title {
           display: block;
