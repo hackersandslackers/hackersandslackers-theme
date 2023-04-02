@@ -157,7 +157,22 @@
     padding: 12px 10px 10px !important;
     transition: $transition;
     width: 100%;
+
+    &:focus,
+    &:active,
+    &:hover {
+      border: 1px solid #9fb6c3;
+      background-color: #e7f5fc;
+      color: #445d6d;
+      cursor: text;
+      transition: $transition;
+
+      &::placeholder {
+        color: #527dab !important;
+      }
+    }
   }
+
 
   .newsletter-messages {
     @include message-overlay;

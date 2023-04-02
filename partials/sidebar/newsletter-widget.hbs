@@ -14,7 +14,7 @@
           name="name"
           placeholder="{{t 'Bryan Adams'}}"
           onfocus="this.placeholder = ''"
-          onblur="{{t 'Bryan Adams'}}"
+          onblur="this.placeholder = 'Bryan Adams'"
           autocomplete="off"
           autocorrect="off" />
         <label for="{{ inputLabel }}">Email</label>
@@ -28,7 +28,7 @@
           required="true"
           placeholder="{{t 'bryanadams@gmail.com'}}"
           onfocus="this.placeholder = ''"
-          onblur="{{t 'bryanadams@gmail.com'}}" />
+          onblur="this.placeholder = 'bryanadams@gmail.com'" />
         <button type='submit' value='{{t ' Subscribe' }}' class='sidebar-btn filled'>
           {{t 'Sign Up' }}
           <i class="fa-sharp fa-solid fa-arrow-right"></i>

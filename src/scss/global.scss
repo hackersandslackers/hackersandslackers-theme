@@ -100,11 +100,26 @@ body {
   a {
     transition: $transition;
   }
-}
 
-.home-template,
-.author-template,
-.tag-template,
-.paged {
-  background: $color-background-grey;
+  input[type="email"]:hover,
+  input[type="text"]:hover {
+    border: 1px solid #9fb6c3;
+    background-color: #e7f5fc;
+    color: #445d6d;
+    cursor: text;
+    transition: $transition;
+  }
+
+  input[type="email"]:hover::placeholder,
+  input[type="text"]:hover::placeholder {
+    color: #527dab !important;
+  }
+
+
+  .home-template,
+  .author-template,
+  .tag-template,
+  .paged {
+    background: $color-background-grey;
+  }
 }

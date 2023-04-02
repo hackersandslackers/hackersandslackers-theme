@@ -15,5 +15,11 @@
       {{/has}}
       </li>
     {{/foreach}}
+    {{#if @member}}
+      <li class="mobile-nav-link nav-signout"><a href="javascript:" data-members-signout>{{t 'Sign out' }}</a></li>
+    {{else}}
+      <li class="mobile-nav-link nav-signin"><a href="#/portal/signin">{{t 'Sign in' }}</a></li>
+      <li class="mobile-nav-link nav-signup"><a href="#/portal/signup">{{t 'Subscribe' }}</a></li>
+    {{/if}}
   </ul>
 </nav>
