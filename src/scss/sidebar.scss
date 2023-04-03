@@ -29,9 +29,10 @@
     label {
       color: $color-darkgrey;
       font-family: $body-font-medium;
-      opacity: .6;
+      opacity: .7;
       display: block;
       line-height: 1.5;
+      font-size: .95em;
     }
 
     input[type="email"],
@@ -166,10 +167,10 @@
       color: #445d6d;
       cursor: text;
       transition: $transition;
+    }
 
-      &::placeholder {
-        color: #527dab !important;
-      }
+    &::placeholder {
+      opacity: 0.7;
     }
   }
 

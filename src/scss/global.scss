@@ -12,7 +12,7 @@
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: $color-background-grey;
+  background-color: $color-background-grey !important;
   font-family: $body-font;
   font-size: 1.7rem;
   font-style: normal;
@@ -103,16 +103,15 @@ body {
 
   input[type="email"]:hover,
   input[type="text"]:hover {
-    border: 1px solid #9fb6c3;
-    background-color: #e7f5fc;
+    border: 1px solid #84aac0;
+    background-color: #c3e1f0;
     color: #445d6d;
     cursor: text;
     transition: $transition;
-  }
 
-  input[type="email"]:hover::placeholder,
-  input[type="text"]:hover::placeholder {
-    color: #527dab !important;
+    &::placeholder {
+      color: #96b2d1 !important;
+    }
   }
 
 

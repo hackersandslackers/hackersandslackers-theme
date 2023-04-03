@@ -386,3 +386,29 @@
   transition: $transition;
 }
 
+@mixin outline-button {
+  color: $color-theme;
+  background-color: white;
+  box-shadow: inset 0 0 0 1px $color-theme;
+  transition: $transition;
+
+  &:hover {
+    color: white;
+    background-color: $color-theme;
+    cursor: pointer;
+  }
+}
+
+@mixin filled-button {
+  background-color: $color-theme;
+  box-shadow: inset 0 0 0 1px $color-theme;
+  color: #fff !important;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: $color-hover !important;
+    box-shadow: inset 0 0 0 1px $color-hover;
+  }
+}
