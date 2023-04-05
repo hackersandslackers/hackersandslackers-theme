@@ -70,7 +70,7 @@
         "eslint": "^8.37.0",
         "eslint-plugin-ghost": "^2.16.0",
         "font-config-webpack-plugin": "^2.0.3",
-        "gscan": "4.36.1",
+        "gscan": "4.36.2",
         "inquirer": "8.2.4",
         "mini-css-extract-plugin": "^2.7.5",
         "postcss": "8.4.21",
