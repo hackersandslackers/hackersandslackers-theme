@@ -27,17 +27,21 @@
     }
   }
 
-  h3 {
-    @include header-third;
-  }
+  .main-content {
 
-  .author-card {
-    @include author-card;
-  }
+    h3 {
+      @include header-third;
+    }
 
-  iframe {
-    height: 332px;
-    margin-bottom: 40px;
-    border: 1px solid #d7dee7;
+    .author-card {
+      @include author-card;
+    }
+
+    iframe {
+      height: 332px;
+      margin-bottom: 40px;
+      border: 1px solid #d7dee7;
+      width: 100%;
+    }
   }
 }

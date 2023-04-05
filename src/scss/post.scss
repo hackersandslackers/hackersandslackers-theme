@@ -359,6 +359,7 @@
 
     iframe {
       margin: 0 0 25px;
+      width: 100%;
 
       @media(max-width: $mobile-breakpoint) {
         width: 100vw;

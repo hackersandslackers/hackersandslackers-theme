@@ -28,7 +28,8 @@
     padding-bottom: max(3.2vmin, 28px);
   }
 
-  .main-content {
+  .main-content,
+  #site-main {
     padding: 40px;
     max-width: 658px;
     background: white;
@@ -42,6 +43,13 @@
 
     @media(max-width: $mobile-breakpoint) {
       padding: 0 5vw 5vw;
+    }
+
+    .page-image {
+      margin-bottom: 40px;
+      box-shadow: $card-shadow;
+      border-radius: 2px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     }
 
     &>p {
