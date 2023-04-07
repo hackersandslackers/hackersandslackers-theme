@@ -1,14 +1,15 @@
 <div class="series-nextprev">
-  {{#foreach tags visibility="internal" limit="1"}}
-    {{#get "posts" filter="tags:[{{slug}}]" limit="1" order="published_at asc"}}
+  {{#foreach tags visibility="internal" limit="1" as |series_tag|}}
+    {{#get "posts" filter="tag:{{slug}}" limit="1" order="published_at asc"}}
       {{#foreach posts}}
+        {{!-- {{@index}} --}}
         <a href="{{url}}" class="series-nextprev-button prev">
           <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
           <span class="series-nextprev-post-title">{{title}}</span>
         </a>
       {{/foreach}}
     {{/get}}
-    {{#get "posts" filter="tags:[{{slug}}]" limit="1" order="published_at asc"}}
+    {{#get "posts" filter="tag:{{slug}}" limit="1" order="published_at asc"}}
       {{#foreach posts}}
         <a href="{{url}}" class="series-nextprev-button next">
           <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
