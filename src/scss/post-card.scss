@@ -211,7 +211,6 @@
         line-height: 1;
         font-family: $body-font-bold;
         font-size: 1.02em;
-        letter-spacing: 1px;
         text-align: center;
         transition: $transition;
 
@@ -221,7 +220,6 @@
 
         @media(max-width: $mobile-breakpoint) {
           font-size: .95em;
-          letter-spacing: unset;
         }
 
         &:hover {
