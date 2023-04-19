@@ -37,7 +37,6 @@
 
     @media (max-width: $smallscreen-breakpoint) {
       font-size: 2em;
-      line-height: 1;
     }
 
     @media (max-width: $tablet-breakpoint) {
@@ -46,7 +45,6 @@
 
     @media (max-width: $mobile-breakpoint) {
       font-size: 1.7em;
-      letter-spacing: -.5px;
     }
   }
 
@@ -188,7 +186,7 @@
       .post-card-author-name {
         color: #646f7d;
         display: block;
-        font-family: $body-font-bold;
+        font-family: $body-font-semibold;
         font-size: 1.1em;
         line-height: 1;
         margin-bottom: 1px;

@@ -52,6 +52,7 @@
     i,
     svg {
       font-size: .9em;
+      font-weight: 500;
     }
   }
 
@@ -67,8 +68,8 @@
 
   .mobile-nav-links-list {
     list-style-type: none;
-    margin: 10px 0 0 0;
-    padding: 0 0 0 20px;
+    margin: 5px 0 20px;
+    padding: 0 0 0 15px;
     display: none;
 
     .mobile-nav-link-nested {
