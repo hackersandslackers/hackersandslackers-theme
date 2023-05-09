@@ -66,7 +66,7 @@
         "css-loader": "^6.7.3",
         "cssnano": "6.0.0",
         "eslint": "^8.39.0",
-        "eslint-plugin-ghost": "^2.16.0",
+        "eslint-plugin-ghost": "^3.0.0",
         "font-config-webpack-plugin": "^2.0.3",
         "gscan": "4.36.2",
         "inquirer": "8.2.4",
