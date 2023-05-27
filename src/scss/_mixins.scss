@@ -350,12 +350,11 @@
     font-style: normal;
     font-size: 3em;
     left: -1rem;
-    top: -0.5rem;
+    top: 0;
     z-index: -10;
 
     @media(max-width: $mobile-breakpoint) {
       font-size: 2.5em;
-      top: 0;
     }
   }
 
