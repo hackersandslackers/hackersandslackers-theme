@@ -17,6 +17,7 @@
     .post-card-title,
     .post-card-excerpt,
     .post-card-author-name,
+    .post-card-author-name-mobile,
     .post-card-meta-details {
       color: white !important;
     }
@@ -44,7 +45,7 @@
     }
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 1.7em;
+      font-size: 1.6em;
     }
   }
 
@@ -112,9 +113,10 @@
       }
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.13em;
+        font-size: 1.05em;
         letter-spacing: unset;
         opacity: 1;
+        line-height: 1.2em;
         margin: 2vw 0 4vw;
       }
     }
@@ -154,7 +156,6 @@
         }
       }
 
-
       .post-card-author-avatar {
         margin-right: 10px;
         font-size: 1.5em;
@@ -193,12 +194,27 @@
         transition: $transition;
 
         @media (max-width: $mobile-breakpoint) {
-          margin-bottom: 2px;
+          display: none;
         }
 
         &:hover {
           color: $color-hover !important;
           cursor: pointer;
+        }
+      }
+
+      .post-card-author-name-mobile {
+        display: none;
+        text-transform: capitalize;
+        color: #646f7d;
+        font-family: $body-font-semibold;
+        font-size: 1.1em;
+        line-height: 1;
+        margin-bottom: 2px;
+        transition: $transition;
+
+        @media (max-width: $mobile-breakpoint) {
+          display: block;
         }
       }
 
@@ -218,6 +234,11 @@
 
         @media(max-width: $mobile-breakpoint) {
           font-size: .95em;
+        }
+
+        @media(max-width: 500px) {
+          font-size: .9em;
+          padding: 4px 6px;
         }
 
         &:hover {
