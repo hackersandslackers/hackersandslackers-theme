@@ -38,7 +38,6 @@ clean:
 	find . -name 'yarn-error.log' -delete
 	find . -name '.pnp.cjs' -delete
 	find . -name '*.map'  -delete
-	find . -name '*.LICENSE.txt' -delete
 	find . -wholename 'assets/built/*.js' -exec rm -rf {} +
 	find . -wholename 'assets/built/*.css' -exec rm -rf {} +
 	find . -wholename '*.lock' -delete
@@ -49,8 +48,9 @@ clean:
 update:
 	npm install npm@latest -g
 	npm install -g npm-check-updates@latest
-	ncu -u
-	yarn i
+	npm install -g ghost-cli@latest
+	cd $(DEV_GHOST_PATH) && ghost update
+	cd $(DEV_GHOST_THEME_PATH) && ncu
 
 .PHONY: reset
 reset: clean
