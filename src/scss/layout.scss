@@ -16,6 +16,10 @@
 .paged .viewport {
   max-width: 93%;
 
+  @media(max-width: $smallscreen-breakpoint) {
+    max-width: 95%;
+  }
+
   @media(max-width: $mobile-breakpoint) {
     max-width: unset;
   }

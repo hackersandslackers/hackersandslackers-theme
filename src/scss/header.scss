@@ -12,6 +12,10 @@
   margin-bottom: 30px;
   box-shadow: $card-shadow;
 
+  @media(max-width: $smallscreen-breakpoint) {
+    margin-bottom: 25px;
+  }
+
   @media(max-width: $mobile-breakpoint) {
     margin-bottom: unset;
     grid-gap: 5vw;
