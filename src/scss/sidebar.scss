@@ -108,16 +108,19 @@
 
       .gh-widget-photo {
         padding: 0;
+        flex: 1.8;
 
         img {
-          max-width: 60px;
+          max-width: 50px;
           margin-top: 5px;
         }
       }
 
       .gh-widget-personal-details {
+        margin-bottom: 10px;
+
         .full-name {
-          font-size: 1.3em;
+          font-size: 1.2em;
           font-family: $body-font-medium;
           line-height: 1em;
           color: $color-header-grey;
@@ -136,6 +139,19 @@
           color: $color-lightgrey;
           line-height: 1;
         }
+      }
+
+      .gh-widget-stats {
+        .gh-widget-item:nth-of-type(2) {
+          display: none;
+        }
+      }
+
+      .gh-widget-heading {
+        display: block;
+        line-height: 1;
+        color: $color-lightgrey;
+        font-family: $body-font-medium;
       }
 
       .gh-widget-repositories {
@@ -167,6 +183,7 @@
 
       &>div>.gh-widget-container:first-child {
         align-items: unset;
+        padding: 0;
       }
 
       &>div>.gh-widget-container:last-child {
@@ -190,9 +207,15 @@
           width: 80px;
         }
 
-        .gh-widget-follow button,
-        .gh-widget-follow a {
+        .gh-widget-follow button {
           @include filled-button;
+
+          a {
+            background-color: unset;
+            box-shadow: unset;
+            color: unset;
+            transition: unset;
+          }
         }
       }
     }
