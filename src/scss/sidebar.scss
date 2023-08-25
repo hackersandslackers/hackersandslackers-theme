@@ -44,7 +44,6 @@
       display: none;
     }
 
-
     &.newsletter p {
       line-height: 1.3;
       font-size: 1em;
@@ -92,12 +91,15 @@
       max-width: unset;
       align-items: unset;
 
-      .gh-widget-container {
-        align-items: unset;
-      }
-
       .gh-widget-item {
         text-align: unset;
+        padding: 5px 0;
+
+        .stat-name {
+          color: $color-lightgrey;
+          font-family: $body-font-medium;
+          font-size: .95em;
+        }
       }
 
       .gh-widget-hr {
@@ -108,21 +110,90 @@
         padding: 0;
 
         img {
-          max-width: 70px;
+          max-width: 60px;
+          margin-top: 5px;
         }
       }
 
       .gh-widget-personal-details {
         .full-name {
-          font-size: 1.5em;
+          font-size: 1.3em;
+          font-family: $body-font-medium;
           line-height: 1em;
+          color: $color-header-grey;
+        }
+
+        .bio {
+          color: $color-sidebar-description;
+          line-height: 1.4;
+          font-size: 0.9em;
+          margin: 5px 0 8px;
+        }
+
+        .location {
+          font-size: .9em;
+          font-family: $body-font-semibold;
+          color: $color-lightgrey;
+          line-height: 1;
         }
       }
 
-      .bio {
-        color: unset;
-        line-height: 1.4;
+      .gh-widget-repositories {
+
+        .gh-widget-item {
+          padding: 0;
+        }
+
+        .names {
+          flex: 4;
+        }
+
+        .language {
+          font-size: .8em;
+        }
+
+        .stars {
+          font-size: 0.8em;
+          text-align: right;
+        }
+      }
+
+      .gh-widget-link {
+        text-decoration: none;
+        font-family: 'SofiaPro-SemiBold';
+        line-height: 1;
         font-size: .9em;
+      }
+
+      &>div>.gh-widget-container:first-child {
+        align-items: unset;
+      }
+
+      &>div>.gh-widget-container:last-child {
+        margin-top: 10px;
+        justify-content: space-between;
+
+        .gh-widget-item {
+          padding: 0;
+        }
+
+        .gh-widget-follow,
+        .gh-widget-active-time {
+          flex: unset;
+        }
+
+        .gh-widget-active-time {
+          font-style: italic;
+        }
+
+        .gh-widget-follow button {
+          width: 80px;
+        }
+
+        .gh-widget-follow button,
+        .gh-widget-follow a {
+          @include filled-button;
+        }
       }
     }
   }
@@ -131,7 +202,6 @@
     font-family: $header-font;
     width: 25px;
     text-align: center;
-    // border: 1px solid black;
     border-radius: 2px;
     line-height: 1.5;
   }
