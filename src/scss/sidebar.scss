@@ -118,9 +118,14 @@
 
       .gh-widget-personal-details {
         margin-bottom: 10px;
+        padding: 5px 0 0;
+
+        &>.gh-widget-item {
+          padding: 0;
+        }
 
         .full-name {
-          font-size: 1.2em;
+          font-size: 1.1em;
           font-family: $body-font-medium;
           line-height: 1em;
           color: $color-header-grey;
@@ -130,7 +135,7 @@
           color: $color-sidebar-description;
           line-height: 1.4;
           font-size: 0.9em;
-          margin: 5px 0 8px;
+          margin-top: 5px;
         }
 
         .location {
@@ -142,16 +147,26 @@
       }
 
       .gh-widget-stats {
-        .gh-widget-item:nth-of-type(2) {
-          display: none;
+        justify-content: space-between !important;
+
+        .gh-widget-item {
+          flex: unset;
+          justify-content: space-between;
+        }
+
+        .count {
+          font-family: $body-font-semibold;
+          font-size: 1.2em;
         }
       }
 
       .gh-widget-heading {
         display: block;
         line-height: 1;
+        font-size: 1.1em;
         color: $color-lightgrey;
-        font-family: $body-font-medium;
+        font-family: $body-font-semibold;
+        margin-bottom: 10px;
       }
 
       .gh-widget-repositories {
@@ -161,16 +176,23 @@
         }
 
         .names {
-          flex: 4;
+          flex: 3.5;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
 
         .language {
           font-size: .8em;
+          text-align: right;
+          font-family: $body-font;
         }
 
         .stars {
           font-size: 0.8em;
           text-align: right;
+          color: #e49c16;
+          font-weight: 600;
         }
       }
 
@@ -178,7 +200,11 @@
         text-decoration: none;
         font-family: 'SofiaPro-SemiBold';
         line-height: 1;
-        font-size: .9em;
+        font-size: .85em;
+      }
+
+      .gh-widget-container {
+        justify-content: unset;
       }
 
       &>div>.gh-widget-container:first-child {
@@ -187,7 +213,7 @@
       }
 
       &>div>.gh-widget-container:last-child {
-        margin-top: 10px;
+        margin-top: 15px;
         justify-content: space-between;
 
         .gh-widget-item {
@@ -204,11 +230,9 @@
         }
 
         .gh-widget-follow button {
-          width: 80px;
-        }
-
-        .gh-widget-follow button {
           @include filled-button;
+          width: 80px;
+          border-radius: 2;
 
           a {
             background-color: unset;

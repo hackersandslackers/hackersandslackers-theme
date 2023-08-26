@@ -46,7 +46,7 @@ clean:
 
 .PHONY: update
 update:
-	npm install npm@latest -g
+	npm install -g npm@latest
 	npm install -g npm-check-updates@latest
 	npm install -g ghost-cli@latest
 	cd $(DEV_GHOST_PATH) && ghost update
