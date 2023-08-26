@@ -95,6 +95,12 @@
         text-align: unset;
         padding: 5px 0;
 
+        .count {
+          line-height: 1;
+          font-size: 1.2em;
+          font-family: $body-font-semibold;
+        }
+
         .stat-name {
           color: $color-lightgrey;
           font-family: $body-font-medium;
@@ -104,15 +110,15 @@
 
       .gh-widget-hr {
         margin: 1em 0 1em;
+        border: 1px solid #ebf1f5;
       }
 
       .gh-widget-photo {
         padding: 0;
-        flex: 1.8;
+        flex: 2;
 
         img {
-          max-width: 50px;
-          margin-top: 5px;
+          max-width: 60px;
         }
       }
 
@@ -142,8 +148,10 @@
       }
 
       .gh-widget-stats {
-        .gh-widget-item:nth-of-type(2) {
-          display: none;
+        justify-content: space-between;
+
+        .gh-widget-item {
+          max-width: 25%;
         }
       }
 
@@ -151,7 +159,7 @@
         display: block;
         line-height: 1;
         color: $color-lightgrey;
-        font-family: $body-font-medium;
+        font-family: $body-font-semibold;
       }
 
       .gh-widget-repositories {
@@ -161,11 +169,16 @@
         }
 
         .names {
-          flex: 4;
+          flex: 3;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: block;
         }
 
         .language {
           font-size: .8em;
+          text-align: right;
         }
 
         .stars {
@@ -176,9 +189,13 @@
 
       .gh-widget-link {
         text-decoration: none;
-        font-family: 'SofiaPro-SemiBold';
+        font-family: $body-font-semibold;
         line-height: 1;
-        font-size: .9em;
+        font-size: .85em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
       }
 
       &>div>.gh-widget-container:first-child {
@@ -203,18 +220,20 @@
           font-style: italic;
         }
 
-        .gh-widget-follow button {
+        .gh-widget-follow {
           width: 80px;
-        }
+          border-radius: 3px;
+          overflow: hidden;
 
-        .gh-widget-follow button {
-          @include filled-button;
+          button {
+            @include filled-button;
 
-          a {
-            background-color: unset;
-            box-shadow: unset;
-            color: unset;
-            transition: unset;
+            a {
+              background-color: unset;
+              box-shadow: unset;
+              color: unset;
+              transition: unset;
+            }
           }
         }
       }
