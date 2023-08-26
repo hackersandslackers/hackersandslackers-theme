@@ -95,12 +95,6 @@
         text-align: unset;
         padding: 5px 0;
 
-        .count {
-          line-height: 1;
-          font-size: 1.2em;
-          font-family: $body-font-semibold;
-        }
-
         .stat-name {
           color: $color-lightgrey;
           font-family: $body-font-medium;
@@ -110,23 +104,28 @@
 
       .gh-widget-hr {
         margin: 1em 0 1em;
-        border: 1px solid #ebf1f5;
       }
 
       .gh-widget-photo {
         padding: 0;
-        flex: 2;
+        flex: 1.8;
 
         img {
-          max-width: 60px;
+          max-width: 50px;
+          margin-top: 5px;
         }
       }
 
       .gh-widget-personal-details {
         margin-bottom: 10px;
+        padding: 5px 0 0;
+
+        &>.gh-widget-item {
+          padding: 0;
+        }
 
         .full-name {
-          font-size: 1.2em;
+          font-size: 1.1em;
           font-family: $body-font-medium;
           line-height: 1em;
           color: $color-header-grey;
@@ -136,7 +135,7 @@
           color: $color-sidebar-description;
           line-height: 1.4;
           font-size: 0.9em;
-          margin: 5px 0 8px;
+          margin-top: 5px;
         }
 
         .location {
@@ -148,18 +147,26 @@
       }
 
       .gh-widget-stats {
-        justify-content: space-between;
+        justify-content: space-between !important;
 
         .gh-widget-item {
-          max-width: 25%;
+          flex: unset;
+          justify-content: space-between;
+        }
+
+        .count {
+          font-family: $body-font-semibold;
+          font-size: 1.2em;
         }
       }
 
       .gh-widget-heading {
         display: block;
         line-height: 1;
+        font-size: 1.1em;
         color: $color-lightgrey;
         font-family: $body-font-semibold;
+        margin-bottom: 10px;
       }
 
       .gh-widget-repositories {
@@ -169,33 +176,35 @@
         }
 
         .names {
-          flex: 3;
+          flex: 3.5;
           white-space: nowrap;
-          overflow: hidden;
           text-overflow: ellipsis;
-          display: block;
+          overflow: hidden;
         }
 
         .language {
           font-size: .8em;
           text-align: right;
+          font-family: $body-font;
         }
 
         .stars {
           font-size: 0.8em;
           text-align: right;
+          color: #e49c16;
+          font-weight: 600;
         }
       }
 
       .gh-widget-link {
         text-decoration: none;
-        font-family: $body-font-semibold;
+        font-family: 'SofiaPro-SemiBold';
         line-height: 1;
         font-size: .85em;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        display: block;
+      }
+
+      .gh-widget-container {
+        justify-content: unset;
       }
 
       &>div>.gh-widget-container:first-child {
@@ -204,7 +213,7 @@
       }
 
       &>div>.gh-widget-container:last-child {
-        margin-top: 10px;
+        margin-top: 15px;
         justify-content: space-between;
 
         .gh-widget-item {
@@ -220,20 +229,16 @@
           font-style: italic;
         }
 
-        .gh-widget-follow {
+        .gh-widget-follow button {
+          @include filled-button;
           width: 80px;
-          border-radius: 3px;
-          overflow: hidden;
+          border-radius: 2;
 
-          button {
-            @include filled-button;
-
-            a {
-              background-color: unset;
-              box-shadow: unset;
-              color: unset;
-              transition: unset;
-            }
+          a {
+            background-color: unset;
+            box-shadow: unset;
+            color: unset;
+            transition: unset;
           }
         }
       }
