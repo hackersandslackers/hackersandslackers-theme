@@ -94,13 +94,6 @@
       .gh-widget-item {
         text-align: unset;
         padding: 5px 0;
-        flex: unset;
-
-        .count {
-          line-height: 1;
-          font-size: 1.2em;
-          font-family: $body-font-semibold;
-        }
 
         .stat-name {
           color: $color-lightgrey;
@@ -111,23 +104,29 @@
 
       .gh-widget-hr {
         margin: 1em 0 1em;
-        border: 1px solid #ebf1f5;
       }
 
       .gh-widget-photo {
         padding: 0;
-        flex: 2;
+        flex: 1.8;
 
         img {
-          max-width: 60px;
+          max-width: 50px;
+          margin-top: 5px;
         }
       }
 
       .gh-widget-personal-details {
         margin-bottom: 10px;
+        padding: 5px 0 0;
+
+        &>.gh-widget-item {
+          padding: 0;
+        }
 
         .full-name {
-          font-size: 1.1em;
+          font-size: 1.2em;
+          white-space: nowrap;
           font-family: $body-font-medium;
           line-height: 1em;
           color: $color-header-grey;
@@ -135,9 +134,10 @@
 
         .bio {
           color: $color-sidebar-description;
-          line-height: 1.4;
-          font-size: .85em;
-          margin-top: 5px;
+          line-height: 1.3;
+          font-size: .95em;
+          margin: 5px 0 10px;
+          font-family: $body-font;
         }
 
         .location {
@@ -149,71 +149,77 @@
       }
 
       .gh-widget-stats {
-        justify-content: space-between;
+        justify-content: space-between !important;
 
-        .gh-widget-item:nth-of-type(2) {
-          max-width: 100px;
+        .gh-widget-item {
+          flex: unset;
+          justify-content: space-between;
+          padding: unset;
+        }
+
+        .count {
+          font-family: $body-font-semibold;
+          font-size: 1.2em;
+          line-height: 1;
         }
       }
 
       .gh-widget-heading {
         display: block;
         line-height: 1;
+        font-size: 1.1em;
         color: $color-lightgrey;
         font-family: $body-font-semibold;
-        padding: unset;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
+        padding: 0;
       }
 
       .gh-widget-repositories {
 
         .gh-widget-container {
           justify-content: space-between;
-        }
 
-        .gh-widget-item {
-          padding: 0;
-        }
-
-        .names {
-          flex: 3;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          display: block;
-          max-width: 135px;
-        }
-
-        .language {
-          font-family: $body-font;
-          font-size: .8em;
-          text-align: right;
-          width: 55px;
-        }
-
-        .stars {
-          font-size: .8em;
-          text-align: right;
-          color: #e49c16;
-          font-weight: 600;
-          max-width: 40px;
-
-          i {
-            margin-right: -4px;
+          .gh-widget-item {
+            padding: 0;
           }
         }
 
-        .gh-widget-link {
-          text-decoration: none;
-          font-family: $body-font-semibold;
-          line-height: 1;
-          font-size: .85em;
+        .names {
+          flex: 3.5;
           white-space: nowrap;
-          overflow: hidden;
           text-overflow: ellipsis;
-          display: block;
-          max-width: 135px;
+          overflow: hidden;
+          max-width: 180px;
         }
+
+        .language {
+          font-size: .8em;
+          text-align: right;
+          font-family: $body-font-medium;
+          color: $color-sidebar-description;
+        }
+
+        .stars {
+          font-size: 0.8em;
+          text-align: right;
+          color: #e49c16;
+          font-weight: 600;
+
+          i {
+            margin-right: -3px;
+          }
+        }
+      }
+
+      .gh-widget-link {
+        text-decoration: none;
+        font-family: 'SofiaPro-SemiBold';
+        line-height: 1;
+        font-size: .85em;
+      }
+
+      .gh-widget-container {
+        justify-content: unset;
       }
 
       &>div>.gh-widget-container:first-child {
@@ -222,7 +228,7 @@
       }
 
       &>div>.gh-widget-container:last-child {
-        margin-top: 10px;
+        margin-top: 15px;
         justify-content: space-between;
 
         .gh-widget-item {
@@ -236,29 +242,20 @@
 
         .gh-widget-active-time {
           font-style: italic;
-          color: $color-sidebar-description;
-          opacity: .8;
+          opacity: .7;
         }
 
-        .gh-widget-follow {
+        .gh-widget-follow button {
+          @include filled-button;
           width: 80px;
           border-radius: 3px;
-          overflow: hidden;
+          line-height: 0;
 
-          button {
-            @include filled-button;
-            line-height: 0;
-
-            .gh-widget-link {
-              background-color: unset;
-              box-shadow: unset;
-              color: unset;
-              transition: unset;
-              text-decoration: none;
-              font-family: $body-font-semibold;
-              line-height: 1;
-              font-size: .85em;
-            }
+          a {
+            background-color: unset;
+            box-shadow: unset;
+            color: unset;
+            transition: unset;
           }
         }
       }
