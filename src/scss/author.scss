@@ -83,11 +83,11 @@
       color: #5e6877;
       display: -webkit-box;
       font-family: $body-font-medium;
-      font-size: 1.1em;
-      line-height: 1.4;
+      line-height: 1.5;
+      font-size: 1em;
       overflow-y: hidden;
       text-overflow: ellipsis;
-      margin-top: 15px;
+      margin: 0px;
 
 
       @media(max-width: $mobile-breakpoint) {
@@ -113,12 +113,16 @@
       display: flex;
       gap: 10px;
       margin: 10px 0;
+      align-items: center;
 
-      a {
+      a,
+      .author-profile-social-link {
         transition: $transition;
 
         &:hover {
           color: $color-hover;
+          fill: $color-hover;
+          font-size: 1.1em;
           cursor: pointer;
         }
       }
