@@ -56,7 +56,7 @@
     &>a {
       font-family: $body-font-bold;
       transition: $transition;
-      margin-left: 10px;
+      margin-left: 15px;
 
       @media(max-width: $mobile-breakpoint) {
         display: none;

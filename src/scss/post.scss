@@ -465,7 +465,7 @@
     display: block;
     height: fit-content;
     justify-content: space-between;
-    margin: 40px 0 0;
+    margin: 40px 0 20px;
     max-width: 100%;
     width: 100%;
 
@@ -722,8 +722,7 @@
     }
   }
 
-  .post-comments,
-  .related-posts {
+  .post-comments {
     max-width: 95%;
     margin: auto;
   }
