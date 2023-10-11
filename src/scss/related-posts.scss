@@ -32,6 +32,12 @@
       font-size: 1.3em;
       line-height: 1.1;
       font-family: $header-font;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      text-overflow: ellipsis;
+      word-wrap: break-word;
 
       @media(max-width: $tablet-breakpoint) {
         font-size: 1.3em;
@@ -45,6 +51,7 @@
     .post-card-excerpt {
       font-size: 1em !important;
       margin: 10px 0;
+      display: none;
 
       @media(max-width: $mobile-breakpoint) {
         font-size: 1.1m !important;

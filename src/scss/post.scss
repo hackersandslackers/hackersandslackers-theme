@@ -206,14 +206,15 @@
       .post-excerpt {
         color: #8c96a4;
         font-family: $body-font-medium;
-        font-size: 1.35em !important;
-        line-height: 1.2;
+        font-size: 1.3em !important;
+        line-height: 1.3;
         margin: 10px 0;
         order: 1;
 
         @media (max-width: $tablet-breakpoint) {
-          font-size: 1.3em !important;
-          line-height: 1.1;
+          margin: 5px 0;
+          font-size: 1.25em !important;
+          line-height: 1.2;
         }
 
         @media (max-width: 767px) {
@@ -231,7 +232,7 @@
       .post-meta {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 0;
+        margin: 20px 0 0;
         align-items: center;
 
         .post-meta-item {
@@ -239,8 +240,10 @@
           color: #7e8da3;
           line-height: 1;
           font-family: $body-font-bold;
+          color: $color-body-font;
           display: flex;
           align-items: center;
+          font-size: 1.15em;
 
           @media(max-width: $tablet-breakpoint) {
             margin: 0 25px 10px 0;
@@ -261,12 +264,11 @@
             transition: $transition;
             display: block;
             line-height: 1;
-            font-size: 1em;
           }
 
           i,
           svg {
-            margin-right: 4px;
+            margin-right: 1vw;
             color: #7e8da3;
           }
 
@@ -288,14 +290,13 @@
 
     .series-toc {
       border-bottom: 1px solid #eaeaea;
-      margin: 0 0 20px;
+      margin: 20px 0;
       overflow: hidden;
       padding: 0 0 20px;
       position: relative;
       min-width: -webkit-fill-available;
 
       @media(max-width: $tablet-breakpoint) {
-        margin: 0 0 20px;
         padding: 0 0 15px;
       }
 
@@ -309,6 +310,7 @@
       .series-toc-item {
         color: $color-body-font;
         counter-increment: step-counter;
+        font-size: 1.1em;
         display: flex;
         justify-content: left;
         line-height: 1;
