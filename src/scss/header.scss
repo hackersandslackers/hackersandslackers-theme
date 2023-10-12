@@ -200,7 +200,7 @@
 
   .nav-wrapper.nav-links {
     @media(max-width: $tablet-breakpoint) {
-      padding: 0 5vw;
+      padding: 0 2vw;
       max-width: 100%;
     }
 
@@ -290,7 +290,7 @@
   border-bottom: 0.5px solid $color-header-border-grey;
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 20px 4vw;
+    padding: 20px 3vw;
     width: unset;
   }
 

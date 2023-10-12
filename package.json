@@ -55,9 +55,9 @@
         "prismjs": "^1.29.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.23.0",
+        "@babel/core": "^7.23.2",
         "@babel/eslint-parser": "^7.22.15",
-        "@babel/preset-env": "^7.22.20",
+        "@babel/preset-env": "^7.23.2",
         "@tryghost/release-utils": "0.8.1",
         "autoprefixer": "10.4.16",
         "babel-loader": "^9.1.3",
@@ -76,7 +76,7 @@
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "sass": "^1.69.2",
+        "sass": "^1.69.3",
         "sass-loader": "^13.3.2",
         "style-loader": "^3.3.3",
         "terser-webpack-plugin": "^5.3.9",
