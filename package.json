@@ -14,7 +14,7 @@
         "pretest": "webpack --mode=production",
         "lint": "eslint . --ext .js --cache",
         "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncomitted changes found.\" && exit 1; fi",
+        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncommitted changes found.\" && exit 1; fi",
         "postship": "git fetch && webpack --mode=production",
         "build": "webpack --mode=production"
     },
@@ -80,7 +80,7 @@
         "sass-loader": "^13.3.2",
         "style-loader": "^3.3.3",
         "terser-webpack-plugin": "^5.3.9",
-        "webpack": "^5.88.2",
+        "webpack": "^5.89.0",
         "webpack-cli": "^5.1.4"
     },
     "browserslist": [
