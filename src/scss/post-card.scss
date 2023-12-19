@@ -238,7 +238,8 @@
 
         @media(max-width: 500px) {
           font-size: .9em;
-          padding: 4px 6px;
+          padding: 6px;
+          line-height: 1;
         }
 
         &:hover {

@@ -87,6 +87,10 @@
       line-height: 1;
       font-size: 1.2em;
 
+      @media(max-width: $tablet-breakpoint) {
+        font-size: 1.1em;
+      }
+
       &:hover {
         color: $color-hover;
         cursor: pointer;
@@ -97,9 +101,10 @@
       margin-right: 25px;
       line-height: 1;
       padding: 0;
+      overflow-y: hidden;
 
       @media(max-width: $tablet-breakpoint) {
-        margin-right: 20px;
+        margin-right: 15px;
       }
     }
 
