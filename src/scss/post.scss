@@ -323,9 +323,11 @@
           line-height: 1.2;
         }
 
+
+
         &::before {
           content: counter(step-counter, upper-roman) "." !important;
-          color: $color-body-font;
+          color: #697482;
           font-family: $body-font-semibold;
           font-size: 15px;
           font-weight: bold;
@@ -335,12 +337,17 @@
         }
 
         .series-toc-item-link {
-          color: $color-body-font;
+          color: #697482;
           font-family: $body-font-medium;
           transition: $transition;
           opacity: .8;
+        }
 
-          &:hover {
+        &:hover {
+
+          .series-toc-item-link,
+          &::before {
+            opacity: 1;
             color: $color-hover;
             cursor: pointer;
           }
