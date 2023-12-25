@@ -12,12 +12,13 @@
           class="sidebar-input-field"
           type="text"
           name="name"
+          autocomplete="given-name"
           placeholder="{{t 'Bryan Adams'}}"
           onfocus="this.placeholder = ''"
           onblur="this.placeholder = 'Bryan Adams'"
           autocomplete="off"
           autocorrect="off" />
-        <label for="{{ inputLabel }}">Email</label>
+        <label for="input-email">Email</label>
         <input
           data-members-email
           data-test-input="input-email"
@@ -26,6 +27,7 @@
           type="email"
           name="email"
           required="true"
+          autocomplete="email"
           placeholder="{{t 'bryanadams@gmail.com'}}"
           onfocus="this.placeholder = ''"
           onblur="this.placeholder = 'bryanadams@gmail.com'" />

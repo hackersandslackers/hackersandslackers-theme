@@ -1,23 +1,22 @@
-{{#foreach tags visibility="internal" limit="1" as |series_tag|}}
-  {{#if series_tag}}
-    <div class="series-nextprev">
-      {{#get "posts" filter="tag:{{slug}}" limit="1" order="published_at asc"}}
-        {{#foreach posts}}
-          {{!-- {{@index}} --}}
+<div class="series-nextprev">
+  {{#foreach tags visibility="internal" limit="1" as |series-tag|}}
+    {{#if series-tag}}
+      {{#get "posts" filter="tags:[{{slug}}]" include="tags" order="published_at asc"}}
+        {{#foreach posts from="{{@index}}" limit="1"}}
           <a href="{{url}}" class="series-nextprev-button prev">
             <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
             <span class="series-nextprev-post-title">{{title}}</span>
           </a>
         {{/foreach}}
       {{/get}}
-      {{#get "posts" filter="tag:{{slug}}" limit="1" order="published_at asc"}}
-        {{#foreach posts}}
+      {{#get "posts" filter="tags:[{{slug}}]" include="tags" limit="1" order="published_at asc"}}
+        {{#foreach posts from="{{@number}}" limit="1"}}
           <a href="{{url}}" class="series-nextprev-button next">
             <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
             <span class="series-nextprev-post-title">{{title}}</span>
           </a>
         {{/foreach}}
       {{/get}}
-    </div>
-  {{/if}}
-{{/foreach}}
+    {{/if}}
+  {{/foreach}}
+</div>
