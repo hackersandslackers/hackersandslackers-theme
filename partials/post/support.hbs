@@ -7,16 +7,18 @@
         type='text'
         name='name'
         id='{{ inputLabel }}'
-        placeholder='{{t ' Your name' }}'
         class="support-input-field"
+        placeholder='{{t ' Your name' }}'
+        autocomplete="given-name"
         required="true" />
       <input
         data-members-email
         type='email'
         name='email'
         id='{{ inputLabel }}'
-        placeholder='{{t ' Your email address'}}'
         class="support-input-field"
+        placeholder='{{t ' Your email address'}}'
+        autocomplete="email"
         required="true" />
       <button type='submit' value='{{t ' Subscribe' }}' class='sidebar-btn filled'>
         {{t 'Sign Up' }}

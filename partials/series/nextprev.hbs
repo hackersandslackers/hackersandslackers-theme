@@ -1,22 +1,24 @@
 <div class="series-nextprev">
   {{#foreach tags visibility="internal" limit="1" as |series|}}
     {{#series}}
-      {{#get "posts" filter="tag:{{slug}}" limit="1" order="published_at asc" as |series-post|}}
-        {{#foreach series-post}}
+      {{#get "posts" filter="tag:{{slug}}+published_at:<='{{published_at}}'" as |series-post|}}
+          {{#foreach series-post limit="2"}}
           <a href="{{url}}" class="series-nextprev-button prev">
-            <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
-            <span class="series-nextprev-post-title">{{title}}</span>
+          <p>{{published_at}}</p>
+          <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
+          <span class="series-nextprev-post-title">{{title}}</span>
           </a>
-        {{/foreach}}
-      {{/get}}
-      {{#get "posts" filter="tag:{{slug}}" limit="1" order="published_at asc" as |series-post|}}
-        {{#foreach series-post}}
-          <a href="{{url}}" class="series-nextprev-button next">
-            <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
-            <span class="series-nextprev-post-title">{{title}}</span>
-          </a>
-        {{/foreach}}
-      {{/get}}
-    {{/series}}
+  {{/foreach}}
+  {{/get}}
+  {{#get "posts" filter="tag:{{slug}}+published_at:>='{{published_at}}'" as |series-post|}}
+    {{#foreach series-post limit="2" from="5"}}
+      <a href="{{url}}" class="series-nextprev-button next">
+        <p>{{published_at}}</p>
+        <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
+        <span class="series-nextprev-post-title">{{title}}</span>
+      </a>
+    {{/foreach}}
+  {{/get}}
+  {{/series}}
   {{/foreach}}
 </div>
