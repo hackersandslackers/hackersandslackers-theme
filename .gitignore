@@ -18,6 +18,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+.coverage
 
 # nyc test coverage
 .nyc_output
@@ -57,6 +58,9 @@ typings/
 
 # Yarn Integrity file
 .yarn-integrity
+
+# Compiled CSS in SCSS source directory
+scss/*.css
 
 # dotenv environment variables file
 .env

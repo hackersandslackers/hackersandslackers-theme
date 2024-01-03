@@ -48,6 +48,12 @@
       }
     }
 
+    .post-card-content-link {
+      max-height: 64px;
+      text-overflow: ellipsis;
+      margin-bottom: 15px;
+    }
+
     .post-card-excerpt {
       font-size: 1em !important;
       margin: 10px 0;
