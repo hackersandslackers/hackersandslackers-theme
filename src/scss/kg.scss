@@ -106,7 +106,9 @@ make sure they look good, and are given a bit of extra spacing. */
     }
   }
 
-  figcaption {
+  figcaption,
+  figcaption>p,
+  figcaption>p>span {
     order: 1;
     width: 100%;
     width: -moz-available;
