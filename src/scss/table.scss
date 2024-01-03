@@ -146,6 +146,7 @@
       line-height: 1.6;
       text-align: left;
       white-space: normal !important;
+      font-family: $body-font;
 
       @media (max-width: $tablet-breakpoint) {
         margin: 0 !important;
@@ -153,27 +154,33 @@
       }
 
       &:first-child {
-        max-width: 55px;
         font-family: $table-font;
         font-size: 0.8em;
         font-weight: 600;
         text-align: top;
+        padding: 12px;
+        white-space: nowrap !important;
 
         @media (max-width: $tablet-breakpoint) {
           max-width: none;
           padding: 10px !important;
-          text-overflow: ellipsis;
-          white-space: nowrap;
+          text-overflow: ellipsis
         }
       }
 
       &:nth-of-type(2) {
-        padding: 12px 15px !important;
+        padding: 12px;
 
         @media (max-width: $tablet-breakpoint) {
           width: 100%;
           line-height: 1.5;
           white-space: inherit;
+        }
+
+        code,
+        pre,
+        .pre {
+          @include inline-code;
         }
       }
 

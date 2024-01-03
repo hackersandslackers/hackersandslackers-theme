@@ -1,24 +1,31 @@
 <div class="series-nextprev">
-  {{#foreach tags visibility="internal" limit="1" as |series|}}
-    {{#series}}
-      {{#get "posts" filter="tag:{{slug}}+published_at:<='{{published_at}}'" as |series-post|}}
-          {{#foreach series-post limit="2"}}
-          <a href="{{url}}" class="series-nextprev-button prev">
-          <p>{{published_at}}</p>
-          <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
-          <span class="series-nextprev-post-title">{{title}}</span>
-          </a>
+  {{#foreach tags visibility="internal" limit="1"}}
+    {{#get "posts" filter="tag:{{slug}}" limit="1" as |series-post|}}
+      {{#foreach series-post}}
+        <a href="{{url}}" class="series-nextprev-button prev">
+          <div>
+            <p>ID: {{id}}</p>
+            <p>index: {{@index}}</p>
+            <p>number: {{@number}}</p>
+            <h6 class="series-nextprev-label"><i class="fa-sharp fa-solid fa-arrow-left"></i> Previous</h6>
+            <span class="series-nextprev-post-title">{{title}}</span>
+          </div>
+        </a>
+      {{/foreach}}
+    {{/get}}
   {{/foreach}}
-  {{/get}}
-  {{#get "posts" filter="tag:{{slug}}+published_at:>='{{published_at}}'" as |series-post|}}
-    {{#foreach series-post limit="2" from="5"}}
+  {{!--{{#get "posts" filter="tags:[{{tags visibility="internal"}}]" as |series-post|}}
+    {{#foreach series-post}}
       <a href="{{url}}" class="series-nextprev-button next">
-        <p>{{published_at}}</p>
-        <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
-        <span class="series-nextprev-post-title">{{title}}</span>
+        <div>
+          <p>ID: {{id}}</p>
+          <p>index: {{@index}}</p>
+          <p>number: {{@number}}</p>
+          <h6 class="series-nextprev-label">Next <i class="fa-sharp fa-solid fa-arrow-right"></i></h6>
+          <span class="series-nextprev-post-title">{{title}}</span>
+        </div>
       </a>
     {{/foreach}}
   {{/get}}
-  {{/series}}
-  {{/foreach}}
+  --}}
 </div>

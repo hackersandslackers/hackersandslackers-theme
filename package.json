@@ -87,7 +87,7 @@
         "defaults"
     ],
     "config": {
-        "posts_per_page": 10,
+        "posts_per_page": 15,
         "image_sizes": {
             "xxs": {
                 "width": 30

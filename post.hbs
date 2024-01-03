@@ -52,7 +52,14 @@
           {{content}}
         </section>
         {{> "post/post-tags"}}
-        {{> "series/nextprev" }}
+        {{!--
+
+          This is currently not possible with Ghost's dynamic routing. See discussion:
+          https://forum.ghost.org/t/dynamic-routing-for-next-previous-post-helper/9279
+
+          {{> "series/nextprev" }}
+
+        --}}
         {{> "post/author-info"}}
       </article>
     </main>

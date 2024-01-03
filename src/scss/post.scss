@@ -202,8 +202,8 @@
       .post-excerpt {
         color: #8c96a4;
         font-family: $body-font-medium;
-        font-size: 1.3em !important;
-        line-height: 1.3;
+        font-size: 1.35em !important;
+        line-height: 1.4;
         margin: 10px 0;
         order: 1;
 
@@ -308,7 +308,7 @@
       .series-toc-item {
         color: $color-body-font;
         counter-increment: step-counter;
-        font-size: 1.1em;
+        font-size: 1.15em;
         display: flex;
         justify-content: left;
         line-height: 1;
@@ -323,11 +323,9 @@
           line-height: 1.2;
         }
 
-
-
         &::before {
           content: counter(step-counter, upper-roman) "." !important;
-          color: #697482;
+          color: #77818e;
           font-family: $body-font-semibold;
           font-size: 15px;
           font-weight: bold;
@@ -337,17 +335,15 @@
         }
 
         .series-toc-item-link {
-          color: #697482;
+          color: #77818e;
           font-family: $body-font-medium;
           transition: $transition;
-          opacity: .8;
         }
 
         &:hover {
 
           .series-toc-item-link,
           &::before {
-            opacity: 1;
             color: $color-hover;
             cursor: pointer;
           }
@@ -693,7 +689,6 @@
     @media(max-width: $mobile-breakpoint) {
       display: none;
     }
-
 
     .support-us-title {
       color: #5d6b7b;
