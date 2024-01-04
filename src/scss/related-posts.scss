@@ -46,6 +46,10 @@
       @media(max-width: $mobile-breakpoint) {
         font-size: 1.5em;
       }
+
+      @media(max-width: 450px) {
+        font-size: 1.3em;
+      }
     }
 
     .post-card-content-link {
@@ -82,7 +86,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-
 
       .post-card-meta {
         width: 100%;

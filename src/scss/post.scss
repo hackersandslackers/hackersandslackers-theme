@@ -177,16 +177,12 @@
       order: 2;
       width: -webkit-fill-available;
 
-      @media(max-width: $tablet-breakpoint) {
-        line-height: 1.05;
-      }
-
       @media (max-width: $mobile-breakpoint) {
         font-size: 2em;
       }
 
       @media (max-width: 450px) {
-        font-size: 1.8em;
+        font-size: 1.9em;
       }
     }
 
@@ -196,7 +192,7 @@
       width: 100%;
 
       @media(max-width: $tablet-breakpoint) {
-        padding: 4vw 4vw 0;
+        padding: 5vw 5vw 0;
       }
 
       .post-excerpt {
@@ -251,7 +247,7 @@
           @media(max-width: $mobile-breakpoint) {
             margin-right: 16px;
             white-space: nowrap;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
           }
 
           a,
@@ -265,7 +261,7 @@
 
           i,
           svg {
-            margin-right: 0.5vw;
+            margin-right: 1vw;
             color: #7e8da3;
             line-height: 1;
           }
@@ -356,7 +352,7 @@
     width: $tablet-breakpoint;
 
     @media(max-width: $tablet-breakpoint) {
-      max-width: 92vw;
+      max-width: 90vw;
       margin: 0 auto;
     }
 
@@ -514,7 +510,7 @@
       }
 
       .author-name {
-        font-size: 1.4em;
+        font-size: 1.4em !important;
         font-family: $body-font-medium;
 
         &:hover {
