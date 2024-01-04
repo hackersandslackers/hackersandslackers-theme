@@ -111,8 +111,8 @@
         flex: 1.8;
 
         img {
-          max-width: 55px;
-          margin-top: 5px;
+          max-width: 50px;
+          margin: 5px 5px 0 0;
         }
       }
 
@@ -214,7 +214,7 @@
 
       .gh-widget-link {
         text-decoration: none;
-        font-family: 'SofiaPro-SemiBold';
+        font-family: $body-font-semibold;
         line-height: 1;
         font-size: .85em;
       }

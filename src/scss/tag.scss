@@ -52,10 +52,6 @@
       font-family: $body-font-medium;
       font-size: 2em;
 
-      @media(max-width: 900px) {
-        margin: 0 0 5px;
-      }
-
       @media(max-width: $mobile-breakpoint) {
         font-size: 1.8em;
         margin: 0 0 5px;
@@ -65,19 +61,28 @@
     p {
       line-height: 1.6em;
       margin: 0;
-      font-size: 1.05em;
+      font-size: 1.1em;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1em;
+      }
     }
 
     .info-card-excerpt {
       line-height: 1.3;
-      font-size: 1.1em;
+      font-size: 1.05em;
+      opacity: .9;
       font-family: $body-font;
       color: $color-body-font;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1em;
+      }
     }
 
     .tag-image {
       max-width: 100px;
-      height: min-content;
+      height: fit-content;
       margin-right: 20px;
 
       @media(max-width: 900px) {
