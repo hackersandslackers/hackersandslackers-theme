@@ -1,7 +1,8 @@
 // @import url("//hello.myfonts.net/count/3c0ce8");
 
-
-/* Sophia Pro */
+/*
+Sophia Pro
+------------------------------------------- */
 @font-face {
   font-family: "SofiaPro-Light";
   font-display: swap;
@@ -37,7 +38,9 @@
     url("https://cdn.hackersandslackers.com/fonts/SofiaPro-Bold.woff") format("woff");
 }
 
-/* TT Norms Pro */
+/*
+TT Norms Pro
+------------------------------------------- */
 @font-face {
   font-family: "TTNormsPro-Medium";
   font-display: swap;
@@ -59,6 +62,40 @@
     url("https://cdn.hackersandslackers.com/fonts/TTNormsPro-Bold.woff") format("woff");
 }
 
+/*
+Camphor Pro
+------------------------------------------- */
+@font-face {
+  font-family: "CamphorPro-Light";
+  font-display: swap;
+  src: url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Light.woff2") format("woff2"),
+    url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CamphorPro-Regular";
+  font-display: swap;
+  src: url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Regular.woff2") format("woff2"),
+    url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CamphorPro-Medium";
+  font-display: swap;
+  src: url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Medium.woff2") format("woff2"),
+    url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "CamphorPro-Bold";
+  font-display: swap;
+  src: url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Bold.woff2") format("woff2"),
+    url("https://cdn.hackersandslackers.com/fonts/CamphorPro-Bold.woff") format("woff");
+}
+
+/*
+dm
+------------------------------------------- */
 
 @font-face {
   src: local("☺"),

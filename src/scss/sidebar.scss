@@ -18,11 +18,13 @@
     .widget-title {
       color: $color-lightgrey;
       font-family: $body-font-medium;
-      font-size: 1.3em;
-      letter-spacing: .8px;
+      font-size: .9em;
+      letter-spacing: 1px;
       line-height: 1;
-      margin: 0 0 10px;
-      padding: 0;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #dee1e7;
+      padding-bottom: 8px;
       text-align: left;
     }
 
@@ -102,10 +104,6 @@
         }
       }
 
-      .gh-widget-hr {
-        margin: 1em 0 1em;
-      }
-
       .gh-widget-photo {
         padding: 0;
         flex: 1.8;
@@ -150,6 +148,7 @@
 
       .gh-widget-stats {
         justify-content: space-between !important;
+        margin-bottom: 20px;
 
         .gh-widget-item {
           flex: unset;
@@ -250,13 +249,14 @@
           @include filled-button;
           width: 80px;
           border-radius: 3px;
-          line-height: 0;
+          line-height: 1;
 
           a {
             background-color: unset;
             box-shadow: unset;
             color: unset;
             transition: unset;
+            line-height: 1;
           }
         }
       }
@@ -275,7 +275,7 @@
     .series-list-link {
       font-family: $body-font-medium !important;
       padding: 9px 6px;
-      border-bottom: 1px solid #dee1e7;
+      border-bottom: 1px solid #f0f1f4;
       font-size: .9em;
       width: 100%;
       display: flex;
@@ -308,7 +308,7 @@
       }
 
       .series-list-link-title {
-        font-family: $body-font-medium;
+        font-family: $body-font-bold;
       }
 
       a,

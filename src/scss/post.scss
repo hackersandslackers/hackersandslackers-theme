@@ -143,8 +143,7 @@
     display: flex !important;
     flex-direction: column;
     width: $tablet-breakpoint;
-    margin: auto;
-    margin: 0 auto 20px;
+    margin: 0 auto;
 
     @media(max-width: $tablet-breakpoint) {
       width: 100%;
@@ -188,7 +187,7 @@
 
     .post-header-details {
       margin: 0 auto;
-      padding: 30px 0 0;
+      padding: 30px 0;
       width: 100%;
 
       @media(max-width: $tablet-breakpoint) {
@@ -261,7 +260,7 @@
 
           i,
           svg {
-            margin-right: 1vw;
+            margin-right: 5px;
             color: #7e8da3;
             line-height: 1;
           }
@@ -521,14 +520,13 @@
     }
 
     .author-meta {
-      @media(max-width: $mobile-breakpoint) {
-        margin: 5px 0;
-      }
+      margin: 5px 0 !important;
     }
 
     .author-card-excerpt {
       line-height: 1.5em !important;
       font-size: 1.1em !important;
+      margin: 0 !important;
 
       @media(max-width: $mobile-breakpoint) {
         width: -webkit-fill-available;
