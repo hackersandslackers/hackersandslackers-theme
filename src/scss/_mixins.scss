@@ -159,6 +159,7 @@
         min-width: 70px;
         overflow: hidden;
         width: 70px;
+        border: 1px solid $color-author-avatar-border;
 
         @media(max-width: $mobile-breakpoint) {
           height: 60px;
@@ -186,7 +187,7 @@
       width: 100%;
 
       .author-name {
-        font-size: 1.3em;
+        font-size: 1.4em;
         font-family: $header-font-semibold;
         color: #666c70;
       }
@@ -274,7 +275,7 @@
       }
 
       .author-card-excerpt {
-        margin: 15px 0 0;
+        margin: 0;
         line-height: 1.4em;
         font-family: $body-font;
 
