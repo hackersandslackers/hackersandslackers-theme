@@ -38,7 +38,7 @@ The HackersAndSlackers theme includes custom widgets, integrations, and features
 
 ### Developers
 
-- **Webpack**: Deprecates Gulp in favor of Webpack with associated plugins such as SASS rendering.
+- **Webpack**: Relies on Webpack for builds (in place of Gulp). Utilizes Webpack plugins to render SASS, minify source files, and serves code-split asset bundles.
 - **Automations**: Integrations such as automatic post optimization, image caching, etc. are served by a [corresponding API](https://github.com/toddbirchard/blog-webhook-api)
 
 ## Getting Started (For Developers)
@@ -56,6 +56,6 @@ For information on installing the Ghost platform, please reference the [Ghost CL
 
 ### Integrations
 
-This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don’t forget to include `.env` in `.gitignore`)!
+This theme comes equipped with multiple built-in integrations, which are visible in `.example.env`. Rename this file to `.env` (and don’t forget to include `.env` in `.gitignore`)!
 
 Replace the values in this configuration file with your own. Additional details to be added here soon.
