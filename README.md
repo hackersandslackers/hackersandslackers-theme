@@ -1,6 +1,6 @@
 # HackersAndSlackers Ghost Theme
 
-[![Deploy Theme](https://github.com/hackersandslackers/hackersandslackers-theme/actions/workflows/deploy-theme.yml/badge.svg?style=flat-square)](https://github.com/hackersandslackers/hackersandslackers-theme/actions/workflows/deploy-theme.yml)
+![Deploy Theme](https://img.shields.io/github/actions/workflow/status/hackersandslackers/hackersandslackers-theme/deploy-theme.yml?style=flat-square&logo=Github&logoColor=white&labelColor=4c566a&color=a3be8c)
 ![Ghost](https://img.shields.io/badge/Ghost-^v5.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
 ![Webpack](https://img.shields.io/badge/Webpack-v5.89.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Sass](https://img.shields.io/badge/Sass-^v1.66.0-pink.svg?longCache=true&style=flat-square&colorA=4c566a&colorB=b48ead&logo=sass&logoColor=ffffff)
