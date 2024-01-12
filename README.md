@@ -1,5 +1,6 @@
 # HackersAndSlackers Ghost Theme
 
+![Deploy Theme](https://img.shields.io/github/actions/workflow/status/hackersandslackers/hackersandslackers-theme/deploy-theme.yml?style=flat-square&logo=GithubActions&logoColor=white&labelColor=4c566a&color=a3be8c)
 ![Ghost](https://img.shields.io/badge/Ghost-^v5.0.0-lightgrey.svg?longCache=true&style=flat-square&logo=ghost&logoColor=white&colorB=656c82&colorA=4c566a)
 ![Webpack](https://img.shields.io/badge/Webpack-v5.89.0-blue.svg?longCache=true&style=flat-square&logo=webpack&logoColor=white&colorB=5e81ac&colorA=4c566a)
 ![Sass](https://img.shields.io/badge/Sass-^v1.66.0-pink.svg?longCache=true&style=flat-square&colorA=4c566a&colorB=b48ead&logo=sass&logoColor=ffffff)
@@ -37,7 +38,7 @@ The HackersAndSlackers theme includes custom widgets, integrations, and features
 
 ### Developers
 
-- **Webpack**: Deprecates Gulp in favor of Webpack with associated plugins such as SASS rendering.
+- **Webpack**: Relies on Webpack for builds (in place of Gulp). Utilizes Webpack plugins to render SASS, minify source files, and serves code-split asset bundles.
 - **Automations**: Integrations such as automatic post optimization, image caching, etc. are served by a [corresponding API](https://github.com/toddbirchard/blog-webhook-api)
 
 ## Getting Started (For Developers)
@@ -55,6 +56,6 @@ For information on installing the Ghost platform, please reference the [Ghost CL
 
 ### Integrations
 
-This theme comes equipped with multiple built-in integrations, which are visible in `.example_env`. Rename this file to `.env` (and don’t forget to include `.env` in `.gitignore`)!
+This theme comes equipped with multiple built-in integrations, which are visible in `.example.env`. Rename this file to `.env` (and don’t forget to include `.env` in `.gitignore`)!
 
 Replace the values in this configuration file with your own. Additional details to be added here soon.
