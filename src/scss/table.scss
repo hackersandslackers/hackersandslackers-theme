@@ -151,6 +151,13 @@
       @media (max-width: $tablet-breakpoint) {
         margin: 0 !important;
         padding: 10px !important;
+
+        p {
+          font-size: 1em;
+          line-height: 1.5;
+          ;
+        }
+
       }
 
       &:first-child {
@@ -164,7 +171,10 @@
         @media (max-width: $tablet-breakpoint) {
           max-width: none;
           padding: 10px !important;
-          text-overflow: ellipsis
+          text-overflow: ellipsis;
+          white-space: unset !important;
+          max-width: 40vw !important;
+          min-width: 30vw;
         }
       }
 

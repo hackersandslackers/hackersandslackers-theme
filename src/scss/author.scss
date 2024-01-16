@@ -74,6 +74,7 @@
 
       @media(max-width: $mobile-breakpoint) {
         margin-right: 10px;
+        min-width: 60px;
       }
     }
 
@@ -84,13 +85,14 @@
       display: -webkit-box;
       font-family: $body-font-medium;
       line-height: 1.5;
-      font-size: 1em;
+      font-size: .95em;
       overflow-y: hidden;
       text-overflow: ellipsis;
       margin: 0px;
 
       @media(max-width: $mobile-breakpoint) {
         font-size: 1em;
+        margin-top: 5px;
       }
     }
 
@@ -161,11 +163,13 @@
 
     .author-profile-pic {
       display: block;
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       object-fit: cover;
       background: color-mod($color-lightgrey) l(+10%);
       border-radius: 50%;
+
+      @media(max-width: $mobile-breakpoint) {}
     }
 
     .author-avatar-link {

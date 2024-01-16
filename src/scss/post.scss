@@ -187,7 +187,7 @@
 
     .post-header-details {
       margin: 0 auto;
-      padding: 30px 0;
+      padding: 30px 0 0;
       width: 100%;
 
       @media(max-width: $tablet-breakpoint) {
@@ -226,7 +226,7 @@
         align-items: center;
 
         @media(max-width: 767px) {
-          margin: 15px 0;
+          margin: 15px 0 0;
         }
 
         .post-meta-item {
@@ -283,7 +283,7 @@
 
     .series-toc {
       border-bottom: 1px solid #eaeaea;
-      margin: 20px 0;
+      margin: 20px 0 0;
       overflow: hidden;
       padding: 0 0 20px;
       position: relative;
@@ -303,7 +303,7 @@
       .series-toc-item {
         color: $color-body-font;
         counter-increment: step-counter;
-        font-size: 1.15em;
+        font-size: 1.1em;
         display: flex;
         justify-content: left;
         line-height: 1;
@@ -333,6 +333,7 @@
           color: #77818e;
           font-family: $body-font-medium;
           transition: $transition;
+          font-size: .95em;
         }
 
         &:hover {
@@ -349,10 +350,11 @@
 
   .post-content {
     width: $tablet-breakpoint;
+    margin: 30px 0 0;
 
     @media(max-width: $tablet-breakpoint) {
       max-width: 90vw;
-      margin: 0 auto;
+      margin: 25px auto;
     }
 
     iframe {
@@ -502,9 +504,9 @@
       .author-avatar-link,
       .author-image {
         @media(max-width: $mobile-breakpoint) {
-          height: 60px;
-          width: 60px;
-          min-width: 60px;
+          height: 58px;
+          width: 58px;
+          min-width: 58px;
         }
       }
 
@@ -526,13 +528,12 @@
     .author-card-excerpt {
       line-height: 1.5em !important;
       font-size: 1.1em !important;
-      margin: 0 !important;
+      margin-top: 0;
 
       @media(max-width: $mobile-breakpoint) {
         width: -webkit-fill-available;
-        margin-top: 26px;
+        margin-top: 10px !important;
         max-width: 85vw;
-        margin-top: 26px;
         font-size: .98em !important;
         line-height: 1.4 !important;
         display: block;
@@ -593,7 +594,7 @@
 
     @media(max-width: $mobile-breakpoint) {
       margin: 10px 10px 25px;
-      padding-left: 20px;
+      padding-left: 15px;
     }
 
     li {

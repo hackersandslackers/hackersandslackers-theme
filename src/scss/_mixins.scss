@@ -97,7 +97,7 @@
   text-transform: uppercase;
   letter-spacing: 0.15em;
   display: inline-block;
-  font-family: $body-font;
+  font-family: $body-font-medium;
   font-size: .85em;
   line-height: 1;
   margin-right: 10px;
@@ -162,9 +162,9 @@
         border: 1px solid $color-author-avatar-border;
 
         @media(max-width: $mobile-breakpoint) {
-          height: 60px;
-          min-width: 60px;
-          width: 60px;
+          height: 58px;
+          min-width: 58px;
+          width: 58px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -280,7 +280,7 @@
         font-family: $body-font;
 
         @media(max-width: $mobile-breakpoint) {
-          margin: 15px 0 0;
+          margin: 10px 0 0;
         }
       }
     }
