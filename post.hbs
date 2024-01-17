@@ -74,15 +74,18 @@
 
       This query gets the latest 3 posts on the site, but adds a filter to
       exclude the post we're currently on from being included. --}}
-      <section class="related-posts">
-        {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
-          {{#if more_posts}}
-            {{#foreach more_posts}}
-              {{> "post-card"}}
-            {{/foreach}}
-          {{/if}}
-        {{/get}}
-      </section>
+      {{#get "posts" filter="id:-{{id}}" limit="3" as |more_posts|}}
+        {{#if more_posts}}
+          <section class="related-posts">
+            <h4 class="related-posts-header">Related Posts</h4>
+            <div class="related-posts-wrapper">
+              {{#foreach more_posts}}
+                {{> "post-card"}}
+              {{/foreach}}
+            </div>
+          </section>
+        {{/if}}
+      {{/get}}
     </div>
   </div>
 {{/post}}

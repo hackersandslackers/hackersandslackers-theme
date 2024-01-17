@@ -2,12 +2,13 @@
 <div class="related-posts">
   {{#get "posts" limit="3" filter="id:-{{id}}+tag:{{primary_tag.slug}}" as |related_posts|}}
     {{#if related_posts}}
+      <h4>Related Posts</h4>
       <aside class="read-more-wrap">
         <div class="read-more inner">
           {{#foreach related_posts}}
             {{> "post-card"}}
           {{/foreach}}
         </div>
+    {{/if}}
   {{/get}}
-  {{/if}}
 </div>
