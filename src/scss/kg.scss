@@ -159,6 +159,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
 .kg-table-card {
   margin: 20px 0;
+  overflow-y: hidden;
 
   .tableContainer {
     margin: 0;

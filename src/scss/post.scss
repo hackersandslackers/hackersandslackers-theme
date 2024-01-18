@@ -374,7 +374,7 @@
     }
 
     h2 {
-      line-height: 1;
+      line-height: 1.2;
       font-family: $body-font-light;
 
       @media(max-width: $mobile-breakpoint) {
@@ -533,6 +533,7 @@
       @media(max-width: $mobile-breakpoint) {
         width: -webkit-fill-available;
         margin-top: 10px !important;
+        padding-top: 5px;
         max-width: 85vw;
         font-size: .98em !important;
         line-height: 1.4 !important;

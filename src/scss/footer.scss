@@ -207,20 +207,34 @@
       }
 
       .social-media-button {
+        font-size: 1.8em;
 
-        @media(max-width: $tablet-breakpoint) {
-          font-size: 1.4em;
+        &:hover {
+          cursor: pointer;
+          font-size: 2em;
+        }
+
+        @media(max-width: $smallscreen-breakpoint) {
+          font-size: 1.8em;
 
           &:hover {
-            font-size: 1.6em;
+            font-size: 2em;
+          }
+        }
+
+        @media(max-width: $tablet-breakpoint) {
+          font-size: 1.6em;
+
+          &:hover {
+            font-size: 1.8em;
           }
         }
 
         @media(max-width: $mobile-breakpoint) {
-          font-size: 1.7em;
+          font-size: 1.6em;
 
           &:hover {
-            font-size: 1.9em;
+            font-size: 1.8em;
           }
         }
 
@@ -290,6 +304,10 @@
         color: #414d5a;
         font-size: 1.05em;
 
+        @media(max-width: $mobile-breakpoint) {
+          font-size: 1.15em;
+        }
+
         a {
           transition: $transition;
           font-family: $body-font-medium;
@@ -308,7 +326,7 @@
     &.social {
       margin-bottom: 0;
       max-width: unset;
-      width: 260px;
+      width: 280px;
       height: unset;
     }
   }

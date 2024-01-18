@@ -69,25 +69,26 @@
 
       .post-card-title {
         font-size: 1.3em;
-        line-height: 1.1;
+        line-height: 1.15;
         font-family: $header-font;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 3;
-        line-clamp: 3;
-        text-overflow: ellipsis;
-        word-wrap: break-word;
+        -webkit-box-orient: vertical;
 
         @media(max-width: $tablet-breakpoint) {
-          font-size: 1.3em;
+          font-size: 1.2em;
+
         }
 
         @media(max-width: $mobile-breakpoint) {
-          font-size: 1.5em;
+          font-size: 1.3em;
+          line-height: 1.15;
         }
 
         @media(max-width: 450px) {
-          font-size: 1.3em;
+          font-size: 1.2em;
+          line-height: 1.1;
         }
       }
 
