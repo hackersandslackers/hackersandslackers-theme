@@ -11,9 +11,7 @@
   @media (max-width: $mobile-breakpoint) {
     @include mobile-full-width;
     @include mobile-horizontal-scroll;
-    width: 120%;
-    min-width: 120%;
-    max-width: 115%;
+    width: 100vw;
   }
 
   table {
@@ -24,8 +22,8 @@
     min-width: 100%;
 
     @media (max-width: $mobile-breakpoint) {
-      width: unset;
-      min-width: 100%;
+      width: 100% !important;
+      overflow: hidden;
     }
 
     * {
@@ -125,6 +123,11 @@
 .sideTableContainer {
   margin: 30px 0;
   border: 1px solid #e3ecf3;
+
+  @media (max-width: $mobile-breakpoint) {
+    margin: 30px 0 30px -5vw;
+    width: 100vw;
+  }
 
   tbody {
     @media (max-width: $tablet-breakpoint) {

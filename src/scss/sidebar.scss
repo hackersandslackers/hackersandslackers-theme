@@ -480,24 +480,24 @@
 
   .social-media-button {
     @include social-media-icon;
-    font-size: 1.5em;
-
-    @media(max-width: $smallscreen-breakpoint) {
-      font-size: 1.3em;
-    }
+    font-size: 1.8em;
 
     &:hover {
       cursor: pointer;
-      font-size: 1.8em;
-
-      @media(max-width: $smallscreen-breakpoint) {
-        font-size: 1.5em;
-      }
+      font-size: 2em;
 
       i,
       svg {
         fill: $color-hover;
         color: $color-hover;
+      }
+    }
+
+    @media(max-width: $smallscreen-breakpoint) {
+      font-size: 1.3em;
+
+      &:hover {
+        font-size: 1.5em;
       }
     }
 

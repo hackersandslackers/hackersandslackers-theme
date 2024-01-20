@@ -354,7 +354,7 @@
 
     @media(max-width: $tablet-breakpoint) {
       max-width: 90vw;
-      margin: 25px auto;
+      margin: 5vw auto;
     }
 
     iframe {
@@ -375,10 +375,10 @@
 
     h2 {
       line-height: 1.2;
-      font-family: $body-font-light;
+      font-family: $body-font;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.7em;
+        font-size: 2em;
         line-height: 1.2;
         margin: 40px 0 5px;
       }
@@ -536,7 +536,7 @@
         padding-top: 5px;
         max-width: 85vw;
         font-size: .98em !important;
-        line-height: 1.4 !important;
+        line-height: 1.5 !important;
         display: block;
         margin-left: calc(-52vw + 50%) !important;
         margin-right: calc(-50vw + 50%) !important;

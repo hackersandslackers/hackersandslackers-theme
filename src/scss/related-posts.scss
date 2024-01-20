@@ -26,6 +26,10 @@
     border-bottom: 1px solid #dee1e7;
     padding-bottom: 8px;
     text-align: left;
+
+    @media(max-width: $mobile-breakpoint) {
+      font-size: 1.2em;
+    }
   }
 
   .related-posts-wrapper {
@@ -54,7 +58,7 @@
 
         @media(max-width: $mobile-breakpoint) {
           display: inline-flex;
-          min-width: 35vw;
+          min-width: 30vw;
         }
       }
 
@@ -82,12 +86,10 @@
         }
 
         @media(max-width: $mobile-breakpoint) {
-          font-size: 1.3em;
           line-height: 1.15;
         }
 
         @media(max-width: 450px) {
-          font-size: 1.2em;
           line-height: 1.1;
         }
       }
