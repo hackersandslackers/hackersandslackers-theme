@@ -1,14 +1,12 @@
 <footer class='footer'>
-
-    <div class="footer-wrapper">
-        {{> "footer/footer-about" }}
-        {{> "footer/footer-links" }}
-        {{> "footer/footer-series" }}
-        {{> "footer/footer-authors" }}
-    </div>
-
-    <div class="subfooter">
-        {{> "sidebar/social-widget" }}
-        <div class="copyright">©{{ date format='YYYY' }} {{ @site.title }}, All Rights Reserved.</div>
-    </div>
+  <div class="footer-wrapper">
+    {{> "footer/footer-about" }}
+    {{> "footer/footer-links" }}
+    {{> "footer/footer-series" }}
+    {{> "footer/footer-authors" }}
+  </div>
+  <div class="subfooter">
+    {{> "sidebar/social-widget" }}
+    <div class="copyright">©{{ date format='YYYY' }} {{ @site.title }}, All Rights Reserved.</div>
+  </div>
 </footer>
