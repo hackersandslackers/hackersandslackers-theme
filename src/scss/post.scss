@@ -25,6 +25,7 @@
 
   .site-header {
     margin-bottom: 0;
+    box-shadow: 0 1px 0 rgba(39, 44, 49, 0.15);
 
     .site-navigation {
       border: unset;
@@ -58,6 +59,8 @@
     @media(max-width: $mobile-breakpoint) {
       margin: unset;
     }
+
+
   }
 
   .post {
@@ -153,6 +156,26 @@
       margin: 0 auto;
     }
 
+    .post-primary-tag {
+      line-height: 1;
+      font-family: $body-font-bold;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+      display: inline-block;
+      font-size: 1.2em;
+      transition: $transition;
+      text-transform: uppercase;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.1em;
+      }
+
+      &:hover {
+        cursor: pointer;
+        color: $color-hover !important;
+      }
+    }
+
     .post-image {
       width: 100%;
 
@@ -172,7 +195,7 @@
       font-size: 2.3em;
       margin: unset;
       font-weight: unset;
-      line-height: 1.1;
+      line-height: 1.05;
       order: 2;
       width: -webkit-fill-available;
 
@@ -187,18 +210,18 @@
 
     .post-header-details {
       margin: 0 auto;
-      padding: 30px 0 0;
+      padding: 50px 0 0;
       width: 100%;
 
       @media(max-width: $tablet-breakpoint) {
-        padding: 5vw 5vw 0;
+        padding: 8vw 5vw 0;
       }
 
       .post-excerpt {
         color: #8c96a4;
         font-family: $body-font-medium;
         font-size: 1.35em !important;
-        line-height: 1.4;
+        line-height: 1.2;
         margin: 10px 0;
         order: 1;
 
@@ -222,18 +245,18 @@
       .post-meta {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 0 0;
+        margin: 20px 0 30px;
         align-items: center;
 
         @media(max-width: 767px) {
-          margin: 15px 0 0;
+          margin: 15px 0 20px;
         }
 
         .post-meta-item {
           margin-right: 25px;
           color: #7e8da3;
           line-height: 1;
-          font-family: $body-font-bold;
+          font-family: $body-font-medium;
           color: $color-body-font;
           display: flex;
           align-items: center;
@@ -263,6 +286,7 @@
             margin-right: 5px;
             color: #7e8da3;
             line-height: 1;
+            font-size: .8em;
           }
 
           &.link {
@@ -375,7 +399,7 @@
 
     h2 {
       line-height: 1.2;
-      font-family: $body-font;
+      font-family: $body-font-light;
 
       @media(max-width: $mobile-breakpoint) {
         font-size: 2em;

@@ -92,6 +92,38 @@
   }
 }
 
+@mixin post-primary-tag {
+  color: white;
+  padding: 6px 10px;
+  border-radius: 3px;
+  line-height: 1;
+  font-family: $body-font-bold;
+  font-size: 1.02em;
+  text-align: center;
+  transition: $transition;
+
+  @media(max-width: $tablet-breakpoint) {
+    font-size: 1em;
+  }
+
+  @media(max-width: $mobile-breakpoint) {
+    font-size: .95em;
+  }
+
+  @media(max-width: 500px) {
+    font-size: .9em;
+    padding: 6px;
+    line-height: 1;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: white !important;
+    color: #646f7d;
+    box-shadow: inset 0 0 0 1px #646f7d !important;
+  }
+}
+
 @mixin post-tag {
   box-shadow: inset 0 0 0 1px rgb(148 151 155 / 50%);
   color: #6b7583 !important;

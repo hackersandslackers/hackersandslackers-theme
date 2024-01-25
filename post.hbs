@@ -4,22 +4,21 @@
     <main id="site-main">
       <article class="post {{post_class}}">
         <header class="post-header">
-          {{!-- Post Image --}}
-          {{#if feature_image}}
-            <div class="post-image">
-              <img src="{{img_url feature_image}}"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-              {{#if feature_image_caption}}
-                <figcaption>{{feature_image_caption}}</figcaption>
-              {{/if}}
-            </div>
-          {{/if}}
           <div class="post-header-details">
+            {{!-- Post Primary Tag --}}
+            {{#primary_tag}}
+              <a href="{{url}}" style="color:{{accent_color}};"
+                class="post-primary-tag">
+                {{name}}
+              </a>
+            {{/primary_tag}}
+            {{!-- Post Title --}}
             <h1 class="post-title">{{title}}</h1>
+            {{!-- Post Summary --}}
             {{#if custom_excerpt}}
               <p class="post-excerpt">{{custom_excerpt}}</p>
             {{/if}}
-            {{!-- Post Meta --}}
+            {{!-- Post Metadata --}}
             <div class="post-meta">
               {{#primary_author}}
                 <div class="post-meta-item link">
@@ -27,12 +26,6 @@
                   <a href="{{url}}" class="author-name">{{name}}</a>
                 </div>
               {{/primary_author}}
-              {{#primary_tag}}
-                <div class="post-meta-item link">
-                  <i class="fa-sharp fa-solid fa-tag"></i>
-                  <a href="{{url}}">{{name}}</a>
-                </div>
-              {{/primary_tag}}
               <div class="post-meta-item">
                 <i class="fa-sharp fa-solid fa-calendar"></i>
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
@@ -44,6 +37,16 @@
                 </div>
               {{/if}}
             </div>
+            {{!-- Post Image --}}
+            {{#if feature_image}}
+              <div class="post-image">
+                <img src="{{img_url feature_image}}"
+                  alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                {{#if feature_image_caption}}
+                  <figcaption>{{feature_image_caption}}</figcaption>
+                {{/if}}
+              </div>
+            {{/if}}
             {{!-- Post Series TOC --}}
             {{> "series/toc" }}
           </div>
