@@ -67,11 +67,12 @@
     word-break: break-word;
     margin: 0 auto 0;
     width: 800px;
-    max-width: 100%;
+    max-width: 90vw;
     margin: 0 auto;
 
     @media(max-width: $tablet-breakpoint) {
       width: unset;
+      max-width: unset;
     }
 
 
@@ -158,7 +159,7 @@
 
     .post-primary-tag {
       line-height: 1;
-      font-family: $body-font-bold;
+      font-family: $header-font;
       margin-bottom: 10px;
       letter-spacing: 1px;
       display: inline-block;
@@ -201,6 +202,7 @@
 
       @media (max-width: $mobile-breakpoint) {
         font-size: 2em;
+        line-height: 1;
       }
 
       @media (max-width: 450px) {
@@ -214,7 +216,9 @@
       width: 100%;
 
       @media(max-width: $tablet-breakpoint) {
-        padding: 8vw 5vw 0;
+        padding: unset;
+        max-width: 90vw;
+        margin: 6vw auto 0;
       }
 
       .post-excerpt {
@@ -233,7 +237,7 @@
 
         @media (max-width: 767px) {
           font-size: 1.25em;
-          margin: 5px 0;
+          margin: 8px 0;
         }
 
         @media(max-width: $mobile-breakpoint) {
@@ -249,14 +253,14 @@
         align-items: center;
 
         @media(max-width: 767px) {
-          margin: 15px 0 20px;
+          margin: 15px 0;
         }
 
         .post-meta-item {
           margin-right: 25px;
           color: #7e8da3;
           line-height: 1;
-          font-family: $body-font-medium;
+          font-family: $body-font;
           color: $color-body-font;
           display: flex;
           align-items: center;
@@ -378,7 +382,7 @@
 
     @media(max-width: $tablet-breakpoint) {
       max-width: 90vw;
-      margin: 5vw auto;
+      margin: 8vw auto;
     }
 
     iframe {
