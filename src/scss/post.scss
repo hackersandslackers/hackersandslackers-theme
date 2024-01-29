@@ -218,7 +218,7 @@
       @media(max-width: $tablet-breakpoint) {
         padding: unset;
         max-width: 90vw;
-        margin: 6vw auto 0;
+        margin: 8vw auto 0;
       }
 
       .post-excerpt {
@@ -249,62 +249,43 @@
       .post-meta {
         display: flex;
         flex-wrap: wrap;
-        margin: 20px 0 30px;
+        margin: 20px 0;
         align-items: center;
+        color: #414d5a;
 
-        @media(max-width: 767px) {
-          margin: 15px 0;
+        .post-meta-author-avatar {
+          border-radius: 50%;
+          overflow: hidden;
+          display: block;
+          height: 50px;
+          min-width: 50px;
+          overflow: hidden;
+          margin-right: 10px;
+
+          .post-meta-author-img {
+            width: 100%;
+            height: 100%;
+          }
         }
 
-        .post-meta-item {
-          margin-right: 25px;
-          color: #7e8da3;
-          line-height: 1;
+        .post-meta-author-name {
+          display: block;
+          font-family: $header-font-semibold;
+          font-size: 1.1em;
+          color: #414d5a;
+
+          &:hover {
+            color: $color-hover;
+            cursor: pointer;
+          }
+        }
+
+        .post-meta-separator {
+          padding: 0 5px;
+        }
+
+        .post-published-time-meta {
           font-family: $body-font;
-          color: $color-body-font;
-          display: flex;
-          align-items: center;
-          font-size: 1.05em;
-
-          @media(max-width: $tablet-breakpoint) {
-            margin: 0 25px 10px 0;
-          }
-
-          @media(max-width: $mobile-breakpoint) {
-            margin-right: 16px;
-            white-space: nowrap;
-            margin-bottom: 12px;
-          }
-
-          a,
-          span,
-          time {
-            color: #7e8da3;
-            font-family: $body-font-semibold;
-            transition: $transition;
-            line-height: 1;
-          }
-
-          i,
-          svg {
-            margin-right: 5px;
-            color: #7e8da3;
-            line-height: 1;
-            font-size: .8em;
-          }
-
-          &.link {
-            transition: $transition;
-
-            &:hover {
-              cursor: pointer;
-
-              * {
-                color: $color-hover;
-                fill: $color-hover;
-              }
-            }
-          }
         }
       }
     }
@@ -382,7 +363,7 @@
 
     @media(max-width: $tablet-breakpoint) {
       max-width: 90vw;
-      margin: 8vw auto;
+      margin: 6vw auto;
     }
 
     iframe {

@@ -21,21 +21,26 @@
             {{!-- Post Metadata --}}
             <div class="post-meta">
               {{#primary_author}}
-                <div class="post-meta-item link">
-                  <i class="fa-sharp fa-solid fa-user-pen"></i>
-                  <a href="{{url}}" class="author-name">{{name}}</a>
+                <div class="post-meta-author-avatar">
+                  {{#if profile_image}}
+                    <img class="post-meta-author-img" src="{{img_url profile_image}}" alt="{{name}}" />
+                  {{else}}
+                    <i class="fa-sharp fa-solid fa-user-pen"></i>
+                  {{/if}}
                 </div>
               {{/primary_author}}
-              <div class="post-meta-item">
-                <i class="fa-sharp fa-solid fa-calendar"></i>
-                <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-              </div>
-              {{#if reading_time}}
-                <div class="post-meta-item">
-                  <i class="fa-sharp fa-solid fa-eye"></i>
-                  <span class="reading-time">{{reading_time}}</span>
+              <div class="post-published-meta">
+                {{#primary_author}}
+                  <a href="{{url}}" class="post-meta-author-name">{{name}}</a>
+                {{/primary_author}}
+                <div class="post-published-time-meta">
+                  <time datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                  <span class="post-meta-separator"> • </span>
+                  {{#if reading_time}}
+                    <span class="reading-time">{{reading_time}}</span>
+                  {{/if}}
                 </div>
-              {{/if}}
+              </div>
             </div>
             {{!-- Post Image --}}
             {{#if feature_image}}
