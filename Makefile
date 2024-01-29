@@ -51,8 +51,3 @@ update:
 	npm install -g ghost-cli@latest
 	cd $(DEV_GHOST_PATH) && ghost update
 	cd $(DEV_GHOST_THEME_PATH) && ncu
-
-.PHONY: reset
-reset: clean
-	make update
-	make build
