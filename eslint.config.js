@@ -1,12 +1,8 @@
-import babelParser from "@babel/eslint-parser";
-import ghostPlugin from "eslint-plugin-ghost";
-
-export default [
+module.exports = [
   {
     files: ["src/js/*.js"],
-    ignores: ["assets/**/*.js"],
     languageOptions: {
-      parser: babelParser,
+      parser: "@babel/eslint-parser",
       parserOptions: {
         ecmaVersion: "latest",
         requireConfigFile: false,
@@ -21,11 +17,11 @@ export default [
       sourceType: "module",
     },
     plugins: {
-      ghost: ghostPlugin,
+      ghost: "ghost",
       extends: ["plugin:ghost/node"],
     },
     rules: {
-      indent: ["warn", 2],
+      indent: ["error", 2],
       quotes: ["error", "double"],
       semi: ["error", "always"],
       "comma-dangle": [
@@ -33,8 +29,6 @@ export default [
         {
           arrays: "always-multiline",
           objects: "always-multiline",
-          imports: "always-multiline",
-          exports: "always-multiline",
           functions: "ignore",
         },
       ],

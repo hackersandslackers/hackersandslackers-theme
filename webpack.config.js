@@ -1,8 +1,8 @@
 const path = require("path");
-const DotEnv = require(`dotenv-webpack`);
+const DotEnv = require("dotenv-webpack");
 const FontConfigWebpackPlugin = require("font-config-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const TerserPlugin = require(`terser-webpack-plugin`);
+const TerserPlugin = require("terser-webpack-plugin");
 const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
