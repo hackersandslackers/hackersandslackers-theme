@@ -3,6 +3,7 @@ const DotEnv = require(`dotenv-webpack`);
 const FontConfigWebpackPlugin = require("font-config-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require(`terser-webpack-plugin`);
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -14,6 +15,7 @@ module.exports = {
   plugins: [
     new DotEnv({ path: "./.env" }),
     new FontConfigWebpackPlugin(),
+    new ESLintPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
