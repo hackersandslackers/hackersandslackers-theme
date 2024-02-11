@@ -21,7 +21,7 @@
   }
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 30px 3vw;
+    padding: 30px 5vw;
   }
 
   .series-feature-image {
@@ -37,14 +37,14 @@
   .post-content {
     margin-bottom: 40px;
 
-    h3 {
-      color: #414d5a;
-      font-size: 1.25em;
+    h2 {
       line-height: 1;
-      margin: 35px 0 5px;
+      font-family: $body-font-light;
+      font-size: 2em !important;
+      margin: 40px 0 5px;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.3em !important;
+        font-size: 1.8em !important;
 
         &:last-of-type {
           display: none;
@@ -100,6 +100,10 @@
 
     &:last-of-type {
       margin-bottom: 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        padding-bottom: 0;
+      }
     }
 
     .series-title {
@@ -116,11 +120,12 @@
       margin-right: 20px;
       display: flex;
       line-height: 1;
+      opacity: .7;
       font-family: $header-font-medium;
       color: $color-header-grey;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 2em;
+        font-size: 1.8em;
         margin-right: 10px;
         min-width: 30px;
       }
@@ -137,7 +142,7 @@
         font-family: $header-font-medium;
         font-size: 1.3em;
         font-weight: unset;
-        line-height: 1.1;
+        line-height: 1.2;
         margin: 0 0 7px;
         overflow-y: hidden;
         text-overflow: ellipsis;
@@ -149,20 +154,19 @@
       }
 
       .series-post-card-excerpt {
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         font-family: $body-font;
         color: $color-body-font;
-        opacity: .9;
-        font-size: .95em;
-        line-height: 1.3;
+        font-size: 1.05em;
+        opacity: .7;
+        line-height: 1.2;
         margin-bottom: 12px;
         overflow-y: hidden;
         text-overflow: ellipsis;
         width: -webkit-fill-available;
         width: stretch;
-        opacity: .9;
         transition: $transition;
 
         @media(max-width: $mobile-breakpoint) {
@@ -175,13 +179,11 @@
         color: #6c7888;
         display: flex;
         font-family: $body-font-medium;
-        font-size: .8em;
+        font-size: .85em;
         line-height: 1;
-        opacity: 0.9;
         transition: $transition;
 
         @media(max-width: $mobile-breakpoint) {
-          font-size: 0.75em;
           display: block;
         }
 
@@ -211,15 +213,6 @@
     @media(max-width: $mobile-breakpoint) {
       font-size: 2em;
       margin-bottom: 10px;
-    }
-  }
-
-  h3 {
-    font-family: $body-font-bold;
-    margin: 1.5em 0 0.2em;
-
-    @media(max-width: $mobile-breakpoint) {
-      font-size: 1.4em !important;
     }
   }
 

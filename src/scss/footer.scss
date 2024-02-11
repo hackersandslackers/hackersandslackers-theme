@@ -257,7 +257,7 @@
     }
 
     .footer-description {
-      font-size: 1.05em;
+      font-size: 1.1em;
       font-family: $body-font-light;
       color: #4c5c71;
       line-height: 1.5;
@@ -268,7 +268,6 @@
 
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
-        font-size: 1.05em;
         line-height: 1.3;
       }
     }
