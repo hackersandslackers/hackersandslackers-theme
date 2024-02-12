@@ -1,9 +1,11 @@
 <footer class='footer'>
   <div class="footer-wrapper">
     {{> "footer/footer-about" }}
-    {{> "footer/footer-links" }}
-    {{> "footer/footer-series" }}
-    {{> "footer/footer-authors" }}
+    <div class="footer-widgets">
+      {{> "footer/footer-links" }}
+      {{> "footer/footer-authors" }}
+      {{> "footer/footer-series" }}
+    </div>
   </div>
   <div class="subfooter">
     {{> "sidebar/social-widget" }}
