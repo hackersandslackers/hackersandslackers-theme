@@ -48,7 +48,7 @@
         "babel-plugin-prismjs": "^2.1.0",
         "basiclightbox": "^5.0.4",
         "delicious-hamburgers": "^1.2.3",
-        "dotenv": "^16.4.2",
+        "dotenv": "^16.4.4",
         "dotenv-webpack": "^8.0.1",
         "github-profile-card": "^3.1.0",
         "prismjs": "^1.29.0"
@@ -72,11 +72,11 @@
         "postcss-color-mod-function": "3.0.3",
         "postcss-easy-import": "4.0.0",
         "pump": "3.0.0",
-        "sass": "^1.70.0",
+        "sass": "^1.71.0",
         "sass-loader": "^14.1.0",
         "style-loader": "^3.3.4",
         "terser-webpack-plugin": "^5.3.10",
-        "webpack": "^5.90.1",
+        "webpack": "^5.90.2",
         "webpack-cli": "^5.1.4"
     },
     "browserslist": [
