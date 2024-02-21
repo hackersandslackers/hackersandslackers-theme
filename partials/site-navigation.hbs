@@ -1,4 +1,4 @@
-<header id="gh-navigation" class="gh-navigation is-{{#match navigationLayout "Logo on the left"}}left-logo{{else match navigationLayout "Stacked"}}stacked{{else}}middle-logo{{/match}}{{#match @custom.header_and_footer_color "Accent color"}} has-accent-color{{/match}} gh-outer">
+<header id="gh-navigation" class="gh-navigation is-{{#match navigationLayout "Logo on the left"}}left-logo{{else match navigationLayout "Stacked"}}stacked{{else}}middle-logo{{/match}} gh-outer">
   <div class="gh-navigation-inner gh-inner">
     <div class="gh-navigation-brand">
       <a class="gh-navigation-logo is-title" href="{{@site.url}}">
@@ -8,7 +8,7 @@
           {{@site.title}}
         {{/if}}
       </a>
-      {{> "search-toggle"}}
+      {{> "navigation/search-toggle"}}
       <button class="gh-burger gh-icon-button" aria-label="Menu">
         {{> "navigation/hamburger"}}
         {{!-- {{> "icons/close"}} --}}
@@ -18,17 +18,17 @@
       {{navigation}}
       {{#unless @site.members_enabled}}
         {{#match navigationLayout "Stacked"}}
-          {{> "search-toggle"}}
+          {{> "navigation/search-toggle"}}
         {{/match}}
       {{/unless}}
     </nav>
     <div class="gh-navigation-actions">
       {{#unless @site.members_enabled}}
         {{^match navigationLayout "Stacked"}}
-          {{> "search-toggle"}}
+          {{> "navigation/search-toggle"}}
         {{/match}}
       {{else}}
-        {{> "search-toggle"}}
+        {{> "navigation/search-toggle"}}
         <div class="gh-navigation-members">
           {{#unless @member}}
             {{#unless @site.members_invite_only}}

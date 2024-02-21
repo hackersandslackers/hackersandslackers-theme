@@ -1,7 +1,7 @@
 {{!< default}}
-{{#page}}
+{{#post}}
   <div class="page sidebar">
-    <main id="site-main" class="page-content {{slug}}-">
+    <main id="site-main" class="page-content {{post_class}} {{slug}}-">
       <h1 class="page-title">{{title}}</h1>
       {{#if feature_image}}
         <figure class="page-image">
@@ -20,4 +20,4 @@
       {{> "sidebar/sidebar" }}
     </div>
   </div>
-{{/page}}
+{{/post}}
