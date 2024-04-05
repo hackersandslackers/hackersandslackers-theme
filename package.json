@@ -65,7 +65,7 @@
         "css-loader": "^6.10.0",
         "cssnano": "6.1.2",
         "font-config-webpack-plugin": "^2.0.3",
-        "gscan": "4.42.0",
+        "gscan": "4.42.1",
         "inquirer": "8.2.6",
         "mini-css-extract-plugin": "^2.8.0",
         "postcss": "8.4.38",
