@@ -361,6 +361,10 @@
     width: $tablet-breakpoint;
     margin: 30px 0 0;
 
+    .protip {
+      @include protip;
+    }
+
     @media(max-width: $tablet-breakpoint) {
       max-width: 90vw;
       margin: 6vw auto;
