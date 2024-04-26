@@ -63,7 +63,7 @@
       "babel-plugin-module-resolver": "^5.0.0",
       "beeper": "3.0.0",
       "css-loader": "^7.1.0",
-      "cssnano": "7.0.0",
+      "cssnano": "7.0.1",
       "font-config-webpack-plugin": "^2.0.3",
       "gscan": "4.43.0",
       "inquirer": "8.2.4",
