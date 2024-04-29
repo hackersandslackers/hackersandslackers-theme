@@ -1,149 +1,151 @@
 {
-    "name": "hackersandslackers",
-    "description": "A clean, minimal theme for Ghost CMS",
-    "version": "0.0.1",
-    "license": "MIT",
-    "screenshots": {
-        "desktop": "assets/screenshot-desktop.jpg",
-        "mobile": "assets/screenshot-mobile.jpg"
-    },
-    "scripts": {
-        "dev": "webpack --mode=development",
-        "test": "gscan .",
-        "test:ci": "gscan --fatal --verbose .",
-        "pretest": "webpack --mode=production",
-        "preship": "yarn test",
-        "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncommitted changes found.\" && exit 1; fi",
-        "postship": "git fetch && webpack --mode=production",
-        "build": "webpack --mode=production"
-    },
-    "author": {
-        "name": "hackersandslackers",
-        "email": "hello@hackersandslackers.com",
-        "url": "https://hackersandslackers.com/"
-    },
-    "gpm": {
-        "type": "theme",
-        "categories": [
-            "Minimal",
-            "Magazine"
-        ]
-    },
-    "keywords": [
-        "ghost",
-        "theme",
-        "ghost-theme",
-        "blog"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/hackersandslackers/hackersandslackers-theme.git"
-    },
-    "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
-    "contributors": [
-        "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors"
-    ],
-    "dependencies": {
-        "@rocktimsaikia/github-card": "^3.0.1",
-        "babel-plugin-prismjs": "^2.1.0",
-        "basiclightbox": "^5.0.4",
-        "delicious-hamburgers": "^1.2.3",
-        "dotenv": "^16.4.5",
-        "dotenv-webpack": "^8.1.0",
-        "github-profile-card": "^3.1.0",
-        "prismjs": "^1.29.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.24.4",
-        "@babel/preset-env": "^7.24.4",
-        "autoprefixer": "10.4.19",
-        "babel-loader": "^9.1.3",
-        "babel-plugin-import": "^1.13.8",
-        "babel-plugin-module-resolver": "^5.0.2",
-        "beeper": "3.0.0",
-        "css-loader": "^7.1.1",
-        "cssnano": "^6.1.2",
-        "font-config-webpack-plugin": "^2.0.3",
-        "inquirer": "8.2.4",
-        "mini-css-extract-plugin": "^2.9.0",
-        "postcss": "8.4.38",
-        "postcss-easy-import": "4.0.0",
-        "pump": "3.0.0",
-        "sass": "^1.75.0",
-        "sass-loader": "^14.2.1",
-        "style-loader": "^4.0.0",
-        "terser-webpack-plugin": "^5.3.10",
-        "webpack": "^5.91.0",
-        "webpack-cli": "^5.1.4"
-    },
-    "browserslist": [
-        "defaults"
-    ],
-    "config": {
-        "posts_per_page": 15,
-        "image_sizes": {
-            "xxs": {
-                "width": 30
-            },
-            "xs": {
-                "width": 100
-            },
-            "s": {
-                "width": 300
-            },
-            "m": {
-                "width": 600
-            },
-            "l": {
-                "width": 1000
-            },
-            "xl": {
-                "width": 2000
-            }
-        },
-        "card_assets": true
-    },
-    "custom": {
-        "navigation_layout": {
-            "type": "select",
-            "options": [
-                "Logo in the middle",
-                "Logo on the left",
-                "Stacked"
-            ],
-            "default": "Logo in the middle"
-        },
-        "site_background_color": {
-            "type": "color",
-            "default": "#ffffff"
-        },
-        "header_and_footer_color": {
-            "type": "select",
-            "options": [
-                "Background color",
-                "Accent color"
-            ],
-            "default": "Background color"
-        },
-        "show_author": {
-            "type": "boolean",
-            "default": true,
-            "group": "homepage"
-        },
-        "show_publish_date": {
-            "type": "boolean",
-            "default": true,
-            "group": "homepage"
-        },
-        "show_publication_info_sidebar": {
-            "type": "boolean",
-            "default": false,
-            "group": "homepage"
-        }
-    },
-    "renovate": {
-        "extends": [
-            "@tryghost:theme"
-        ]
-    }
+  "name": "hackersandslackers",
+  "description": "A clean, minimal theme for Ghost CMS",
+  "version": "0.0.1",
+  "license": "MIT",
+  "screenshots": {
+      "desktop": "assets/screenshot-desktop.jpg",
+      "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "scripts": {
+      "dev": "webpack --mode=development",
+      "test": "gscan .",
+      "test:ci": "gscan --fatal --verbose .",
+      "pretest": "webpack --mode=production",
+      "preship": "yarn test",
+      "ship": "STATUS=$(git status --porcelain); echo $STATUS; if [ -z \"$STATUS\" ]; then yarn version && git push --follow-tags; else echo \"Uncommitted changes found.\" && exit 1; fi",
+      "postship": "git fetch && webpack --mode=production",
+      "build": "webpack --mode=production"
+  },
+  "author": {
+      "name": "hackersandslackers",
+      "email": "hello@hackersandslackers.com",
+      "url": "https://hackersandslackers.com/"
+  },
+  "gpm": {
+      "type": "theme",
+      "categories": [
+          "Minimal",
+          "Magazine"
+      ]
+  },
+  "keywords": [
+      "ghost",
+      "theme",
+      "ghost-theme",
+      "blog"
+  ],
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/hackersandslackers/hackersandslackers-theme.git"
+  },
+  "bugs": "https://github.com/hackersandslackers/hackersandslackers-theme/issues",
+  "contributors": [
+      "https://github.com/hackersandslackers/hackersandslackers-theme/graphs/contributors"
+  ],
+  "dependencies": {
+      "@rocktimsaikia/github-card": "^3.0.1",
+      "babel-plugin-prismjs": "^2.1.0",
+      "basiclightbox": "^5.0.4",
+      "delicious-hamburgers": "^1.2.3",
+      "dotenv": "^16.4.5",
+      "dotenv-webpack": "^8.1.0",
+      "github-profile-card": "^3.1.0",
+      "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+      "@babel/core": "^7.24.4",
+      "@babel/preset-env": "^7.24.4",
+      "@tryghost/release-utils": "0.8.1",
+      "autoprefixer": "10.4.19",
+      "babel-loader": "^9.1.3",
+      "babel-plugin-import": "^1.13.8",
+      "babel-plugin-module-resolver": "^5.0.2",
+      "beeper": "3.0.0",
+      "css-loader": "^7.1.1",
+      "cssnano": "7.0.1",
+      "font-config-webpack-plugin": "^2.0.3",
+      "inquirer": "8.2.4",
+      "mini-css-extract-plugin": "^2.9.0",
+      "postcss": "8.4.38",
+      "postcss-color-mod-function": "3.0.3",
+      "postcss-easy-import": "4.0.0",
+      "pump": "3.0.0",
+      "sass": "^1.75.0",
+      "sass-loader": "^14.2.1",
+      "style-loader": "^14.2.1",
+      "terser-webpack-plugin": "^5.3.10",
+      "webpack": "^5.91.0",
+      "webpack-cli": "^5.1.4"
+  },
+  "browserslist": [
+      "defaults"
+  ],
+  "config": {
+      "posts_per_page": 15,
+      "image_sizes": {
+          "xxs": {
+              "width": 30
+          },
+          "xs": {
+              "width": 100
+          },
+          "s": {
+              "width": 300
+          },
+          "m": {
+              "width": 600
+          },
+          "l": {
+              "width": 1000
+          },
+          "xl": {
+              "width": 2000
+          }
+      },
+      "card_assets": true
+  },
+  "custom": {
+    "navigation_layout": {
+      "type": "select",
+      "options": [
+          "Logo in the middle",
+          "Logo on the left",
+          "Stacked"
+      ],
+      "default": "Logo in the middle"
+  },
+  "site_background_color": {
+      "type": "color",
+      "default": "#ffffff"
+  },
+    "header_and_footer_color": {
+      "type": "select",
+      "options": [
+          "Background color",
+          "Accent color"
+      ],
+      "default": "Background color"
+  },
+  "show_author": {
+    "type": "boolean",
+    "default": true,
+    "group": "homepage"
+},
+"show_publish_date": {
+    "type": "boolean",
+    "default": true,
+    "group": "homepage"
+},
+"show_publication_info_sidebar": {
+    "type": "boolean",
+    "default": false,
+    "group": "homepage"
+  }
+},
+  "renovate": {
+      "extends": [
+          "@tryghost:theme"
+      ]
+  }
 }
