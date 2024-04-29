@@ -1,3 +1,7 @@
 User-agent: *
 Sitemap: https://hackersandslackers.com/rss/
 Disallow: /ghost/
+Disallow: /account/
+Disallow: /signup/
+Disallow: /signin/
+Disallow: /search/

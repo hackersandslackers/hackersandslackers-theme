@@ -11,7 +11,10 @@
   ],
     "plugins": [
       ["prismjs", {
-          "plugins": ["normalize-whitespace", "custom-class"],
+          "plugins": [
+            "normalize-whitespace",
+            "custom-class"
+          ],
           "languages": [
             "markup",
             "css",

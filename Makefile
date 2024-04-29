@@ -21,9 +21,11 @@ export HELP
 all help:
 	@echo "$$HELP"
 
+
 .PHONY: build
 build:
 	yarn run build
+
 
 .PHONY: dev
 dev:
@@ -31,6 +33,7 @@ dev:
 	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
 	cd $(DEV_GHOST_THEME_PATH) && npm run dev
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
+
 
 .PHONY: clean
 clean:
@@ -44,10 +47,11 @@ clean:
 	find . -type d -wholename './.yarn' -exec rm -rf {} +
 	find . -type d -wholename '**/node_modules' -exec rm -rf {} +
 
+
 .PHONY: update
 update:
-	npm install -g npm@latest
-	npm install -g npm-check-updates@latest
-	npm install -g ghost-cli@latest
-	cd $(DEV_GHOST_PATH) && ghost update
+	npm install -g npm@latest && \
+	npm install -g npm-check-updates@latest && \
+	npm install -g ghost-cli@latest && \
+	cd $(DEV_GHOST_PATH) && ghost update && \
 	cd $(DEV_GHOST_THEME_PATH) && ncu
