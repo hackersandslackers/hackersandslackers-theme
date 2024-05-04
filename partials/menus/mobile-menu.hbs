@@ -5,9 +5,9 @@
     </li>
     {{#foreach navigation}}
       {{#has slug="tags"}}
-        {{> "navigation/mobile-menu-tags-subnav"}}
+        {{> "menu/mobile-menu-tags-subnav"}}
         {{else has slug="series"}}
-          {{> "navigation/mobile-menu-series-subnav"}}
+          {{> "menu/mobile-menu-series-subnav"}}
           {{else}}
             <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
               <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>

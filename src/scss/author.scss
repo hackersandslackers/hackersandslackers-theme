@@ -166,7 +166,7 @@
       width: 60px;
       height: 60px;
       object-fit: cover;
-      background: color-mod($color-lightgrey) l(+10%);
+      background: $color-lightgrey;
       border-radius: 50%;
 
       @media(max-width: $mobile-breakpoint) {}
