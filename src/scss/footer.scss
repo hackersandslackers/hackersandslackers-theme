@@ -145,6 +145,19 @@
     }
   }
 
+  .footer-navigation-link {
+    transition: $transition;
+    font-family: $body-font-medium;
+    color: $color-header-grey;
+    opacity: .8;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+      opacity: 1;
+    }
+  }
+
   .subfooter {
     margin: 30px auto 0;
     align-items: center;

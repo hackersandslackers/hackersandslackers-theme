@@ -1,14 +1,14 @@
-{{#if @site.navigation}}
-  <div class='widget links'>
-    <h4 class='footer-title'>{{t 'Navigation' }}</h4>
-    <ul class='footer-list'>
-      {{ "components/navigation" }}
-      {{#if @member}}
-        <li class="mobile-nav-link nav-signout"><a href="javascript:" data-members-signout>{{t 'Sign out' }}</a></li>
-      {{else}}
-        <li class="mobile-nav-link nav-signin"><a href="#/portal/signin">{{t 'Sign in' }}</a></li>
-        <li class="mobile-nav-link nav-signup"><a href="#/portal/signup">{{t 'Subscribe' }}</a></li>
-      {{/if}}
-    </ul>
-  </div>
-{{/if}}
+<div class='widget links'>
+  <h4 class='footer-title'>{{t 'Pages' }}</h4>
+  <ul class='footer-list'>
+    {{ navigation }}
+    {{#if @member}}
+      <li class="mobile-nav-link nav-signout">
+        <a href="javascript:" data-members-signout>{{t 'Sign out' }}</a>
+      </li>
+    {{else}}
+      <li class="mobile-nav-link nav-signin"><a href="#/portal/signin">{{t 'Sign in' }}</a></li>
+      <li class="mobile-nav-link nav-signup"><a href="#/portal/signup">{{t 'Subscribe' }}</a></li>
+    {{/if}}
+  </ul>
+</div>
