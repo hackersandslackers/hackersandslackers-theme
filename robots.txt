@@ -1,7 +1,9 @@
 User-agent: *
-Sitemap: https://hackersandslackers.com/rss/
+Sitemap: https://hackersandslackers.com/sitemap.xml
 Disallow: /ghost/
 Disallow: /account/
 Disallow: /signup/
 Disallow: /signin/
 Disallow: /search/
+Disallow: /#/portal/*
+Disallow: /series/code-snippet-corner/
