@@ -220,16 +220,16 @@
       width: 100%;
 
       .author-name {
-        font-size: 1.4em;
+        font-size: 1.3em;
         font-family: $header-font-semibold;
-        color: #666c70;
+        color: #5a6267;
       }
 
       .author-post-count {
         font-size: .9em;
         margin-left: 10px;
         color: $color-body-font;
-        opacity: .8;
+        opacity: .6;
         font-family: $header-font-medium;
       }
 
@@ -311,6 +311,7 @@
         margin: 0;
         line-height: 1.4em;
         font-family: $body-font;
+        font-size: 1em;
 
         @media(max-width: $mobile-breakpoint) {
           margin: 10px 0 0;
@@ -426,8 +427,8 @@
   transition: $transition;
 
   &:hover {
-    color: white;
-    background-color: $color-theme;
+    background-color: $color-hover !important;
+    box-shadow: inset 0 0 0 1px $color-hover !important;
     cursor: pointer;
   }
 }
@@ -440,9 +441,7 @@
 
   &:hover {
     cursor: pointer;
-    background-color: white;
-    color: $color-hover !important;
-    box-shadow: inset 0 0 0 1px $color-hover;
+    background-color: $color-hover !important;
   }
 }
 

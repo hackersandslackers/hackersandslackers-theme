@@ -1,7 +1,11 @@
 <div class='widget links'>
   <h4 class='footer-title'>{{t 'Pages' }}</h4>
   <ul class='footer-list'>
-    {{ navigation }}
+    {{#foreach navigation}}
+      <li class="footer-nav-link">
+        <a href="{{url absolute="true"}}" class="footer-navigation-link">{{label}}</a>
+      </li>
+    {{/foreach}}
     {{#if @member}}
       <li class="mobile-nav-link nav-signout">
         <a href="javascript:" data-members-signout>{{t 'Sign out' }}</a>

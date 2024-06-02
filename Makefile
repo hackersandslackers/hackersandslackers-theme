@@ -30,8 +30,8 @@ build:
 .PHONY: dev
 dev:
 	if [ -d $(DEV_GHOST_THEME_PATH) ]; then rm -rf $(DEV_GHOST_THEME_PATH); fi
-	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH)
-	cd $(DEV_GHOST_THEME_PATH) && npm run dev
+	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH) && \
+	cd $(DEV_GHOST_THEME_PATH) && npm run dev && \
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
 
 

@@ -312,12 +312,12 @@
   }
 }
 
-
 .site-header .nav-link {
   color: $color-lightgrey;
 }
 
-.site-header .nav-btn {
+.nav-btn,
+.nav-link {
   display: inline-block;
   padding: 8px 16px;
   font-size: .9em;
@@ -329,19 +329,33 @@
   text-transform: initial;
   white-space: nowrap;
   border: none;
-  cursor: pointer;
   border-radius: 2px;
   transition: $transition;
 }
 
-.nav-btn {
+.outline-btn {
+  color: $color-theme;
+  background-color: white;
+  box-shadow: inset 0 0 0 1px $color-theme;
+  transition: $transition;
 
-  &.outline {
-    @include outline-button;
+  &:hover {
+    color: $color-hover !important;
+    box-shadow: inset 0 0 0 1px $color-hover !important;
+    cursor: pointer !important;
   }
+}
 
-  &.filled {
-    @include filled-button;
+.filled-btn {
+  background-color: $color-theme;
+  box-shadow: inset 0 0 0 1px $color-theme;
+  color: #fff !important;
+  transition: $transition;
+
+  &:hover {
+    cursor: pointer !important;
+    background-color: $color-hover;
+    box-shadow: inset 0 0 0 1px $color-hover;
   }
 }
 
@@ -391,17 +405,25 @@
     margin-right: 15px;
     padding: 0;
     line-height: 1em;
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
   }
 }
 
 
-.tag-link {
+.tag-link,
+.tag-item {
   color: $color-lightgrey;
   letter-spacing: 0.5px;
   line-height: 16px;
   white-space: nowrap;
   font-size: .9em;
   font-family: $body-font-bold;
+  transition: $transition;
 
   &:hover {
     cursor: pointer;
