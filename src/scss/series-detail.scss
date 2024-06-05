@@ -169,6 +169,10 @@
         width: stretch;
         transition: $transition;
 
+        @media(max-width: $tablet-breakpoint) {
+          font-size: 1.1em;
+        }
+
         @media(max-width: $mobile-breakpoint) {
           margin-bottom: 10px;
         }

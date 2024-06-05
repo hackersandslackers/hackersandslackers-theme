@@ -369,8 +369,10 @@
   .dragscroll {
     cursor: grab;
     flex-wrap: nowrap;
+    scroll-snap-align: center;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
     /* IE and Edge */
     scrollbar-width: none;
     /* Firefox */
@@ -386,6 +388,11 @@
 
     &[data-dragging="true"] a {
       pointer-events: none;
+    }
+
+    .tag-item {
+      display: inline-block;
+      scroll-snap-align: start;
     }
   }
 }
@@ -415,22 +422,25 @@
 }
 
 
-.tag-link,
+
 .tag-item {
-  color: $color-lightgrey;
-  letter-spacing: 0.5px;
   line-height: 16px;
   white-space: nowrap;
-  font-size: .9em;
-  font-family: $body-font-bold;
-  transition: $transition;
+  user-select: none;
 
-  &:hover {
-    cursor: pointer;
-    color: $color-hover;
+  .tag-link {
+    color: $color-lightgrey;
+    letter-spacing: 0.5px;
+    font-family: $body-font-semibold;
+    font-size: .9em;
+    transition: $transition;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
   }
 }
-
 
 .logo {
   height: 40px;
