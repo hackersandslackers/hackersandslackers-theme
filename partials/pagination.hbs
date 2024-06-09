@@ -1,12 +1,17 @@
 <nav class="pagination" role="navigation">
-
-  <a class="pagination-arrow newer-posts {{#unless prev}}hidden{{/unless}}" href="{{page_url prev}}">
-    <i class="fa-sharp fa-solid fa-arrow-left"></i>
-  </a>
-
+  {{#if prev}}
+    <a class="pagination-arrow newer-posts" href="{{page_url prev}}">
+      <i class="fa-sharp fa-solid fa-arrow-left"></i>
+    </a>
+  {{else}}
+    <div class="fake-pagination-button"></div>
+  {{/if}}
   <span class="page-number">Page {{page}} of {{pages}}</span>
-
-  <a class="pagination-arrow older-posts {{#unless next}}hidden{{/unless}}" href="{{page_url next}}">
-    <i class="fa-sharp fa-solid fa-arrow-right"></i>
-  </a>
+  {{#if next}}
+    <a class="pagination-arrow older-posts }" href="{{page_url next}}">
+      <i class="fa-sharp fa-solid fa-arrow-right"></i>
+    </a>
+  {{else}}
+    <div class="fake-pagination-button"></div>
+  {{/if}}
 </nav>

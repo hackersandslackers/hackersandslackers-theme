@@ -4,12 +4,13 @@
     {{#get "tags"
             limit="all"
             filter="slug:-[adventures-in-excel,newsletter,code-snippet-corner,hacking-tableau-server,microsoft-powerpivot,mongodb-cloud,create-an-aws-api]"
-            include="count.posts,meta_title,accent_color"
+            include="slug,count.posts,meta_title,accent_color"
+            visibility="internal"
             order="count.posts DESC"
           }}
       {{#foreach tags visibility="internal"}}
         <div class="series-list-link">
-          <a href="{{url}}" class="series-list-link-title">{{meta_title}}</a>
+          <a href="/series/{{slug}}/" class="series-list-link-title">{{meta_title}}</a>
           <span class="series-list-count" style="color:{{accent_color}};border-color:{{accent_color}};">{{count.posts}}</span>
         </div>
       {{/foreach}}
