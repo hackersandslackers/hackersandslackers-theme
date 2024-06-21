@@ -1,4 +1,4 @@
-<header class="site-header">
+<header id="site-header" class="site-header">
   <div class="site-navigation">
     <div class="nav-wrapper nav-links">
       <div class="nav left">
@@ -14,7 +14,7 @@
         <div class="logo mobile">
           {{#if @site.icon}}
             <a href="{{ @site.url }}" class="mobile-logo">
-              <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }}" width="" height="">
+              <img class="icon" src="{{ @site.icon }}" alt="{{ @site.title }} Mobile" width="" height="">
               <h1 class="icon title">{{ @site.title }}</h1>
             </a>
           {{else}}

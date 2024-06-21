@@ -62,7 +62,7 @@
         "babel-plugin-module-resolver": "^5.0.2",
         "beeper": "3.0.0",
         "css-loader": "^7.1.2",
-        "cssnano": "7.0.2",
+        "cssnano": "7.0.3",
         "font-config-webpack-plugin": "^2.0.3",
         "inquirer": "8.2.4",
         "mini-css-extract-plugin": "^2.9.0",
@@ -70,11 +70,11 @@
         "postcss-easy-import": "4.0.0",
         "postcss-loader": "^8.1.1",
         "pump": "3.0.0",
-        "sass": "^1.77.4",
+        "sass": "^1.77.6",
         "sass-loader": "^14.2.1",
         "style-loader": "^4.0.0",
         "terser-webpack-plugin": "^5.3.10",
-        "webpack": "^5.91.0",
+        "webpack": "^5.92.1",
         "webpack-cli": "^5.1.4"
     },
     "browserslist": [

@@ -1,15 +1,36 @@
-
-
-
 .error-template {
   background-color: $color-background-grey;
 
-  .error-content {
-    width: 900px;
+  @media(max-width: $mobile-breakpoint) {
+    width: 100%;
+    box-shadow: unset;
+  }
+
+  .error-body-content {
+    width: 1000px;
     padding: 40px;
     background: white;
     margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
     box-shadow: $card-shadow;
+
+    @media(max-width: $smallscreen-breakpoint) {
+      padding: 30px 20px;
+      width: 100%;
+      max-width: unset;
+    }
+
+    @media($mobile-breakpoint) {
+      box-shadow: unset;
+    }
+
+    .error-message-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     .error-code {
       font-family: $header-font;
@@ -17,14 +38,22 @@
       font-size: 4em;
       line-height: 1;
       margin: 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 5.5em;
+      }
     }
 
     .error-description {
       font-family: $header-font-medium;
       color: $color-post-blurb-grey;
-      margin: 0 0 15px;
       font-size: 1.4em;
       line-height: 1;
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.2em;
+        line-height: 1;
+      }
 
       .svg-inline--fa {
         height: 0.9em;
@@ -34,13 +63,21 @@
 
     .error-suggestion {
       @include body-font;
+      font-size: 1.4em;
+      line-height: 1;
     }
 
     .error-explanation {
       @include body-font;
       font-family: $body-font-medium;
-      font-size: 1.2em;
+      font-size: 1.3em;
       line-height: 1;
+      margin: 15px 0;
+
+      @media(max-width: $mobile-breakpoint) {
+        margin: 15px auto;
+        max-width: 96%;
+      }
     }
 
     .suggested-posts {
@@ -49,19 +86,57 @@
       grid-template-columns: 1fr 1fr 1fr;
       margin-top: 15px;
 
+      @media(max-width: $mobile-breakpoint) {
+        row-gap: 20px;
+      }
+
+      @media(max-width: $mobile-breakpoint) {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        max-width: 95%;
+        margin: auto;
+      }
+
       .post-card {
+        height: 355px;
+        overflow: hidden;
+        border: 1px solid #b6bcc1;
+        box-sizing: unset;
+        box-shadow: unset;
+
+        @media(max-width: $mobile-breakpoint) {
+          height: unset;
+        }
 
         .post-card-title {
-          font-size: 1.3em;
+          font-size: 1.4em;
+          line-height: 1.1;
+
+          @media(max-width: $mobile-breakpoint) {
+            font-size: 1.8em;
+          }
         }
 
         .post-card-excerpt {
-          font-size: 1em;
+          font-size: 1.15em;
           margin: 10px 0 0;
+
+          @media(max-width: $mobile-breakpoint) {
+            font-size: 1.3em;
+          }
+        }
+
+        .error-message-top {
+          display: flex;
+          justify-content: space-between;
         }
 
         .post-card-content {
           padding: 15px;
+          width: -webkit-fill-available;
+          display: block;
+          height: -webkit-fill-available;
+          max-height: -webkit-fill-available;
         }
 
         .post-card-meta {
@@ -80,14 +155,20 @@
 
     .error-footer {
       border-top: 1px solid #eaecee;
-      margin-top: 40px;
-      padding-top: 40px;
+      margin-top: 30px;
+      padding-top: 20px;
+    }
+
+    .error-suggestion {
+      display: block;
     }
 
     .error-link {
       font-family: $body-font-bold;
       color: $color-lightgrey;
       transition: $transition;
+      display: block;
+
 
       &:hover {
         color: $color-hover;
@@ -98,5 +179,31 @@
 
   .footer-wrapper {
     max-width: 800px;
+
+    @media(max-width:$mobile-breakpoint) {
+      padding: 0 30px;
+      max-width: unset;
+    }
+
+    .footer-description {
+      @media($mobile-breakpoint) {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  .viewport {
+    max-height: unset;
+  }
+
+  #site-header {
+    @media(max-width: $smallscreen-breakpoint) {
+      margin-bottom: 0;
+      box-shadow: none;
+    }
+
+    .nav-wrapper {
+      min-width: 93%;
+    }
   }
 }

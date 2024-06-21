@@ -16,11 +16,18 @@
   <body class="error-template">
     {{> "header" }}
     <div class="viewport">
-      <main class="error-content error-{{statusCode}}">
+      <main class="error-body-content error-{{statusCode}}">
         <section class="error-message">
-          <h1 class="error-code">{{statusCode}}</h1>
-          <p class="error-description">{{#match statusCode "=" 404}} <i class="fa-sharp fa-solid fa-file-circle-xmark"></i> {{/match}} {{message}}.</p>
-          <p class="error-suggestion">Feeling lost? <a class="error-link" href="{{@site.url}}">Go to the front page →</a></p>
+          <div class="error-message-top">
+            <div class="error">
+              <h1 class="error-code">{{statusCode}}</h1>
+              <p class="error-description">{{#match statusCode "=" 404}} <i class="fa-sharp fa-solid fa-file-circle-xmark"></i> {{/match}} {{message}}.</p>
+            </div>
+            <div>
+              <p class="error-suggestion">Feeling lost?</p>
+              <a class="error-link" href="{{@site.url}}">Go to the front page →</a>
+            </div>
+          </div>
           <footer class="error-footer">
             <p class="error-explanation">Perhaps you'd be interested in some of our latest posts:</p>
             {{#match statusCode "=" 404}}

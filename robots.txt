@@ -5,5 +5,4 @@ Disallow: /account/
 Disallow: /signup/
 Disallow: /signin/
 Disallow: /search/
-Disallow: /#/portal/*
 Disallow: /series/code-snippet-corner/

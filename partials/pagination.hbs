@@ -1,7 +1,9 @@
 <nav class="pagination" role="navigation">
   {{#if prev}}
     <a class="pagination-arrow newer-posts" href="{{page_url prev}}">
-      <i class="fa-sharp fa-solid fa-arrow-left"></i>
+      <i class="fa-sharp fa-solid fa-arrow-left">
+        <a href="#"></a>
+      </i>
     </a>
   {{else}}
     <div class="fake-pagination-button"></div>
