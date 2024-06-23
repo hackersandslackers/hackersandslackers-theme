@@ -98,17 +98,13 @@
       font-family: $body-font-medium;
       font-size: 1.3em;
       letter-spacing: -.5px;
-      line-height: 1.15em;
+      line-height: 1.2em;
       margin: 5px 0 20px;
       overflow-y: hidden;
       text-overflow: ellipsis;
       max-width: 720px;
       order: 1;
       transition: $transition;
-
-      @media (max-width: $smallscreen-breakpoint) {
-        font-size: 1.2em;
-      }
 
       @media (max-width: $tablet-breakpoint) {
         font-size: 1.3em;
@@ -119,7 +115,6 @@
       }
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.1em;
         letter-spacing: unset;
         opacity: 1;
         line-height: 1.2em;
@@ -194,7 +189,7 @@
         color: #646f7d;
         display: block;
         font-family: $body-font-semibold;
-        font-size: 1.1em;
+        font-size: 1.2em;
         line-height: 1;
         margin-bottom: 1px;
         transition: $transition;
@@ -230,7 +225,7 @@
         border-radius: 3px;
         line-height: 1;
         font-family: $body-font-bold;
-        font-size: 1.02em;
+        font-size: 1.1em;
         text-align: center;
         transition: $transition;
 
@@ -261,7 +256,6 @@
       }
 
       .post-card-meta-item {
-        font-size: .9em;
         font-family: $body-font-medium;
         line-height: 1;
 

@@ -7,12 +7,12 @@
       </li>
     {{/foreach}}
     {{#if @member}}
-      <li class="mobile-nav-link nav-signout">
-        <a href="javascript:" data-members-signout>{{t 'Sign out' }}</a>
+      <li class="footer-nav-link mobile-nav-link nav-signout">
+        <a class="footer-navigation-link" href="javascript:" data-members-signout>{{t 'Sign out' }} </a>
       </li>
     {{else}}
-      <li class="mobile-nav-link nav-signin"><a href="#/portal/signin">{{t 'Sign in' }}</a></li>
-      <li class="mobile-nav-link nav-signup"><a href="#/portal/signup">{{t 'Subscribe' }}</a></li>
+      <li class="footer-nav-link mobile-nav-link nav-signin"><a href="#/portal/signin" class="footer-navigation-link">{{t 'Sign in' }}</a></li>
+      <li class="footer-nav-link mobile-nav-link nav-signup"><a href="#/portal/signup" class="footer-navigation-link">{{t 'Subscribe' }}</a></li>
     {{/if}}
   </ul>
 </div>

@@ -24,7 +24,7 @@
   }
 
   .nav-wrapper {
-    width: 1000px;
+    width: 950px;
     margin: auto;
     align-items: center;
     display: flex;
@@ -59,6 +59,7 @@
       font-family: $body-font-bold;
       transition: $transition;
       margin-left: 15px;
+      line-height: 1;
 
       @media(max-width: $mobile-breakpoint) {
         display: none;
@@ -87,7 +88,7 @@
       font-family: $body-font-semibold;
       transition: $transition;
       line-height: 1;
-      font-size: 1.2em;
+      font-size: 1.3em;
 
       @media(max-width: $tablet-breakpoint) {
         font-size: 1.1em;
@@ -166,7 +167,7 @@
     align-items: center;
     color: $color-lightgrey;
     transition: $transition;
-    font-size: 1.2em;
+    font-size: 1.3em;
     display: block;
     height: 20px;
 
@@ -319,7 +320,7 @@
 .nav-btn,
 .nav-link {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 10px 16px;
   font-size: .9em;
   line-height: 16px;
   font-weight: 600;
@@ -409,7 +410,7 @@
   margin: 0 auto;
 
   .tag-item {
-    margin-right: 15px;
+    margin-right: 18px;
     padding: 0;
     line-height: 1em;
     transition: $transition;

@@ -40,7 +40,6 @@
             "hcl",
             "vim",
             "makefile",
-            "markdown"
           ],
           "theme": "default",
           "css": false
