@@ -78,11 +78,15 @@
 
 @mixin kg-card-figcaption {
   text-align: center;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 1.4rem;
-  line-height: 1.1em;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+  font-size: 1.1em;
   padding-top: 10px;
-  font-family: $body-font-medium;
+  font-family: $body-font-semibold;
+
+  * {
+    padding: 0;
+  }
 
   a {
     border-bottom: 1px solid $color-theme;

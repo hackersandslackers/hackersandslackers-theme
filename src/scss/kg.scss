@@ -106,17 +106,15 @@ make sure they look good, and are given a bit of extra spacing. */
     }
   }
 
-  figcaption,
-  figcaption>p,
-  figcaption>p>span {
+  figcaption {
     order: 1;
     width: 100%;
     width: -moz-available;
     margin: 0 auto;
-    padding: 14px 15px 10px;
+    padding: 16px 15px 12px;
     border-radius: 4px 4px 0 0 !important;
     background: #20242c;
-    color: #d2d7e1;
+    color: #e3e6ee;
     font-family: $body-font-medium;
     font-size: 1em;
     line-height: 1;

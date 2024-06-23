@@ -231,12 +231,11 @@
 
         @media (max-width: $tablet-breakpoint) {
           margin: 10px 0;
-          font-size: 1.25em !important;
+          font-size: 1.25em;
           line-height: 1.2;
         }
 
         @media (max-width: 767px) {
-          font-size: 1.25em;
           margin: 8px 0;
         }
 
