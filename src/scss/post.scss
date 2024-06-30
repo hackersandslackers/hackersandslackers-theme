@@ -161,14 +161,13 @@
       line-height: 1;
       font-family: $header-font;
       margin-bottom: 10px;
-      letter-spacing: 1px;
       display: inline-block;
       font-size: 1.2em;
       transition: $transition;
       text-transform: uppercase;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.1em;
+        font-size: 1em;
       }
 
       &:hover {
@@ -256,8 +255,8 @@
           border-radius: 50%;
           overflow: hidden;
           display: block;
-          height: 50px;
-          min-width: 50px;
+          height: 55px;
+          width: 55px;
           overflow: hidden;
           margin-right: 10px;
 
@@ -270,7 +269,7 @@
         .post-meta-author-name {
           display: block;
           font-family: $header-font-semibold;
-          font-size: 1.1em;
+          font-size: 1.2em;
           color: #414d5a;
 
           &:hover {
@@ -328,7 +327,7 @@
 
         &::before {
           content: counter(step-counter, upper-roman) "." !important;
-          color: #77818e;
+          color: #5f6874;
           font-family: $body-font-semibold;
           font-size: 15px;
           font-weight: bold;
@@ -338,10 +337,9 @@
         }
 
         .series-toc-item-link {
-          color: #77818e;
+          color: #5f6874;
           font-family: $body-font-medium;
           transition: $transition;
-          font-size: .95em;
         }
 
         &:hover {
@@ -547,7 +545,6 @@
         margin-top: 10px !important;
         padding-top: 5px;
         max-width: 85vw;
-        font-size: .98em !important;
         line-height: 1.5 !important;
         display: block;
         margin-left: calc(-52vw + 50%) !important;

@@ -35,7 +35,7 @@ make sure they look good, and are given a bit of extra spacing. */
     iframe {
       margin: 0;
       height: 60vw;
-      border: 1px solid #d0d8df;
+      border: 1px solid #cdcdcd;
       width: 100%;
     }
   }
@@ -61,7 +61,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   img {
     margin: auto;
-    box-shadow: 0 0 3px rgb(0 0 0 / 20%);
+    border: 1px solid #999999;
     border-radius: 3px;
 
     &:hover {
