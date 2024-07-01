@@ -170,13 +170,9 @@
 
       .post-card-author-image {
         border-radius: 50%;
-        height: 38px;
-        min-width: 38px;
-
-        @media(max-width: $mobile-breakpoint) {
-          height: 35px;
-          min-width: 35px;
-        }
+        height: 45px;
+        min-width: 45px;
+        border: 1px solid $color-author-avatar-border;
 
         i {
           font-size: 1.5em;
@@ -189,9 +185,9 @@
         color: #646f7d;
         display: block;
         font-family: $body-font-semibold;
-        font-size: 1.2em;
-        line-height: 1;
-        margin-bottom: 1px;
+        font-size: 1.25em;
+        line-height: 1.2;
+        margin-bottom: 2px;
         transition: $transition;
 
         @media (max-width: $mobile-breakpoint) {
@@ -229,16 +225,7 @@
         text-align: center;
         transition: $transition;
 
-        @media(max-width: $tablet-breakpoint) {
-          font-size: 1em;
-        }
-
-        @media(max-width: $mobile-breakpoint) {
-          font-size: .95em;
-        }
-
         @media(max-width: 500px) {
-          font-size: .9em;
           padding: 6px;
           line-height: 1;
         }
@@ -253,6 +240,10 @@
 
       .post-card-meta-details {
         line-height: 1;
+
+        .date i {
+          margin-right: 3px;
+        }
       }
 
       .post-card-meta-item {

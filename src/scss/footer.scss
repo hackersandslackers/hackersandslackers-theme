@@ -168,6 +168,10 @@
       margin-bottom: 7px;
     }
 
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
     .footer-navigation-link {
       color: #4e576a;
       transition: $transition;
@@ -190,13 +194,10 @@
       flex-direction: column;
     }
 
-    @media(max-width: $mobile-breakpoint) {
-      margin: 40px auto 0;
-      padding-top: 20px;
-    }
+    @media(max-width: $mobile-breakpoint) {}
 
     .copyright {
-      margin: 15px 0;
+      margin: 10px 0;
       font-size: 1.05em;
       color: #475162;
       font-family: $body-font-medium;
@@ -222,6 +223,10 @@
           color: #fff;
           font-size: 1.5rem;
         }
+      }
+
+      .widget.social {
+        margin-bottom: 0;
       }
     }
   }
@@ -258,7 +263,6 @@
 
       .social-media-button {
         font-size: 1.7em;
-        margin-right: 15px;
 
         &:hover {
           cursor: pointer;

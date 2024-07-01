@@ -21,6 +21,16 @@
     @media(max-width: $tablet-breakpoint) {
       padding-top: 0;
     }
+
+    @media(max-width: $mobile-breakpoint) {
+      max-width: 100vw;
+    }
+  }
+
+  .viewport {
+    @media(max-width: $tablet-breakpoint) {
+      max-width: 100vw;
+    }
   }
 
   .site-header {
@@ -217,7 +227,7 @@
       @media(max-width: $tablet-breakpoint) {
         padding: unset;
         max-width: 90vw;
-        margin: 8vw auto 0;
+        margin: 6vw auto 0;
       }
 
       .post-excerpt {
@@ -253,6 +263,7 @@
 
         .post-meta-author-avatar {
           border-radius: 50%;
+          border: 1px solid $color-author-avatar-border;
           overflow: hidden;
           display: block;
           height: 55px;
@@ -722,7 +733,7 @@
 
     .support-description {
       color: #4c5a69;
-      font-size: 0.95em;
+      font-size: 1.1em;
       line-height: 1.5;
       margin: 0 auto 20px;
       text-align: left;

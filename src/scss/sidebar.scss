@@ -16,6 +16,7 @@
     position: relative;
 
     .widget-title {
+      font-size: 1.05em;
       color: $color-lightgrey;
       font-family: $body-font-medium;
       font-size: .9em;
@@ -459,7 +460,7 @@
   line-height: 1.3;
   margin: 15px 0 0;
   text-align: center;
-  font-size: .98em;
+  font-size: 1.05em;
 }
 
 /* 12.3. Sidebar Social Widget

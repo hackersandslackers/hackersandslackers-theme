@@ -17,13 +17,13 @@
   max-width: 93%;
 
   @media(max-width: $mobile-breakpoint) {
-    max-width: unset;
+    max-width: 100vw;
   }
 }
 
 .page-about .viewport {
   @media(max-width: $tablet-breakpoint) {
-    max-width: 100%;
+    max-width: 100vw;
   }
 }
 
