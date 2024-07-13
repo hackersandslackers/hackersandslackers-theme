@@ -72,6 +72,7 @@
         font-family: $header-font;
         overflow: hidden;
         display: -webkit-box;
+        line-clamp: 3;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
 
@@ -82,10 +83,6 @@
 
         @media(max-width: $mobile-breakpoint) {
           line-height: 1.15;
-        }
-
-        @media(max-width: 450px) {
-          line-height: 1.1;
         }
       }
 
@@ -100,6 +97,12 @@
           max-height: 64px;
           text-overflow: ellipsis;
           margin-bottom: 15px;
+
+          @media(max-width: $mobile-breakpoint) {
+            max-height: 75px;
+            height: 75px;
+            margin-bottom: unset;
+          }
         }
 
         .post-card-excerpt {
@@ -122,7 +125,11 @@
         justify-content: space-between;
         display: flex;
         align-items: center;
-        width: 100%
+        width: 100%;
+
+        @media(max-width: $mobile-breakpoint) {
+          padding: 10px 0 0;
+        }
       }
 
       .post-card-content {

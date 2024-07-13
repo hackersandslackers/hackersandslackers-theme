@@ -166,6 +166,7 @@
 
     @media(max-width: $mobile-breakpoint) {
       margin-bottom: 7px;
+      font-size: 1.1em;
     }
 
     &:last-of-type {
@@ -318,6 +319,7 @@
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
         font-size: 1.2em;
+        line-height: 1.2;
       }
     }
 

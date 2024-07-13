@@ -56,12 +56,15 @@ make sure they look good, and are given a bit of extra spacing. */
 
   @media(max-width: $mobile-breakpoint) {
     max-width: unset;
-    @include mobile-full-width;
+
+    & {
+      @include mobile-full-width;
+    }
   }
 
   img {
     margin: auto;
-    border: 1px solid #999999;
+    border: 1px solid #eaeaea;
     border-radius: 3px;
 
     &:hover {
@@ -78,6 +81,7 @@ make sure they look good, and are given a bit of extra spacing. */
     margin: 0 auto;
     padding: 8px 0 0;
     max-width: 90vw;
+    font-family: $body-font-medium;
   }
 }
 

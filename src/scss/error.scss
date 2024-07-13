@@ -62,17 +62,23 @@
     }
 
     .error-suggestion {
-      @include body-font;
       font-size: 1.4em;
       line-height: 1;
+
+      & {
+        @include body-font;
+      }
     }
 
     .error-explanation {
-      @include body-font;
       font-family: $body-font-medium;
       font-size: 1.3em;
       line-height: 1;
       margin: 15px 0;
+
+      & {
+        @include body-font;
+      }
 
       @media(max-width: $mobile-breakpoint) {
         margin: 15px auto;
@@ -183,12 +189,6 @@
     @media(max-width:$mobile-breakpoint) {
       padding: 0 30px;
       max-width: unset;
-    }
-
-    .footer-description {
-      @media($mobile-breakpoint) {
-        font-size: 1.2em;
-      }
     }
   }
 

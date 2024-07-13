@@ -244,10 +244,13 @@
         }
 
         .gh-widget-follow button {
-          @include filled-button;
           width: 80px;
           border-radius: 3px;
           line-height: 1;
+
+          & {
+            @include filled-button;
+          }
 
           a {
             background-color: unset;
@@ -352,13 +355,19 @@
 
 
   .newsletter-messages {
-    @include message-overlay;
     display: none;
 
-    .message {
+    & {
       @include message-overlay;
+    }
+
+    .message {
       padding: 20px;
       display: none;
+
+      & {
+        @include message-overlay;
+      }
     }
 
     * {
@@ -477,8 +486,11 @@
   }
 
   .social-media-button {
-    @include social-media-icon;
     font-size: 1.6em;
+
+    & {
+      @include social-media-icon;
+    }
 
     &:hover {
       cursor: pointer;

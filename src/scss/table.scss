@@ -9,9 +9,15 @@
   border-spacing: 0;
 
   @media (max-width: $mobile-breakpoint) {
-    @include mobile-full-width;
-    @include mobile-horizontal-scroll;
     width: 100vw;
+
+    & {
+      @include mobile-full-width;
+    }
+
+    & {
+      @include mobile-horizontal-scroll;
+    }
   }
 
   table {

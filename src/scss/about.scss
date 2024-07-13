@@ -13,8 +13,11 @@
     }
 
     @media (max-width: $mobile-breakpoint) {
-      @include mobile-full-width;
       margin: 0 5vw 10px;
+
+      & {
+        @include mobile-full-width;
+      }
 
       .page-title {
         order: 2;

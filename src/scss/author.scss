@@ -208,14 +208,17 @@
         }
       }
     }
+  }
 
+  .post-card {
 
-    .post-card {
+    .post-card-author-avatar,
+    .post-card-author-name {
+      display: none;
+    }
 
-      .post-card-author-avatar,
-      .post-card-author-name {
-        display: none;
-      }
+    .post-card-meta-details {
+      margin-left: 3px;
     }
   }
 }

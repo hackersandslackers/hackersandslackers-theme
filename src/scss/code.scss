@@ -25,12 +25,18 @@
   tab-size: 4;
 
   @media (max-width: $mobile-breakpoint) {
-    @include mobile-horizontal-scroll();
-    @include mobile-full-width();
     padding: 15px 15px 20px;
     border-radius: 0 !important;
     font-size: 0.8em !important;
     white-space: pre-wrap;
+
+    & {
+      @include mobile-horizontal-scroll();
+    }
+
+    & {
+      @include mobile-full-width();
+    }
   }
 
   &::selection,
@@ -49,7 +55,10 @@
     @media (max-width: $mobile-breakpoint) {
       border-radius: 0;
       white-space: pre !important;
-      @include mobile-horizontal-scroll;
+
+      & {
+        @include mobile-horizontal-scroll;
+      }
     }
 
     .token.comment,

@@ -46,8 +46,8 @@
     }
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 1.8em;
-      line-height: 1.1;
+      font-size: 1.7em;
+      line-height: 1.05;
     }
   }
 
@@ -91,9 +91,10 @@
     }
 
     .post-card-excerpt {
+      line-clamp: 3;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
-      color: #8c96a4;
+      color: #808997;
       display: -webkit-box;
       font-family: $body-font-medium;
       font-size: 1.3em;
@@ -117,12 +118,14 @@
       @media(max-width: $mobile-breakpoint) {
         letter-spacing: unset;
         opacity: 1;
-        line-height: 1.2em;
+        font-size: 1.1em;
+        line-height: 1.1em;
         margin: 2vw 0 4vw;
       }
     }
 
     .post-card-meta {
+      line-clamp: 1;
       -webkit-line-clamp: 1;
       align-items: center;
       border-top: 1px solid #ebebeb;
@@ -205,9 +208,9 @@
         text-transform: capitalize;
         color: #646f7d;
         font-family: $body-font-semibold;
-        font-size: 1.1em;
+        font-size: 1.2em;
         line-height: 1;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
         transition: $transition;
 
         @media (max-width: $mobile-breakpoint) {
@@ -220,7 +223,7 @@
         padding: 6px 10px;
         border-radius: 3px;
         line-height: 1;
-        font-family: $body-font-bold;
+        font-family: $body-font-semibold;
         font-size: 1.1em;
         text-align: center;
         transition: $transition;
@@ -228,6 +231,11 @@
         @media(max-width: 500px) {
           padding: 6px;
           line-height: 1;
+          font-size: 1em;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          max-width: 45%;
+          display: block;
         }
 
         &:hover {
@@ -247,12 +255,12 @@
       }
 
       .post-card-meta-item {
-        font-family: $body-font-medium;
+        font-family: $body-font-semibold;
         line-height: 1;
 
         @media(max-width: $mobile-breakpoint) {
           display: block;
-          font-size: 0.85em;
+          font-size: 0.95em;
         }
 
         &.separator,
