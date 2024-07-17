@@ -64,7 +64,7 @@
         "css-loader": "^7.1.2",
         "cssnano": "7.0.4",
         "font-config-webpack-plugin": "^2.0.3",
-        "inquirer": "10.0.1",
+        "inquirer": "10.0.3",
         "mini-css-extract-plugin": "^2.9.0",
         "postcss": "^8.4.39",
         "postcss-easy-import": "4.0.0",
