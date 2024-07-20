@@ -59,7 +59,12 @@
   color: #414d5a;
   font-family: $body-font;
   font-size: 1.15em;
-  line-height: 1.8em;
+  line-height: 1.5em;
+  
+  @media(max-width: $mobile-breakpoint) {
+    font-size: 1.1em;
+    line-height: 1.4em;
+  }
 }
 
 @mixin inline-code {
