@@ -77,7 +77,7 @@
           display: flex;
           height: 130px;
 
-          .series-image {
+          .series-card-image {
             height: auto;
             margin: auto;
             max-height: 80%;
@@ -85,7 +85,7 @@
           }
         }
 
-        .series-title {
+        .series-card-title {
           color: $color-header-grey;
           font-family: $body-font-bold;
           font-size: 1.3em;
@@ -96,7 +96,7 @@
           transition: $transition;
         }
 
-        .series-description {
+        .series-card-description {
           -webkit-line-clamp: 4;
           -webkit-box-orient: vertical;
           color: $color-body-font;
@@ -112,10 +112,9 @@
           width: -webkit-fill-available;
         }
 
-        .series-post-count {
+        .series-card-post-count {
           color: #787f90;
           display: flex;
-          font-family: $header-font;
           line-height: 1;
           margin-top: 10px;
           text-align: right;
@@ -123,6 +122,10 @@
           i,
           svg {
             margin-right: 8px;
+          }
+
+          span {
+            font-family: $body-font-semibold;
           }
         }
       }

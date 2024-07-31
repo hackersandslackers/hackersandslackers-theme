@@ -1,14 +1,14 @@
 <a class="series-card" href="/series/{{slug}}/" title="{{name}}">
   {{#if feature_image}}
     <div class="series-image-wrapper">
-      <img class="series-image" src="{{img_url feature_image}}" alt="{{title}}" />
+      <img class="series-card-image" src="{{img_url feature_image}}" alt="{{title}}" />
     </div>
   {{/if}}
   <div class="series-info">
-    <h3 class="series-post-title">{{meta_title}}</h3>
-    <p class="series-post-description">{{meta_description}}</p>
+    <h3 class="series-card-title">{{meta_title}}</h3>
+    <p class="series-card-description">{{meta_description}}</p>
   </div>
-  <div class="series-post-count">
+  <div class="series-card-post-count">
     <i class="fa-sharp fa-solid fa-list-ol"></i>
     <span>{{plural count.posts empty=(t "0 Post") singular=(t "% Post") plural=(t "% Posts")}}</span>
   </div>

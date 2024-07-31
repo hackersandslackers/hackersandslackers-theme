@@ -5,11 +5,11 @@
     {{#page}}{{content}}{{/page}}
   </div>
   {{#foreach posts}}
-    <a class="series-post-card" href="{{url}}">
-      <div class="series-post-number">{{@number}}</div>
-      <div class="series-post-card-detail">
-        <h3 class="series-post-card-title">{{title}}</h3>
-        <div class="series-post-card-excerpt">{{excerpt}}</div>
+    <a class="series-card" href="{{url}}">
+      <div class="series-number">{{@number}}</div>
+      <div class="series-card-detail">
+        <h3 class="series-card-title">{{title}}</h3>
+        <div class="series-card-excerpt">{{excerpt}}</div>
         <div class="reading-time"><i class="fa-regular fa-clock"></i> <span>{{reading_time}}</span></div>
       </div>
     </a>
