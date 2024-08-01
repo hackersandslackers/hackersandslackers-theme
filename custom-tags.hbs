@@ -1,0 +1,15 @@
+{{!< default}}
+<div class="tags-page">
+  <div class="tags-info-card">
+    <h1 class="tags-title">{{page.title}}</h1>
+    {{#page}}{{content}}{{/page}}
+  </div>
+  {{#foreach tags}}
+    <a class="tag-card" href="{{url}}">
+      <div class="tag-card-detail">
+        <h3 class="tag-card-title">{{title}}</h3>
+        <div class="tag-card-excerpt">{{excerpt}}</div>
+      </div>
+    </a>
+  {{/foreach}}
+</div>
