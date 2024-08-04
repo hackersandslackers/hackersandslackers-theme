@@ -141,7 +141,7 @@
             "default": false,
             "group": "homepage"
         },
-        "posts_per_series_page": 15
+        "posts_per_series_page": 12
     },
     "renovate": {
         "extends": [

@@ -5,13 +5,6 @@
     {{#page}}{{content}}{{/page}}
   </div>
   {{#foreach posts}}
-    <a class="series-card" href="{{url}}">
-      <div class="series-number">{{@number}}</div>
-      <div class="series-card-detail">
-        <h3 class="series-card-title">{{title}}</h3>
-        <div class="series-card-excerpt">{{excerpt}}</div>
-        <div class="reading-time"><i class="fa-regular fa-clock"></i> <span>{{reading_time}}</span></div>
-      </div>
-    </a>
+    {{> "series/series-post-card" }}
   {{/foreach}}
 </div>
