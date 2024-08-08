@@ -137,8 +137,18 @@ make sure they look good, and are given a bit of extra spacing. */
       white-space: nowrap;
     }
 
+    p {
+      font-size: .9em;
+      line-height: 1;
+      color: #cfdde5;
+    }
+
     code {
       font-family: $monospace-font;
+    }
+
+    * {
+      margin: 0;
     }
   }
 }
