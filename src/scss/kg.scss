@@ -64,7 +64,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   img {
     margin: auto;
-    border: 1px solid #eaeaea;
+    border: 1px solid #dcdcdc;
     border-radius: 3px;
 
     &:hover {
@@ -138,9 +138,10 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     p {
-      font-size: .9em;
+      font-size: 1.05em;
       line-height: 1;
       color: #cfdde5;
+      font-family: $body-font-medium;
     }
 
     code {
@@ -284,5 +285,46 @@ make sure they look good, and are given a bit of extra spacing. */
 
   .kg-bookmark-metadata {
     margin-top: unset;
+  }
+
+  figcaption {
+    font-size: .9em;
+    padding-top: 5px;
+  }
+}
+
+.kg-callout-card-yellow {
+  box-shadow: 2px 2px 3px -2px rgba(71, 30, 0, .74), 0 0 1px rgba(0, 0, 0, .4);
+  background: #ffd3a7 !important;
+  color: #694503;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+
+  .kg-callout-emoji {
+    font-size: 1.15em !important;
+    margin-bottom: 5px;
+
+    &::after {
+      content: "Protip";
+      font-family: $body-font-semibold;
+      margin-left: 5px;
+    }
+  }
+
+  .kg-callout-text {
+    color: #694503;
+    font-size: 1em !important;
+
+    a {
+      color: #694503;
+      border-bottom: 1px solid #694503 !important;
+
+      &:hover {
+        color: #b07200 !important;
+        border-bottom: 1px solid #b07200 !important;
+      }
+    }
   }
 }

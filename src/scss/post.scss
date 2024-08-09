@@ -320,7 +320,7 @@
       .series-toc-item {
         color: $color-body-font;
         counter-increment: step-counter;
-        font-size: 1.1em;
+        font-size: 1.15em;
         display: flex;
         justify-content: left;
         line-height: 1;
@@ -398,7 +398,7 @@
       font-family: $body-font-light;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 2em;
+        font-size: 1.8em;
         line-height: 1.2;
         margin: 40px 0 5px;
       }
@@ -625,7 +625,7 @@
 
     li {
       margin: 0 0 10px;
-      line-height: 1.6;
+      line-height: 1.5;
 
       &::marker {
         font-weight: 600;

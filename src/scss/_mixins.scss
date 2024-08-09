@@ -59,7 +59,7 @@
   color: #414d5a;
   font-family: $body-font;
   font-size: 1.15em;
-  line-height: 1.8em;
+  line-height: 1.6em;
 }
 
 @mixin inline-code {
@@ -79,7 +79,7 @@
   text-align: center;
   color: $color-default-figcaption;
   line-height: 1.1;
-  font-size: 1.1em;
+  font-size: 1em;
   padding-top: 10px;
   font-family: $body-font-semibold;
 
@@ -456,6 +456,10 @@
   p {
     color: #694503;
     line-height: 1.5;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   &::before {
