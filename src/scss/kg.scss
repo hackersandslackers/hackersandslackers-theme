@@ -139,13 +139,16 @@ make sure they look good, and are given a bit of extra spacing. */
 
     p {
       font-size: 1.05em;
-      line-height: 1;
+      line-height: 1.1;
       color: #cfdde5;
       font-family: $body-font-medium;
     }
 
     code {
       font-family: $monospace-font;
+      color: #b9d3e7;
+      background: rgb(185 211 251 / 15%);
+      font-size: .9em;
     }
 
     * {
