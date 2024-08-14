@@ -306,8 +306,13 @@ make sure they look good, and are given a bit of extra spacing. */
   border-radius: 4px;
 
   .kg-callout-emoji {
-    font-size: 1.15em !important;
-    margin-bottom: 5px;
+    line-height: 1.2em;
+    font-size: 1.1em !important;
+    background: #cc9b457a;
+    padding: 12px;
+    width: 117%;
+    margin: -20px -26px 16px;
+    letter-spacing: .1px;
 
     &::after {
       content: "Protip";
@@ -317,7 +322,7 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 
   .kg-callout-text {
-    color: #694503;
+    color: #dc9c5ca1;
     font-size: 1em !important;
 
     a {

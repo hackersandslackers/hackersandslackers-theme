@@ -299,7 +299,7 @@
     }
 
     .series-toc {
-      border-bottom: 1px solid #eaeaea;
+      border-bottom: 1px solid #d2d5d8;
       margin: 20px 0 0;
       overflow: hidden;
       padding: 0 0 20px;
@@ -332,7 +332,7 @@
         }
 
         @media(max-width: $mobile-breakpoint) {
-          line-height: 1.2;
+          line-height: 1.1;
         }
 
         &::before {
