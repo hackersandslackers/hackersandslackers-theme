@@ -279,7 +279,7 @@
         .post-meta-author-name {
           display: block;
           font-family: $header-font-semibold;
-          font-size: 1.2em;
+          font-size: 1.3em;
           color: #414d5a;
 
           &:hover {
@@ -507,7 +507,7 @@
   }
 
   .author-card {
-    border-top: 2px dotted #eaeaea;
+    border-top: 2px dotted #d2d5d8;
     border-bottom: unset;
     padding: 30px 0 0 0;
     margin: 0;
@@ -548,7 +548,7 @@
     }
 
     .author-meta {
-      margin: 5px 0 !important;
+      margin: 8px 0 !important;
     }
 
     .author-card-excerpt {
@@ -712,10 +712,10 @@
     }
 
     .support-us-title {
-      color: #5d6b7b;
+      color: #4c5867;
       display: block;
-      font-family: $header-font-medium;
-      font-size: 1.3em;
+      font-family: $header-font-semibold;
+      font-size: 1.4em;
       margin-bottom: 10px;
       text-align: left;
     }
@@ -727,7 +727,7 @@
       border-radius: 3px !important;
       display: block;
       font-family: $body-font-medium;
-      font-size: .9em;
+      font-size: 1.05em;
       height: 45px;
       line-height: 1;
       margin: 0 auto 10px;
@@ -736,16 +736,22 @@
       width: -webkit-fill-available;
     }
 
-    .support-description {
-      color: #4c5a69;
-      font-size: 1.1em;
-      line-height: 1.5;
-      margin: 0 auto 20px;
-      text-align: left;
+    .support-coffee-link {
+      display: flex;
+      flex-direction: row-reverse;
+
+      .support-description {
+        color: #4c5a69;
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin: 0 auto 15px;
+        text-align: left;
+      }
+
     }
 
     .support-coffee-button {
-      width: 280px;
+      width: 220px;
     }
   }
 

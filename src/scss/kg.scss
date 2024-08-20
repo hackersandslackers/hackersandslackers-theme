@@ -119,7 +119,7 @@ make sure they look good, and are given a bit of extra spacing. */
     border-radius: 4px 4px 0 0 !important;
     background: #20242c;
     color: #e3e6ee;
-    font-family: $body-font-medium;
+    font-family: $body-font-semibold;
     font-size: 1em;
     line-height: 1;
     text-align: left;
@@ -304,14 +304,15 @@ make sure they look good, and are given a bit of extra spacing. */
   display: flex;
   flex-direction: column;
   border-radius: 4px;
+  overflow: hidden;
 
   .kg-callout-emoji {
     line-height: 1.2em;
     font-size: 1.1em !important;
     background: #cc9b457a;
-    padding: 12px;
+    padding: 8px;
     width: 117%;
-    margin: -20px -26px 16px;
+    margin: -20px -26px 14px;
     letter-spacing: .1px;
 
     &::after {
@@ -322,7 +323,7 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 
   .kg-callout-text {
-    color: #dc9c5ca1;
+    color: #694503;
     font-size: 1em !important;
 
     a {

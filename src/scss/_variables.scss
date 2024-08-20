@@ -1,30 +1,30 @@
+@use 'sass:list';
 @import "_fonts.scss";
 
 /* Colors */
 $color-theme: #0297f6;
-$color-green: #a4d037;
-$color-yellow: #fecd35;
-$color-red: #f05230;
+$color-hover: #40cebb;
+
 $color-darkgrey: #15171A;
-$color-midgrey: #738a94;
 $color-lightgrey: #687385;
 $color-secondary-text: #979797;
-$color-border: #eaecee;
 $color-wash: #e5eff5;
-$color-darkmode: #151719;
 $color-body-font: #1c2228;
 $color-background-grey: #f4f8fb;
 $color-header-grey: #4e576a;
-$color-header-border-grey: #c9ccd0;
-$color-hover: #40cebb;
-$color-social-btn: #a1adc6;
-$color-code-bg: #2e3440;
 $color-post-blurb-grey: #677584;
 $color-sidebar-description: #607183;
+
+$color-inline-code: #3d7193;
+$color-inline-code-bg: rgb(133 176 225 / .25);
+
+$color-code-bg: #2e3440;
+$color-social-btn: #a1adc6;
+
+$color-border: #d2d5d8;
+$color-header-border-grey: #c9ccd0;
 $color-author-avatar-border: #849ab1;
 $color-default-figcaption: rgba(0, 0, 0, 0.5);
-$color-inline-code: #517aa1;
-$color-inline-code-bg: rgba(144, 181, 223, .1);
 
 /* Code Colors */
 $nord0: #2e3440;
@@ -45,18 +45,18 @@ $nord14: #a3be8c;
 $nord15: #b48ead;
 
 /* Fonts */
-$font-serif: "Georgia", "Times", serif;
-$font-mono: "Menlo", "Courier", monospace;
-$body-font: "SofiaPro-Regular", "HelveticaNeue", sans-serif;
-$body-font-light: "SofiaPro-Light", "HelveticaNeue", sans-serif;
-$body-font-medium: "SofiaPro-Medium", "HelveticaNeue", sans-serif;
-$body-font-semibold: "SofiaPro-SemiBold", "HelveticaNeue", sans-serif;
-$body-font-bold: "SofiaPro-Bold", "HelveticaNeue", sans-serif;
-$header-font: "TTNormsPro-Bold", "HelveticaNeue", sans-serif;
-$header-font-medium: "TTNormsPro-Medium", "HelveticaNeue", sans-serif;
-$header-font-semibold: "TTNormsPro-SemiBold", "HelveticaNeue", sans-serif;
-$monospace-font: "dm", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$table-font: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+$font-serif: ("Georgia", "Times", serif);
+$font-mono: ("Menlo", "Courier", monospace);
+$body-font: ("SofiaPro-Regular", "HelveticaNeue", sans-serif);
+$body-font-light: ("SofiaPro-Light", "HelveticaNeue", sans-serif);
+$body-font-medium: ("SofiaPro-Medium", "HelveticaNeue", sans-serif);
+$body-font-semibold: ("SofiaPro-SemiBold", "HelveticaNeue", sans-serif);
+$body-font-bold: ("SofiaPro-Bold", "HelveticaNeue", sans-serif);
+$header-font: ("TTNormsPro-Bold", "HelveticaNeue", sans-serif);
+$header-font-medium: ("TTNormsPro-Medium", "HelveticaNeue", sans-serif);
+$header-font-semibold: ("TTNormsPro-SemiBold", "HelveticaNeue", sans-serif);
+$monospace-font: ("dm", "SFMono-Regular", monospace);
+$table-font: (-apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif);
 
 /* Breakpoints */
 $smallscreen-breakpoint: 950px;

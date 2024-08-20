@@ -2021,11 +2021,11 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@^22.1.0":
-  version "22.2.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.2.0.tgz#7cf046a99f0ba4d628ad3088cb21f790df9b0c5b"
-  integrity sha512-bm6EG6/pCpkxDf/0gDNDdtDILMOHgaQBVOJGdwsqClnxA3xL6jtMv76rLBc006RVMWbmaf0xbmom4Z/5o2nRkQ==
+  version "22.4.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-22.4.1.tgz#9b595d292c65b94c20923159e2ce947731b6fdce"
+  integrity sha512-1tbpb9325+gPnKK0dMm+/LMriX0vKxf6RnB0SZUqfyVkQ4fMgUSySqhxE/y8Jvs4NyF1yHzTfG9KlnkIODxPKg==
   dependencies:
-    undici-types "~6.13.0"
+    undici-types "~6.19.2"
 
 "@types/wrap-ansi@^3.0.0":
   version "3.0.0"
@@ -2827,9 +2827,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.5.4:
-  version "1.5.6"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.6.tgz#c81d9938b5a877314ad370feb73b4e5409b36abd"
-  integrity sha512-jwXWsM5RPf6j9dPYzaorcBSUg6AiqocPEyMpkchkvntaH9HGfOOMZwxMJjDY/XEs3T5dM7uyH1VhRMkqUU9qVw==
+  version "1.5.11"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.11.tgz#258077f1077a1c72f2925cd5b326c470a7f5adef"
+  integrity sha512-R1CccCDYqndR25CaXFd6hp/u9RaaMcftMkphmvuepXr5b1vfLkRml6aWVeBhXJ7rbevHkKEMJtz8XqPf7ffmew==
 
 emoji-regex@^10.0.0:
   version "10.3.0"
@@ -3543,10 +3543,10 @@ mimic-fn@^2.1.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz#7ed2c2ccccaf84d3ffcb7a69b57711fc2083401b"
   integrity sha512-OqbOk5oEQeAZ8WXWydlu9HJjz9WVdEIvamMCcXmuqUYjTknH/sqsWvhQ3vgwKFRR1HpjvNBKQ37nbJgYzGqGcg==
 
-mini-css-extract-plugin@^2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.9.0.tgz#c73a1327ccf466f69026ac22a8e8fd707b78a235"
-  integrity sha512-Zs1YsZVfemekSZG+44vBsYTLQORkPMwnlv+aehcxK/NLKC+EGhDB39/YePYYqx/sTk6NnYpuqikhSn7+JIevTA==
+mini-css-extract-plugin@^2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/mini-css-extract-plugin/-/mini-css-extract-plugin-2.9.1.tgz#4d184f12ce90582e983ccef0f6f9db637b4be758"
+  integrity sha512-+Vyi+GCCOHnrJ2VPS+6aPoXN2k2jgUzDRhTFLjjTBn23qyXJXkjUWQgTL+mXpF5/A8ixLdCc6kWsoeOjKGejKQ==
   dependencies:
     schema-utils "^4.0.0"
     tapable "^2.2.1"
@@ -3807,11 +3807,11 @@ pkg-up@^3.1.0:
     find-up "^3.0.0"
 
 postcss-calc@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-10.0.1.tgz#78dce1b90d04a7cb3a67ca7235c041a719762f50"
-  integrity sha512-pp1Z3FxtxA+xHAoWXcOXgnBN1WPu4ZiJ5LWGjKyf9MMreagAsaTUtnqFK1y1sHhyJddAkYTPu6XSuLgb3oYCjw==
+  version "10.0.2"
+  resolved "https://registry.yarnpkg.com/postcss-calc/-/postcss-calc-10.0.2.tgz#15f01635a27b9d38913a98c4ef2877f5b715b439"
+  integrity sha512-DT/Wwm6fCKgpYVI7ZEWuPJ4az8hiEHtCUeYjZXqU7Ou4QqYh1Df2yCQ7Ca6N7xqKPFkxN3fhf+u9KSoOCJNAjg==
   dependencies:
-    postcss-selector-parser "^6.1.1"
+    postcss-selector-parser "^6.1.2"
     postcss-value-parser "^4.2.0"
 
 postcss-colormin@^7.0.2:
@@ -4049,7 +4049,7 @@ postcss-reduce-transforms@^7.0.0:
   dependencies:
     postcss-value-parser "^4.2.0"
 
-postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.1.1:
+postcss-selector-parser@^6.0.2, postcss-selector-parser@^6.0.4, postcss-selector-parser@^6.1.1, postcss-selector-parser@^6.1.2:
   version "6.1.2"
   resolved "https://registry.yarnpkg.com/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz#27ecb41fb0e3b6ba7a1ec84fff347f734c7929de"
   integrity sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==
@@ -4286,10 +4286,10 @@ safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.2:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass-loader@^16.0.0:
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-16.0.0.tgz#9b8d497e24bc176dc368df2b5b9e90b4ad24bf4e"
-  integrity sha512-n13Z+3rU9A177dk4888czcVFiC8CL9dii4qpXWUg3YIIgZEvi9TCFKjOQcbK0kJM7DJu9VucrZFddvNfYCPwtw==
+sass-loader@^16.0.1:
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-16.0.1.tgz#57049c1787076e923b21a1dccc612546ecaf4295"
+  integrity sha512-xACl1ToTsKnL9Ce5yYpRxrLj9QUDCnwZNhzpC7tKiFyA8zXsd3Ap+HGVnbCgkdQcm43E+i6oKAWBsvGA6ZoiMw==
   dependencies:
     neo-async "^2.6.2"
 
@@ -4546,10 +4546,10 @@ type-fest@^0.21.3:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.21.3.tgz#d260a24b0198436e133fa26a524a6d65fa3b2e37"
   integrity sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==
 
-undici-types@~6.13.0:
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.13.0.tgz#e3e79220ab8c81ed1496b5812471afd7cf075ea5"
-  integrity sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==
+undici-types@~6.19.2:
+  version "6.19.8"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-6.19.8.tgz#35111c9d1437ab83a7cdc0abae2f26d88eda0a02"
+  integrity sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.0"
