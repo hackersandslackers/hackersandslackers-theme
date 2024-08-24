@@ -207,12 +207,11 @@
         }
       }
 
-      &.missing-avatar i {
+      i {
         width: 100%;
         height: 100%;
-        font-size: 2em;
-        fill: $color-body-font;
-        color: $color-body-font;
+        font-size: 2.5em;
+        color: #4e576a;
         display: flex;
         justify-content: center;
         align-items: center;

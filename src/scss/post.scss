@@ -269,10 +269,24 @@
           width: 46px;
           overflow: hidden;
           margin-right: 10px;
+          position: relative;
 
           .post-meta-author-img {
             width: 100%;
             height: 100%;
+          }
+
+          i {
+            font-size: 2.3em;
+            display: block;
+            text-align: center;
+            position: absolute;
+            top: 3px;
+            left: 2px;
+            right: 0px;
+            bottom: 0;
+            line-height: 1;
+            color: #4e576a;
           }
         }
 
@@ -736,18 +750,21 @@
       width: -webkit-fill-available;
     }
 
+    .sidebar-btn {
+      font-size: 1.2em;
+    }
+
+    .support-description {
+      color: #4c5a69;
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin: 0 auto 15px;
+      text-align: left;
+    }
+
     .support-coffee-link {
       display: flex;
       flex-direction: row-reverse;
-
-      .support-description {
-        color: #4c5a69;
-        font-size: 1.1em;
-        line-height: 1.5;
-        margin: 0 auto 15px;
-        text-align: left;
-      }
-
     }
 
     .support-coffee-button {

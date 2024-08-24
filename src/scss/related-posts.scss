@@ -152,10 +152,15 @@
             display: block;
             font-family: $body-font-medium;
             color: #636f7c;
+            margin: 0 3px;
 
             * {
               font-family: $body-font-medium;
               color: #636f7c;
+            }
+
+            i {
+              font-family: "Font Awesome 6 Sharp";
             }
 
             &.separator {
