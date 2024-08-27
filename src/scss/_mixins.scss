@@ -447,16 +447,17 @@
 }
 
 @mixin protip {
-  background: #ffd3a7;
   padding: 2vh 2vw;
   border-radius: 5px;
+  background: #ffd3a7;
   box-shadow: 2px 2px 5px -2px rgb(71 30 0 / 74%), 0 0 1px rgba(0, 0, 0, .4);
   overflow: hidden;
 
   p,
   .kg-callout-text {
-    color: #694503;
     line-height: 1.5;
+    color: #694503;
+    font-family: $body-font;
 
     &:last-of-type {
       margin-bottom: 0;
@@ -469,5 +470,21 @@
     padding: 5px;
     display: block;
     border-radius: 4px 4px 0 0;
+  }
+}
+
+@mixin kg-callout-card {
+  padding: 2vh 2vw;
+  border-radius: 5px;
+
+  p,
+  .kg-callout-text {
+    line-height: 1.5;
+    font-family: $body-font;
+    font-size: 1em !important;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

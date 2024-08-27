@@ -204,10 +204,23 @@ make sure they look good, and are given a bit of extra spacing. */
 /* ---------------------------------------------------------- */
 
 .kg-callout-card {
-  font-family: $body-font;
+  padding: 2vh 2vw;
+  border-radius: 5px;
 
   @media(max-width: $mobile-breakpoint) {
     padding: 1em 1.2em !important;
+    font-size: 1em !important;
+  }
+
+  p,
+  .kg-callout-text {
+    line-height: 1.5;
+    font-family: $body-font;
+    font-size: 1.15em !important;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .kg-callout-emoji {
@@ -217,10 +230,14 @@ make sure they look good, and are given a bit of extra spacing. */
 
   &.kg-callout-card-grey {
     background: rgb(125 164 203 / 13%);
+  }
+
+  &.kg-callout-card-blue {
+    box-shadow: 2px 2px 2px -2px rgb(8 88 131 / 90%), 0 0 1px rgba(0, 0, 0, .4);
+    color: #2d5a7d !important;
 
     .kg-callout-text {
-      font-size: 1em;
-      color: #545a69;
+      color: #2d5a7d !important;
     }
   }
 }
