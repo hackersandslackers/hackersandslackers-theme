@@ -154,13 +154,10 @@
             color: #636f7c;
             margin: 0 3px;
 
-            * {
+            span,
+            time {
               font-family: $body-font-medium;
               color: #636f7c;
-            }
-
-            i {
-              font-family: "Font Awesome 6 Sharp";
             }
 
             &.separator {

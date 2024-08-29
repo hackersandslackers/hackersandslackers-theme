@@ -15,14 +15,14 @@ $color-header-grey: #4e576a;
 $color-post-blurb-grey: #677584;
 $color-sidebar-description: #607183;
 
-$color-inline-code: #3d7193;
-$color-inline-code-bg: rgb(133 176 225 / .25);
+$color-inline-code: #638fac;
+$color-inline-code-bg: rgba(133, 176, 225, 0.1);
 
 $color-code-bg: #2e3440;
 $color-social-btn: #a1adc6;
 
 $color-border: #d2d5d8;
-$color-header-border-grey: #c9ccd0;
+$color-header-border-grey: #dfeef7;
 $color-author-avatar-border: #849ab1;
 $color-default-figcaption: rgba(0, 0, 0, 0.5);
 
@@ -57,6 +57,7 @@ $header-font-medium: ("TTNormsPro-Medium", "HelveticaNeue", sans-serif);
 $header-font-semibold: ("TTNormsPro-SemiBold", "HelveticaNeue", sans-serif);
 $monospace-font: ("dm", "SFMono-Regular", monospace);
 $table-font: (-apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif);
+$icon-font: "Font Awesome 6 Sharp";
 
 /* Breakpoints */
 $smallscreen-breakpoint: 950px;
