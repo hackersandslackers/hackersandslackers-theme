@@ -128,6 +128,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
     @media(max-width: $mobile-breakpoint) {
       min-width: 100%;
+      padding: 16px 15px 12px;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
       border-right: 0;
@@ -138,10 +139,10 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     p {
-      font-size: 1.05em;
-      line-height: 1.1;
+      font-size: .95em;
+      line-height: 1.3;
       color: #cfdde5;
-      font-family: $body-font-medium;
+      font-family: $body-font-semibold;
     }
 
     code {
@@ -177,8 +178,14 @@ make sure they look good, and are given a bit of extra spacing. */
   margin: 20px 0;
   overflow-y: hidden;
 
+  @media(max-width: $mobile-breakpoint) {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+
   .tableContainer {
     margin: 0;
+    overflow-x: scroll;
   }
 
   figcaption {
@@ -204,11 +211,11 @@ make sure they look good, and are given a bit of extra spacing. */
 /* ---------------------------------------------------------- */
 
 .kg-callout-card {
-  padding: 2vh 2vw;
+  display: block !important;
   border-radius: 5px;
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 1em 1.2em !important;
+    // padding: 1em 1.2em !important;
     font-size: 1em !important;
   }
 
@@ -226,13 +233,15 @@ make sure they look good, and are given a bit of extra spacing. */
   .kg-callout-emoji {
     font-size: 1.5em !important;
     padding-right: 0.4em !important;
+    display: block !important;
   }
 
   &.kg-callout-card-grey {
     background: rgb(125 164 203 / 13%);
   }
 
-  &.kg-callout-card-blue {
+  &.kg-callout-card-blue,
+  &.kg-callout-card-grey {
     box-shadow: 2px 2px 2px -2px rgb(8 88 131 / 90%), 0 0 1px rgba(0, 0, 0, .4);
     color: #2d5a7d !important;
 
@@ -318,8 +327,6 @@ make sure they look good, and are given a bit of extra spacing. */
   background: rgb(217 164 71 / 50%) !important;
   color: #775008;
   font-size: 1.1em;
-  display: flex;
-  flex-direction: column;
   border-radius: 6px;
   overflow: hidden;
 
@@ -327,8 +334,8 @@ make sure they look good, and are given a bit of extra spacing. */
     line-height: 1.2em;
     font-size: 1.1em !important;
     background: #cc9b457a;
-    padding: 8px;
-    width: 117%;
+    padding: 10px 8px;
+    width: auto;
     margin: -20px -26px 14px;
     letter-spacing: .1px;
 

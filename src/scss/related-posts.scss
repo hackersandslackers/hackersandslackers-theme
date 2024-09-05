@@ -41,10 +41,6 @@
       flex-direction: column;
       display: flex;
 
-      @media(max-width: $mobile-breakpoint) {
-        flex-direction: row;
-      }
-
       .post-card-image-link {
         position: relative;
         overflow: hidden;

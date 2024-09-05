@@ -447,7 +447,7 @@
 }
 
 @mixin protip {
-  padding: 2vh 2vw;
+  display: block;
   border-radius: 5px;
   background: #ffd3a7;
   box-shadow: 2px 2px 5px -2px rgb(71 30 0 / 74%), 0 0 1px rgba(0, 0, 0, .4);
@@ -474,7 +474,7 @@
 }
 
 @mixin kg-callout-card {
-  padding: 2vh 2vw;
+  display: block;
   border-radius: 5px;
 
   p,

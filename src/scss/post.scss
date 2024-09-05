@@ -230,7 +230,7 @@
       }
 
       .post-excerpt {
-        color: #8c96a4;
+        color: #778291;
         font-family: $body-font-medium;
         font-size: 1.35em !important;
         line-height: 1.2;
@@ -308,6 +308,7 @@
 
         .post-published-time-meta {
           font-family: $body-font-medium;
+          opacity: .7;
         }
       }
     }
@@ -765,6 +766,7 @@
     .support-coffee-link {
       display: flex;
       flex-direction: row-reverse;
+      margin-right: 15px;
     }
 
     .support-coffee-button {
