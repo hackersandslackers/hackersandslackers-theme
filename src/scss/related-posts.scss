@@ -7,8 +7,12 @@
   margin: 0 auto;
 
   @media(max-width: $mobile-breakpoint) {
-    max-width: 90% !important;
+    max-width: 92vw !important;
     margin-bottom: 20px !important;
+  }
+
+  @media(max-width: $xs-mobile-breakpoint) {
+    max-width: 92vw !important;
   }
 
   .related-posts-header {
@@ -21,8 +25,14 @@
     border-bottom: 1px solid #dee1e7;
     padding-bottom: 8px;
     text-align: left;
+    max-width: 96vw;
+    margin: auto;
 
     @media(max-width: $mobile-breakpoint) {
+      margin: 0 auto 10px;
+    }
+
+    @media(max-width: $xs-mobile-breakpoint) {
       font-size: 1.2em;
     }
   }
@@ -31,8 +41,9 @@
     grid-gap: 2vmin;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: $xs-mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-gap: 3vmin;
     }
@@ -47,7 +58,7 @@
         height: auto;
         max-height: 135px;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: $xs-mobile-breakpoint) {
           display: inline-flex;
           min-width: 30vw;
         }
@@ -80,10 +91,16 @@
         @media(max-width: $mobile-breakpoint) {
           line-height: 1.15;
         }
+
+        @media(max-width: $xs-mobile-breakpoint) {
+          line-height: 1.2;
+          font-size: 1.4em;
+        }
+
+
       }
 
       .post-card-content {
-        padding: 13px;
 
         @media(max-width: $mobile-breakpoint) {
           width: fit-content;
@@ -135,6 +152,11 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @media(max-width: $mobile-breakpoint) {
+          width: fit-content;
+          padding: 10px;
+        }
+
         .post-card-meta {
           width: 100%;
 
@@ -149,6 +171,15 @@
             font-family: $body-font-medium;
             color: #636f7c;
             margin: 0 3px;
+
+            @media (max-width: $mobile-breakpoint) {
+              font-size: 0.9em;
+            }
+
+            @media (max-width: $xs-mobile-breakpoint) {
+              font-size: 0.95em;
+              padding: 5px 0;
+            }
 
             span,
             time {
