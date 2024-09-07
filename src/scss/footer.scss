@@ -257,8 +257,8 @@
       }
 
       @media (max-width: $mobile-breakpoint) {
-        width: 300px !important;
-        margin-bottom: 5px;
+        width: 315px !important;
+        margin-bottom: unset;
       }
 
       .social-media-button {
@@ -311,14 +311,13 @@
 
       @media(max-width: $tablet-breakpoint) {
         width: 60vw;
-        color: #84898e;
         font-size: 1.2em;
       }
 
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
         font-size: 1.1em;
-        line-height: 1.2;
+        line-height: 1.3;
       }
     }
 

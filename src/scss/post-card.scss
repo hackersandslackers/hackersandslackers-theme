@@ -37,16 +37,19 @@
     transition: $transition;
 
     @media (max-width: $smallscreen-breakpoint) {
-      font-size: 2em;
+      font-size: 1.8em;
     }
 
     @media (max-width: $tablet-breakpoint) {
-      font-size: 3.8vmax;
-      line-height: 4vmax;
+      font-size: 2em;
     }
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 1.7em;
+      font-size: 1.9em;
+    }
+
+    @media (max-width: $xs-mobile-breakpoint) {
+      font-size: 1.8em;
       line-height: 1.05;
     }
   }
@@ -97,8 +100,7 @@
       color: #808997;
       display: -webkit-box;
       font-family: $body-font-medium;
-      font-size: 1.3em;
-      letter-spacing: -.5px;
+      font-size: 1.4em;
       line-height: 1.2em;
       margin: 5px 0 20px;
       overflow-y: hidden;
@@ -107,8 +109,8 @@
       order: 1;
       transition: $transition;
 
-      @media (max-width: $tablet-breakpoint) {
-        font-size: 1.3em;
+      @media(max-width: $smallscreen-breakpoint) {
+        font-size: 1.35em;
       }
 
       @media (max-width: 767px) {
@@ -118,9 +120,13 @@
       @media(max-width: $mobile-breakpoint) {
         letter-spacing: unset;
         opacity: 1;
-        font-size: 1.1em;
-        line-height: 1.1em;
+        font-size: 1.3em;
+        line-height: 1.2em;
         margin: 2vw 0 4vw;
+      }
+
+      @media(max-width: $mobile-breakpoint) {
+        font-size: 1.25em;
       }
     }
 
@@ -137,7 +143,7 @@
       text-overflow: ellipsis;
       color: $color-secondary-text;
 
-      @media (max-width: $mobile-breakpoint) {
+      @media(max-width: $tablet-breakpoint) {
         padding: 15px 0 0;
       }
 
