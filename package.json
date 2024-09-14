@@ -69,7 +69,7 @@
         "postcss": "^8.4.45",
         "postcss-easy-import": "4.0.0",
         "postcss-loader": "^8.1.1",
-        "pump": "3.0.0",
+        "pump": "3.0.2",
         "sass": "^1.78.0",
         "sass-loader": "^16.0.1",
         "style-loader": "^4.0.0",

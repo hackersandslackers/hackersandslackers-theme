@@ -421,10 +421,6 @@
 
     h3 {
       @include header-third;
-
-      @media(max-width: $mobile-breakpoint) {
-        line-height: 1.1;
-      }
     }
 
     a {
@@ -449,14 +445,16 @@
     .intro-notice {
       align-items: flex-start;
       background: #eceef1;
-      border-radius: 5px;
+      border-radius: 6px;
       color: #6e7482;
       display: flex;
       font-style: italic;
       justify-content: left;
-      line-height: 1.6;
-      margin: -20px auto -10px;
-      padding: 20px;
+      line-height: 1.4;
+      font-size: .9em;
+      margin: -10px auto;
+      padding: 15px;
+      box-shadow: 2px 2px 2px -2px rgb(0 0 0 / 75%), 0 0 1px rgba(0, 0, 0, 0.4);
 
       img {
         height: 40px;

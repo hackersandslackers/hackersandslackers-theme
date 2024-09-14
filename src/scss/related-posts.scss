@@ -43,6 +43,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
 
+    @media(max-width: $tablet-breakpoint) {
+      max-width: 96vw;
+    }
+
     @media(max-width: $xs-mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-gap: 3vmin;
@@ -101,6 +105,10 @@
       }
 
       .post-card-content {
+
+        @media(max-width: $tablet-breakpoint) {
+          padding: 12px;
+        }
 
         @media(max-width: $mobile-breakpoint) {
           width: fit-content;
@@ -205,7 +213,8 @@
             color: white;
           }
 
-          .meta-items-left * {
+          .meta-items-left *,
+          time {
             color: white;
             cursor: pointer;
           }

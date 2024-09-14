@@ -15,10 +15,9 @@
 @mixin header-third {
   font-family: $body-font-medium;
   font-size: 1.3em;
-  line-height: 1.1;
+  line-height: 1.3;
   margin: 40px 0 5px;
   color: #4e576a;
-  letter-spacing: .5px;
 
   @media(max-width: $mobile-breakpoint) {
     font-size: 1.3em;
@@ -447,7 +446,7 @@
 }
 
 @mixin protip {
-  display: block;
+  flex-direction: column;
   border-radius: 5px;
   background: #ffd3a7;
   box-shadow: 2px 2px 5px -2px rgb(71 30 0 / 74%), 0 0 1px rgba(0, 0, 0, .4);
