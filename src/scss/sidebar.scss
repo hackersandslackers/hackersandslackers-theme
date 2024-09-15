@@ -50,7 +50,8 @@
       line-height: 1.3;
       font-size: 1em;
       margin-bottom: 15px;
-      font-family: $body-font;
+      font-family: $body-font-light;
+      color: #313b45;
     }
 
     &.twitter {
@@ -463,7 +464,7 @@
 }
 
 .widget.about .description {
-  font-family: $body-font;
+  font-family: $body-font-light;
   color: $color-sidebar-description;
   line-height: 1.3;
   margin: 15px 0 0;

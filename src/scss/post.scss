@@ -550,7 +550,7 @@
       }
 
       .author-name {
-        font-size: 1.4em !important;
+        font-size: 1.5em !important;
         font-family: $body-font-medium;
 
         &:hover {
@@ -566,7 +566,7 @@
 
     .author-card-excerpt {
       line-height: 1.5em !important;
-      font-size: 1.1em !important;
+      font-size: 1.15em !important;
       margin-top: 0;
 
       @media(max-width: $mobile-breakpoint) {

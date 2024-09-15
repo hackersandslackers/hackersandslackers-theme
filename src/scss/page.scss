@@ -35,6 +35,10 @@
     background: white;
     box-shadow: $card-shadow;
 
+    @media(max-width: $smallscreen-breakpoint) {
+      padding: 30px;
+    }
+
     @media(max-width: $tablet-breakpoint) {
       padding: 5vw;
       width: 100%;
@@ -68,6 +72,8 @@
 
   .about-content {
     margin-bottom: 40px;
+
+
 
     .authors-list-title {
       margin: 40px 0 15px;

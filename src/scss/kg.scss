@@ -147,9 +147,12 @@ make sure they look good, and are given a bit of extra spacing. */
 
     code {
       font-family: $monospace-font;
-      color: #b9d3e7;
-      background: rgb(185 211 251 / 15%);
-      font-size: .9em;
+      color: #d2dce3;
+      background: rgb(156 195 255 / 20%);
+      font-size: 0.95em;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-weight: 600;
     }
 
     * {
