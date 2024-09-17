@@ -230,7 +230,7 @@
       }
 
       .post-excerpt {
-        color: #8c96a4;
+        color: #778291;
         font-family: $body-font-medium;
         font-size: 1.35em !important;
         line-height: 1.2;
@@ -308,6 +308,7 @@
 
         .post-published-time-meta {
           font-family: $body-font-medium;
+          opacity: .7;
         }
       }
     }
@@ -420,10 +421,6 @@
 
     h3 {
       @include header-third;
-
-      @media(max-width: $mobile-breakpoint) {
-        line-height: 1.1;
-      }
     }
 
     a {
@@ -448,14 +445,16 @@
     .intro-notice {
       align-items: flex-start;
       background: #eceef1;
-      border-radius: 5px;
+      border-radius: 6px;
       color: #6e7482;
       display: flex;
       font-style: italic;
       justify-content: left;
-      line-height: 1.6;
-      margin: -20px auto -10px;
-      padding: 20px;
+      line-height: 1.4;
+      font-size: .9em;
+      margin: -10px auto;
+      padding: 15px;
+      box-shadow: 2px 2px 2px -2px rgb(0 0 0 / 75%), 0 0 1px rgba(0, 0, 0, 0.4);
 
       img {
         height: 40px;
@@ -551,7 +550,7 @@
       }
 
       .author-name {
-        font-size: 1.4em !important;
+        font-size: 1.5em !important;
         font-family: $body-font-medium;
 
         &:hover {
@@ -567,7 +566,7 @@
 
     .author-card-excerpt {
       line-height: 1.5em !important;
-      font-size: 1.1em !important;
+      font-size: 1.15em !important;
       margin-top: 0;
 
       @media(max-width: $mobile-breakpoint) {
@@ -765,6 +764,7 @@
     .support-coffee-link {
       display: flex;
       flex-direction: row-reverse;
+      margin-right: 15px;
     }
 
     .support-coffee-button {

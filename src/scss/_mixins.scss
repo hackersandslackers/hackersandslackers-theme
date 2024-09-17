@@ -14,11 +14,10 @@
 
 @mixin header-third {
   font-family: $body-font-medium;
-  font-size: 1.3em;
-  line-height: 1.1;
+  font-size: 1.4em;
+  line-height: 1.3;
   margin: 40px 0 5px;
   color: #4e576a;
-  letter-spacing: .5px;
 
   @media(max-width: $mobile-breakpoint) {
     font-size: 1.3em;
@@ -113,7 +112,7 @@
     font-size: .95em;
   }
 
-  @media(max-width: 500px) {
+  @media(max-width: $xs-mobile-breakpoint) {
     font-size: .9em;
     padding: 6px;
     line-height: 1;
@@ -222,9 +221,14 @@
       width: 100%;
 
       .author-name {
-        font-size: 1.3em;
+        font-size: 1.4em;
         font-family: $header-font-semibold;
         color: #5a6267;
+
+        &:hover {
+          color: $color-hover;
+          cursor: pointer;
+        }
       }
 
       .author-post-count {
@@ -265,7 +269,8 @@
       .author-meta {
         display: flex;
         flex-wrap: wrap;
-        margin: 10px 0;
+        margin: 8px 0;
+        line-height: 1;
 
         @media(max-width: $mobile-breakpoint) {
           margin: 5px 0;
@@ -313,7 +318,7 @@
         margin: 0;
         line-height: 1.4em;
         font-family: $body-font;
-        font-size: 1em;
+        font-size: 1.05em;
 
         @media(max-width: $mobile-breakpoint) {
           margin: 10px 0 0;
@@ -447,7 +452,7 @@
 }
 
 @mixin protip {
-  padding: 2vh 2vw;
+  flex-direction: column;
   border-radius: 5px;
   background: #ffd3a7;
   box-shadow: 2px 2px 5px -2px rgb(71 30 0 / 74%), 0 0 1px rgba(0, 0, 0, .4);
@@ -474,7 +479,7 @@
 }
 
 @mixin kg-callout-card {
-  padding: 2vh 2vw;
+  display: block;
   border-radius: 5px;
 
   p,

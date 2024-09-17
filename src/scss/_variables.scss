@@ -13,10 +13,10 @@ $color-body-font: #1c2228;
 $color-background-grey: #f4f8fb;
 $color-header-grey: #4e576a;
 $color-post-blurb-grey: #677584;
-$color-sidebar-description: #607183;
+$color-sidebar-description: #313b45;
 
-$color-inline-code: #638fac;
-$color-inline-code-bg: rgba(133, 176, 225, 0.1);
+$color-inline-code: #446378;
+$color-inline-code-bg: rgba(133, 176, 225, 0.2);
 
 $color-code-bg: #2e3440;
 $color-social-btn: #a1adc6;
@@ -63,6 +63,7 @@ $icon-font: "Font Awesome 6 Sharp";
 $smallscreen-breakpoint: 950px;
 $tablet-breakpoint: 800px;
 $mobile-breakpoint: 600px;
+$xs-mobile-breakpoint: 500px;
 
 /* Hamburger Menu */
 $hamburger-size: 35px;

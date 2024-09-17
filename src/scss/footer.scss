@@ -257,8 +257,8 @@
       }
 
       @media (max-width: $mobile-breakpoint) {
-        width: 300px !important;
-        margin-bottom: 5px;
+        width: 315px !important;
+        margin-bottom: unset;
       }
 
       .social-media-button {
@@ -304,21 +304,20 @@
     }
 
     .footer-description {
-      font-family: $body-font;
+      font-family: $body-font-light;
       color: #384453;
       line-height: 1.5;
       font-size: 1.1em;
 
       @media(max-width: $tablet-breakpoint) {
         width: 60vw;
-        color: #84898e;
         font-size: 1.2em;
       }
 
       @media(max-width: $mobile-breakpoint) {
         width: 100%;
-        font-size: 1.1em;
-        line-height: 1.2;
+        font-size: 1.15em;
+        line-height: 1.4;
       }
     }
 

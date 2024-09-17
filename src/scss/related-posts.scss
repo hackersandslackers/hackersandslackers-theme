@@ -7,8 +7,12 @@
   margin: 0 auto;
 
   @media(max-width: $mobile-breakpoint) {
-    max-width: 90% !important;
+    max-width: 92vw !important;
     margin-bottom: 20px !important;
+  }
+
+  @media(max-width: $xs-mobile-breakpoint) {
+    max-width: 92vw !important;
   }
 
   .related-posts-header {
@@ -17,12 +21,17 @@
     font-size: 1.3em;
     line-height: 1;
     text-transform: uppercase;
-    margin: 28px 0 16px;
+    margin: 28px auto 16px;
     border-bottom: 1px solid #dee1e7;
     padding-bottom: 8px;
     text-align: left;
+    max-width: 96vw;
 
     @media(max-width: $mobile-breakpoint) {
+      margin: 0 auto 10px;
+    }
+
+    @media(max-width: $xs-mobile-breakpoint) {
       font-size: 1.2em;
     }
   }
@@ -31,8 +40,13 @@
     grid-gap: 2vmin;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: $tablet-breakpoint) {
+      max-width: 96vw;
+    }
+
+    @media(max-width: $xs-mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-gap: 3vmin;
     }
@@ -41,17 +55,13 @@
       flex-direction: column;
       display: flex;
 
-      @media(max-width: $mobile-breakpoint) {
-        flex-direction: row;
-      }
-
       .post-card-image-link {
         position: relative;
         overflow: hidden;
         height: auto;
         max-height: 135px;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: $xs-mobile-breakpoint) {
           display: inline-flex;
           min-width: 30vw;
         }
@@ -84,19 +94,28 @@
         @media(max-width: $mobile-breakpoint) {
           line-height: 1.15;
         }
+
+        @media(max-width: $xs-mobile-breakpoint) {
+          line-height: 1.2;
+          font-size: 1.4em;
+        }
       }
 
       .post-card-content {
-        padding: 13px;
+
+        @media(max-width: $tablet-breakpoint) {
+          padding: 12px;
+        }
 
         @media(max-width: $mobile-breakpoint) {
           width: fit-content;
+          padding: 10px;
         }
 
         .post-card-content-link {
           max-height: 64px;
           text-overflow: ellipsis;
-          margin-bottom: 15px;
+          margin-bottom: 13px;
 
           @media(max-width: $mobile-breakpoint) {
             max-height: 75px;
@@ -139,6 +158,11 @@
         flex-direction: column;
         justify-content: space-between;
 
+        @media(max-width: $mobile-breakpoint) {
+          width: fit-content;
+          padding: 10px;
+        }
+
         .post-card-meta {
           width: 100%;
 
@@ -150,14 +174,25 @@
 
           .post-card-meta-item {
             display: block;
-            font-family: $body-font-medium;
+            font-family: $body-font-semibold;
             color: #636f7c;
             margin: 0 3px;
+            transition: $transition;
+
+            @media (max-width: $mobile-breakpoint) {
+              font-size: 0.9em;
+            }
+
+            @media (max-width: $xs-mobile-breakpoint) {
+              font-size: 0.95em;
+              padding: 5px 0;
+            }
 
             span,
             time {
               font-family: $body-font-medium;
               color: #636f7c;
+              transition: $transition;
             }
 
             &.separator {
@@ -166,22 +201,24 @@
 
             &.reading-time {
               display: block !important;
+              font-family: $body-font-semibold;
             }
           }
         }
+      }
 
-        &:hover {
-          background: $color-theme;
+      &:hover {
+        background: $color-theme;
+        cursor: pointer;
+
+        * {
+          color: white !important;
+        }
+
+        .meta-items-left *,
+        .reading-time {
+          color: white;
           cursor: pointer;
-
-          * {
-            color: white;
-          }
-
-          .meta-items-left * {
-            color: white;
-            cursor: pointer;
-          }
         }
       }
     }

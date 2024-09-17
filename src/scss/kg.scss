@@ -119,7 +119,7 @@ make sure they look good, and are given a bit of extra spacing. */
     border-radius: 4px 4px 0 0 !important;
     background: #20242c;
     color: #e3e6ee;
-    font-family: $body-font-semibold;
+    font-family: $body-font-medium;
     font-size: 1em;
     line-height: 1;
     text-align: left;
@@ -128,6 +128,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
     @media(max-width: $mobile-breakpoint) {
       min-width: 100%;
+      padding: 16px 15px 12px;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
       border-right: 0;
@@ -138,17 +139,20 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     p {
-      font-size: 1.05em;
-      line-height: 1.1;
+      font-size: .95em;
+      line-height: 1.3;
       color: #cfdde5;
-      font-family: $body-font-medium;
+      font-family: $body-font-semibold;
     }
 
     code {
       font-family: $monospace-font;
-      color: #b9d3e7;
-      background: rgb(185 211 251 / 15%);
-      font-size: .9em;
+      color: #d2dce3;
+      background: rgb(156 195 255 / 20%);
+      font-size: 0.95em;
+      padding: 2px 5px;
+      border-radius: 4px;
+      font-weight: 600;
     }
 
     * {
@@ -177,8 +181,14 @@ make sure they look good, and are given a bit of extra spacing. */
   margin: 20px 0;
   overflow-y: hidden;
 
+  @media(max-width: $mobile-breakpoint) {
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+  }
+
   .tableContainer {
     margin: 0;
+    overflow-x: scroll;
   }
 
   figcaption {
@@ -204,11 +214,11 @@ make sure they look good, and are given a bit of extra spacing. */
 /* ---------------------------------------------------------- */
 
 .kg-callout-card {
-  padding: 2vh 2vw;
+  display: flex;
   border-radius: 5px;
 
   @media(max-width: $mobile-breakpoint) {
-    padding: 1em 1.2em !important;
+    // padding: 1em 1.2em !important;
     font-size: 1em !important;
   }
 
@@ -226,13 +236,15 @@ make sure they look good, and are given a bit of extra spacing. */
   .kg-callout-emoji {
     font-size: 1.5em !important;
     padding-right: 0.4em !important;
+    display: block !important;
   }
 
   &.kg-callout-card-grey {
     background: rgb(125 164 203 / 13%);
   }
 
-  &.kg-callout-card-blue {
+  &.kg-callout-card-blue,
+  &.kg-callout-card-grey {
     box-shadow: 2px 2px 2px -2px rgb(8 88 131 / 90%), 0 0 1px rgba(0, 0, 0, .4);
     color: #2d5a7d !important;
 
@@ -318,17 +330,16 @@ make sure they look good, and are given a bit of extra spacing. */
   background: rgb(217 164 71 / 50%) !important;
   color: #775008;
   font-size: 1.1em;
-  display: flex;
-  flex-direction: column;
   border-radius: 6px;
   overflow: hidden;
+  flex-direction: column;
 
   .kg-callout-emoji {
     line-height: 1.2em;
     font-size: 1.1em !important;
     background: #cc9b457a;
-    padding: 8px;
-    width: 117%;
+    padding: 10px 8px;
+    width: auto;
     margin: -20px -26px 14px;
     letter-spacing: .1px;
 
