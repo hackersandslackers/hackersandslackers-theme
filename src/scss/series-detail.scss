@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import "_variables.scss";
 @import "_mixins.scss";
 
@@ -7,8 +8,8 @@
   box-shadow: $card-shadow;
   margin: 20px auto 60px;
   max-width: 100%;
-  width: 900px !important;
-  padding: 40px;
+  width: 950px !important;
+  padding: 35px;
 
   @media(max-width: 900px) {
     margin: -30px auto 30px;
@@ -24,13 +25,14 @@
     padding: 30px 5vw;
   }
 
-  .series-feature-image {
-    overflow: hidden;
-    margin: 50px auto;
-    width: 50%;
+  .series-header {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
 
-    @media(max-width: $mobile-breakpoint) {
-      margin: 0 auto 40px;
+    .series-page-image {
+      max-width: 50px;
+      margin-right: 10px;
     }
   }
 
@@ -52,10 +54,11 @@
       }
     }
 
-    ul {
-      font-size: .95em;
+    li {
+      font-size: 1.05em;
+      font-family: $body-font-light;
       line-height: 1.7;
-      margin: 10px 0 0;
+      color: #232931;
 
       @media(max-width: $mobile-breakpoint) {
         &:last-of-type {
@@ -137,6 +140,7 @@
 
       .series-post-card-title {
         -webkit-line-clamp: 1;
+        line-clamp: 1;
         -webkit-box-orient: vertical;
         display: -webkit-box;
         font-family: $header-font-medium;
@@ -155,13 +159,14 @@
 
       .series-post-card-excerpt {
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        font-family: $body-font;
+        font-family: $body-font-light;
         color: $color-body-font;
         font-size: 1.05em;
         opacity: .7;
-        line-height: 1.2;
+        line-height: 1.4;
         margin-bottom: 12px;
         overflow-y: hidden;
         text-overflow: ellipsis;
@@ -213,6 +218,8 @@
     font-family: $header-font-medium;
     color: $color-header-grey;
     line-height: 1;
+    margin: 0;
+    font-size: 2.7em;
 
     @media(max-width: $mobile-breakpoint) {
       font-size: 2em;
@@ -243,5 +250,9 @@
         font-size: 1em;
       }
     }
+  }
+
+  .footer-wrapper {
+    max-width: 75vw;
   }
 }

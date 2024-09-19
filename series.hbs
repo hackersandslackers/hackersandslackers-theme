@@ -1,9 +1,20 @@
 {{!< default}}
 <div class="series-detail">
-  <h1 class="series-title">{{page.title}}</h1>
-  <div class="post-content">
-    {{#page}}{{content}}{{/page}}
-  </div>
+  {{#page}}
+    <div class="series-header">
+      {{!-- Series Page Image --}}
+      {{#if feature_image}}
+        <img
+          class="series-page-image"
+          src="{{img_url feature_image}}"
+          alt="{{title}}" />
+      {{/if}}
+      <h1 class="series-title">{{title}}</h1>
+    </div>
+    <div class="post-content">
+      {{content}}
+    </div>
+  {{/page}}
   {{#foreach posts}}
     {{> "series/series-post-card" }}
   {{/foreach}}

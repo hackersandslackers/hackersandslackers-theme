@@ -265,6 +265,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   .kg-bookmark-title {
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     color: #4e576a;
     display: -webkit-box;
@@ -280,6 +281,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   .kg-bookmark-description {
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
     font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;

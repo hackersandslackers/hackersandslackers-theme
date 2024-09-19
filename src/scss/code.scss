@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import "_mixins.scss";
 @import "_variables.scss";
 
@@ -65,7 +66,7 @@
     .token.prolog,
     .token.doctype,
     .token.cdata {
-      color: lighten($nord3, 30%);
+      color: color.adjust($nord3, $lightness: +30%);
     }
 
     .token.punctuation {
@@ -88,7 +89,7 @@
     .token.string,
     .token.char,
     .token.inserted {
-      color: lighten($nord14, 10%);
+      color: color.adjust($nord14, $lightness: +10%);
     }
 
     .token.builtin {
@@ -96,7 +97,7 @@
     }
 
     .token.triple-quoted-string {
-      color: lighten($nord3, 30%);
+      color: color.adjust($nord3, $lightness: +30%);
     }
 
     .token.operator,
@@ -156,7 +157,7 @@
     }
 
     .token.attr-value {
-      color: lighten($nord14, 10%);
+      color: color.adjust($nord14, $lightness: +10%);
       font-weight: normal;
     }
 
