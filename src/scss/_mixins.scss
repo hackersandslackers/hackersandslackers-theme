@@ -317,8 +317,8 @@
       .author-card-excerpt {
         margin: 0;
         line-height: 1.4em;
-        font-family: $body-font;
-        font-size: 1.05em;
+        font-family: $body-font-light;
+        font-size: 1.5em;
 
         @media(max-width: $mobile-breakpoint) {
           margin: 10px 0 0;

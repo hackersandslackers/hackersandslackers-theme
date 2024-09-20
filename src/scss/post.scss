@@ -348,6 +348,7 @@
 
         @media(max-width: $mobile-breakpoint) {
           line-height: 1.1;
+          font-size: 1.1em;
         }
 
         &::before {
@@ -566,8 +567,9 @@
 
     .author-card-excerpt {
       line-height: 1.5em !important;
-      font-size: 1.15em !important;
+      font-size: 1.1em !important;
       margin-top: 0;
+      color: #1e242a;
 
       @media(max-width: $mobile-breakpoint) {
         width: -webkit-fill-available;

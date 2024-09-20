@@ -207,7 +207,43 @@ make sure they look good, and are given a bit of extra spacing. */
     font-size: 1.7rem;
     line-height: 1.6em;
   }
+}
 
+/* Bookmark Cards */
+/* ---------------------------------------------------------- */
+.kg-bookmark-container,
+.kg-bookmark-card {
+  display: flex;
+  width: 100%;
+
+  @media(max-width: $mobile-breakpoint) {
+    flex-direction: column-reverse;
+  }
+
+  .kg-bookmark-thumbnail {
+    @media(max-width: $mobile-breakpoint) {
+      max-height: 180px;
+      overflow: hidden;
+      align-items: center;
+      display: flex;
+    }
+  }
+
+  .kg-bookmark-thumbnail,
+  .kg-bookmark-thumbnail>img {
+    @media(max-width: $mobile-breakpoint) {
+      position: relative;
+      top: unset;
+      left: unset;
+      min-width: unset;
+    }
+  }
+
+  .kg-bookmark-content {
+    @media(max-width: $mobile-breakpoint) {
+      padding: 15px;
+    }
+  }
 }
 
 /* Callout Cards */
@@ -218,7 +254,6 @@ make sure they look good, and are given a bit of extra spacing. */
   border-radius: 5px;
 
   @media(max-width: $mobile-breakpoint) {
-    // padding: 1em 1.2em !important;
     font-size: 1em !important;
   }
 
@@ -263,6 +298,19 @@ make sure they look good, and are given a bit of extra spacing. */
 
 .kg-bookmark-card {
 
+  &:hover {
+    .kg-bookmark-content {
+      cursor: pointer;
+      background: $color-theme;
+
+      * {
+        color: white;
+        opacity: 1;
+      }
+
+    }
+  }
+
   .kg-bookmark-title {
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -277,6 +325,10 @@ make sure they look good, and are given a bit of extra spacing. */
     text-decoration: none;
     text-overflow: ellipsis;
     width: -webkit-fill-available;
+
+    @media(max-width: $mobile-breakpoint) {
+      font-family: $body-font-semibold;
+    }
   }
 
   .kg-bookmark-description {
@@ -292,29 +344,21 @@ make sure they look good, and are given a bit of extra spacing. */
     overflow-y: hidden;
     text-overflow: ellipsis;
     width: -webkit-fill-available;
-  }
 
-  .kg-bookmark-thumbnail {
     @media(max-width: $mobile-breakpoint) {
-      display: none;
+      margin: 10px 0;
     }
   }
 
-  .kg-bookmark-content * {
-    transition: $transition;
-  }
-
-  &:hover {
-    .kg-bookmark-content {
-      cursor: pointer;
-      background: $color-theme;
-
-      * {
-        color: white;
-        opacity: 1;
-      }
-
+  .kg-bookmark-content {
+    @media(max-width: $mobile-breakpoint) {
+      padding: 15px;
     }
+
+    * {
+      transition: $transition;
+    }
+
   }
 
   .kg-bookmark-metadata {
