@@ -7,12 +7,12 @@
   margin: 0 auto;
 
   @media(max-width: $mobile-breakpoint) {
-    max-width: 92vw !important;
+    max-width: 88vw !important;
     margin-bottom: 20px !important;
   }
 
   @media(max-width: $xs-mobile-breakpoint) {
-    max-width: 92vw !important;
+    max-width: 86vw !important;
   }
 
   .related-posts-header {
@@ -88,16 +88,11 @@
 
         @media(max-width: $tablet-breakpoint) {
           font-size: 1.2em;
-
-        }
-
-        @media(max-width: $mobile-breakpoint) {
-          line-height: 1.15;
         }
 
         @media(max-width: $xs-mobile-breakpoint) {
-          line-height: 1.2;
           font-size: 1.4em;
+          line-height: 1.3;
         }
       }
 

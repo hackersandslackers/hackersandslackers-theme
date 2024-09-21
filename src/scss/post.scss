@@ -211,6 +211,7 @@
 
       @media (max-width: $mobile-breakpoint) {
         font-size: 2em;
+        line-height: 1.1;
       }
 
       @media (max-width: 450px) {
@@ -639,7 +640,7 @@
     }
 
     li {
-      color: #232931;
+      color: #414d5a;
       margin: 0 0 10px;
       line-height: 1.5;
 
