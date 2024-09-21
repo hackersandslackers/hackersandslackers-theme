@@ -600,22 +600,24 @@
     z-index: 1000;
     will-change: opacity;
 
-    div {
-      max-width: 80vw;
-      max-height: 80vw;
-      border: 1px solid black;
+    &:hover {
+      cursor: zoom-out;
+    }
 
-      &:hover {
-        cursor: pointer;
-      }
+    img {
+      box-shadow: 0 1px 4px rgba(39, 44, 49, .4);
+      max-height: 90vh;
+      max-width: 95vw;
+      border: 1px solid #000
+    }
 
-      @media(max-width: $mobile-breakpoint) {
-        max-width: 90vw;
-        max-height: 90vw;
-      }
+    @media(max-width: $mobile-breakpoint) {
+      max-width: 90vw;
+      max-height: 90vh;
     }
   }
 }
+
 
 .page-template .post-header {
   padding-bottom: max(3.2vmin, 28px);

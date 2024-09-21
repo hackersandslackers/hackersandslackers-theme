@@ -424,6 +424,11 @@
   text-align: center;
   overflow: hidden;
   transition: $transition;
+  //visibility: hidden;
+
+  img {
+    box-shadow: $card-shadow;
+  }
 }
 
 @mixin outline-button {

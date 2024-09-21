@@ -6,16 +6,20 @@ Prism.highlightAll();
 
 function createLightboxImageListeners() {
   const postBody = document.querySelector(".post-template");
-  let images = postBody.querySelectorAll(".kg-image-card img");
+  const images = document.querySelectorAll(".post-template .kg-image-card img");
   if (images.length > 0) {
-    for (let image in images) {
-      if (image < images.length) {
-        images[image].onclick = () => {
-          const imageSource = images[image].getAttribute("src");
-          const imageAlt = images[image].getAttribute("alt");
-          let imageOverlay = `<img src="${imageSource}" alt="${imageAlt}" />`;
+    for (let imageNum in images) {
+      if (imageNum < images.length) {
+        const image = images[imageNum];
+        image.onclick = () => {
+          const imageSource = image.src;
+          const imageAlt = image.alt;
+          const lightboxOverlay = `
+            <div class="lightbox-wrapper">
+              <img src="${imageSource}" alt="${imageAlt}" />
+            </div>`;
           const instance = basicLightbox
-            .create(imageOverlay, {
+            .create(lightboxOverlay, {
               onShow: (instance) => {
                 instance.element().style.opacity = 1;
                 postBody.classList.add("lightbox-wrapper");
