@@ -80,12 +80,11 @@
       min-width: 90px;
       height: auto;
       margin-right: 15px;
-
-
     }
 
     .author-card-excerpt {
       -webkit-line-clamp: 3;
+      line-clamp: 3;
       -webkit-box-orient: vertical;
       color: #5e6877;
       display: -webkit-box;

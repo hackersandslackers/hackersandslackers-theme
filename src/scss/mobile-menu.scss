@@ -6,7 +6,7 @@
   background: white;
   min-height: 100%;
   z-index: 3;
-  padding: 30px 40px;
+  padding: 60px 40px 0;
   overflow-y: scroll;
   top: 0;
   right: -100%;
@@ -24,9 +24,10 @@
 
     .mobile-nav-link {
       font-family: $body-font-medium;
-      font-size: 1.3em;
-      transition: $transition;
+      font-size: 1.5em;
+      text-align: center;
       margin-bottom: 15px;
+      transition: $transition;
 
       &:hover {
         cursor: pointer;
@@ -73,7 +74,8 @@
     display: none;
 
     .mobile-nav-link-nested {
-      font-size: .8em;
+      font-family: $body-font;
+      font-size: .75em;
       margin-bottom: 6px;
       margin-left: 5px;
 

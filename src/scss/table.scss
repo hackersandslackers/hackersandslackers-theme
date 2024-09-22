@@ -9,11 +9,9 @@
   border-spacing: 0;
 
   @media (max-width: $mobile-breakpoint) {
-    width: 100vw;
-
-    & {
-      @include mobile-full-width;
-    }
+    width: auto;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 
     & {
       @include mobile-horizontal-scroll;
@@ -28,7 +26,6 @@
     min-width: 100%;
 
     @media (max-width: $mobile-breakpoint) {
-      width: 100% !important;
       overflow: hidden;
     }
 

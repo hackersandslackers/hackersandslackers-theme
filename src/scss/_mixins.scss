@@ -318,7 +318,8 @@
         margin: 0;
         line-height: 1.4em;
         font-family: $body-font-light;
-        font-size: 1.5em;
+        font-size: 1em;
+        color: #1e242a;
 
         @media(max-width: $mobile-breakpoint) {
           margin: 10px 0 0;

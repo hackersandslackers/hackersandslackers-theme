@@ -576,6 +576,7 @@
         width: -webkit-fill-available;
         margin-top: 10px !important;
         padding-top: 5px;
+        padding-left: 5px;
         max-width: 85vw;
         line-height: 1.5 !important;
         display: block;
@@ -609,11 +610,6 @@
       max-height: 90vh;
       max-width: 95vw;
       border: 1px solid #000
-    }
-
-    @media(max-width: $mobile-breakpoint) {
-      max-width: 90vw;
-      max-height: 90vh;
     }
   }
 }
