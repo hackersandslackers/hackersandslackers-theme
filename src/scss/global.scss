@@ -25,6 +25,12 @@ body {
     color: white;
     background: $color-theme;
   }
+
+  b,
+  strong {
+    font-family: $body-font-semibold;
+    font-weight: unset;
+  }
 }
 
 .page.sidebar {

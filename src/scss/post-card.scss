@@ -89,6 +89,10 @@
     padding: 20px;
     transition: $transition;
 
+    @media(max-width: $smallscreen-breakpoint) {
+      padding: 15px;
+    }
+
     @media(max-width: $mobile-breakpoint) {
       padding: 15px;
     }
@@ -110,7 +114,7 @@
       transition: $transition;
 
       @media(max-width: $smallscreen-breakpoint) {
-        font-size: 1.35em;
+        font-size: 1.3em;
       }
 
       @media (max-width: 767px) {
@@ -120,13 +124,9 @@
       @media(max-width: $mobile-breakpoint) {
         letter-spacing: unset;
         opacity: 1;
-        font-size: 1.3em;
+        font-size: 1.1em;
         line-height: 1.2em;
         margin: 2vw 0 4vw;
-      }
-
-      @media(max-width: $mobile-breakpoint) {
-        font-size: 1.25em;
       }
     }
 
@@ -143,7 +143,7 @@
       text-overflow: ellipsis;
       color: $color-secondary-text;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: $smallscreen-breakpoint) {
         padding: 15px 0 0;
       }
 
@@ -235,9 +235,8 @@
         transition: $transition;
 
         @media(max-width: $xs-mobile-breakpoint) {
-          padding: 6px;
+          padding: 6px 8px;
           line-height: 1;
-          font-size: 1em;
           white-space: nowrap;
           text-overflow: ellipsis;
           max-width: 45%;
