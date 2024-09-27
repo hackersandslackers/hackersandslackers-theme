@@ -2,6 +2,9 @@
     "name": "hackersandslackers",
     "description": "A clean, minimal theme for Ghost CMS",
     "version": "0.0.1",
+    "engines": {
+        "ghost": ">=5.0.0"
+    },
     "license": "MIT",
     "screenshots": {
         "desktop": "assets/screenshot-desktop.jpg",
