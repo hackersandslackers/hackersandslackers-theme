@@ -10,16 +10,17 @@
     <link rel="shortcut icon" href="{{@site.icon}}" />
     {{!-- Preload main styles and scripts for better performance --}}
     <link rel="preload" as="style" href="{{asset "built/global.css"}}">
-    {{! Theme JS }}
+    {{! Custom Theme JS }}
     <script src="{{asset 'built/main.js'}}"></script>
     <script src="{{asset 'built/github-widget.js'}}"></script>
-    <script defer data-domain="hackersandslackers.com" src="https://plausible.io/js/script.js"></script>
-    {{! Theme CSS }}
-    <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
     <script src="https://kit.fontawesome.com/0dae50f8a6.js" crossorigin="anonymous"></script>
-    {{!-- Contextual logic per page. --}}
+    {{! Analytics JS }}
+    <script defer data-domain="hackersandslackers.com" src="https://plausible.io/js/script.outbound-links.pageview-props.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    {{! Page-specific JS }}
     {{#is "post"}}
       <script src="{{asset 'built/post.js'}}"></script>
+      <script src="https://js.linkz.ai/?key=113483423586035531643"></script>
     {{/is}}
     {{#is "page, author, tag, about, series"}}
       <script src="{{asset 'built/page.js'}}"></script>
@@ -27,7 +28,6 @@
     {{#is "author"}}
       <script src="{{asset 'built/author.js'}}"></script>
     {{/is}}
-    {{! Advanced SEO meta data}}
     {{ghost_head}}
   </head>
 
