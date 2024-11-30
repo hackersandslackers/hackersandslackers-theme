@@ -1,17 +1,16 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
 .post-feed {
   grid-gap: 30px;
   display: grid;
-  grid-auto-rows: -webkit-min-content;
   grid-auto-rows: min-content;
   grid-template-columns: 1fr;
   margin: 0 auto;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     grid-gap: 4.5vw;
     margin: 2.5vh 4vw;
   }

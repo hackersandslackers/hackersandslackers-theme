@@ -1,6 +1,5 @@
-@use 'sass:color';
-@import "_mixins.scss";
-@import "_variables.scss";
+@import "_mixins.less";
+@import "_variables.less";
 
 .post-content>pre,
 .kg-code-card>pre,
@@ -12,8 +11,8 @@
   padding: 15px 20px 20px;
   overflow-x: scroll;
   background: #2e3440;
-  color: $nord6;
-  font-family: $monospace-font !important;
+  color: @nord6;
+  font-family: @monospace-font !important;
   font-size: 0.85em !important;
   hyphens: none;
   line-height: 1.5;
@@ -25,18 +24,18 @@
   word-spacing: normal;
   tab-size: 4;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: @mobile-breakpoint) {
     padding: 15px 15px 20px;
     border-radius: 0 !important;
     font-size: 0.8em !important;
     white-space: pre-wrap;
 
     & {
-      @include mobile-horizontal-scroll();
+      .mobile-horizontal-scroll();
     }
 
     & {
-      @include mobile-full-width();
+      .mobile-full-width();
     }
   }
 
@@ -53,12 +52,12 @@
   code {
     white-space: pre-wrap !important;
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: @mobile-breakpoint) {
       border-radius: 0;
       white-space: pre !important;
 
       & {
-        @include mobile-horizontal-scroll;
+        .mobile-horizontal-scroll();
       }
     }
 
@@ -66,11 +65,11 @@
     .token.prolog,
     .token.doctype,
     .token.cdata {
-      color: color.adjust($nord3, $lightness: +30%);
+      color: lighten(@nord3, 30%);
     }
 
     .token.punctuation {
-      color: $nord9;
+      color: @nord9;
     }
 
     .token.property,
@@ -80,7 +79,7 @@
     .token.constant,
     .token.symbol,
     .token.deleted {
-      color: $nord15;
+      color: @nord15;
       font-weight: bold;
     }
 
@@ -89,15 +88,15 @@
     .token.string,
     .token.char,
     .token.inserted {
-      color: color.adjust($nord14, $lightness: +10%);
+      color: lighten(@nord14, 10%);
     }
 
     .token.builtin {
-      color: $nord13;
+      color: @nord13;
     }
 
     .token.triple-quoted-string {
-      color: color.adjust($nord3, $lightness: +30%);
+      color: lighten(@nord3, 30%);
     }
 
     .token.operator,
@@ -106,25 +105,25 @@
     .language-css .token.string,
     .style .token.string {
       background: none;
-      color: $nord9;
+      color: @nord9;
     }
 
     .token.atrule,
     .token.attr-value,
     .token.keyword {
-      color: $nord9;
+      color: @nord9;
       font-weight: bold;
     }
 
     .token.function {
-      color: $nord7;
+      color: @nord7;
       font-weight: bold;
     }
 
     .token.regex,
     .token.important,
     .token.variable {
-      color: $nord13;
+      color: @nord13;
     }
 
     .token.important,
@@ -149,27 +148,27 @@
   &.language-jinja2,
   &.language-html {
     .token.variable {
-      color: $nord6;
+      color: @nord6;
     }
 
     .token.attr-name {
-      color: $nord13;
+      color: @nord13;
     }
 
     .token.attr-value {
-      color: color.adjust($nord14, $lightness: +10%);
+      color: lighten(@nord14, 10%);
       font-weight: normal;
     }
 
     .token.doctype .name {
-      color: $nord5;
+      color: @nord5;
     }
   }
 
   // JSON
   &.language-json {
     .token.property {
-      color: $nord14;
+      color: @nord14;
     }
   }
 }
@@ -186,14 +185,14 @@
   margin: 0;
   padding: 20px;
   overflow: auto;
-  background: $nord0;
+  background: @nord0;
 }
 
 :not(pre)>code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
-  background: $nord0;
-  color: $nord4;
+  background: @nord0;
+  color: @nord4;
 }
 
 /*********************************************************
@@ -238,8 +237,8 @@ code[class*="language-ini"] {
   left: 0;
   margin-top: 1em;
   padding: inherit 0;
-  background: $nord1;
-  box-shadow: inset 5px 0 0 $nord4;
+  background: @nord1;
+  box-shadow: inset 5px 0 0 @nord4;
   line-height: inherit;
   white-space: pre;
   pointer-events: none;
@@ -249,5 +248,5 @@ code[class*="language-ini"] {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
   border-radius: 4px;
-  background: $nord0;
+  background: @nord0;
 }

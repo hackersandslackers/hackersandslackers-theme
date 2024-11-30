@@ -1,24 +1,24 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "author.scss";
-@import "tag.scss";
-@import "series-all.scss";
-@import "kg.scss";
-@import "series-detail.scss";
-@import "error.scss";
+@import "_variables.less";
+@import "_mixins.less";
+@import "author.less";
+@import "tag.less";
+@import "series-all.less";
+@import "kg.less";
+@import "series-detail.less";
+@import "error.less";
 
 
 .page-template {
-  background: $color-background-grey;
+  background: @color-background-grey;
 
   .page-title {
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       font-size: 2.2em;
     }
   }
 
   &.page-about .page-title {
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       font-size: 2.2em;
       margin-bottom: unset;
     }
@@ -33,25 +33,25 @@
     padding: 40px;
     max-width: 658px;
     background: white;
-    box-shadow: $card-shadow;
+    box-shadow: @card-shadow;
 
-    @media(max-width: $smallscreen-breakpoint) {
+    @media(max-width: @smallscreen-breakpoint) {
       padding: 30px;
     }
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       padding: 5vw;
       width: 100%;
       max-width: unset;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       padding: 0 5vw 5vw;
     }
 
     .page-image {
       margin-bottom: 40px;
-      box-shadow: $card-shadow;
+      box-shadow: @card-shadow;
       border-radius: 2px;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     }
@@ -59,21 +59,19 @@
     &>p {
       -webkit-font-smoothing: antialiased;
       color: #414d5a;
-      font-family: $body-font;
+      font-family: @body-font;
       font-size: 1.1em;
       line-height: 1.7em;
       margin: 0 0 25px;
 
       a {
-        @include content-link;
+        .content-link();
       }
     }
   }
 
   .about-content {
     margin-bottom: 40px;
-
-
 
     .authors-list-title {
       margin: 40px 0 15px;
@@ -83,14 +81,14 @@
 
 
 .page-title {
-  font-family: $header-font-medium;
-  color: $color-header-grey;
+  font-family: @header-font-medium;
+  color: @color-header-grey;
   line-height: 1;
   margin-bottom: 10px;
 }
 
 
-@media (max-width: $smallscreen-breakpoint) {
+@media (max-width: @smallscreen-breakpoint) {
 
   .author-template .site-content {
     margin: unset;
@@ -103,13 +101,13 @@
 
   .author-card,
   .info-card {
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: @tablet-breakpoint) {
       margin: unset;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
     }
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: @mobile-breakpoint) {
       padding: 2vw 6vw;
     }
   }

@@ -1,4 +1,4 @@
-import "../scss/post.scss";
+import "../less/post.less";
 import Prism from "prismjs";
 import * as basicLightbox from "basiclightbox";
 

@@ -39,7 +39,7 @@
             "go",
             "hcl",
             "vim",
-            "makefile",
+            "makefile"
           ],
           "theme": "default",
           "css": false
@@ -49,8 +49,8 @@
         {
           "root": ["./src"],
           "alias": {
-            "Fonts": "./assets/fonts/",
-            "Styles": "./src/scss/"
+            "Fonts": "./src/css/fonts.css",
+            "Styles": "./src/less/"
           }
         }
       ]

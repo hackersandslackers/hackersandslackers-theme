@@ -1,34 +1,34 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "kg.scss";
-@import "table.scss";
-@import "code.scss";
-@import "related-posts.scss";
-@import "author.scss";
+@import "_variables.less";
+@import "_mixins.less";
+@import "kg.less";
+@import "table.less";
+@import "code.less";
+@import "related-posts.less";
+@import "author.less";
 
 
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
 .post-template {
-  background: $color-background-grey;
+  background: @color-background-grey;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     overflow-x: hidden;
   }
 
   .main {
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       padding-top: 0;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       max-width: 100vw;
     }
   }
 
   .viewport {
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       max-width: 100vw;
     }
   }
@@ -40,7 +40,7 @@
     .site-navigation {
       border: unset;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         padding: 20px 3vw;
       }
     }
@@ -55,18 +55,18 @@
   main {
     margin: 0 auto 0;
     padding-top: 0;
-    width: $tablet-breakpoint;
+    width: @tablet-breakpoint;
 
-    @media(max-width: $smallscreen-breakpoint) {
+    @media(max-width: @smallscreen-breakpoint) {
       width: 100%;
       padding-top: unset;
     }
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       margin: 0;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       margin: unset;
     }
 
@@ -80,7 +80,7 @@
     max-width: 90vw;
     margin: 0 auto;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       width: unset;
       max-width: unset;
     }
@@ -91,7 +91,7 @@
       justify-content: space-between;
       margin: 40px 0 20px;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         padding: 0 5vw;
       }
 
@@ -102,7 +102,7 @@
         max-width: 48%;
         min-width: 48%;
         padding: 15px;
-        transition: $transition;
+        transition: @transition;
 
         &.next {
           text-align: right;
@@ -122,7 +122,7 @@
         }
 
         &:hover {
-          background: $color-theme;
+          background: @color-theme;
           cursor: pointer;
 
           * {
@@ -140,7 +140,7 @@
           -webkit-line-clamp: 2;
           line-clamp: 2;
           display: -webkit-box;
-          font-family: $body-font-medium;
+          font-family: @body-font-medium;
           font-size: .9em;
           font-weight: 400;
           line-height: 1.5;
@@ -157,40 +157,40 @@
     align-items: center;
     display: flex !important;
     flex-direction: column;
-    width: $tablet-breakpoint;
+    width: @tablet-breakpoint;
     margin: 0 auto;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       width: 100%;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       margin: 0 auto;
     }
 
     .post-primary-tag {
       line-height: 1;
-      font-family: $header-font;
+      font-family: @header-font;
       margin-bottom: 10px;
       display: inline-block;
       font-size: 1.2em;
-      transition: $transition;
+      transition: @transition;
       text-transform: uppercase;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1em;
       }
 
       &:hover {
         cursor: pointer;
-        color: $color-hover !important;
+        color: @color-hover !important;
       }
     }
 
     .post-image {
       width: 100%;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         padding: 0;
       }
 
@@ -200,9 +200,9 @@
     }
 
     .post-title {
-      color: $color-header-grey;
+      color: @color-header-grey;
       display: block;
-      font-family: $header-font;
+      font-family: @header-font;
       font-size: 2.3em;
       margin: unset;
       font-weight: unset;
@@ -210,7 +210,7 @@
       order: 2;
       width: -webkit-fill-available;
 
-      @media (max-width: $mobile-breakpoint) {
+      @media (max-width: @mobile-breakpoint) {
         font-size: 2em;
         line-height: 1.1;
       }
@@ -225,7 +225,7 @@
       padding: 50px 0 0;
       width: 100%;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         padding: unset;
         max-width: 90vw;
         margin: 6vw auto 0;
@@ -233,13 +233,13 @@
 
       .post-excerpt {
         color: #778291;
-        font-family: $body-font-medium;
+        font-family: @body-font-medium;
         font-size: 1.35em !important;
         line-height: 1.2;
         margin: 10px 0;
         order: 1;
 
-        @media (max-width: $tablet-breakpoint) {
+        @media (max-width: @tablet-breakpoint) {
           margin: 10px 0;
           font-size: 1.25em;
           line-height: 1.2;
@@ -249,7 +249,7 @@
           margin: 8px 0;
         }
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           font-size: 1.05em;
           display: none;
         }
@@ -264,7 +264,7 @@
 
         .post-meta-author-avatar {
           border-radius: 50%;
-          border: 1px solid $color-author-avatar-border;
+          border: 1px solid @color-author-avatar-border;
           overflow: hidden;
           display: block;
           height: 46px;
@@ -294,12 +294,12 @@
 
         .post-meta-author-name {
           display: block;
-          font-family: $header-font-semibold;
+          font-family: @header-font-semibold;
           font-size: 1.3em;
           color: #414d5a;
 
           &:hover {
-            color: $color-hover;
+            color: @color-hover;
             cursor: pointer;
           }
         }
@@ -309,7 +309,7 @@
         }
 
         .post-published-time-meta {
-          font-family: $body-font-medium;
+          font-family: @body-font-medium;
           opacity: .7;
         }
       }
@@ -323,7 +323,7 @@
       position: relative;
       min-width: -webkit-fill-available;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         padding: 0 0 15px;
       }
 
@@ -335,7 +335,7 @@
       }
 
       .series-toc-item {
-        color: $color-body-font;
+        color: @color-body-font;
         counter-increment: step-counter;
         font-size: 1.15em;
         display: flex;
@@ -344,11 +344,11 @@
         margin: 12px 0;
         padding-left: 0;
 
-        @media(max-width: $tablet-breakpoint) {
+        @media(max-width: @tablet-breakpoint) {
           margin: 0 0 10px;
         }
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           line-height: 1.1;
           font-size: 1.1em;
         }
@@ -356,7 +356,7 @@
         &::before {
           content: counter(step-counter, upper-roman) "." !important;
           color: #5f6874;
-          font-family: $body-font-semibold;
+          font-family: @body-font-semibold;
           font-size: 15px;
           font-weight: bold;
           display: inline-block;
@@ -366,15 +366,15 @@
 
         .series-toc-item-link {
           color: #5f6874;
-          font-family: $body-font-medium;
-          transition: $transition;
+          font-family: @body-font-medium;
+          transition: @transition;
         }
 
         &:hover {
 
           .series-toc-item-link,
           &::before {
-            color: $color-hover;
+            color: @color-hover;
             cursor: pointer;
           }
         }
@@ -383,14 +383,14 @@
   }
 
   .post-content {
-    width: $tablet-breakpoint;
+    width: @tablet-breakpoint;
     margin: 30px 0 0;
 
     .protip {
-      @include protip;
+      .protip();
     }
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       max-width: 90vw;
       margin: 6vw auto;
     }
@@ -399,7 +399,7 @@
       margin: 0 0 25px;
       width: 100%;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         width: 100vw;
         max-width: unset;
         margin-left: calc(-50vw + 50%) !important;
@@ -413,9 +413,9 @@
 
     h2 {
       line-height: 1.2;
-      font-family: $body-font-light;
+      font-family: @body-font-light;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1.8em;
         line-height: 1.2;
         margin: 40px 0 5px;
@@ -423,24 +423,24 @@
     }
 
     h3 {
-      @include header-third;
+      .header-third();
     }
 
     a {
-      @include content-link;
+      .content-link();
     }
 
     pre {
       overflow: auto;
       padding: 16px 20px;
-      color: $color-wash;
+      color: @color-wash;
       font-size: 1.4rem;
       line-height: 1.5em;
-      background: $color-code-bg;
+      background: @color-code-bg;
       border-radius: 0 0 5px 5px;
       box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         padding: 20px 15px;
       }
     }
@@ -463,27 +463,27 @@
         height: 40px;
         min-width: 40px;
         opacity: .7;
-        color: $color-post-blurb-grey;
+        color: @color-post-blurb-grey;
         margin: 0;
         margin-right: 10px !important;
       }
 
       p {
-        font-family: $body-font;
-        color: $color-post-blurb-grey;
+        font-family: @body-font;
+        color: @color-post-blurb-grey;
         letter-spacing: -.2px;
         line-height: 1.6em;
         margin: 0;
 
         a {
           font-weight: bold;
-          color: $color-post-blurb-grey;
-          border-bottom: $color-post-blurb-grey 1px solid;
-          transition: $transition;
+          color: @color-post-blurb-grey;
+          border-bottom: @color-post-blurb-grey 1px solid;
+          transition: @transition;
 
           &:hover {
-            color: $color-hover;
-            border-bottom: $color-hover 1px solid;
+            color: @color-hover;
+            border-bottom: @color-hover 1px solid;
             cursor: pointer;
           }
         }
@@ -505,7 +505,7 @@
     max-width: 100%;
     width: 100%;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       padding: 0 5vw;
     }
 
@@ -513,10 +513,10 @@
       letter-spacing: 0.1em;
 
       & {
-        @include post-tag;
+        .post-tag();
       }
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin: 0 7px 7px 0;
       }
     }
@@ -529,23 +529,23 @@
     margin: 0;
 
     & {
-      @include author-card;
+      .author-card();
     }
 
     .author-card-wrapper {
       padding: 30px 0;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         padding: 30px 5vw;
       }
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin: 0;
       }
 
       .author-avatar-link,
       .author-image {
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           height: 58px;
           width: 58px;
           min-width: 58px;
@@ -554,11 +554,11 @@
 
       .author-name {
         font-size: 1.5em !important;
-        font-family: $body-font-medium;
+        font-family: @body-font-medium;
 
         &:hover {
           cursor: pointer;
-          color: $color-hover;
+          color: @color-hover;
         }
       }
     }
@@ -573,7 +573,7 @@
       margin-top: 0;
       color: #1e242a;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         width: -webkit-fill-available;
         margin-top: 10px !important;
         padding-top: 5px;
@@ -588,7 +588,7 @@
   }
 
   .basicLightbox {
-    @include lightbox;
+    .lightbox();
   }
 }
 
@@ -610,7 +610,7 @@
     margin: 0 0 30px;
     padding: 0 0 0 1em;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       margin: 10px 10px 25px;
       padding-left: 15px;
     }
@@ -625,7 +625,7 @@
       }
 
       code {
-        @include inline-code;
+        .inline-code();
       }
     }
   }
@@ -641,7 +641,7 @@
   }
 
   blockquote {
-    @include blockquote;
+    .blockquote();
   }
 
   hr+*,
@@ -652,34 +652,34 @@
   pre {
     overflow: auto;
     padding: 16px 20px;
-    color: $color-wash;
+    color: @color-wash;
     font-size: 1.4rem;
     line-height: 1.5em;
-    background: $color-code-bg;
+    background: @color-code-bg;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
   }
 
   a {
-    border-bottom: 1px solid $color-theme;
+    border-bottom: 1px solid @color-theme;
     text-decoration: underline;
     word-break: break-word;
-    transition: $transition;
+    transition: @transition;
     text-decoration: none;
 
     &:hover {
-      color: $color-theme;
+      color: @color-theme;
       cursor: pointer;
     }
   }
 }
 
 .post-after {
-  background-color: $color-background-grey;
+  background-color: @color-background-grey;
   width: 100%;
   margin: 30px 0;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     margin: 30px 0 10px;
   }
 
@@ -696,18 +696,18 @@
     padding: 20px 0 0;
     text-align: center;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       margin: 0 5vw 60px;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       display: none;
     }
 
     .support-us-title {
       color: #4c5867;
       display: block;
-      font-family: $header-font-semibold;
+      font-family: @header-font-semibold;
       font-size: 1.4em;
       margin-bottom: 10px;
       text-align: left;
@@ -719,7 +719,7 @@
       border: 1px solid #d6dde9;
       border-radius: 3px !important;
       display: block;
-      font-family: $body-font-medium;
+      font-family: @body-font-medium;
       font-size: 1.05em;
       height: 45px;
       line-height: 1;
@@ -759,13 +759,13 @@
 }
 
 #ghost-comments-root {
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     padding: 0 30px;
   }
 }
 
 .lightbox-wrapper {
-  @include lightboxBody;
+  .lightboxBody();
 
   &:hover {
     cursor: zoom-out;

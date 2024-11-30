@@ -1,6 +1,6 @@
 THEME_PATH := $(CURDIR)
-DEV_GHOST_PATH := '/Users/toddbirchard/projects/ghostlocal'
-DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-theme'
+DEV_GHOST_PATH := '/Users/toddbirchard/Projects/ghostlocal'
+DEV_GHOST_THEME_PATH := '/Users/toddbirchard/Projects/ghostlocal/content/themes/hackersandslackers'
 
 define HELP
 Manage development of Hackersandslackers Ghost theme.
@@ -31,7 +31,7 @@ build:
 dev:
 	if [ -d $(DEV_GHOST_THEME_PATH) ]; then rm -rf $(DEV_GHOST_THEME_PATH); fi
 	cp -R $(THEME_PATH) $(DEV_GHOST_THEME_PATH) && \
-	cd $(DEV_GHOST_THEME_PATH) && npm run dev && \
+	cd $(DEV_GHOST_THEME_PATH) && yarn run dev && \
 	cd $(DEV_GHOST_PATH) && ghost restart --verbose && cd $(THEME_PATH)
 
 
@@ -51,7 +51,8 @@ clean:
 .PHONY: update
 update:
 	npm install -g npm@latest && \
-	npm install -g npm-check-updates@latest && \
+	npm install -g yarn && \
 	npm install -g ghost-cli@latest && \
+	npm install -g npm-check-updates@latest && \
 	cd $(DEV_GHOST_PATH) && ghost update && \
 	cd $(DEV_GHOST_THEME_PATH) && ncu

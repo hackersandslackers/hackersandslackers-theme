@@ -1,23 +1,23 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 /* 12. Sidebar
 /* ---------------------------------------------------------- */
 .sidebar {
-  @media (max-width: $tablet-breakpoint) {
+  @media (max-width: @tablet-breakpoint) {
     display: none;
   }
 
   .widget {
     background-color: white;
     padding: 20px;
-    box-shadow: $card-shadow;
+    box-shadow: @card-shadow;
     margin-bottom: 20px;
     position: relative;
 
     .widget-title {
-      color: $color-lightgrey;
-      font-family: $body-font-medium;
+      color: @color-lightgrey;
+      font-family: @body-font-medium;
       font-size: .9em;
       letter-spacing: 1px;
       line-height: 1;
@@ -29,8 +29,8 @@
     }
 
     label {
-      color: $color-darkgrey;
-      font-family: $body-font-medium;
+      color: @color-darkgrey;
+      font-family: @body-font-medium;
       opacity: .7;
       display: block;
       line-height: 1.5;
@@ -50,7 +50,7 @@
       line-height: 1.3;
       font-size: 1em;
       margin-bottom: 15px;
-      font-family: $body-font-light;
+      font-family: @body-font-light;
       color: #313b45;
     }
 
@@ -69,13 +69,13 @@
         color: #78849c;
         display: inline-block;
         flex-grow: 1;
-        font-family: $body-font-medium;
+        font-family: @body-font-medium;
         font-size: .85em !important;
         line-height: 1.5em;
         margin: 0 2px 4px;
         padding: 4px 10px;
         text-align: center;
-        transition: $transition;
+        transition: @transition;
 
         &:hover {
           border: 1px solid #78849c;
@@ -96,8 +96,8 @@
         padding: 5px 0;
 
         .stat-name {
-          color: $color-lightgrey;
-          font-family: $body-font-medium;
+          color: @color-lightgrey;
+          font-family: @body-font-medium;
           font-size: .95em;
         }
       }
@@ -123,23 +123,23 @@
         .full-name {
           font-size: 1.2em;
           white-space: nowrap;
-          font-family: $body-font-medium;
+          font-family: @body-font-medium;
           line-height: 1em;
-          color: $color-header-grey;
+          color: @color-header-grey;
         }
 
         .bio {
-          color: $color-sidebar-description;
+          color: @color-sidebar-description;
           line-height: 1.3;
           font-size: .95em;
           margin: 5px 0 10px;
-          font-family: $body-font-light;
+          font-family: @body-font-light;
         }
 
         .location {
           font-size: .9em;
-          font-family: $body-font-semibold;
-          color: $color-lightgrey;
+          font-family: @body-font-semibold;
+          color: @color-lightgrey;
           line-height: 1;
         }
       }
@@ -155,7 +155,7 @@
         }
 
         .count {
-          font-family: $body-font-semibold;
+          font-family: @body-font-semibold;
           font-size: 1.2em;
           line-height: 1;
         }
@@ -165,8 +165,8 @@
         display: block;
         line-height: 1;
         font-size: 1.1em;
-        color: $color-lightgrey;
-        font-family: $body-font-semibold;
+        color: @color-lightgrey;
+        font-family: @body-font-semibold;
         margin-bottom: 5px;
         padding: 0;
       }
@@ -192,8 +192,8 @@
         .language {
           font-size: .8em;
           text-align: right;
-          font-family: $body-font-medium;
-          color: $color-sidebar-description;
+          font-family: @body-font-medium;
+          color: @color-sidebar-description;
         }
 
         .stars {
@@ -211,7 +211,7 @@
 
       .gh-widget-link {
         text-decoration: none;
-        font-family: $body-font-semibold;
+        font-family: @body-font-semibold;
         line-height: 1;
         font-size: .85em;
       }
@@ -249,7 +249,7 @@
           line-height: 1;
 
           & {
-            @include filled-button;
+            .filled-button();
           }
 
           a {
@@ -265,7 +265,7 @@
   }
 
   .series-list-count {
-    font-family: $header-font;
+    font-family: @header-font;
     width: 25px;
     text-align: center;
     border-radius: 2px;
@@ -274,7 +274,7 @@
 
   .series-widget-list {
     .series-list-link {
-      font-family: $body-font-medium !important;
+      font-family: @body-font-medium !important;
       padding: 9px 6px;
       border-bottom: 1px solid #f0f1f4;
       font-size: .9em;
@@ -282,7 +282,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: $transition;
+      transition: @transition;
 
       &:last-of-type {
         border-bottom: unset;
@@ -290,8 +290,8 @@
       }
 
       &:hover {
-        background-color: $color-hover;
-        border-bottom: 1px solid $color-hover;
+        background-color: @color-hover;
+        border-bottom: 1px solid @color-hover;
         cursor: pointer;
 
         * {
@@ -301,15 +301,15 @@
       }
 
       * {
-        transition: $transition;
+        transition: @transition;
       }
 
       a {
-        color: $color-lightgrey;
+        color: @color-lightgrey;
       }
 
       .series-list-link-title {
-        font-family: $body-font-medium;
+        font-family: @body-font-medium;
       }
 
       a,
@@ -326,16 +326,16 @@
 
 .subscribe-form {
   .subscribe-form-description {
-    color: $color-sidebar-description;
+    color: @color-sidebar-description;
   }
 
   .sidebar-input-field {
     color: #4e5869;
-    font-family: $body-font;
+    font-family: @body-font;
     font-size: .9em;
     margin: 0 0 10px;
     padding: 12px 10px 10px !important;
-    transition: $transition;
+    transition: @transition;
     width: 100%;
 
     &:focus,
@@ -345,7 +345,7 @@
       background-color: #e7f5fc;
       color: #445d6d;
       cursor: text;
-      transition: $transition;
+      transition: @transition;
     }
 
     &::placeholder {
@@ -358,7 +358,7 @@
     display: none;
 
     & {
-      @include message-overlay;
+      .message-overlay();
     }
 
     .message {
@@ -366,12 +366,12 @@
       display: none;
 
       & {
-        @include message-overlay;
+        .message-overlay();
       }
     }
 
     * {
-      font-family: $body-font-bold;
+      font-family: @body-font-bold;
     }
   }
 
@@ -389,7 +389,7 @@
       .success-title {
         display: block;
         font-size: 2em;
-        font-family: $header-font;
+        font-family: @header-font;
         margin-bottom: 10px;
       }
 
@@ -412,7 +412,7 @@
         .error-title {
           display: block;
           font-size: 2em;
-          font-family: $header-font;
+          font-family: @header-font;
           margin-bottom: 10px;
         }
 
@@ -438,12 +438,12 @@
     text-align: right;
     width: 100%;
     background: none;
-    font-family: $body-font-bold;
-    transition: $transition;
+    font-family: @body-font-bold;
+    transition: @transition;
 
     &:hover {
       cursor: pointer;
-      color: $color-hover;
+      color: @color-hover;
     }
   }
 }
@@ -454,10 +454,10 @@
 .widget.about .widget-logo {
   display: block;
   margin: 0 auto 15px;
-  transition: $transition;
+  transition: @transition;
   width: 230px;
 
-  @media(max-width: $smallscreen-breakpoint) {
+  @media(max-width: @smallscreen-breakpoint) {
     margin: 0 auto 10px;
   }
 
@@ -468,8 +468,8 @@
 }
 
 .widget.about .description {
-  font-family: $body-font-light;
-  color: $color-sidebar-description;
+  font-family: @body-font-light;
+  color: @color-sidebar-description;
   line-height: 1.3;
   margin: 15px 0 0;
   text-align: center;
@@ -493,7 +493,7 @@
     font-size: 1.7em;
 
     & {
-      @include social-media-icon;
+      .social-media-icon();
     }
 
     &:hover {
@@ -502,12 +502,12 @@
 
       i,
       svg {
-        fill: $color-hover;
-        color: $color-hover;
+        fill: @color-hover;
+        color: @color-hover;
       }
     }
 
-    @media(max-width: $smallscreen-breakpoint) {
+    @media(max-width: @smallscreen-breakpoint) {
       font-size: 1.5em;
 
       &:hover {

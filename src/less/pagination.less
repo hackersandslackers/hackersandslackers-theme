@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 
 .pagination {
@@ -11,16 +11,16 @@
 
   .pagination-arrow {
     font-size: 1.4em;
-    transition: $transition;
-    color: $color-lightgrey;
+    transition: @transition;
+    color: @color-lightgrey;
 
     &:hover {
 
       i,
       svg {
-        color: $color-hover !important;
+        color: @color-hover !important;
         cursor: pointer;
-        fill: $color-hover !important;
+        fill: @color-hover !important;
       }
 
     }
@@ -37,7 +37,7 @@
   }
 
   .page-number {
-    font-family: $body-font-bold;
+    font-family: @body-font-bold;
     opacity: .5;
     line-height: 1;
     font-size: 1.1em;

@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 .page-about {
 
@@ -7,18 +7,18 @@
     display: flex;
     flex-direction: column;
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: @mobile-breakpoint) {
       margin: 0 !important;
 
       & {
-        @include mobile-full-width;
+        .mobile-full-width();
       }
     }
 
     .about-video {
       margin-bottom: 15px;
 
-      @media (max-width: $mobile-breakpoint) {
+      @media (max-width: @mobile-breakpoint) {
         order: 1;
         margin-bottom: 0;
       }
@@ -27,7 +27,7 @@
     .page-title {
       margin-bottom: 15px;
 
-      @media (max-width: $mobile-breakpoint) {
+      @media (max-width: @mobile-breakpoint) {
         font-size: 2.4em;
         margin-bottom: 10px;
         order: 2;
@@ -39,11 +39,11 @@
   .main-content {
 
     h3 {
-      @include header-third;
+      .header-third();
     }
 
     .author-card {
-      @include author-card;
+      .author-card();
     }
 
     iframe {

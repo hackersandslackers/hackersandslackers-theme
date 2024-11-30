@@ -1,4 +1,4 @@
-export function mainNavigationScroll() {
+/* export function mainNavigationScroll() {
   const slider = document.querySelector(".dragscroll");
   let isDown = false;
   let startX;
@@ -45,6 +45,7 @@ export function hamburgerMenu() {
     mobileMenuButton.classList.toggle("active");
   });
 
+  
   mobileSeriesLink.addEventListener("click", function () {
     const mobileSeriesNav = document.querySelector(
       ".nav-series .mobile-nav-links-list"
@@ -60,4 +61,6 @@ export function hamburgerMenu() {
     mobileTagNav.classList.toggle("active");
     mobileTagsNavIcon.classList.toggle("flip-vertically");
   });
+  
 }
+*/

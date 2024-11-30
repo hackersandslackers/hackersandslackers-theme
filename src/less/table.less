@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 .tableContainer {
   overflow-x: scroll;
@@ -8,13 +8,13 @@
   border-radius: 3px;
   border-spacing: 0;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: @mobile-breakpoint) {
     width: auto;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
 
     & {
-      @include mobile-horizontal-scroll;
+      .mobile-horizontal-scroll();
     }
   }
 
@@ -25,12 +25,12 @@
     table-layout: fixed;
     min-width: 100%;
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: @mobile-breakpoint) {
       overflow: hidden;
     }
 
     * {
-      font-family: $table-font !important;
+      font-family: @table-font !important;
     }
 
     tr {
@@ -63,7 +63,7 @@
           text-align: left;
           text-transform: uppercase;
 
-          @media (max-width: $mobile-breakpoint) {
+          @media (max-width: @mobile-breakpoint) {
             padding: 12px 8px;
             font-size: 0.75em;
           }
@@ -90,7 +90,7 @@
         vertical-align: top;
         transition: all 0.3s ease-out;
 
-        @media (max-width: $mobile-breakpoint) {
+        @media (max-width: @mobile-breakpoint) {
           padding: 12px 8px;
           font-size: 0.8em;
           min-width: 150px;
@@ -98,7 +98,7 @@
         }
 
         a {
-          border-bottom: 1px solid $color-theme;
+          border-bottom: 1px solid @color-theme;
           color: #585a61;
           font-weight: 500;
         }
@@ -127,19 +127,19 @@
   margin: 30px 0;
   border: 1px solid #e3ecf3;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: @mobile-breakpoint) {
     margin: 30px 0 30px -5vw;
     width: 100vw;
   }
 
   tbody {
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: @tablet-breakpoint) {
       margin-left: 0 !important;
     }
   }
 
   tr {
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: @tablet-breakpoint) {
       width: 200px !important;
       padding: 0 !important;
 
@@ -152,9 +152,9 @@
       line-height: 1.6;
       text-align: left;
       white-space: normal !important;
-      font-family: $body-font;
+      font-family: @body-font;
 
-      @media (max-width: $tablet-breakpoint) {
+      @media (max-width: @tablet-breakpoint) {
         margin: 0 !important;
         padding: 10px !important;
 
@@ -167,14 +167,14 @@
       }
 
       &:first-child {
-        font-family: $table-font;
+        font-family: @table-font;
         font-size: 0.8em;
         font-weight: 600;
         text-align: top;
         padding: 12px;
         white-space: nowrap !important;
 
-        @media (max-width: $tablet-breakpoint) {
+        @media (max-width: @tablet-breakpoint) {
           max-width: none;
           padding: 10px !important;
           text-overflow: ellipsis;
@@ -187,7 +187,7 @@
       &:nth-of-type(2) {
         padding: 12px;
 
-        @media (max-width: $tablet-breakpoint) {
+        @media (max-width: @tablet-breakpoint) {
           width: 100%;
           line-height: 1.5;
           white-space: inherit;
@@ -196,12 +196,12 @@
         code,
         pre,
         .pre {
-          @include inline-code;
+          .inline-code();
         }
       }
 
       a {
-        color: $color-theme;
+        color: @color-theme;
         font-weight: 600;
       }
 
@@ -212,7 +212,7 @@
   }
 
   ul {
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: @tablet-breakpoint) {
       margin: 0 0 0 !important;
     }
 
@@ -232,7 +232,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $tablet-breakpoint) {
+  @media (max-width: @tablet-breakpoint) {
     display: block !important;
     margin-right: calc(-50vw + 50%) !important;
     margin-left: calc(-50vw + 50%) !important;
@@ -243,13 +243,13 @@
     height: fit-content;
     max-height: unset;
 
-    @media (max-width: $tablet-breakpoint) {
+    @media (max-width: @tablet-breakpoint) {
       width: -webkit-fit-content !important;
       max-width: unset;
       margin: 0 40px 40px !important;
     }
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (max-width: @mobile-breakpoint) {
       min-width: 100% !important;
       margin: 0 0 40px !important;
     }
