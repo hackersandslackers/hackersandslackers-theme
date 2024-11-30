@@ -51,7 +51,6 @@
         "@tryghost/release-utils": "0.8.1",
         "babel-plugin-prismjs": "^2.1.0",
         "basiclightbox": "^5.0.4",
-        "delicious-hamburgers": "^1.2.3",
         "dotenv": "^16.4.5",
         "dotenv-webpack": "^8.1.0",
         "github-profile-card": "^3.1.0",

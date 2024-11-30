@@ -10,17 +10,17 @@
     <link rel="shortcut icon" href="{{@site.icon}}" />
     {{!-- Preload main styles and scripts for better performance --}}
     <link rel="preload" as="style" href="{{asset "built/global.css"}}">
-    <link rel="preload" type="style" href="{{asset 'built//hamburgers.min.css'}}" />
     <link rel="preload" as="script" href="{{asset "built/main.js"}}">
     {{!-- Theme CSS --}}
+    <link rel="stylesheet" type="text/css" href="{{asset 'built/fonts.css'}}" />
     <link rel="stylesheet" type="text/css" href="{{asset 'built/global.css'}}" />
     <link rel="stylesheet" type="text/css" href="{{asset 'built//hamburgers.min.css'}}" />
     {{!-- Custom Theme JS --}}
     <script src="{{asset 'built/github-widget.js'}}"></script>
     <script src="https://kit.fontawesome.com/0dae50f8a6.js" crossorigin="anonymous"></script>
     {{!-- Analytics JS --}}
-    <script defer data-domain="hackersandslackers.com" src="https://plausible.io/js/script.outbound-links.pageview-props.tagged-events.js"></script>
-    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    {{!-- <script defer data-domain="hackersandslackers.com" src="https://plausible.io/js/script.outbound-links.pageview-props.tagged-events.js"></script> 
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script> --}}
     {{!-- Page-specific JS --}}
     {{#is "post"}}
       <script src="{{asset 'built/post.js'}}"></script>
