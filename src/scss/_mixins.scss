@@ -1,3 +1,6 @@
+@forward "_variables.scss";
+
+
 @mixin content-link {
   border-bottom: 1px solid $color-theme;
   text-decoration: underline;

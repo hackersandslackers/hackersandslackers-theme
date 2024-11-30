@@ -1,7 +1,7 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "~delicious-hamburgers/scss/base";
-@import "~delicious-hamburgers/scss/animations/collapse";
+@use "_variables.scss";
+@use "_mixins.scss";
+@use "~delicious-hamburgers/scss/base";
+@use "~delicious-hamburgers/scss/animations/collapse";
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */

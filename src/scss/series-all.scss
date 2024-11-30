@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@use "_variables.scss";
+@use "_mixins.scss";
 
 .page-series {
   background: $color-background-grey;
@@ -98,6 +98,7 @@
 
         .series-card-description {
           -webkit-line-clamp: 4;
+          line-clamp: 4;
           -webkit-box-orient: vertical;
           color: $color-body-font;
           display: -webkit-box;

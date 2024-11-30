@@ -1,6 +1,6 @@
 @use 'sass:color';
-@import "_mixins.scss";
-@import "_variables.scss";
+@use "_mixins.scss";
+@use "_variables.scss";
 
 .post-content>pre,
 .kg-code-card>pre,

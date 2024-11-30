@@ -1,6 +1,5 @@
-@use 'sass:color';
-@import "_variables.scss";
-@import "_mixins.scss";
+@use "./_variables.scss" as *;
+@use "_mixins.scss" as *;
 
 
 .series-detail {

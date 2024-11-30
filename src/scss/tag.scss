@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@use "_variables.scss";
+@use "_mixins.scss";
 
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
@@ -8,7 +8,7 @@
 
   .site-header {
     @media(max-width: $mobile-breakpoint) {
-      box-shadow: -1px 1px 0 rgb(39 44 49 / 10%) !important;
+      box-shadow: -1px 1px 0 rgba(39 44 49 .1) !important;
     }
   }
 

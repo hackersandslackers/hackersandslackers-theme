@@ -1,13 +1,13 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "layout.scss";
-@import "header.scss";
-@import "post-card.scss";
-@import "feed.scss";
-@import "sidebar.scss";
-@import "footer.scss";
-@import "pagination.scss";
-@import "mobile-menu.scss";
+@use "_variables.scss";
+@use "_mixins.scss";
+@use "layout.scss";
+@use "header.scss";
+@use "post-card.scss";
+@use "feed.scss";
+@use "sidebar.scss";
+@use "footer.scss";
+@use "pagination.scss";
+@use "mobile-menu.scss";
 
 body {
   text-rendering: optimizeLegibility;
