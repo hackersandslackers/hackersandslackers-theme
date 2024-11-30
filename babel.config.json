@@ -50,7 +50,7 @@
           "root": ["./src"],
           "alias": {
             "Fonts": "./assets/fonts/",
-            "Styles": "./src/scss/"
+            "Styles": "./src/less/"
           }
         }
       ]

@@ -969,7 +969,7 @@ iframe.instagram-media+script+ :not([id]) {
     margin: 20px auto;
     max-width: 100%;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: 600px) {
         padding: 0 30px;
     }
 }

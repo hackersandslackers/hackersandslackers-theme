@@ -1,11 +1,10 @@
-@use 'sass:color';
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 
 .series-detail {
   background: #fff !important;
-  box-shadow: $card-shadow;
+  box-shadow: @card-shadow;
   margin: 20px auto 60px;
   max-width: 100%;
   width: 950px !important;
@@ -17,11 +16,11 @@
     padding: 40px;
   }
 
-  @media(max-width: $tablet-breakpoint) {
+  @media(max-width: @tablet-breakpoint) {
     margin: 0 auto 30px;
   }
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     padding: 30px 5vw;
   }
 
@@ -41,11 +40,11 @@
 
     h2 {
       line-height: 1;
-      font-family: $body-font-light;
+      font-family: @body-font-light;
       font-size: 2em !important;
       margin: 40px 0 5px;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1.8em !important;
 
         &:last-of-type {
@@ -56,11 +55,11 @@
 
     li {
       font-size: 1.05em;
-      font-family: $body-font-light;
+      font-family: @body-font-light;
       line-height: 1.7;
       color: #232931;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         &:last-of-type {
           display: none;
         }
@@ -78,9 +77,9 @@
     display: flex;
     margin-bottom: 13px;
     overflow: hidden;
-    transition: $transition;
+    transition: @transition;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       padding: 15px 5px;
       border-left: unset;
       border-radius: unset;
@@ -92,8 +91,8 @@
 
     &:hover {
       cursor: pointer;
-      background: $color-hover;
-      border-color: $color-hover;
+      background: @color-hover;
+      border-color: @color-hover;
 
       *,
       .series-post-card-excerpt {
@@ -104,13 +103,13 @@
     &:last-of-type {
       margin-bottom: 0;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         padding-bottom: 0;
       }
     }
 
     .series-post-card-title {
-      font-family: $header-font-medium;
+      font-family: @header-font-medium;
       font-size: 2.2em;
       font-weight: unset;
       margin: 0 0 20px;
@@ -124,10 +123,10 @@
       display: flex;
       line-height: 1;
       opacity: .7;
-      font-family: $header-font-medium;
-      color: $color-header-grey;
+      font-family: @header-font-medium;
+      color: @color-header-grey;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1.8em;
         margin-right: 10px;
         min-width: 30px;
@@ -143,16 +142,16 @@
         line-clamp: 1;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        font-family: $header-font-medium;
+        font-family: @header-font-medium;
         font-size: 1.3em;
         font-weight: unset;
         line-height: 1.2;
         margin: 0 0 7px;
         overflow-y: hidden;
         text-overflow: ellipsis;
-        transition: $transition;
+        transition: @transition;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           -webkit-line-clamp: 2;
         }
       }
@@ -162,8 +161,8 @@
         line-clamp: 3;
         -webkit-box-orient: vertical;
         display: -webkit-box;
-        font-family: $body-font-light;
-        color: $color-body-font;
+        font-family: @body-font-light;
+        color: @color-body-font;
         font-size: 1.05em;
         opacity: .7;
         line-height: 1.4;
@@ -172,13 +171,13 @@
         text-overflow: ellipsis;
         width: -webkit-fill-available;
         width: stretch;
-        transition: $transition;
+        transition: @transition;
 
-        @media(max-width: $tablet-breakpoint) {
+        @media(max-width: @tablet-breakpoint) {
           font-size: 1.1em;
         }
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           margin-bottom: 10px;
         }
       }
@@ -187,27 +186,27 @@
         align-items: center;
         color: #6c7888;
         display: flex;
-        font-family: $body-font-medium;
+        font-family: @body-font-medium;
         font-size: .85em;
         line-height: 1;
-        transition: $transition;
+        transition: @transition;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           display: block;
         }
 
         i,
         svg {
           margin-right: 5px;
-          transition: $transition;
+          transition: @transition;
 
-          @media(max-width: $mobile-breakpoint) {
+          @media(max-width: @mobile-breakpoint) {
             margin-right: 3px;
           }
         }
 
         span {
-          font-family: $body-font-medium;
+          font-family: @body-font-medium;
           font-size: 1.1em;
         }
       }
@@ -215,13 +214,13 @@
   }
 
   .series-title {
-    font-family: $header-font-medium;
-    color: $color-header-grey;
+    font-family: @header-font-medium;
+    color: @color-header-grey;
     line-height: 1;
     margin: 0;
     font-size: 2.7em;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       font-size: 2em;
       margin-bottom: 10px;
       line-height: 1.2;
@@ -246,7 +245,7 @@
     i {
       font-size: 1.1em;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1em;
       }
     }

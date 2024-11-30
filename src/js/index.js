@@ -1,4 +1,4 @@
-import "../scss/global.scss";
+import "../less/global.less";
 import { mainNavigationScroll, hamburgerMenu } from "./navigation.js";
 // import { authorDisplayName } from "./postcard.js";
 

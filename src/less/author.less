@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 
 /* 8.1. Author Card
@@ -7,7 +7,7 @@
 .author-template {
 
   .site-header {
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       margin-bottom: 0 !important;
       box-shadow: -1px 0 0 rgb(39 44 49 / 10%) !important;
     }
@@ -17,13 +17,13 @@
   .author-page-title-card {
     background: white;
     padding: 30px;
-    box-shadow: $card-shadow;
+    box-shadow: @card-shadow;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       margin: 0 auto 0 !important;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       background: unset;
       box-shadow: unset;
       padding: 2vw 6vw !important;
@@ -36,29 +36,29 @@
     .author-card-name-wrapper {
       line-height: 1;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin-right: 0;
       }
     }
 
     .author-card-title {
-      color: $color-header-grey;
-      font-family: $header-font-semibold;
+      color: @color-header-grey;
+      font-family: @header-font-semibold;
       font-size: 1.6em;
       margin: 0;
       line-height: 1;
       letter-spacing: 0.1px;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1.4em;
       }
     }
 
     .author-post-count {
-      font-family: $body-font-medium;
+      font-family: @body-font-medium;
       font-size: .8em;
       margin-left: 10px;
-      color: $color-header-grey;
+      color: @color-header-grey;
       opacity: .8;
     }
 
@@ -69,7 +69,7 @@
       overflow: hidden;
       width: 80px;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -88,31 +88,31 @@
       -webkit-box-orient: vertical;
       color: #5e6877;
       display: -webkit-box;
-      font-family: $body-font;
+      font-family: @body-font;
       line-height: 1.4;
       font-size: 1.1em;
       overflow-y: hidden;
       text-overflow: ellipsis;
       margin: 0;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         font-size: 1.05em;
         margin: 10px auto 0;
       }
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1em;
         line-height: 1.3;
       }
     }
 
     .author-name {
-      color: $color-header-grey;
-      font-family: $header-font-medium;
+      color: @color-header-grey;
+      font-family: @header-font-medium;
       font-size: 1.3em;
       font-weight: unset;
       margin: 0 0 0.3em;
-      transition: $transition;
+      transition: @transition;
     }
 
     a,
@@ -128,24 +128,24 @@
 
       a,
       .author-profile-social-link {
-        transition: $transition;
+        transition: @transition;
 
         &:hover {
-          color: $color-hover;
-          fill: $color-hover;
+          color: @color-hover;
+          fill: @color-hover;
           font-size: 1.1em;
           cursor: pointer;
         }
       }
 
       .author {
-        color: $color-secondary-text;
-        font-family: $body-font-bold;
+        color: @color-secondary-text;
+        font-family: @body-font-bold;
       }
 
       .author-meta-item {
         color: #4d525d;
-        font-family: $body-font-medium;
+        font-family: @body-font-medium;
         font-size: 1.1em !important;
         line-height: 1;
         white-space: nowrap;
@@ -153,14 +153,14 @@
         align-items: center;
         margin-right: 10px;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           font-size: .95em !important;
           line-height: 1;
         }
 
         a,
         span {
-          font-family: $body-font-medium;
+          font-family: @body-font-medium;
         }
 
         i,
@@ -174,7 +174,7 @@
     .author-avatar-link {
       margin-right: 15px;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -188,7 +188,7 @@
       height: auto;
       margin-right: 15px;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin-right: 10px;
         min-width: 70px;
       }
@@ -198,10 +198,10 @@
         width: 90px;
         height: 90px;
         object-fit: cover;
-        background: $color-lightgrey;
+        background: @color-lightgrey;
         border-radius: 50%;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           height: 70px;
           width: 70px;
         }

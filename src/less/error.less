@@ -1,7 +1,7 @@
 .error-template {
-  background-color: $color-background-grey;
+  background-color: @color-background-grey;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     width: 100%;
     box-shadow: unset;
   }
@@ -13,15 +13,15 @@
     margin: 0 auto;
     height: 100%;
     max-width: 1000px;
-    box-shadow: $card-shadow;
+    box-shadow: @card-shadow;
 
-    @media(max-width: $smallscreen-breakpoint) {
+    @media(max-width: @smallscreen-breakpoint) {
       padding: 30px 20px;
       width: 100%;
       max-width: unset;
     }
 
-    @media($mobile-breakpoint) {
+    @media(@mobile-breakpoint) {
       box-shadow: unset;
     }
 
@@ -32,24 +32,24 @@
     }
 
     .error-code {
-      font-family: $header-font;
-      color: $color-header-grey;
+      font-family: @header-font;
+      color: @color-header-grey;
       font-size: 4em;
       line-height: 1;
       margin: 0;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 5.5em;
       }
     }
 
     .error-description {
-      font-family: $header-font-medium;
-      color: $color-post-blurb-grey;
+      font-family: @header-font-medium;
+      color: @color-post-blurb-grey;
       font-size: 1.4em;
       line-height: 1;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1.2em;
         line-height: 1;
       }
@@ -65,21 +65,21 @@
       line-height: 1;
 
       & {
-        @include body-font;
+        .body-font;
       }
     }
 
     .error-explanation {
-      font-family: $body-font-medium;
+      font-family: @body-font-medium;
       font-size: 1.3em;
       line-height: 1;
       margin: 15px 0;
 
       & {
-        @include body-font;
+        .body-font;
       }
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin: 15px auto;
         max-width: 96%;
       }
@@ -91,11 +91,11 @@
       grid-template-columns: 1fr 1fr 1fr;
       margin-top: 15px;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         row-gap: 20px;
       }
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         grid-template-columns: 1fr;
         row-gap: 30px;
         max-width: 95%;
@@ -109,7 +109,7 @@
         box-sizing: unset;
         box-shadow: unset;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           height: unset;
         }
 
@@ -117,7 +117,7 @@
           font-size: 1.4em;
           line-height: 1.1;
 
-          @media(max-width: $mobile-breakpoint) {
+          @media(max-width: @mobile-breakpoint) {
             font-size: 1.8em;
           }
         }
@@ -126,7 +126,7 @@
           font-size: 1.15em;
           margin: 10px 0 0;
 
-          @media(max-width: $mobile-breakpoint) {
+          @media(max-width: @mobile-breakpoint) {
             font-size: 1.3em;
           }
         }
@@ -150,8 +150,8 @@
 
         &:hover {
           * {
-            background: $color-hover;
-            color: $color-hover;
+            background: @color-hover;
+            color: @color-hover;
             cursor: pointer;
           }
         }
@@ -169,14 +169,14 @@
     }
 
     .error-link {
-      font-family: $body-font-bold;
-      color: $color-lightgrey;
-      transition: $transition;
+      font-family: @body-font-bold;
+      color: @color-lightgrey;
+      transition: @transition;
       display: block;
 
 
       &:hover {
-        color: $color-hover;
+        color: @color-hover;
         cursor: pointer;
       }
     }
@@ -185,7 +185,7 @@
   .footer-wrapper {
     max-width: 800px;
 
-    @media(max-width:$mobile-breakpoint) {
+    @media(max-width:@mobile-breakpoint) {
       padding: 0 30px;
       max-width: unset;
     }
@@ -196,7 +196,7 @@
   }
 
   #site-header {
-    @media(max-width: $smallscreen-breakpoint) {
+    @media(max-width: @smallscreen-breakpoint) {
       margin-bottom: 0;
       box-shadow: none;
     }

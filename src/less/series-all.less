@@ -1,25 +1,25 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 .page-series {
-  background: $color-background-grey;
+  background: @color-background-grey;
 
   .series-all-info-card {
     background: white;
-    box-shadow: $card-shadow;
+    box-shadow: @card-shadow;
     padding: 30px;
     margin: 0 auto 50px;
     width: 950px;
     max-width: 95%;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       width: 100%;
       max-width: unset !important;
     }
 
     h1 {
-      font-family: $header-font-medium;
-      color: $color-header-grey
+      font-family: @header-font-medium;
+      color: @color-header-grey
     }
 
     p {
@@ -34,7 +34,7 @@
     max-width: 95%;
     width: 950px;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       max-width: 90vw;
     }
 
@@ -44,28 +44,28 @@
       grid-template-columns: 1fr 1fr 1fr;
       margin: 10px 0 0;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         grid-template-columns: 1fr;
       }
 
       .series-card {
         background: #fff;
         border: 1px solid #e0e7ee;
-        box-shadow: $card-shadow;
+        box-shadow: @card-shadow;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         overflow: hidden;
-        transition: $transition;
+        transition: @transition;
         padding: 20px;
 
         * {
-          transition: $transition;
+          transition: @transition;
         }
 
         &:hover {
           cursor: pointer;
-          background: $color-theme;
+          background: @color-theme;
 
           * {
             color: #fff !important;
@@ -86,22 +86,22 @@
         }
 
         .series-card-title {
-          color: $color-header-grey;
-          font-family: $body-font-bold;
+          color: @color-header-grey;
+          font-family: @body-font-bold;
           font-size: 1.3em;
           font-weight: unset;
           line-height: 1.2;
           margin-bottom: 5px;
           margin-top: 0;
-          transition: $transition;
+          transition: @transition;
         }
 
         .series-card-description {
-          -webkit-line-clamp: 4;
+          line-clamp: 4;
           -webkit-box-orient: vertical;
-          color: $color-body-font;
+          color: @color-body-font;
           display: -webkit-box;
-          font-family: $body-font-medium;
+          font-family: @body-font-medium;
           font-size: .95em;
           line-height: 1.35 !important;
           margin: 10px 0 !important;
@@ -125,7 +125,7 @@
           }
 
           span {
-            font-family: $body-font-semibold;
+            font-family: @body-font-semibold;
           }
         }
       }

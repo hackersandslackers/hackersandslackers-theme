@@ -1,23 +1,23 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 
 .related-posts {
   max-width: 850px;
   margin: 0 auto;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     max-width: 88vw !important;
     margin-bottom: 20px !important;
   }
 
-  @media(max-width: $xs-mobile-breakpoint) {
+  @media(max-width: @xs-mobile-breakpoint) {
     max-width: 86vw !important;
   }
 
   .related-posts-header {
-    color: $color-lightgrey;
-    font-family: $header-font-semibold;
+    color: @color-lightgrey;
+    font-family: @header-font-semibold;
     font-size: 1.3em;
     line-height: 1;
     text-transform: uppercase;
@@ -27,11 +27,11 @@
     text-align: left;
     max-width: 96vw;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       margin: 0 auto 10px;
     }
 
-    @media(max-width: $xs-mobile-breakpoint) {
+    @media(max-width: @xs-mobile-breakpoint) {
       font-size: 1.2em;
     }
   }
@@ -42,11 +42,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       max-width: 96vw;
     }
 
-    @media(max-width: $xs-mobile-breakpoint) {
+    @media(max-width: @xs-mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-gap: 3vmin;
     }
@@ -61,7 +61,7 @@
         height: auto;
         max-height: 135px;
 
-        @media(max-width: $xs-mobile-breakpoint) {
+        @media(max-width: @xs-mobile-breakpoint) {
           display: inline-flex;
           min-width: 30vw;
         }
@@ -70,7 +70,7 @@
       .post-card-image {
         position: relative;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           object-fit: cover;
           object-position: left center;
         }
@@ -79,18 +79,18 @@
       .post-card-title {
         font-size: 1.2em;
         line-height: 1.15;
-        font-family: $header-font;
+        font-family: @header-font;
         overflow: hidden;
         display: -webkit-box;
         line-clamp: 3;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
 
-        @media(max-width: $tablet-breakpoint) {
+        @media(max-width: @tablet-breakpoint) {
           font-size: 1.2em;
         }
 
-        @media(max-width: $xs-mobile-breakpoint) {
+        @media(max-width: @xs-mobile-breakpoint) {
           font-size: 1.4em;
           line-height: 1.1;
         }
@@ -98,11 +98,11 @@
 
       .post-card-content {
 
-        @media(max-width: $tablet-breakpoint) {
+        @media(max-width: @tablet-breakpoint) {
           padding: 12px;
         }
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           width: fit-content;
           padding: 10px;
         }
@@ -112,7 +112,7 @@
           text-overflow: ellipsis;
           margin-bottom: 13px;
 
-          @media(max-width: $mobile-breakpoint) {
+          @media(max-width: @mobile-breakpoint) {
             max-height: 75px;
             height: 75px;
             margin-bottom: unset;
@@ -124,7 +124,7 @@
           margin: 10px 0;
           display: none;
 
-          @media(max-width: $mobile-breakpoint) {
+          @media(max-width: @mobile-breakpoint) {
             font-size: 1.1em !important;
           }
         }
@@ -141,7 +141,7 @@
         align-items: center;
         width: 100%;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           padding: 10px 0 0;
         }
       }
@@ -153,7 +153,7 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @media(max-width: $mobile-breakpoint) {
+        @media(max-width: @mobile-breakpoint) {
           width: fit-content;
           padding: 10px;
         }
@@ -169,25 +169,25 @@
 
           .post-card-meta-item {
             display: block;
-            font-family: $body-font-semibold;
+            font-family: @body-font-semibold;
             color: #636f7c;
             margin: 0 3px;
-            transition: $transition;
+            transition: @transition;
 
-            @media (max-width: $mobile-breakpoint) {
+            @media (max-width: @mobile-breakpoint) {
               font-size: 0.9em;
             }
 
-            @media (max-width: $xs-mobile-breakpoint) {
+            @media (max-width: @xs-mobile-breakpoint) {
               font-size: 0.95em;
               padding: 5px 0;
             }
 
             span,
             time {
-              font-family: $body-font-medium;
+              font-family: @body-font-medium;
               color: #636f7c;
-              transition: $transition;
+              transition: @transition;
             }
 
             &.separator {
@@ -196,14 +196,14 @@
 
             &.reading-time {
               display: block !important;
-              font-family: $body-font-semibold;
+              font-family: @body-font-semibold;
             }
           }
         }
       }
 
       &:hover {
-        background: $color-theme;
+        background: @color-theme;
         cursor: pointer;
 
         * {

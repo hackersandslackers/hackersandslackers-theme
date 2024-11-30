@@ -1,7 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "~delicious-hamburgers/scss/base";
-@import "~delicious-hamburgers/scss/animations/collapse";
+@import "_variables.less";
+@import "_mixins.less";
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -12,13 +10,13 @@
   position: relative;
   background: white;
   margin-bottom: 30px;
-  box-shadow: $card-shadow;
+  box-shadow: @card-shadow;
 
-  @media(max-width: $smallscreen-breakpoint) {
+  @media(max-width: @smallscreen-breakpoint) {
     margin-bottom: 25px;
   }
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     margin-bottom: unset;
     grid-gap: 5vw;
   }
@@ -32,7 +30,7 @@
     margin: 0 auto;
     max-width: 93%;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       max-width: 100%;
     }
 
@@ -50,18 +48,18 @@
     width: 225px;
     justify-content: flex-end;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       justify-content: left;
       width: unset
     }
 
     &>a {
-      font-family: $body-font-bold;
-      transition: $transition;
+      font-family: @body-font-bold;
+      transition: @transition;
       margin-left: 15px;
       line-height: 1;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: none;
       }
     }
@@ -71,7 +69,7 @@
       margin-left: 6px;
       z-index: 1000;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: block;
       }
 
@@ -84,18 +82,18 @@
 
   .nav.left {
     li a {
-      color: $color-lightgrey;
-      font-family: $body-font-semibold;
-      transition: $transition;
+      color: @color-lightgrey;
+      font-family: @body-font-semibold;
+      transition: @transition;
       line-height: 1;
       font-size: 1.3em;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         font-size: 1.2em;
       }
 
       &:hover {
-        color: $color-hover;
+        color: @color-hover;
         cursor: pointer;
       }
     }
@@ -106,13 +104,13 @@
       padding: 0;
       overflow-y: hidden;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media(max-width: @tablet-breakpoint) {
         margin-right: 13px;
       }
     }
 
     ul {
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: none;
       }
     }
@@ -124,18 +122,18 @@
     margin-top: unset;
     margin-right: 15px;
     white-space: nowrap;
-    font-family: $body-font;
+    font-family: @body-font;
     font-size: 16px;
     font-style: normal;
     line-height: 1;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       margin-right: 10px;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       margin: unset;
     }
 
@@ -144,19 +142,19 @@
     }
 
     &.signup {
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: none;
       }
     }
 
     &.login {
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         display: none;
       }
     }
 
     &.search {
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin: 0 5px 0 0;
       }
     }
@@ -165,18 +163,18 @@
   .search-button {
     display: flex;
     align-items: center;
-    color: $color-lightgrey;
-    transition: $transition;
+    color: @color-lightgrey;
+    transition: @transition;
     font-size: 1.3em;
     display: block;
     height: 20px;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       font-size: 1.3em;
     }
 
     &:hover {
-      color: $color-hover;
+      color: @color-hover;
       cursor: pointer;
     }
   }
@@ -186,7 +184,7 @@
     align-items: center;
 
     .icon {
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin-right: 3px;
       }
     }
@@ -198,7 +196,7 @@
 .about-template .site-header,
 .post-template .site-header,
 .tag-template .site-header {
-  @media(max-width: $tablet-breakpoint) {
+  @media(max-width: @tablet-breakpoint) {
     margin-bottom: 0;
     box-shadow: none;
   }
@@ -207,12 +205,12 @@
 .post-template {
 
   .nav-wrapper.nav-links {
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       padding: 0 2vw;
       max-width: 100%;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       padding: 0;
     }
   }
@@ -241,7 +239,7 @@
   padding-top: 6.4vmin;
   padding-bottom: 6.4vmin;
   text-align: center;
-  color: $color-darkgrey;
+  color: @color-darkgrey;
 }
 
 .has-cover .site-header-content {
@@ -286,7 +284,7 @@
   font-size: 5rem;
   font-weight: 800;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     font-size: 1.05em;
   }
 }
@@ -295,9 +293,9 @@
   position: relative;
   padding: 20px 0;
   background-color: #fff;
-  border-bottom: 0.5px solid $color-header-border-grey;
+  border-bottom: 0.5px solid @color-header-border-grey;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media(max-width: @mobile-breakpoint) {
     padding: 20px 3vw;
     width: unset;
   }
@@ -314,7 +312,7 @@
 }
 
 .site-header .nav-link {
-  color: $color-lightgrey;
+  color: @color-lightgrey;
 }
 
 .nav-btn,
@@ -324,46 +322,46 @@
   font-size: .9em;
   line-height: 16px;
   font-weight: 600;
-  font-family: $body-font;
+  font-family: @body-font;
   letter-spacing: .5px;
   text-align: center;
   text-transform: initial;
   white-space: nowrap;
   border: none;
   border-radius: 2px;
-  transition: $transition;
+  transition: @transition;
 }
 
 .outline-btn {
-  color: $color-theme;
+  color: @color-theme;
   background-color: white;
-  box-shadow: inset 0 0 0 1px $color-theme;
-  transition: $transition;
+  box-shadow: inset 0 0 0 1px @color-theme;
+  transition: @transition;
 
   &:hover {
-    color: $color-hover !important;
-    box-shadow: inset 0 0 0 1px $color-hover !important;
+    color: @color-hover !important;
+    box-shadow: inset 0 0 0 1px @color-hover !important;
     cursor: pointer !important;
   }
 }
 
 .filled-btn {
-  background-color: $color-theme;
-  box-shadow: inset 0 0 0 1px $color-theme;
+  background-color: @color-theme;
+  box-shadow: inset 0 0 0 1px @color-theme;
   color: #fff !important;
-  transition: $transition;
+  transition: @transition;
 
   &:hover {
     cursor: pointer !important;
-    background-color: $color-hover;
-    box-shadow: inset 0 0 0 1px $color-hover;
+    background-color: @color-hover;
+    box-shadow: inset 0 0 0 1px @color-hover;
   }
 }
 
 .tags-navigation {
-  border-bottom: 0.5px solid $color-header-border-grey;
+  border-bottom: 0.5px solid @color-header-border-grey;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: @mobile-breakpoint) {
     display: none;
   }
 
@@ -413,11 +411,11 @@
     margin-right: 18px;
     padding: 0;
     line-height: 1em;
-    transition: $transition;
+    transition: @transition;
 
     &:hover {
       cursor: pointer;
-      color: $color-hover;
+      color: @color-hover;
     }
   }
 }
@@ -430,15 +428,15 @@
   user-select: none;
 
   .tag-link {
-    color: $color-lightgrey;
+    color: @color-lightgrey;
     letter-spacing: 0.5px;
-    font-family: $body-font-semibold;
+    font-family: @body-font-semibold;
     font-size: .9em;
-    transition: $transition;
+    transition: @transition;
 
     &:hover {
       cursor: pointer;
-      color: $color-hover;
+      color: @color-hover;
     }
   }
 }
@@ -446,10 +444,10 @@
 .logo {
   height: 40px;
   margin-right: 25px;
-  transition: $transition;
+  transition: @transition;
   width: 40px;
 
-  @media(max-width: $tablet-breakpoint) {
+  @media(max-width: @tablet-breakpoint) {
     margin-right: 20px;
   }
 
@@ -458,8 +456,8 @@
   }
 
   .icon.title {
-    color: $color-theme;
-    font-family: $header-font;
+    color: @color-theme;
+    font-family: @header-font;
     font-size: 1.1em;
     margin: unset;
     white-space: nowrap;
@@ -473,14 +471,14 @@
 .logo.mobile {
   display: none;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: @mobile-breakpoint) {
     display: block;
     height: 35px;
     weight: 35px;
   }
 
   * {
-    transition: $transition;
+    transition: @transition;
   }
 
   &:hover * {
@@ -490,13 +488,13 @@
 }
 
 .logo.desktop {
-  @media (max-width: $mobile-breakpoint) {
+  @media (max-width: @mobile-breakpoint) {
     display: none;
   }
 }
 
 .post-template .nav-wrapper {
-  max-width: $tablet-breakpoint;
+  max-width: @tablet-breakpoint;
 }
 
 .post-template .tags-navigation {

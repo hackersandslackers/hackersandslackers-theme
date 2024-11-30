@@ -1,19 +1,19 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "layout.scss";
-@import "header.scss";
-@import "post-card.scss";
-@import "feed.scss";
-@import "sidebar.scss";
-@import "footer.scss";
-@import "pagination.scss";
-@import "mobile-menu.scss";
+@import "_variables.less";
+@import "_mixins.less";
+@import "layout.less";
+@import "header.less";
+@import "post-card.less";
+@import "feed.less";
+@import "sidebar.less";
+@import "footer.less";
+@import "pagination.less";
+@import "mobile-menu.less";
 
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  background-color: $color-background-grey !important;
-  font-family: $body-font;
+  background-color: @color-background-grey !important;
+  font-family: @body-font;
   font-size: 1.7rem;
   font-style: normal;
   font-weight: 400;
@@ -23,12 +23,12 @@ body {
 
   &::selection {
     color: white;
-    background: $color-theme;
+    background: @color-theme;
   }
 
   b,
   strong {
-    font-family: $body-font-semibold;
+    font-family: @body-font-semibold;
     font-weight: unset;
   }
 }
@@ -45,16 +45,16 @@ body {
     grid-gap: 20px;
   }
 
-  @media (max-width: $tablet-breakpoint) {
+  @media (max-width: @tablet-breakpoint) {
     grid-template-columns: 1fr;
     max-width: 100%;
   }
 }
 
 .post-title {
-  color: $color-header-grey;
+  color: @color-header-grey;
   display: block;
-  font-family: $header-font;
+  font-family: @header-font;
   font-size: 2.3em;
   margin: unset;
   font-weight: unset;
@@ -67,43 +67,43 @@ body {
 .site-content {
 
   h2 {
-    font-family: $body-font-light;
+    font-family: @body-font-light;
     font-weight: normal;
     font-size: 2.3em;
     margin: 40px 0 5px;
-    color: $color-header-grey;
+    color: @color-header-grey;
     margin: 40px 0 5px;
   }
 
   h3 {
-    color: $color-header-grey;
+    color: @color-header-grey;
   }
 
   p {
     margin: 0 0 25px;
 
     & {
-      @include body-font;
+      .body-font();
     }
 
     &::selection {
-      background: $color-theme;
+      background: @color-theme;
       color: white;
     }
 
     code {
-      @include inline-code;
+      .inline-code();
     }
   }
 
   li {
-    @include body-font;
+    .body-font();
     line-height: 1.7em;
     padding: unset;
   }
 
   a {
-    transition: $transition;
+    transition: @transition;
   }
 
   input[type="email"]:hover,
@@ -112,7 +112,7 @@ body {
     background-color: #c3e1f0;
     color: #445d6d;
     cursor: text;
-    transition: $transition;
+    transition: @transition;
 
     &::placeholder {
       color: #96b2d1 !important;
@@ -124,6 +124,6 @@ body {
   .author-template,
   .tag-template,
   .paged {
-    background: $color-background-grey;
+    background: @color-background-grey;
   }
 }

@@ -22,7 +22,7 @@ module.exports = {
   mode: process.env.ENVIRONMENT,
   resolve: {
     alias: {
-      Styles: path.resolve(__dirname, "./src/scss/"),
+      Styles: path.resolve(__dirname, "./src/less/"),
     },
   },
   output: {
@@ -36,16 +36,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
+        test: /\.less$/,
         use: [
           "style-loader",
           "css-loader",
           {
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require.resolve("sass"),
-            },
+            loader: "less-loader",
           },
         ],
       },

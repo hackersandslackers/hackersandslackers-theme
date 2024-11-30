@@ -1,13 +1,13 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@import "_variables.less";
+@import "_mixins.less";
 
 /* 8. Tag Template
 /* ---------------------------------------------------------- */
 .tag-template {
-  background: $color-background-grey;
+  background: @color-background-grey;
 
   .site-header {
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       box-shadow: -1px 1px 0 rgb(39 44 49 / 10%) !important;
     }
   }
@@ -28,31 +28,31 @@
     display: flex;
     justify-content: space-between;
     background: #fff;
-    box-shadow: $card-shadow;
+    box-shadow: @card-shadow;
     padding: 30px;
     grid-column: span 2;
     margin-bottom: 20px;
 
-    @media (max-width: $smallscreen-breakpoint) {
+    @media (max-width: @smallscreen-breakpoint) {
       margin: 0 auto 20px !important;
     }
 
-    @media(max-width: $tablet-breakpoint) {
+    @media(max-width: @tablet-breakpoint) {
       padding: 40px 30px;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media(max-width: @mobile-breakpoint) {
       padding: 6vw 6vw 5vw !important;
     }
 
     .info-card-title {
       margin: 0 0 10px;
       line-height: 1;
-      color: $color-header-grey;
-      font-family: $body-font-medium;
+      color: @color-header-grey;
+      font-family: @body-font-medium;
       font-size: 2em;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1.8em;
         margin: 0 0 5px;
       }
@@ -63,7 +63,7 @@
       margin: 0;
       font-size: 1.1em;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1em;
       }
     }
@@ -72,10 +72,10 @@
       line-height: 1.4;
       font-size: 1.05em;
       opacity: .9;
-      font-family: $body-font;
-      color: $color-body-font;
+      font-family: @body-font;
+      color: @color-body-font;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         font-size: 1em;
       }
     }
@@ -89,7 +89,7 @@
         margin-right: 20px;
       }
 
-      @media(max-width: $mobile-breakpoint) {
+      @media(max-width: @mobile-breakpoint) {
         margin-right: 15px;
         max-width: 18vw;
       }
