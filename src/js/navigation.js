@@ -53,6 +53,7 @@ export function hamburgerMenu() {
     mobileSeriesNavIcon.classList.toggle("flip-vertically");
   });
 
+
   mobileTagLink.addEventListener("click", function () {
     const mobileTagNav = document.querySelector(
       ".nav-tags .mobile-nav-links-list"

@@ -98,6 +98,7 @@
 
         .series-card-description {
           -webkit-line-clamp: 4;
+          line-clamp: 4;
           -webkit-box-orient: vertical;
           color: $color-body-font;
           display: -webkit-box;
