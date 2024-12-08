@@ -1,4 +1,4 @@
-@import "_variables.scss";
+@use "core/_variables.scss" as *;
 
 .mobile-menu {
   position: fixed;
@@ -107,4 +107,8 @@
   .flip-vertically {
     transform: scaleY(-1);
   }
+}
+
+.hamburger--collapse span.bar:before {
+  height: 3px;
 }

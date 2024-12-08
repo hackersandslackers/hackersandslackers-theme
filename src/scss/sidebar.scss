@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@use "core/_variables.scss" as *;
+@use "core/_mixins.scss" as *;
 
 /* 12. Sidebar
 /* ---------------------------------------------------------- */
@@ -473,7 +473,7 @@
   line-height: 1.3;
   margin: 15px 0 0;
   text-align: center;
-  font-size: 1.05em;
+  font-size: .95em;
 }
 
 /* 12.3. Sidebar Social Widget

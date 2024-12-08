@@ -1,10 +1,10 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "kg.scss";
-@import "table.scss";
-@import "code.scss";
-@import "related-posts.scss";
-@import "author.scss";
+@use "core/_variables.scss" as *;
+@use "core/_mixins.scss" as *;
+@use "kg.scss";
+@use "table.scss";
+@use "code.scss";
+@use "related-posts.scss";
+@use "author.scss";
 
 
 /* 7. Single Post

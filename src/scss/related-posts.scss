@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@use "core/_variables.scss" as *;
+@use "core/_mixins.scss" as *;
 
 
 .related-posts {

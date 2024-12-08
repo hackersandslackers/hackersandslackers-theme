@@ -1,11 +1,11 @@
-@import "_variables.scss";
-@import "_mixins.scss";
-@import "author.scss";
-@import "tag.scss";
-@import "series-all.scss";
-@import "kg.scss";
-@import "series-detail.scss";
-@import "error.scss";
+@use "core/_variables.scss" as *;
+@use "core/_mixins.scss" as *;
+@use "author.scss";
+@use "tag.scss";
+@use "series-all.scss";
+@use "kg.scss";
+@use "series-detail.scss";
+@use "error.scss";
 
 
 .page-template {

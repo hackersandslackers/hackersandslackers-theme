@@ -1,5 +1,5 @@
-@import "_variables.scss";
-@import "_mixins.scss";
+@use "core/_variables.scss" as *;
+@use "core/_mixins.scss" as *;
 
 .post-card {
   position: relative;
@@ -49,7 +49,7 @@
     }
 
     @media (max-width: $xs-mobile-breakpoint) {
-      font-size: 1.8em;
+      font-size: 1.65em;
       line-height: 1.05;
     }
   }
@@ -104,7 +104,7 @@
       color: #808997;
       display: -webkit-box;
       font-family: $body-font-medium;
-      font-size: 1.4em;
+      font-size: 1.3em;
       line-height: 1.15em;
       margin: 5px 0 20px;
       overflow-y: hidden;
@@ -114,7 +114,7 @@
       transition: $transition;
 
       @media(max-width: $smallscreen-breakpoint) {
-        font-size: 1.3em;
+        font-size: 1.2em;
       }
 
       @media (max-width: 767px) {
@@ -194,9 +194,9 @@
         color: #646f7d;
         display: block;
         font-family: $body-font-semibold;
-        font-size: 1.25em;
+        font-size: 1.2em;
         line-height: 1.2;
-        margin-bottom: 2px;
+        margin-bottom: 3px;
         transition: $transition;
 
         @media (max-width: $mobile-breakpoint) {
@@ -236,6 +236,7 @@
 
         @media(max-width: $xs-mobile-breakpoint) {
           padding: 6px 8px;
+          font-size: 1em;
           line-height: 1;
           white-space: nowrap;
           text-overflow: ellipsis;
@@ -253,6 +254,7 @@
 
       .post-card-meta-details {
         line-height: 1;
+        font-size: 0.95em;
 
         .date i {
           margin-right: 3px;

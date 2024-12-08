@@ -1,3 +1,6 @@
+@use "core/_variables.scss" as *;
+@use "core/_mixins.scss" as *;
+
 .error-template {
   background-color: $color-background-grey;
 

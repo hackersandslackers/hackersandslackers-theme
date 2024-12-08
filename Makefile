@@ -1,6 +1,6 @@
 THEME_PATH := $(CURDIR)
 DEV_GHOST_PATH := '/Users/toddbirchard/projects/ghostlocal'
-DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers-theme'
+DEV_GHOST_THEME_PATH := '/Users/toddbirchard/projects/ghostlocal/content/themes/hackersandslackers'
 
 define HELP
 Manage development of Hackersandslackers Ghost theme.
@@ -51,6 +51,7 @@ clean:
 .PHONY: update
 update:
 	npm install -g npm@latest && \
+	npm install -g yarn && \
 	npm install -g npm-check-updates@latest && \
 	npm install -g ghost-cli@latest && \
 	cd $(DEV_GHOST_PATH) && ghost update && \
