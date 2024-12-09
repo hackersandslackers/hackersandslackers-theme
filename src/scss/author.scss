@@ -11,6 +11,25 @@
       margin-bottom: 0 !important;
       box-shadow: -1px 0 0 rgb(39 44 49 / 10%) !important;
     }
+    
+    .site-navigation {
+      @media(max-width: $mobile-breakpoint) {
+        border-bottom: 1px solid #d0dae0;
+      }
+    }
+
+    .tags-navigation {
+      @media(max-width: $tablet-breakpoint) {
+        border-bottom: 1px solid #d0dae0;
+      }
+    }
+  }
+
+  .post-feed {
+
+    @media(max-width: $mobile-breakpoint) {
+      margin: 0 4vw 2.5vh;
+    }
   }
 
   .author-card,
@@ -24,13 +43,17 @@
     }
 
     @media(max-width: $mobile-breakpoint) {
-      background: unset;
       box-shadow: unset;
-      padding: 2vw 6vw !important;
+      padding: 3vw 4vw !important;
     }
 
     .author-card-wrapper {
       display: flex;
+      
+      @media(max-width: $mobile-breakpoint) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     .author-card-name-wrapper {
@@ -50,7 +73,9 @@
       letter-spacing: 0.1px;
 
       @media(max-width: $mobile-breakpoint) {
-        font-size: 1.4em;
+        font-size: 1.7em;
+        font-family: $header-font-medium;
+        text-align: center;
       }
     }
 
@@ -80,6 +105,11 @@
       min-width: 90px;
       height: auto;
       margin-right: 15px;
+
+      @media(max-width: $mobile-breakpoint) {
+        min-width: 100px;
+        margin: 0 0 10px 0;
+      }
     }
 
     .author-card-excerpt {
@@ -126,6 +156,10 @@
       margin: 10px 0;
       align-items: center;
 
+      @media(max-width: $mobile-breakpoint) {
+        justify-content: center;
+      }
+
       a,
       .author-profile-social-link {
         transition: $transition;
@@ -154,8 +188,11 @@
         margin-right: 10px;
 
         @media(max-width: $mobile-breakpoint) {
-          font-size: .95em !important;
           line-height: 1;
+        }
+
+        &.location {
+          display: none;
         }
 
         a,
@@ -189,21 +226,22 @@
       margin-right: 15px;
 
       @media(max-width: $mobile-breakpoint) {
-        margin-right: 10px;
-        min-width: 70px;
+        margin-right: unset;
+        min-width: 100px;
+        margin-bottom: 10px;
       }
 
       .author-profile-pic {
         display: block;
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
         object-fit: cover;
         background: $color-lightgrey;
         border-radius: 50%;
 
         @media(max-width: $mobile-breakpoint) {
-          height: 70px;
-          width: 70px;
+          height: 100px;
+          width: 100px;
         }
       }
     }

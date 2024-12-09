@@ -74,6 +74,9 @@ $hamburger-thickness:3px;
 
       @media(max-width: $mobile-breakpoint) {
         display: block;
+        height: 40px;
+        width: 40px;
+        margin: unset;
       }
 
       &.active {

@@ -1,4 +1,4 @@
-import GitHubCard from "github-profile-card";
+// import GitHubCard from "github-profile-card";
 
 window.addEventListener("load", function () {
   let githubUsername = process.env.GITHUB_USERNAME;

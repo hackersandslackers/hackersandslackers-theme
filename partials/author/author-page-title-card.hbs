@@ -11,7 +11,7 @@
       <h1 class="author-card-title">{{name}}</h1>
       <div class="author-meta">
         {{#if location}}
-          <div class="author-meta-item">
+          <div class="author-meta-item location">
             <i class="fa-light fa-location-dot"></i>
             <span class="author-profile-location">{{location}}</span>
           </div>
@@ -25,8 +25,8 @@
         {{/if}}
         {{#if twitter}}
           <div class="author-meta-item">
-            <a class="author-profile-social-link" href="{{twitter_url}}" target="_blank" rel="noopener">
-              <i class="fa-brands fa-x-twitter"></i>
+            <a class="author-profile-social-link twitter" href="{{twitter_url}}" target="_blank" rel="noopener">
+              <i class="fa-brands fa-bluesky"></i>
             </a>
           </div>
         {{/if}}
