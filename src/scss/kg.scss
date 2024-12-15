@@ -159,7 +159,8 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     * {
-      margin: 0;
+      margin-bottom: 0 !important;
+      
     }
   }
 }
