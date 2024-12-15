@@ -6,6 +6,7 @@
   .about-header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 25px !important;
 
     @media (max-width: $mobile-breakpoint) {
       margin: 0 !important;
@@ -16,11 +17,11 @@
     }
 
     .about-video {
-      margin-bottom: 15px;
+      margin-bottom: 25px;
 
       @media (max-width: $mobile-breakpoint) {
         order: 1;
-        margin-bottom: 0;
+        margin-bottom: 15px;
       }
     }
 
