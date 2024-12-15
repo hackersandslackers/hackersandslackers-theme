@@ -10,12 +10,12 @@
   }
 
   .error-body-content {
-    width: 1000px;
+    width: 800px;
     padding: 40px;
     background: white;
     margin: 0 auto;
     height: 100%;
-    max-width: 1000px;
+    max-width: 800px;
     box-shadow: $card-shadow;
 
     @media(max-width: $smallscreen-breakpoint) {

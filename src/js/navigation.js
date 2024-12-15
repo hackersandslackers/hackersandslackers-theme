@@ -45,20 +45,23 @@ export function hamburgerMenu() {
     mobileMenuButton.classList.toggle("active");
   });
 
-  mobileSeriesLink.addEventListener("click", function () {
-    const mobileSeriesNav = document.querySelector(
-      ".nav-series .mobile-nav-links-list"
-    );
-    mobileSeriesNav.classList.toggle("active");
-    mobileSeriesNavIcon.classList.toggle("flip-vertically");
-  });
+  // Mobile expandable Series menu
+  const mobileSeriesNav = document.querySelector(".nav-series .mobile-nav-links-list");
+  if (mobileSeriesNav != null) {
+    mobileSeriesLink.addEventListener("click", function () {
+      mobileSeriesNav.classList.toggle("active");
+      mobileSeriesNavIcon.classList.toggle("flip-vertically");
+    });
+  }
 
 
-  mobileTagLink.addEventListener("click", function () {
-    const mobileTagNav = document.querySelector(
-      ".nav-tags .mobile-nav-links-list"
-    );
-    mobileTagNav.classList.toggle("active");
-    mobileTagsNavIcon.classList.toggle("flip-vertically");
-  });
+  // Mobile expandable Tags menu
+  const mobileTagNav = document.querySelector(".nav-tag .mobile-nav-links-list");
+  if (mobileTagNav != null) {
+    mobileTagLink.addEventListener("click", function () {
+      mobileTagNav.classList.toggle("active");
+      mobileTagsNavIcon.classList.toggle("flip-vertically");
+    });
+  }
+  
 }

@@ -6,12 +6,15 @@
     {{#foreach navigation}}
       {{#has slug="tags"}}
         {{> "menus/mobile-menu-tags-subnav"}}
-        {{else has slug="series"}}
-          {{> "menus/mobile-menu-series-subnav"}}
-          {{else}}
-            <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
-              <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
-            </li>
+          <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
+            <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
+          </li>
+      {{/has}}
+      {{#has slug="series"}}
+        {{> "menus/mobile-menu-series-subnav"}}
+          <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
+            <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
+          </li>
       {{/has}}
       </li>
     {{/foreach}}
