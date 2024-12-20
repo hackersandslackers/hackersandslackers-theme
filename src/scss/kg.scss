@@ -106,6 +106,7 @@ make sure they look good, and are given a bit of extra spacing. */
     margin: 0 !important;
     order: 1;
     border-radius: 0 0 5px 5px;
+    background: #313d4e;
 
     @media(max-width: $mobile-breakpoint) {
       border-radius: unset;
@@ -120,8 +121,8 @@ make sure they look good, and are given a bit of extra spacing. */
     margin: 0 auto;
     padding: 16px 15px 12px;
     border-radius: 4px 4px 0 0 !important;
-    background: #20242c;
-    color: #dee1e3;
+    background: #242a36 !important;
+    color: #dee1e3 !important;
     font-family: $body-font-medium;
     font-size: 1em;
     line-height: 1;
@@ -131,7 +132,8 @@ make sure they look good, and are given a bit of extra spacing. */
 
     @media(max-width: $mobile-breakpoint) {
       min-width: 100%;
-      padding: 16px 15px 12px;
+      padding: 12px 15px;
+      line-height: 1;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
       border-right: 0;
@@ -148,10 +150,11 @@ make sure they look good, and are given a bit of extra spacing. */
       font-family: $body-font-semibold;
     }
 
-    code {
+    code,
+    code > span {
       font-family: $monospace-font;
-      color: #d2dce3;
-      background: rgb(156 195 255 / 20%);
+      color: #9ab5c8;
+      background: rgba(170, 198, 230, 0.1) !important;
       font-size: 0.95em;
       padding: 2px 5px;
       border-radius: 4px;
@@ -266,6 +269,10 @@ make sure they look good, and are given a bit of extra spacing. */
     line-height: 1.4;
     font-family: $body-font;
     font-size: 1.15em !important;
+
+    code {
+      font-size: .9em;
+    }
 
     &:last-of-type {
       margin-bottom: 0;

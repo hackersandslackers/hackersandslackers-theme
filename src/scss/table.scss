@@ -24,6 +24,7 @@
     background-color: #fff;
     table-layout: fixed;
     min-width: 100%;
+    border: 1px solid #bfcee2;
 
     @media (max-width: $mobile-breakpoint) {
       overflow: hidden;
@@ -56,7 +57,7 @@
         td,
         th {
           padding: 10px !important;
-          border-bottom: 1px solid #e3ecf3;
+          border: 1px solid #c0ced8;
           color: #585a61;
           font-size: 0.8em;
           font-weight: 700;
@@ -81,9 +82,7 @@
       th {
         padding: 12px 10px;
         overflow: hidden;
-        border-top: 0;
-        border-bottom: 0;
-        border-bottom: 1px solid #e8eef2;
+        border: 1px solid #c0ced8;
         font-size: 0.8em;
         line-height: 1.4;
         text-align: left;
@@ -114,6 +113,7 @@
     table-layout: fixed;
 
     td {
+      border: 1px solid #c0ced8;
       word-wrap: break-word;
       overflow: unset;
       white-space: normal;
@@ -153,6 +153,7 @@
       text-align: left;
       white-space: normal !important;
       font-family: $body-font;
+      border: 1px solid #c0ced8;
 
       @media (max-width: $tablet-breakpoint) {
         margin: 0 !important;

@@ -165,7 +165,7 @@
         font-family: $body-font-light;
         color: $color-body-font;
         font-size: 1.05em;
-        opacity: .7;
+        opacity: .8;
         line-height: 1.4;
         margin-bottom: 12px;
         overflow-y: hidden;
@@ -180,6 +180,8 @@
 
         @media(max-width: $mobile-breakpoint) {
           margin-bottom: 10px;
+          font-size: 1em;
+          line-height: 1.3;
         }
       }
 

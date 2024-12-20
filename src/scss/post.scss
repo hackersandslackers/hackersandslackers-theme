@@ -261,6 +261,9 @@
         margin: 20px 0;
         align-items: center;
         color: #414d5a;
+        @media(max-width: $mobile-breakpoint) {
+          margin: 10px 0;
+        }
 
         .post-meta-author-avatar {
           border-radius: 50%;
@@ -349,7 +352,7 @@
         }
 
         @media(max-width: $mobile-breakpoint) {
-          line-height: 1.1;
+          line-height: 1.2;
           font-size: 1.1em;
         }
 
