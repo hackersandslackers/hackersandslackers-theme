@@ -39,6 +39,10 @@
           color: $color-hover;
         }
 
+        li {
+          padding: unset;
+        }
+
         svg,
         span {
           color: $color-hover;
@@ -46,6 +50,8 @@
       }
     }
   }
+
+  
 
   #mobile-nav-tags-links,
   #mobile-nav-series-links {
@@ -106,6 +112,39 @@
 
   .flip-vertically {
     transform: scaleY(-1);
+  }
+
+  .mobile-member-actions {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 15vh;
+    margin: auto;
+
+    a {
+      display: block;
+      font-family: $body-font-medium;
+      font-size: 1.2em;
+      margin: 0 10px;
+      transition: $transition;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-hover;
+      }
+
+      .mobile-signin-button,
+      .mobile-signup-button {
+        border: 1px solid blue;
+        transition: $transition;
+        padding: 10px 20px;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-hover;
+        }
+      }
+    }
   }
 }
 
