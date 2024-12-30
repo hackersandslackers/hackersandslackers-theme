@@ -46,6 +46,11 @@
       max-width: 96vw;
     }
 
+    @media(max-width: $mobile-breakpoint) {
+      display: flex;
+      flex-direction: column;
+    }
+
     @media(max-width: $xs-mobile-breakpoint) {
       grid-template-columns: 1fr;
       grid-gap: 3vmin;

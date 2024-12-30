@@ -88,6 +88,10 @@
     padding: 0;
   }
 
+  p {
+    margin-bottom: unset;
+  }
+
   a {
     border-bottom: 1px solid $color-theme;
     color: #737883;
