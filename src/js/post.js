@@ -36,7 +36,18 @@ function createLightboxImageListeners() {
   }
 }
 
+
+function createSeriesNextPrevLinks() {
+  const currentSlug = window.location.pathname.slice('/').replace('/', '');
+  const postDataEndpoint = "https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug;
+  console.log("postDataEndpoint = " + postDataEndpoint);
+
+}
+
 window.addEventListener("load", function () {
   // Lightbox functionality for post images
   createLightboxImageListeners();
+
+  // Create Series Next/Previous "Post" links for series posts
+  createSeriesNextPrevLinks();
 });
