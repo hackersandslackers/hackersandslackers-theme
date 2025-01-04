@@ -1,6 +1,7 @@
 import "../scss/post.scss";
 import Prism from "prismjs";
 import * as basicLightbox from "basiclightbox";
+import { getRequest } from "./clients.js";
 
 Prism.highlightAll();
 
@@ -36,12 +37,26 @@ function createLightboxImageListeners() {
   }
 }
 
+async function getSeriesTag(postMetadata) {
+  const tagsArray = await postMetadata["posts"]
+  return await tagsArray.find(({ visibility }) => visibility === "internal");
+}
+
+async function getPostMetaData() {
+  const currentSlug = window.location.pathname.slice('/').replace('/', '');
+  const postEndpoint = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
+  postEndpoint.searchParams.append('key', '3033ed0ed2e97aa9fbc337c87c');
+  postEndpoint.searchParams.append('fields', 'id,title,slug');
+  postEndpoint.searchParams.append('include', 'tags');
+  const res = await fetch(postEndpoint);
+  return await res.json();
+}
+
 
 function createSeriesNextPrevLinks() {
-  const currentSlug = window.location.pathname.slice('/').replace('/', '');
-  const postDataEndpoint = "https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug;
-  console.log("postDataEndpoint = " + postDataEndpoint);
-
+  const postMetadata = getPostMetaData();
+  const seriesTag = getSeriesTag(postMetadata);
+  console.log("getSeriesTag = " + seriesTag);
 }
 
 window.addEventListener("load", function () {
