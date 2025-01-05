@@ -1,7 +1,7 @@
 import "../scss/post.scss";
 import Prism from "prismjs";
 import * as basicLightbox from "basiclightbox";
-import { getRequest } from "./clients.js";
+import axios from 'axios';
 
 Prism.highlightAll();
 
@@ -37,26 +37,42 @@ function createLightboxImageListeners() {
   }
 }
 
-async function getSeriesTag(postMetadata) {
-  const tagsArray = await postMetadata["posts"]
-  return await tagsArray.find(({ visibility }) => visibility === "internal");
-}
-
-async function getPostMetaData() {
+function getPostMetaData() {
   const currentSlug = window.location.pathname.slice('/').replace('/', '');
   const postEndpoint = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
-  postEndpoint.searchParams.append('key', '3033ed0ed2e97aa9fbc337c87c');
-  postEndpoint.searchParams.append('fields', 'id,title,slug');
-  postEndpoint.searchParams.append('include', 'tags');
-  const res = await fetch(postEndpoint);
-  return await res.json();
+
+  const params = new URLSearchParams({
+    key: '3033ed0ed2e97aa9fbc337c87c',
+    fields: 'id,title,slug',
+    include: 'tags',
+   });
+
+  axios.get(postEndpoint, params)
+    .then(function (response) {
+      const postTags = JSON.stringify(response.data.posts[0].tags);
+
+      const seriesLength = postTags.length;
+      console.log("seriesLength = " + seriesLength);
+
+      const enumeratedPost = postTags.findIndex((tag) => tag.visibility === "internal");
+      console.log("enumeratedPost = " + enumeratedPost);
+
+      const seriesTag = postTags.filter((tag) => tag.visibility === "internal");
+      console.log("seriesTag = " + seriesTag);
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .finally(function (response) {
+      // return response.data.posts[0];
+    });
 }
 
 
 function createSeriesNextPrevLinks() {
   const postMetadata = getPostMetaData();
-  const seriesTag = getSeriesTag(postMetadata);
-  console.log("getSeriesTag = " + seriesTag);
+  console.log("postMetadata = " + postMetadata);
 }
 
 window.addEventListener("load", function () {
