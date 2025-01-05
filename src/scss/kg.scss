@@ -38,7 +38,9 @@ make sure they look good, and are given a bit of extra spacing. */
     iframe {
       margin: 0;
       height: 60vw;
-      border: 1px solid #cdcdcd;
+      border: 2px solid #4d4e53;
+      border-radius: 10px;
+      margin: 0 0 5px;
       width: 100%;
     }
   }
@@ -293,6 +295,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   &.kg-callout-card-blue,
   &.kg-callout-card-grey {
+    padding: 1.2em;
     box-shadow: 2px 2px 2px -2px rgb(8 88 131 / 90%), 0 0 1px rgba(0, 0, 0, .4);
     color: #2d5a7d !important;
 
