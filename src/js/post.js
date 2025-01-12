@@ -1,7 +1,7 @@
 import "../scss/post.scss";
 import Prism from "prismjs";
 import * as basicLightbox from "basiclightbox";
-import axios from 'axios';
+import axios, {isCancel, AxiosError} from 'axios';
 
 Prism.highlightAll();
 
@@ -37,19 +37,70 @@ function createLightboxImageListeners() {
   }
 }
 
-function getPostMetaData() {
-  const currentSlug = window.location.pathname.slice('/').replace('/', '');
-  const postEndpoint = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
+async function getData() {
+  const currentSlug = window.location.pathname.slice('/').replace('/', '').replace('/', '');
+  const url = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
+  console.log("currentSlug = " + currentSlug);
+
+  const httpHeaders = new Headers({
+    "Content-Type": "application/json",
+    "Accept-Version": "v5.0",
+  });
 
   const params = new URLSearchParams({
-    key: '3033ed0ed2e97aa9fbc337c87c',
+    key: '4a2d2032d43f8bb0148595d834',
     fields: 'id,title,slug',
-    include: 'tags',
+    include: 'tags'
    });
 
-  axios.get(postEndpoint, params)
+  try {
+    const resp = await fetch(url, {
+      method: 'GET',
+      params: params,
+      headers: httpHeaders,
+    })
+      .then(function (resp) {
+        const json = await resp.json();
+        console.log(json);
+        return json;
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .finally(function (resp) {
+      // return response.data.posts[0];
+    });
+}
+/*
+function getPostMetaData() {
+  const currentSlug = window.location.pathname.slice('/').replace('/', '').replace('/', '');
+  const postEndpoint = "https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug;
+  console.log("currentSlug = " + currentSlug);
+
+  const httpHeaders = new Headers({
+    "Content-Type": "application/json",
+    "Accept-Version": "v5.0",
+  });
+
+  const params = new URLSearchParams({
+    key: '4a2d2032d43f8bb0148595d834',
+    fields: 'id,title,slug',
+    include: 'tags'
+   });
+
+  fetch(postEndpoint, {
+    method: 'GET',
+    params: params,
+    headers: httpHeaders,
+  })
     .then(function (response) {
-      const postTags = JSON.stringify(response.data.posts[0].tags);
+      const resp = response.data;
+      console.log("response = " + response);
+      console.log("resp = " + resp);
+
+      const post = response.data.post;
+      console.log("post = " + post);
 
       const seriesLength = postTags.length;
       console.log("seriesLength = " + seriesLength);
@@ -68,10 +119,12 @@ function getPostMetaData() {
       // return response.data.posts[0];
     });
 }
+}
+*/
 
 
 function createSeriesNextPrevLinks() {
-  const postMetadata = getPostMetaData();
+  const postMetadata = getData();
   console.log("postMetadata = " + postMetadata);
 }
 
@@ -80,5 +133,5 @@ window.addEventListener("load", function () {
   createLightboxImageListeners();
 
   // Create Series Next/Previous "Post" links for series posts
-  createSeriesNextPrevLinks();
+  await getData();
 });
