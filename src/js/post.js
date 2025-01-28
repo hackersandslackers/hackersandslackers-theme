@@ -141,5 +141,5 @@ window.addEventListener("load", function () {
 
   // Create Series Next/Previous "Post" links for series posts
   const seriesPostData = getData();
-  createSeriesNextPrevLinks(seriesPostData);
+  // createSeriesNextPrevLinks(seriesPostData);
 });
