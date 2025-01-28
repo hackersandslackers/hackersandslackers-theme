@@ -54,7 +54,7 @@ async function getData() {
   });
 
     fetch(request).then((response) => {
-      const result = response.data;
+      const result = response.json();
       console.log(result);
       return result;
     }).catch(function (error) {
