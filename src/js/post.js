@@ -39,7 +39,7 @@ function createLightboxImageListeners() {
 
 async function getData() {
   const currentSlug = window.location.pathname.slice('/').replace('/', '').replace('/', '');
-  const url = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
+  const url = "https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug + "/?key=7c851365b774ed6b14a3bd692f&fields=id,title,slug&include=tags";
   console.log("currentSlug = " + currentSlug);
 
   const httpHeaders = new Headers({
@@ -47,16 +47,11 @@ async function getData() {
     "Accept-Version": "v5.0",
   });
 
-  const params = new URLSearchParams({
-    key: '7c851365b774ed6b14a3bd692f',
-    fields: 'id,title,slug',
-    include: 'tags'
-   });
-
   const request = new Request(url, {
-    method: 'GET',
-    params: params,
-    headers: httpHeaders,
+    headers: {
+      "Content-Type": "application/json",
+      "Accept-Version": "v5.0",
+    },
   });
 
     fetch(request).then((response) => {
