@@ -38,7 +38,7 @@
     box-shadow: 0 1px 0 rgba(39, 44, 49, 0.15);
 
     .site-navigation {
-      border: unset;
+      border-bottom: 1px solid #cdd9e0;
 
       @media(max-width: $mobile-breakpoint) {
         padding: 20px 3vw;
@@ -222,7 +222,7 @@
 
     .post-header-details {
       margin: 0 auto;
-      padding: 50px 0 0;
+      padding: 40px 0 0;
       width: 100%;
 
       @media(max-width: $tablet-breakpoint) {
@@ -399,7 +399,6 @@
     }
 
     iframe {
-      margin: 0 0 25px;
       width: 100%;
 
       @media(max-width: $mobile-breakpoint) {
@@ -731,7 +730,7 @@
       line-height: 1;
       margin: 0 auto 10px;
       padding: 10px !important;
-      transition: all .2s ease-out;
+      transition: $transition;
       width: -webkit-fill-available;
     }
 
@@ -741,10 +740,10 @@
 
     .support-description {
       color: #4c5a69;
-      font-size: 1.1em;
       line-height: 1.5;
-      margin: 0 auto 15px;
+      margin: 0 auto 20px;
       text-align: left;
+      font-size: 1em;
     }
 
     .support-coffee-link {

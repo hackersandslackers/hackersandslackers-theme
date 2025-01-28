@@ -38,7 +38,9 @@ make sure they look good, and are given a bit of extra spacing. */
     iframe {
       margin: 0;
       height: 60vw;
-      border: 1px solid #cdcdcd;
+      border: 2px solid #4d4e53;
+      border-radius: 10px;
+      margin: 0 0 5px;
       width: 100%;
     }
   }
@@ -121,7 +123,7 @@ make sure they look good, and are given a bit of extra spacing. */
     margin: 0 auto;
     padding: 16px 15px 12px;
     border-radius: 4px 4px 0 0 !important;
-    background: #242a36 !important;
+    background: #1c212b !important;
     color: #dee1e3 !important;
     font-family: $body-font-medium;
     font-size: 1em;
@@ -224,7 +226,7 @@ make sure they look good, and are given a bit of extra spacing. */
   width: 100%;
 
   @media(max-width: $mobile-breakpoint) {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .kg-bookmark-thumbnail {
@@ -283,6 +285,8 @@ make sure they look good, and are given a bit of extra spacing. */
     font-size: 1.5em !important;
     padding-right: 0.4em !important;
     display: block !important;
+    line-height: 1;
+    padding: 12px 8px 10px
   }
 
   &.kg-callout-card-grey {
@@ -291,6 +295,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   &.kg-callout-card-blue,
   &.kg-callout-card-grey {
+    padding: 1.2em;
     box-shadow: 2px 2px 2px -2px rgb(8 88 131 / 90%), 0 0 1px rgba(0, 0, 0, .4);
     color: #2d5a7d !important;
 
@@ -364,6 +369,7 @@ make sure they look good, and are given a bit of extra spacing. */
   .kg-bookmark-content {
     @media(max-width: $mobile-breakpoint) {
       padding: 15px;
+      order: 2;
     }
 
     * {
@@ -379,6 +385,10 @@ make sure they look good, and are given a bit of extra spacing. */
   figcaption {
     font-size: .9em;
     padding-top: 5px;
+
+    p {
+      margin-bottom: unset;
+    }
   }
 }
 
@@ -397,7 +407,7 @@ make sure they look good, and are given a bit of extra spacing. */
     background: #cc9b457a;
     padding: 10px 8px;
     width: auto;
-    margin: -20px -26px 14px;
+    margin: -22px -29px 14px;
     letter-spacing: .1px;
 
     &::after {

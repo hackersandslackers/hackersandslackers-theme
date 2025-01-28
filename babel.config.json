@@ -39,7 +39,7 @@
             "go",
             "hcl",
             "vim",
-            "makefile",
+            "makefile"
           ],
           "theme": "default",
           "css": false

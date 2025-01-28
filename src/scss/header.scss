@@ -299,7 +299,7 @@ $hamburger-thickness:3px;
   position: relative;
   padding: 20px 0;
   background-color: #fff;
-  border-bottom: 0.5px solid $color-header-border-grey;
+  border-bottom: 1px solid $color-header-border-grey;
 
   @media(max-width: $mobile-breakpoint) {
     padding: 20px 3vw;

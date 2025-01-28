@@ -199,13 +199,13 @@
 
     .copyright {
       margin: 10px 0;
-      font-size: 1.05em;
+      font-size: 1em;
       color: #475162;
       font-family: $body-font-medium;
       line-height: 1;
       opacity: .8;
 
-      @media(max-width: 767px) {
+      @media(max-width: $tablet-breakpoint) {
         font-size: .95em;
       }
 
@@ -251,7 +251,7 @@
       height: unset;
       margin-bottom: 0;
       max-width: unset;
-      width: 280px;
+      width: 270px;
 
       @media (max-width: $tablet-breakpoint) {
         height: 35px !important;
@@ -264,18 +264,18 @@
       }
 
       .social-media-button {
-        font-size: 1.7em;
+        font-size: 1.6em;
 
         &:hover {
           cursor: pointer;
-          font-size: 2.1em;
+          font-size: 1.8em;
         }
 
         @media(max-width: $tablet-breakpoint) {
-          font-size: 1.8em;
+          font-size: 1.5em;
 
           &:hover {
-            font-size: 2em;
+            font-size: 1.7em;
           }
         }
 
@@ -333,12 +333,8 @@
     }
 
     &.info {
-      max-width: 29%;
-      margin-right: 40px;
-
-      @media(max-width: $tablet-breakpoint) {
-        margin-right: 30px;
-      }
+      max-width: 25vw;
+      margin-right: 4vw;
     }
 
     .footer-list {

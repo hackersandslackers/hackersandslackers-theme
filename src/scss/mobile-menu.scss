@@ -39,6 +39,10 @@
           color: $color-hover;
         }
 
+        li {
+          padding: unset;
+        }
+
         svg,
         span {
           color: $color-hover;
@@ -46,6 +50,8 @@
       }
     }
   }
+
+  
 
   #mobile-nav-tags-links,
   #mobile-nav-series-links {
@@ -107,8 +113,81 @@
   .flip-vertically {
     transform: scaleY(-1);
   }
+
+  .mobile-member-actions {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 15vh;
+    margin: auto;
+
+    a {
+      display: block;
+      font-family: $body-font-medium;
+      font-size: 1.2em;
+      margin: 0 10px;
+      transition: $transition;
+
+      &:hover {
+        cursor: pointer;
+        color: $color-hover;
+      }
+
+      .mobile-signin-button,
+      .mobile-signup-button {
+        border: 1px solid blue;
+        transition: $transition;
+        padding: 10px 20px;
+
+        &:hover {
+          cursor: pointer;
+          color: $color-hover;
+        }
+      }
+    }
+  }
 }
 
 .hamburger--collapse span.bar:before {
   height: 3px;
+}
+
+.gh-navigation-actions {
+  position: fixed;
+  bottom: 5vh;
+  display: block;
+  width: 84vw;
+
+.gh-navigation-members {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    display: block;
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 2px;
+    border: 3px solid $color-theme;
+    color: $color-theme;
+    font-family: $body-font-semibold;
+    width: 48%;
+    text-align: center;
+    transition: $transition;
+
+    &:last-of-type {
+      background-color: $color-theme;
+      color: white;
+
+      &:hover {
+        color: $color-theme !important;
+      }
+
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: $color-hover;
+    }
+  }
+}
 }
