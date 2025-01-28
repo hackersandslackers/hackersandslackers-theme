@@ -807,7 +807,7 @@
     "@inquirer/core" "^10.1.4"
     "@inquirer/type" "^3.0.2"
 
-"@inquirer/core@^10.1.1", "@inquirer/core@^10.1.4":
+"@inquirer/core@^10.1.4":
   version "10.1.4"
   resolved "https://registry.yarnpkg.com/@inquirer/core/-/core-10.1.4.tgz#02394e68d894021935caca0d10fc68fd4f3a3ead"
   integrity sha512-5y4/PUJVnRb4bwWY67KLdebWOhOc7xj5IP2J80oWXa64mVag24rwQ1VAdnj7/eDY/odhguW0zQ1Mp1pj6fO/2w==
@@ -870,7 +870,7 @@
     "@inquirer/type" "^3.0.2"
     ansi-escapes "^4.3.2"
 
-"@inquirer/prompts@^7.2.0":
+"@inquirer/prompts@^7.2.3":
   version "7.2.3"
   resolved "https://registry.yarnpkg.com/@inquirer/prompts/-/prompts-7.2.3.tgz#8a0d7cb5310d429bf815d25bbff108375fc6315b"
   integrity sha512-hzfnm3uOoDySDXfDNOm9usOuYIaQvTgKp/13l1uJoe6UNY+Zpcn2RYt0jXz3yA+yemGHvDOxVzqWl3S5sQq53Q==
@@ -916,7 +916,7 @@
     ansi-escapes "^4.3.2"
     yoctocolors-cjs "^2.1.2"
 
-"@inquirer/type@^3.0.1", "@inquirer/type@^3.0.2":
+"@inquirer/type@^3.0.2":
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/@inquirer/type/-/type-3.0.2.tgz#baff9f8d70947181deb36772cd9a5b6876d3e60c"
   integrity sha512-ZhQ4TvhwHZF+lGhQ2O/rsjo80XoZR5/5qhOY3t6FJuX5XBg5Be8YzYTvaUGJnc12AUGI2nr4QSUE4PhKSigx7g==
@@ -3112,14 +3112,14 @@ inherits@2:
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.4.tgz#0fa2c64f932917c3433a0ded55363aae37416b7c"
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
-inquirer@12.2.0:
-  version "12.2.0"
-  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-12.2.0.tgz#3d165be547c67beb3a0ce98ac39da46d29c9b17a"
-  integrity sha512-CI0yGbyd5SS4vP7i180S9i95yI+M3ONaljfLBlNS1IIIZ7n+xbH76WzHkIHj253huRiXaKQZl8zijOl0Y0mjqg==
+inquirer@12.3.2:
+  version "12.3.2"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-12.3.2.tgz#afa6e8573f9e9ca408335b4936ae32cbea708c22"
+  integrity sha512-YjQCIcDd3yyDuQrbII0FBtm/ZqNoWtvaC71yeCnd5Vbg4EgzsAGaemzfpzmqfvIZEp2roSwuZZKdM0C65hA43g==
   dependencies:
-    "@inquirer/core" "^10.1.1"
-    "@inquirer/prompts" "^7.2.0"
-    "@inquirer/type" "^3.0.1"
+    "@inquirer/core" "^10.1.4"
+    "@inquirer/prompts" "^7.2.3"
+    "@inquirer/type" "^3.0.2"
     ansi-escapes "^4.3.2"
     mute-stream "^2.0.0"
     run-async "^3.0.0"
