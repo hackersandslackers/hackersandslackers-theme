@@ -1,7 +1,6 @@
 import "../scss/post.scss";
 import Prism from "prismjs";
 import * as basicLightbox from "basiclightbox";
-import axios, {isCancel, AxiosError} from 'axios';
 
 Prism.highlightAll();
 
@@ -55,7 +54,7 @@ async function getData() {
   });
 
     fetch(request).then((response) => {
-      const result = response.json();
+      const result = response.data;
       console.log(result);
       return result;
     }).catch(function (error) {
@@ -116,15 +115,32 @@ function getPostMetaData() {
 */
 
 
-function createSeriesNextPrevLinks() {
-  const postMetadata = getData();
-  console.log("postMetadata = " + postMetadata);
+function createSeriesNextPrevLinks(data) {
+  console.log("data = " + data);
+  const post = data.post;
+  console.log("post = " + post);
+
+  const postTags = post.tags;
+  console.log("postTags = " + postTags);
+
+  const seriesLength = postTags.length;
+  console.log("seriesLength = " + seriesLength);
+
+  const enumeratedPost = postTags.findIndex((tag) => tag.visibility === "internal");
+  console.log("enumeratedPost = " + enumeratedPost);
+
+  const seriesTag = postTags.filter((tag) => tag.visibility === "internal");
+  console.log("seriesTag = " + seriesTag);
 }
+
+
 
 window.addEventListener("load", function () {
   // Lightbox functionality for post images
   createLightboxImageListeners();
 
   // Create Series Next/Previous "Post" links for series posts
-  getData();
+  const seriesPostData = getData();
+  console.log("test");
+  createSeriesNextPrevLinks(seriesPostData);
 });
