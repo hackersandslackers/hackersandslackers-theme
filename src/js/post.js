@@ -48,27 +48,25 @@ async function getData() {
   });
 
   const params = new URLSearchParams({
-    key: '4a2d2032d43f8bb0148595d834',
+    key: '7c851365b774ed6b14a3bd692f',
     fields: 'id,title,slug',
     include: 'tags'
    });
 
-  try {
-    const resp = await fetch(url, {
-      method: 'GET',
-      params: params,
-      headers: httpHeaders,
-    })
-      .then(function (resp) {
-        const json = await resp.json();
-        console.log(json);
-        return json;
-    })
-    .catch(function (error) {
+  const request = new Request(url, {
+    method: 'GET',
+    params: params,
+    headers: httpHeaders,
+  });
+
+    fetch(request).then((response) => {
+      const result = response.json();
+      console.log(result);
+      return result;
+    }).catch(function (error) {
       // handle error
       console.log(error);
-    })
-    .finally(function (resp) {
+    }).finally(function (response) {
       // return response.data.posts[0];
     });
 }
@@ -84,7 +82,7 @@ function getPostMetaData() {
   });
 
   const params = new URLSearchParams({
-    key: '4a2d2032d43f8bb0148595d834',
+    key: '7c851365b774ed6b14a3bd692f',
     fields: 'id,title,slug',
     include: 'tags'
    });
@@ -133,5 +131,5 @@ window.addEventListener("load", function () {
   createLightboxImageListeners();
 
   // Create Series Next/Previous "Post" links for series posts
-  await getData();
+  getData();
 });
