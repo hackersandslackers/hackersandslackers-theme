@@ -9,7 +9,8 @@ module.exports = {
     main: path.resolve(__dirname, `./src/js/index.js`),
     post: path.resolve(__dirname, `./src/js/post.js`),
     page: path.resolve(__dirname, `./src/js/page.js`),
-    // author: path.resolve(__dirname, `./src/js/author.js`),
+    author: path.resolve(__dirname, `./src/js/author.js`),
+    nav: path.resolve(__dirname, `./src/js/navigation.js`),
   },
   plugins: [
     new DotEnv({ path: "./.env" }),
@@ -27,7 +28,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, "./assets/built"),
+    path: path.resolve(__dirname, "./assets/built/js/"),
   },
   optimization: {
     minimize: true,
@@ -55,7 +56,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              publicPath: "./assets/built",
+              publicPath: "./assets/built/css/",
             },
           },
           "css-loader",
