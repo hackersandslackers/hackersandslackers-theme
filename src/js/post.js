@@ -41,6 +41,7 @@ async function getData() {
   const currentSlug = window.location.pathname.slice('/').replace('/', '').replace('/', '');
   const url = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
   console.log("currentSlug = " + currentSlug);
+  console.log("IM GOING TO KILL MYSELF");
 
   const httpHeaders = new Headers({
     "Content-Type": "application/json",
@@ -59,11 +60,14 @@ async function getData() {
     headers: httpHeaders,
   });
 
-    fetch(request).then((response) => {
-      const result = response.json();
-      console.log(result);
-      return result;
-    }).catch(function (error) {
+    const fetchRequest = await fetch(request);
+    fetchRequest.then((response) => {
+      return response.json();
+    }).then(posts =>{
+      console.log(posts);
+      return posts;
+    })
+    .catch(function (error) {
       // handle error
       console.log(error);
     }).finally(function (response) {
@@ -131,5 +135,5 @@ window.addEventListener("load", function () {
   createLightboxImageListeners();
 
   // Create Series Next/Previous "Post" links for series posts
-  getData();
+  createSeriesNextPrevLinks();
 });
