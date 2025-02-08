@@ -124,7 +124,6 @@ function getPostMetaData() {
 }
 */
 
-
 function createSeriesNextPrevLinks() {
   const postMetadata = getData();
   console.log("postMetadata = " + postMetadata);
