@@ -1,6 +1,7 @@
 import "../scss/post.scss";
 import Prism from "prismjs";
 import * as basicLightbox from "basiclightbox";
+import axios, {isCancel, AxiosError} from 'axios';
 
 Prism.highlightAll();
 
@@ -38,26 +39,35 @@ function createLightboxImageListeners() {
 
 async function getData() {
   const currentSlug = window.location.pathname.slice('/').replace('/', '').replace('/', '');
-  const url = "https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug + "/?key=7c851365b774ed6b14a3bd692f&fields=id,title,slug&include=tags";
+  const url = new URL("https://hackersandslackers.com/ghost/api/content/posts/slug/" + currentSlug);
   console.log("currentSlug = " + currentSlug);
+  console.log("IM GOING TO KILL MYSELF");
 
   const httpHeaders = new Headers({
     "Content-Type": "application/json",
     "Accept-Version": "v5.0",
   });
 
+  const params = new URLSearchParams({
+    key: '7c851365b774ed6b14a3bd692f',
+    fields: 'id,title,slug',
+    include: 'tags'
+   });
+
   const request = new Request(url, {
-    headers: {
-      "Content-Type": "application/json",
-      "Accept-Version": "v5.0",
-    },
+    method: 'GET',
+    params: params,
+    headers: httpHeaders,
   });
 
-    fetch(request).then((response) => {
-      const result = response.json();
-      console.log(result);
-      return result;
-    }).catch(function (error) {
+    const fetchRequest = await fetch(request);
+    fetchRequest.then((response) => {
+      return response.json();
+    }).then(posts =>{
+      console.log(posts);
+      return posts;
+    })
+    .catch(function (error) {
       // handle error
       console.log(error);
     }).finally(function (response) {
@@ -114,32 +124,15 @@ function getPostMetaData() {
 }
 */
 
-
-function createSeriesNextPrevLinks(data) {
-  console.log("data = " + data);
-  const post = data.post;
-  console.log("post = " + post);
-
-  const postTags = post.tags;
-  console.log("postTags = " + postTags);
-
-  const seriesLength = postTags.length;
-  console.log("seriesLength = " + seriesLength);
-
-  const enumeratedPost = postTags.findIndex((tag) => tag.visibility === "internal");
-  console.log("enumeratedPost = " + enumeratedPost);
-
-  const seriesTag = postTags.filter((tag) => tag.visibility === "internal");
-  console.log("seriesTag = " + seriesTag);
+function createSeriesNextPrevLinks() {
+  const postMetadata = getData();
+  console.log("postMetadata = " + postMetadata);
 }
-
-
 
 window.addEventListener("load", function () {
   // Lightbox functionality for post images
   createLightboxImageListeners();
 
   // Create Series Next/Previous "Post" links for series posts
-  const seriesPostData = getData();
-  // createSeriesNextPrevLinks(seriesPostData);
+  createSeriesNextPrevLinks();
 });
