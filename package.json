@@ -49,7 +49,7 @@
     "dependencies": {
         "@rocktimsaikia/github-card": "^3.0.1",
         "@tryghost/release-utils": "0.8.1",
-        "axios": "^1.7.9",
+        "axios": "^1.8.2",
         "babel-plugin-prismjs": "^2.1.0",
         "basiclightbox": "^5.0.4",
         "dotenv": "^16.4.7",
