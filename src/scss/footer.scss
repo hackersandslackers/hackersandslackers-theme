@@ -333,8 +333,12 @@
     }
 
     &.info {
-      max-width: 25vw;
+      max-width: 20vw;
       margin-right: 4vw;
+
+      @media(max-width: $tablet-breakpoint) {
+        max-width: 25vw;
+      }
     }
 
     .footer-list {
