@@ -65,7 +65,7 @@
         "babel-plugin-module-resolver": "^5.0.2",
         "beeper": "3.0.0",
         "css-loader": "^7.1.2",
-        "cssnano": "7.1.1",
+        "cssnano": "7.1.2",
         "font-config-webpack-plugin": "^2.0.3",
         "inquirer": "12.10.0",
         "mini-css-extract-plugin": "^2.9.4",
