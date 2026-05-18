@@ -12,7 +12,8 @@ module.exports = {
   plugins: [
     new DotEnv({ path: "./.env" }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: (pathData) =>
+        pathData.chunk.name === "main" ? "global.css" : "[name].css",
       chunkFilename: "[id].css",
     }),
   ],

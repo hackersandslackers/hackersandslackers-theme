@@ -1,6 +1,3 @@
-/*!**************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/fonts.css ***!
-  \**************************************************************************/
 /* @import url("//hello.myfonts.net/count/3c0ce8"); */
 
 /*
@@ -145,9 +142,6 @@ dm
   unicode-range: U+2200-10FFFF;
 }
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/variables.css ***!
-  \******************************************************************************/
 :root {
   /* Colors */
   --color-theme: #0297f6;
@@ -206,11 +200,30 @@ dm
   /* Shadows & Transitions */
   --card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
   --transition: all .2s ease-out;
+
+  /* Breakpoints */
+  --widescreen-breakpoint: 1020px;
+  --smallscreen-breakpoint: 950px;
+  --large-tablet-breakpoint: 900px;
+  --tablet-breakpoint: 800px;
+  --small-tablet-breakpoint: 767px;
+  --large-mobile-breakpoint: 700px;
+  --mobile-breakpoint: 600px;
+  --xs-mobile-breakpoint: 500px;
+  --xxs-mobile-breakpoint: 450px;
 }
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/fonts.css (1) ***!
-  \******************************************************************************/
+/* Custom media queries — compiled by postcss-custom-media */
+@custom-media --widescreen (max-width: 1020px);
+@custom-media --smallscreen (max-width: 950px);
+@custom-media --large-tablet (max-width: 900px);
+@custom-media --tablet (max-width: 800px);
+@custom-media --small-tablet (max-width: 767px);
+@custom-media --large-mobile (max-width: 700px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --xs-mobile (max-width: 500px);
+@custom-media --xxs-mobile (max-width: 450px);
+
 /* @import url("//hello.myfonts.net/count/3c0ce8"); */
 
 /*
@@ -355,9 +368,6 @@ dm
   unicode-range: U+2200-10FFFF;
 }
 
-/*!**********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/variables.css (1) ***!
-  \**********************************************************************************/
 :root {
   /* Colors */
   --color-theme: #0297f6;
@@ -416,11 +426,30 @@ dm
   /* Shadows & Transitions */
   --card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
   --transition: all .2s ease-out;
+
+  /* Breakpoints */
+  --widescreen-breakpoint: 1020px;
+  --smallscreen-breakpoint: 950px;
+  --large-tablet-breakpoint: 900px;
+  --tablet-breakpoint: 800px;
+  --small-tablet-breakpoint: 767px;
+  --large-mobile-breakpoint: 700px;
+  --mobile-breakpoint: 600px;
+  --xs-mobile-breakpoint: 500px;
+  --xxs-mobile-breakpoint: 450px;
 }
 
-/*!******************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/kg.css ***!
-  \******************************************************************/
+/* Custom media queries — compiled by postcss-custom-media */
+@custom-media --widescreen (max-width: 1020px);
+@custom-media --smallscreen (max-width: 950px);
+@custom-media --large-tablet (max-width: 900px);
+@custom-media --tablet (max-width: 800px);
+@custom-media --small-tablet (max-width: 767px);
+@custom-media --large-mobile (max-width: 700px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --xs-mobile (max-width: 500px);
+@custom-media --xxs-mobile (max-width: 450px);
+
 /* Cards
 /* ---------------------------------------------------------- */
 
@@ -447,7 +476,7 @@ make sure they look good, and are given a bit of extra spacing. */
     margin-bottom: 25px;
     max-height: 500px;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       display: block;
       max-width: unset;
       width: unset;
@@ -499,7 +528,7 @@ make sure they look good, and are given a bit of extra spacing. */
   transition: var(--transition);
   max-width: 90%;
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     max-width: unset;
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
@@ -521,7 +550,7 @@ make sure they look good, and are given a bit of extra spacing. */
       cursor: zoom-in;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       border-radius: unset;
     }
   }
@@ -544,12 +573,11 @@ make sure they look good, and are given a bit of extra spacing. */
   width: 100%;
   margin: 30px 0;
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
     border-radius: unset !important;
     display: flex;
-    flex-direction: column;
     margin: 30px 0;
     position: relative;
     width: unset;
@@ -563,7 +591,7 @@ make sure they look good, and are given a bit of extra spacing. */
     border-radius: 0 0 5px 5px;
     background: #313d4e;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       border-radius: unset;
       font-size: .8em !important;
     }
@@ -574,7 +602,7 @@ make sure they look good, and are given a bit of extra spacing. */
     width: 100%;
     width: -moz-available;
     margin: 0 auto;
-    padding: 16px 15px 12px;
+    padding: 10px 10px 12px;
     border-radius: 4px 4px 0 0 !important;
     background: #1c212b !important;
     color: #dee1e3 !important;
@@ -585,7 +613,7 @@ make sure they look good, and are given a bit of extra spacing. */
     white-space: normal;
     order: 0;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       min-width: 100%;
       padding: 12px 15px;
       line-height: 1;
@@ -642,7 +670,7 @@ make sure they look good, and are given a bit of extra spacing. */
   margin: 20px 0;
   overflow-y: hidden;
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     margin-left: calc(-50vw + 50%) !important;
     margin-right: calc(-50vw + 50%) !important;
   }
@@ -696,10 +724,13 @@ make sure they look good, and are given a bit of extra spacing. */
 .kg-bookmark-card {
   display: flex;
   width: 100%;
-  flex-direction: column;
+
+  @media (--mobile) {
+    flex-direction: column;
+  }
 
   .kg-bookmark-thumbnail {
-    @media(max-width: 600px) {
+    @media (--mobile) {
       max-height: 180px;
       overflow: hidden;
       align-items: center;
@@ -709,7 +740,7 @@ make sure they look good, and are given a bit of extra spacing. */
 
   .kg-bookmark-thumbnail,
   .kg-bookmark-thumbnail > img {
-    @media(max-width: 600px) {
+    @media (--mobile) {
       position: relative;
       top: unset;
       left: unset;
@@ -718,7 +749,7 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 
   .kg-bookmark-content {
-    @media(max-width: 600px) {
+    @media (--mobile) {
       padding: 15px;
     }
   }
@@ -731,7 +762,7 @@ make sure they look good, and are given a bit of extra spacing. */
   display: flex;
   border-radius: 5px;
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     font-size: 1em !important;
   }
 
@@ -811,7 +842,7 @@ make sure they look good, and are given a bit of extra spacing. */
     text-overflow: ellipsis;
     width: -webkit-fill-available;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       font-family: var(--body-font-semibold);
     }
   }
@@ -830,13 +861,13 @@ make sure they look good, and are given a bit of extra spacing. */
     text-overflow: ellipsis;
     width: -webkit-fill-available;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       margin: 10px 0;
     }
   }
 
   .kg-bookmark-content {
-    @media(max-width: 600px) {
+    @media (--mobile) {
       padding: 15px;
       order: 2;
     }
@@ -901,9 +932,6 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 }
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/fonts.css (2) ***!
-  \******************************************************************************/
 /* @import url("//hello.myfonts.net/count/3c0ce8"); */
 
 /*
@@ -1048,9 +1076,6 @@ dm
   unicode-range: U+2200-10FFFF;
 }
 
-/*!**********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/variables.css (2) ***!
-  \**********************************************************************************/
 :root {
   /* Colors */
   --color-theme: #0297f6;
@@ -1109,11 +1134,30 @@ dm
   /* Shadows & Transitions */
   --card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
   --transition: all .2s ease-out;
+
+  /* Breakpoints */
+  --widescreen-breakpoint: 1020px;
+  --smallscreen-breakpoint: 950px;
+  --large-tablet-breakpoint: 900px;
+  --tablet-breakpoint: 800px;
+  --small-tablet-breakpoint: 767px;
+  --large-mobile-breakpoint: 700px;
+  --mobile-breakpoint: 600px;
+  --xs-mobile-breakpoint: 500px;
+  --xxs-mobile-breakpoint: 450px;
 }
 
-/*!*********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/table.css ***!
-  \*********************************************************************/
+/* Custom media queries — compiled by postcss-custom-media */
+@custom-media --widescreen (max-width: 1020px);
+@custom-media --smallscreen (max-width: 950px);
+@custom-media --large-tablet (max-width: 900px);
+@custom-media --tablet (max-width: 800px);
+@custom-media --small-tablet (max-width: 767px);
+@custom-media --large-mobile (max-width: 700px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --xs-mobile (max-width: 500px);
+@custom-media --xxs-mobile (max-width: 450px);
+
 .tableContainer {
   overflow-x: scroll;
   margin: 30px 0;
@@ -1121,7 +1165,7 @@ dm
   border-radius: 3px;
   border-spacing: 0;
 
-  @media (max-width: 600px) {
+  @media (--mobile) {
     width: auto;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
@@ -1149,7 +1193,7 @@ dm
     min-width: 100%;
     border: .5px solid #bfcee2;
 
-    @media (max-width: 600px) {
+    @media (--mobile) {
       overflow: hidden;
     }
 
@@ -1187,7 +1231,7 @@ dm
           text-align: left;
           text-transform: uppercase;
 
-          @media (max-width: 600px) {
+          @media (--mobile) {
             padding: 12px 8px;
             font-size: 0.75em;
           }
@@ -1212,7 +1256,7 @@ dm
         vertical-align: top;
         transition: all 0.3s ease-out;
 
-        @media (max-width: 600px) {
+        @media (--mobile) {
           padding: 12px 8px;
           font-size: 0.8em;
           min-width: 150px;
@@ -1248,19 +1292,19 @@ dm
   margin: 30px 0;
   border: .5px solid #e3ecf3;
 
-  @media (max-width: 600px) {
+  @media (--mobile) {
     margin: 30px 0 30px -5vw;
     width: 100vw;
   }
 
   tbody {
-    @media (max-width: 800px) {
+    @media (--tablet) {
       margin-left: 0 !important;
     }
   }
 
   tr {
-    @media (max-width: 800px) {
+    @media (--tablet) {
       width: 200px !important;
       padding: 0 !important;
 
@@ -1276,7 +1320,7 @@ dm
       font-family: var(--body-font);
       border: .5px solid #c0ced8;
 
-      @media (max-width: 800px) {
+      @media (--tablet) {
         margin: 0 !important;
         padding: 10px !important;
 
@@ -1294,7 +1338,7 @@ dm
         padding: 12px;
         white-space: nowrap !important;
 
-        @media (max-width: 800px) {
+        @media (--tablet) {
           max-width: none;
           padding: 10px !important;
           text-overflow: ellipsis;
@@ -1307,7 +1351,7 @@ dm
       &:nth-of-type(2) {
         padding: 12px;
 
-        @media (max-width: 800px) {
+        @media (--tablet) {
           width: 100%;
           line-height: 1.5;
           white-space: inherit;
@@ -1341,7 +1385,7 @@ dm
   }
 
   ul {
-    @media (max-width: 800px) {
+    @media (--tablet) {
       margin: 0 0 0 !important;
     }
 
@@ -1361,7 +1405,7 @@ dm
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 800px) {
+  @media (--tablet) {
     display: block !important;
     margin-right: calc(-50vw + 50%) !important;
     margin-left: calc(-50vw + 50%) !important;
@@ -1372,22 +1416,19 @@ dm
     height: fit-content;
     max-height: unset;
 
-    @media (max-width: 800px) {
+    @media (--tablet) {
       width: -webkit-fit-content !important;
       max-width: unset;
       margin: 0 40px 40px !important;
     }
 
-    @media (max-width: 600px) {
+    @media (--mobile) {
       min-width: 100% !important;
       margin: 0 0 40px !important;
     }
   }
 }
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/fonts.css (3) ***!
-  \******************************************************************************/
 /* @import url("//hello.myfonts.net/count/3c0ce8"); */
 
 /*
@@ -1532,9 +1573,6 @@ dm
   unicode-range: U+2200-10FFFF;
 }
 
-/*!**********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/variables.css (3) ***!
-  \**********************************************************************************/
 :root {
   /* Colors */
   --color-theme: #0297f6;
@@ -1593,11 +1631,30 @@ dm
   /* Shadows & Transitions */
   --card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
   --transition: all .2s ease-out;
+
+  /* Breakpoints */
+  --widescreen-breakpoint: 1020px;
+  --smallscreen-breakpoint: 950px;
+  --large-tablet-breakpoint: 900px;
+  --tablet-breakpoint: 800px;
+  --small-tablet-breakpoint: 767px;
+  --large-mobile-breakpoint: 700px;
+  --mobile-breakpoint: 600px;
+  --xs-mobile-breakpoint: 500px;
+  --xxs-mobile-breakpoint: 450px;
 }
 
-/*!********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/code.css ***!
-  \********************************************************************/
+/* Custom media queries — compiled by postcss-custom-media */
+@custom-media --widescreen (max-width: 1020px);
+@custom-media --smallscreen (max-width: 950px);
+@custom-media --large-tablet (max-width: 900px);
+@custom-media --tablet (max-width: 800px);
+@custom-media --small-tablet (max-width: 767px);
+@custom-media --large-mobile (max-width: 700px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --xs-mobile (max-width: 500px);
+@custom-media --xxs-mobile (max-width: 450px);
+
 .post-content > pre,
 .kg-code-card > pre,
 .kg-code-card > code[class*="language-"] {
@@ -1621,7 +1678,7 @@ dm
   word-spacing: normal;
   tab-size: 4;
 
-  @media (max-width: 600px) {
+  @media (--mobile) {
     padding: 15px 15px 20px;
     border-radius: 0 !important;
     font-size: 0.8em !important;
@@ -1664,7 +1721,7 @@ dm
   code {
     white-space: pre-wrap !important;
 
-    @media (max-width: 600px) {
+    @media (--mobile) {
       border-radius: 0;
       white-space: pre !important;
       -webkit-overflow-scrolling: touch;
@@ -1873,9 +1930,6 @@ code[class*="language-ini"] {
   background: var(--nord0);
 }
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/fonts.css (4) ***!
-  \******************************************************************************/
 /* @import url("//hello.myfonts.net/count/3c0ce8"); */
 
 /*
@@ -2020,9 +2074,6 @@ dm
   unicode-range: U+2200-10FFFF;
 }
 
-/*!**********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/variables.css (4) ***!
-  \**********************************************************************************/
 :root {
   /* Colors */
   --color-theme: #0297f6;
@@ -2081,21 +2132,40 @@ dm
   /* Shadows & Transitions */
   --card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
   --transition: all .2s ease-out;
+
+  /* Breakpoints */
+  --widescreen-breakpoint: 1020px;
+  --smallscreen-breakpoint: 950px;
+  --large-tablet-breakpoint: 900px;
+  --tablet-breakpoint: 800px;
+  --small-tablet-breakpoint: 767px;
+  --large-mobile-breakpoint: 700px;
+  --mobile-breakpoint: 600px;
+  --xs-mobile-breakpoint: 500px;
+  --xxs-mobile-breakpoint: 450px;
 }
 
-/*!*****************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/related-posts.css ***!
-  \*****************************************************************************/
+/* Custom media queries — compiled by postcss-custom-media */
+@custom-media --widescreen (max-width: 1020px);
+@custom-media --smallscreen (max-width: 950px);
+@custom-media --large-tablet (max-width: 900px);
+@custom-media --tablet (max-width: 800px);
+@custom-media --small-tablet (max-width: 767px);
+@custom-media --large-mobile (max-width: 700px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --xs-mobile (max-width: 500px);
+@custom-media --xxs-mobile (max-width: 450px);
+
 .related-posts {
   max-width: 850px;
   margin: 0 auto;
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     max-width: 88vw !important;
     margin-bottom: 20px !important;
   }
 
-  @media(max-width: 500px) {
+  @media (--xs-mobile) {
     max-width: 86vw !important;
   }
 
@@ -2111,11 +2181,11 @@ dm
     text-align: left;
     max-width: 96vw;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       margin: 0 auto 10px;
     }
 
-    @media(max-width: 500px) {
+    @media (--xs-mobile) {
       font-size: 1.2em;
     }
   }
@@ -2126,16 +2196,16 @@ dm
     grid-template-columns: 1fr 1fr 1fr;
     margin: auto;
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       max-width: 96vw;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       display: flex;
       flex-direction: column;
     }
 
-    @media(max-width: 500px) {
+    @media (--xs-mobile) {
       grid-template-columns: 1fr;
       grid-gap: 3vmin;
     }
@@ -2150,7 +2220,7 @@ dm
         height: auto;
         max-height: 135px;
 
-        @media(max-width: 500px) {
+        @media (--xs-mobile) {
           display: inline-flex;
           min-width: 30vw;
         }
@@ -2159,7 +2229,7 @@ dm
       .post-card-image {
         position: relative;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           object-fit: cover;
           object-position: left center;
         }
@@ -2175,11 +2245,11 @@ dm
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
 
-        @media(max-width: 800px) {
+        @media (--tablet) {
           font-size: 1.2em;
         }
 
-        @media(max-width: 500px) {
+        @media (--xs-mobile) {
           font-size: 1.4em;
           line-height: 1.1;
         }
@@ -2187,11 +2257,11 @@ dm
 
       .post-card-content {
 
-        @media(max-width: 800px) {
+        @media (--tablet) {
           padding: 12px;
         }
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           width: fit-content;
           padding: 10px;
         }
@@ -2201,7 +2271,7 @@ dm
           text-overflow: ellipsis;
           margin-bottom: 13px;
 
-          @media(max-width: 600px) {
+          @media (--mobile) {
             max-height: 75px;
             height: 75px;
             margin-bottom: unset;
@@ -2213,7 +2283,7 @@ dm
           margin: 10px 0;
           display: none;
 
-          @media(max-width: 600px) {
+          @media (--mobile) {
             font-size: 1.1em !important;
           }
         }
@@ -2230,7 +2300,7 @@ dm
         align-items: center;
         width: 100%;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           padding: 10px 0 0;
         }
       }
@@ -2241,7 +2311,7 @@ dm
         flex-direction: column;
         justify-content: space-between;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           width: fit-content;
           padding: 10px;
         }
@@ -2262,11 +2332,11 @@ dm
             margin: 0 3px;
             transition: var(--transition);
 
-            @media (max-width: 600px) {
+            @media (--mobile) {
               font-size: 0.9em;
             }
 
-            @media (max-width: 500px) {
+            @media (--xs-mobile) {
               font-size: 0.95em;
               padding: 5px 0;
             }
@@ -2308,9 +2378,6 @@ dm
   }
 }
 
-/*!******************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/fonts.css (5) ***!
-  \******************************************************************************/
 /* @import url("//hello.myfonts.net/count/3c0ce8"); */
 
 /*
@@ -2455,9 +2522,6 @@ dm
   unicode-range: U+2200-10FFFF;
 }
 
-/*!**********************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/core/variables.css (5) ***!
-  \**********************************************************************************/
 :root {
   /* Colors */
   --color-theme: #0297f6;
@@ -2516,29 +2580,48 @@ dm
   /* Shadows & Transitions */
   --card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
   --transition: all .2s ease-out;
+
+  /* Breakpoints */
+  --widescreen-breakpoint: 1020px;
+  --smallscreen-breakpoint: 950px;
+  --large-tablet-breakpoint: 900px;
+  --tablet-breakpoint: 800px;
+  --small-tablet-breakpoint: 767px;
+  --large-mobile-breakpoint: 700px;
+  --mobile-breakpoint: 600px;
+  --xs-mobile-breakpoint: 500px;
+  --xxs-mobile-breakpoint: 450px;
 }
 
-/*!**********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/author.css ***!
-  \**********************************************************************/
+/* Custom media queries — compiled by postcss-custom-media */
+@custom-media --widescreen (max-width: 1020px);
+@custom-media --smallscreen (max-width: 950px);
+@custom-media --large-tablet (max-width: 900px);
+@custom-media --tablet (max-width: 800px);
+@custom-media --small-tablet (max-width: 767px);
+@custom-media --large-mobile (max-width: 700px);
+@custom-media --mobile (max-width: 600px);
+@custom-media --xs-mobile (max-width: 500px);
+@custom-media --xxs-mobile (max-width: 450px);
+
 /* 8.1. Author Card
 /* ---------------------------------------------------------- */
 .author-template {
 
   .site-header {
-    @media(max-width: 800px) {
+    @media (--tablet) {
       margin-bottom: 0 !important;
       box-shadow: -1px 0 0 rgb(39 44 49 / 10%) !important;
     }
 
     .site-navigation {
-      @media(max-width: 600px) {
+      @media (--mobile) {
         border-bottom: 1px solid #d0dae0;
       }
     }
 
     .tags-navigation {
-      @media(max-width: 800px) {
+      @media (--tablet) {
         border-bottom: 1px solid #d0dae0;
       }
     }
@@ -2546,7 +2629,7 @@ dm
 
   .post-feed {
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       margin: 0 4vw 2.5vh;
     }
   }
@@ -2557,11 +2640,11 @@ dm
     padding: 30px;
     box-shadow: var(--card-shadow);
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       margin: 0 auto 0 !important;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       box-shadow: unset;
       padding: 3vw 4vw !important;
     }
@@ -2569,7 +2652,7 @@ dm
     .author-card-wrapper {
       display: flex;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         flex-direction: column;
         align-items: center;
       }
@@ -2578,7 +2661,7 @@ dm
     .author-card-name-wrapper {
       line-height: 1;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         margin-right: 0;
       }
     }
@@ -2591,7 +2674,7 @@ dm
       line-height: 1;
       letter-spacing: 0.1px;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         font-size: 1.7em;
         font-family: var(--header-font-medium);
         text-align: center;
@@ -2613,7 +2696,7 @@ dm
       overflow: hidden;
       width: 80px;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2625,7 +2708,7 @@ dm
       height: auto;
       margin-right: 15px;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         min-width: 100px;
         margin: 0 0 10px 0;
       }
@@ -2644,12 +2727,12 @@ dm
       text-overflow: ellipsis;
       margin: 0;
 
-      @media(max-width: 800px) {
+      @media (--tablet) {
         font-size: 1.05em;
         margin: 10px auto 0;
       }
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         font-size: 1em;
         line-height: 1.3;
       }
@@ -2675,7 +2758,7 @@ dm
       margin: 10px 0;
       align-items: center;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         justify-content: center;
       }
 
@@ -2706,7 +2789,7 @@ dm
         align-items: center;
         margin-right: 10px;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           line-height: 1;
         }
 
@@ -2730,7 +2813,7 @@ dm
     .author-avatar-link {
       margin-right: 15px;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -2744,7 +2827,7 @@ dm
       height: auto;
       margin-right: 15px;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         margin-right: unset;
         min-width: 100px;
         margin-bottom: 10px;
@@ -2758,7 +2841,7 @@ dm
         background: var(--color-lightgrey);
         border-radius: 50%;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           height: 100px;
           width: 100px;
         }
@@ -2779,31 +2862,28 @@ dm
   }
 }
 
-/*!********************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/post.css ***!
-  \********************************************************************/
 /* 7. Single Post
 /* ---------------------------------------------------------- */
 
 .post-template {
   background: var(--color-background-grey);
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     overflow-x: hidden;
   }
 
   .main {
-    @media(max-width: 800px) {
+    @media (--tablet) {
       padding-top: 0;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       max-width: 100vw;
     }
   }
 
   .viewport {
-    @media(max-width: 800px) {
+    @media (--tablet) {
       max-width: 100vw;
     }
   }
@@ -2815,7 +2895,7 @@ dm
     .site-navigation {
       border-bottom: 1px solid #cdd9e0;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         padding: 20px 3vw;
       }
     }
@@ -2832,16 +2912,16 @@ dm
     padding-top: 0;
     width: 800px;
 
-    @media(max-width: 950px) {
+    @media (--smallscreen) {
       width: 100%;
       padding-top: unset;
     }
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       margin: 0;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       margin: unset;
     }
   }
@@ -2853,7 +2933,7 @@ dm
     max-width: 90vw;
     margin: 0 auto;
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       width: unset;
       max-width: unset;
     }
@@ -2863,7 +2943,7 @@ dm
       justify-content: space-between;
       margin: 40px 0 20px;
 
-      @media(max-width: 800px) {
+      @media (--tablet) {
         padding: 0 5vw;
       }
 
@@ -2932,11 +3012,11 @@ dm
     width: 800px;
     margin: 0 auto;
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       width: 100%;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       margin: 0 auto;
     }
 
@@ -2949,7 +3029,7 @@ dm
       transition: var(--transition);
       text-transform: uppercase;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         font-size: 1em;
       }
 
@@ -2962,7 +3042,7 @@ dm
     .post-image {
       width: 100%;
 
-      @media(max-width: 800px) {
+      @media (--tablet) {
         padding: 0;
       }
 
@@ -2982,12 +3062,12 @@ dm
       order: 2;
       width: -webkit-fill-available;
 
-      @media (max-width: 600px) {
+      @media (--mobile) {
         font-size: 2em;
         line-height: 1.1;
       }
 
-      @media (max-width: 450px) {
+      @media (--xxs-mobile) {
         font-size: 1.9em;
       }
     }
@@ -2997,7 +3077,7 @@ dm
       padding: 40px 0 0;
       width: 100%;
 
-      @media(max-width: 800px) {
+      @media (--tablet) {
         padding: unset;
         max-width: 90vw;
         margin: 6vw auto 0;
@@ -3011,17 +3091,17 @@ dm
         margin: 10px 0;
         order: 1;
 
-        @media (max-width: 800px) {
+        @media (--tablet) {
           margin: 10px 0;
           font-size: 1.25em;
           line-height: 1.2;
         }
 
-        @media (max-width: 767px) {
+        @media (--small-tablet) {
           margin: 8px 0;
         }
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           font-size: 1.05em;
           display: none;
         }
@@ -3034,7 +3114,7 @@ dm
         align-items: center;
         color: #414d5a;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           margin: 10px 0;
         }
 
@@ -3099,7 +3179,7 @@ dm
       position: relative;
       min-width: -webkit-fill-available;
 
-      @media(max-width: 800px) {
+      @media (--tablet) {
         padding: 0 0 15px;
       }
 
@@ -3120,11 +3200,11 @@ dm
         margin: 12px 0;
         padding-left: 0;
 
-        @media(max-width: 800px) {
+        @media (--tablet) {
           margin: 0 0 10px;
         }
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           line-height: 1.2;
           font-size: 1.1em;
         }
@@ -3188,7 +3268,7 @@ dm
       }
     }
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       max-width: 90vw;
       margin: 6vw auto;
     }
@@ -3196,7 +3276,7 @@ dm
     iframe {
       width: 100%;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         width: 100vw;
         max-width: unset;
         margin-left: calc(-50vw + 50%) !important;
@@ -3212,7 +3292,7 @@ dm
       line-height: 1.2;
       font-family: var(--body-font-light);
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         font-size: 1.8em;
         line-height: 1.2;
         margin: 40px 0 5px;
@@ -3226,7 +3306,7 @@ dm
       margin: 40px 0 5px;
       color: #4e576a;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         font-size: 1.3em;
       }
     }
@@ -3253,7 +3333,7 @@ dm
       border-radius: 0 0 5px 5px;
       box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .1), 0 0 1px rgba(0, 0, 0, .4);
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         padding: 20px 15px;
       }
     }
@@ -3318,7 +3398,7 @@ dm
     max-width: 100%;
     width: 100%;
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       padding: 0 5vw;
     }
 
@@ -3337,7 +3417,7 @@ dm
       padding: 9px 10px 7px;
       transition: all .2s ease-out;
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         margin-bottom: 10px;
         margin: 0 7px 7px 0;
         line-height: .9;
@@ -3374,11 +3454,11 @@ dm
       justify-content: space-between;
       padding: 30px 0;
 
-      @media(max-width: 800px) {
+      @media (--tablet) {
         padding: 30px 5vw;
       }
 
-      @media(max-width: 600px) {
+      @media (--mobile) {
         margin: 0;
       }
 
@@ -3391,7 +3471,7 @@ dm
         width: 70px;
         margin-right: 15px;
 
-        @media(max-width: 600px) {
+        @media (--mobile) {
           height: 60px;
           min-width: 60px;
           width: 60px;
@@ -3412,7 +3492,7 @@ dm
           width: 70px;
           border: 1px solid var(--color-author-avatar-border);
 
-          @media(max-width: 600px) {
+          @media (--mobile) {
             height: 58px;
             min-width: 58px;
             width: 58px;
@@ -3472,7 +3552,7 @@ dm
           margin: 8px 0 !important;
           line-height: 1;
 
-          @media(max-width: 600px) {
+          @media (--mobile) {
             margin: 5px 0;
           }
 
@@ -3521,7 +3601,7 @@ dm
           color: #1e242a;
           margin-top: 0;
 
-          @media(max-width: 600px) {
+          @media (--mobile) {
             width: -webkit-fill-available;
             margin-top: 10px !important;
             padding-top: 5px;
@@ -3584,7 +3664,7 @@ dm
     margin: 0 0 30px;
     padding: 0 0 0 1em;
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       margin: 10px 10px 25px;
       padding-left: 15px;
     }
@@ -3668,7 +3748,7 @@ dm
   width: 100%;
   margin: 30px 0;
 
-  @media(max-width: 600px) {
+  @media (--mobile) {
     margin: 30px 0 10px;
   }
 
@@ -3685,11 +3765,11 @@ dm
     padding: 20px 0 0;
     text-align: center;
 
-    @media(max-width: 800px) {
+    @media (--tablet) {
       margin: 0 5vw 60px;
     }
 
-    @media(max-width: 600px) {
+    @media (--mobile) {
       display: none;
     }
 
@@ -3748,7 +3828,7 @@ dm
 }
 
 #ghost-comments-root {
-  @media(max-width: 600px) {
+  @media (--mobile) {
     padding: 0 30px;
   }
 }
