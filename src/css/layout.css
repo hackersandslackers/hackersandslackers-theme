@@ -1,5 +1,4 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
+@import "./core/variables.css";
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */
@@ -19,13 +18,13 @@
 .paged .viewport {
   max-width: 93%;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     max-width: 100vw;
   }
 }
 
 .page-about .viewport {
-  @media(max-width: $tablet-breakpoint) {
+  @media (--tablet) {
     max-width: 100vw;
   }
 }

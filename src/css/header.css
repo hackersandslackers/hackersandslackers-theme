@@ -1,8 +1,4 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
-@use "../../assets/built/hamburgers.min.css";
-
-$hamburger-thickness:3px;
+@import "./core/variables.css";
 
 /* 4. Site Header
 /* ---------------------------------------------------------- */
@@ -13,13 +9,13 @@ $hamburger-thickness:3px;
   position: relative;
   background: white;
   margin-bottom: 30px;
-  box-shadow: $card-shadow;
+  box-shadow: var(--card-shadow);
 
-  @media(max-width: $smallscreen-breakpoint) {
+  @media (--smallscreen) {
     margin-bottom: 25px;
   }
 
-  @media(max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     margin-bottom: unset;
     grid-gap: 5vw;
   }
@@ -33,7 +29,7 @@ $hamburger-thickness:3px;
     margin: 0 auto;
     max-width: 93%;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       max-width: 100%;
     }
 
@@ -51,17 +47,17 @@ $hamburger-thickness:3px;
     width: 225px;
     justify-content: flex-end;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       justify-content: left;
-      width: unset
+      width: unset;
     }
 
-    &>a {
-      transition: $transition;
+    & > a {
+      transition: var(--transition);
       margin-left: 15px;
       line-height: 1;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         display: none;
       }
     }
@@ -71,7 +67,7 @@ $hamburger-thickness:3px;
       margin-left: 6px;
       z-index: 1000;
 
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         display: block;
         height: 40px;
         width: 40px;
@@ -87,18 +83,18 @@ $hamburger-thickness:3px;
 
   .nav.left {
     li a {
-      color: $color-lightgrey;
-      transition: $transition;
-      font-family: $body-font;
+      color: var(--color-lightgrey);
+      transition: var(--transition);
+      font-family: var(--body-font);
       line-height: 1;
       font-size: 1.3em;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media (--tablet) {
         font-size: 1.2em;
       }
 
       &:hover {
-        color: $color-hover;
+        color: var(--color-hover);
         cursor: pointer;
       }
     }
@@ -109,13 +105,13 @@ $hamburger-thickness:3px;
       padding: 0;
       overflow-y: hidden;
 
-      @media(max-width: $tablet-breakpoint) {
+      @media (--tablet) {
         margin-right: 13px;
       }
     }
 
     ul {
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         display: none;
       }
     }
@@ -127,18 +123,18 @@ $hamburger-thickness:3px;
     margin-top: unset;
     margin-right: 15px;
     white-space: nowrap;
-    font-family: $body-font;
+    font-family: var(--body-font);
     font-size: 16px;
     font-style: normal;
     line-height: 1;
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
 
-    @media(max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       margin-right: 10px;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       margin: unset;
     }
 
@@ -147,19 +143,19 @@ $hamburger-thickness:3px;
     }
 
     &.signup {
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         display: none;
       }
     }
 
     &.login {
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         display: none;
       }
     }
 
     &.search {
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         margin: 0 5px 0 0;
       }
     }
@@ -168,18 +164,18 @@ $hamburger-thickness:3px;
   .search-button {
     display: flex;
     align-items: center;
-    color: $color-lightgrey;
-    transition: $transition;
+    color: var(--color-lightgrey);
+    transition: var(--transition);
     font-size: 1.3em;
     display: block;
     height: 20px;
 
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       font-size: 1.3em;
     }
 
     &:hover {
-      color: $color-hover;
+      color: var(--color-hover);
       cursor: pointer;
     }
   }
@@ -189,7 +185,7 @@ $hamburger-thickness:3px;
     align-items: center;
 
     .icon {
-      @media(max-width: $mobile-breakpoint) {
+      @media (--mobile) {
         margin-right: 3px;
       }
     }
@@ -201,7 +197,7 @@ $hamburger-thickness:3px;
 .about-template .site-header,
 .post-template .site-header,
 .tag-template .site-header {
-  @media(max-width: $tablet-breakpoint) {
+  @media (--tablet) {
     margin-bottom: 0;
     box-shadow: none;
   }
@@ -210,12 +206,12 @@ $hamburger-thickness:3px;
 .post-template {
 
   .nav-wrapper.nav-links {
-    @media(max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       padding: 0 2vw;
       max-width: 100%;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       padding: 0;
     }
   }
@@ -244,7 +240,7 @@ $hamburger-thickness:3px;
   padding-top: 6.4vmin;
   padding-bottom: 6.4vmin;
   text-align: center;
-  color: $color-darkgrey;
+  color: var(--color-darkgrey);
 }
 
 .has-cover .site-header-content {
@@ -289,7 +285,7 @@ $hamburger-thickness:3px;
   font-size: 5rem;
   font-weight: 800;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     font-size: 1.05em;
   }
 }
@@ -298,9 +294,9 @@ $hamburger-thickness:3px;
   position: relative;
   padding: 20px 0;
   background-color: #fff;
-  border-bottom: 1px solid $color-header-border-grey;
+  border-bottom: 1px solid var(--color-header-border-grey);
 
-  @media(max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     padding: 20px 3vw;
     width: unset;
   }
@@ -317,7 +313,7 @@ $hamburger-thickness:3px;
 }
 
 .site-header .nav-link {
-  color: $color-lightgrey;
+  color: var(--color-lightgrey);
 }
 
 .nav-btn,
@@ -326,46 +322,46 @@ $hamburger-thickness:3px;
   padding: 10px 16px;
   font-size: .9em;
   line-height: 16px;
-  font-family: $body-font;
+  font-family: var(--body-font);
   letter-spacing: .5px;
   text-align: center;
   text-transform: initial;
   white-space: nowrap;
   border: none;
   border-radius: 2px;
-  transition: $transition;
+  transition: var(--transition);
 }
 
 .outline-btn {
-  color: $color-theme;
+  color: var(--color-theme);
   background-color: white;
-  box-shadow: inset 0 0 0 1px $color-theme;
-  transition: $transition;
+  box-shadow: inset 0 0 0 1px var(--color-theme);
+  transition: var(--transition);
 
   &:hover {
-    color: $color-hover !important;
-    box-shadow: inset 0 0 0 1px $color-hover !important;
+    color: var(--color-hover) !important;
+    box-shadow: inset 0 0 0 1px var(--color-hover) !important;
     cursor: pointer !important;
   }
 }
 
 .filled-btn {
-  background-color: $color-theme;
-  box-shadow: inset 0 0 0 1px $color-theme;
+  background-color: var(--color-theme);
+  box-shadow: inset 0 0 0 1px var(--color-theme);
   color: #fff !important;
-  transition: $transition;
+  transition: var(--transition);
 
   &:hover {
     cursor: pointer !important;
-    background-color: $color-hover;
-    box-shadow: inset 0 0 0 1px $color-hover;
+    background-color: var(--color-hover);
+    box-shadow: inset 0 0 0 1px var(--color-hover);
   }
 }
 
 .tags-navigation {
-  border-bottom: 0.5px solid $color-header-border-grey;
+  border-bottom: 0.5px solid var(--color-header-border-grey);
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     display: none;
   }
 
@@ -415,16 +411,14 @@ $hamburger-thickness:3px;
     margin-right: 18px;
     padding: 0;
     line-height: 1em;
-    transition: $transition;
+    transition: var(--transition);
 
     &:hover {
       cursor: pointer;
-      color: $color-hover;
+      color: var(--color-hover);
     }
   }
 }
-
-
 
 .tag-item {
   line-height: 16px;
@@ -432,15 +426,15 @@ $hamburger-thickness:3px;
   user-select: none;
 
   .tag-link {
-    color: $color-lightgrey;
+    color: var(--color-lightgrey);
     letter-spacing: 0.5px;
-    font-family: $body-font-semibold;
+    font-family: var(--body-font-semibold);
     font-size: .9em;
-    transition: $transition;
+    transition: var(--transition);
 
     &:hover {
       cursor: pointer;
-      color: $color-hover;
+      color: var(--color-hover);
     }
   }
 }
@@ -448,10 +442,10 @@ $hamburger-thickness:3px;
 .logo {
   height: 40px;
   margin-right: 25px;
-  transition: $transition;
+  transition: var(--transition);
   width: 40px;
 
-  @media(max-width: $tablet-breakpoint) {
+  @media (--tablet) {
     margin-right: 20px;
   }
 
@@ -460,8 +454,8 @@ $hamburger-thickness:3px;
   }
 
   .icon.title {
-    color: $color-theme;
-    font-family: $header-font;
+    color: var(--color-theme);
+    font-family: var(--header-font);
     font-size: 1.1em;
     margin: unset;
     white-space: nowrap;
@@ -475,14 +469,14 @@ $hamburger-thickness:3px;
 .logo.mobile {
   display: none;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     display: block;
     height: 35px;
     weight: 35px;
   }
 
   * {
-    transition: $transition;
+    transition: var(--transition);
   }
 
   &:hover * {
@@ -492,13 +486,13 @@ $hamburger-thickness:3px;
 }
 
 .logo.desktop {
-  @media (max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     display: none;
   }
 }
 
 .post-template .nav-wrapper {
-  max-width: $tablet-breakpoint;
+  max-width: 800px;
 }
 
 .post-template .tags-navigation {

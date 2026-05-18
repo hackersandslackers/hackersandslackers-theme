@@ -1,24 +1,22 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
-@use "author.scss";
-@use "tag.scss";
-@use "series-all.scss";
-@use "kg.scss";
-@use "series-detail.scss";
-@use "error.scss";
-
+@import "./core/variables.css";
+@import "./author.css";
+@import "./tag.css";
+@import "./series-all.css";
+@import "./kg.css";
+@import "./series-detail.css";
+@import "./error.css";
 
 .page-template {
-  background: $color-background-grey;
+  background: var(--color-background-grey);
 
   .page-title {
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       font-size: 2.2em;
     }
   }
 
   &.page-about .page-title {
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       font-size: 2.2em;
       margin-bottom: unset;
     }
@@ -33,47 +31,53 @@
     padding: 40px;
     max-width: 658px;
     background: white;
-    box-shadow: $card-shadow;
+    box-shadow: var(--card-shadow);
 
-    @media(max-width: $smallscreen-breakpoint) {
+    @media (--smallscreen) {
       padding: 30px;
     }
 
-    @media(max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       padding: 5vw;
       width: 100%;
       max-width: unset;
     }
 
-    @media(max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       padding: 0 5vw 5vw;
     }
 
     .page-image {
       margin-bottom: 40px;
-      box-shadow: $card-shadow;
+      box-shadow: var(--card-shadow);
       border-radius: 2px;
       box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
     }
 
-    &>p {
+    & > p {
       -webkit-font-smoothing: antialiased;
       color: #414d5a;
-      font-family: $body-font;
+      font-family: var(--body-font);
       font-size: 1.1em;
       line-height: 1.7em;
       margin: 0 0 25px;
 
       a {
-        @include content-link;
+        border-bottom: 1px solid var(--color-theme);
+        word-break: break-word;
+        transition: var(--transition);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--color-theme);
+          cursor: pointer;
+        }
       }
     }
   }
 
   .about-content {
     margin-bottom: 40px;
-
-
 
     .authors-list-title {
       margin: 40px 0 15px;
@@ -83,14 +87,14 @@
 
 
 .page-title {
-  font-family: $header-font-medium;
-  color: $color-header-grey;
+  font-family: var(--header-font-medium);
+  color: var(--color-header-grey);
   line-height: 1;
   margin-bottom: 10px;
 }
 
 
-@media (max-width: $smallscreen-breakpoint) {
+@media (--smallscreen) {
 
   .author-template .site-content {
     margin: unset;
@@ -103,13 +107,13 @@
 
   .author-card,
   .info-card {
-    @media (max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       margin: unset;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
     }
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       padding: 2vw 6vw;
     }
   }

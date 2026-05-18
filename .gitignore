@@ -89,3 +89,6 @@ yarn-error.log
 
 # Yarn
 .yarn
+
+# LLM Generated Files
+.claude

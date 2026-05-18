@@ -1,5 +1,4 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
+@import "./core/variables.css";
 
 .tableContainer {
   overflow-x: scroll;
@@ -8,13 +7,23 @@
   border-radius: 3px;
   border-spacing: 0;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     width: auto;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 
-    & {
-      @include mobile-horizontal-scroll;
+    &:hover {
+      cursor: grab;
+    }
+
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      background: transparent;
     }
   }
 
@@ -26,12 +35,12 @@
     min-width: 100%;
     border: .5px solid #bfcee2;
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       overflow: hidden;
     }
 
     * {
-      font-family: $table-font !important;
+      font-family: var(--table-font) !important;
     }
 
     tr {
@@ -64,7 +73,7 @@
           text-align: left;
           text-transform: uppercase;
 
-          @media (max-width: $mobile-breakpoint) {
+          @media (--mobile) {
             padding: 12px 8px;
             font-size: 0.75em;
           }
@@ -89,7 +98,7 @@
         vertical-align: top;
         transition: all 0.3s ease-out;
 
-        @media (max-width: $mobile-breakpoint) {
+        @media (--mobile) {
           padding: 12px 8px;
           font-size: 0.8em;
           min-width: 150px;
@@ -97,7 +106,7 @@
         }
 
         a {
-          border-bottom: 1px solid $color-theme;
+          border-bottom: 1px solid var(--color-theme);
           color: #585a61;
           font-weight: 500;
         }
@@ -121,25 +130,23 @@
   }
 }
 
-
-
 .sideTableContainer {
   margin: 30px 0;
   border: .5px solid #e3ecf3;
 
-  @media (max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     margin: 30px 0 30px -5vw;
     width: 100vw;
   }
 
   tbody {
-    @media (max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       margin-left: 0 !important;
     }
   }
 
   tr {
-    @media (max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       width: 200px !important;
       padding: 0 !important;
 
@@ -152,30 +159,28 @@
       line-height: 1.6;
       text-align: left;
       white-space: normal !important;
-      font-family: $body-font;
+      font-family: var(--body-font);
       border: .5px solid #c0ced8;
 
-      @media (max-width: $tablet-breakpoint) {
+      @media (--tablet) {
         margin: 0 !important;
         padding: 10px !important;
 
         p {
           font-size: 1em;
           line-height: 1.5;
-          ;
         }
-
       }
 
       &:first-child {
-        font-family: $table-font;
+        font-family: var(--table-font);
         font-size: 0.8em;
         font-weight: 600;
         text-align: top;
         padding: 12px;
         white-space: nowrap !important;
 
-        @media (max-width: $tablet-breakpoint) {
+        @media (--tablet) {
           max-width: none;
           padding: 10px !important;
           text-overflow: ellipsis;
@@ -188,7 +193,7 @@
       &:nth-of-type(2) {
         padding: 12px;
 
-        @media (max-width: $tablet-breakpoint) {
+        @media (--tablet) {
           width: 100%;
           line-height: 1.5;
           white-space: inherit;
@@ -197,12 +202,21 @@
         code,
         pre,
         .pre {
-          @include inline-code;
+          display: inline;
+          font-family: var(--monospace-font);
+          vertical-align: middle;
+          font-weight: 600;
+          padding: 0.1em 0.4em 0.1em;
+          font-size: 0.78em;
+          line-height: 1.4em;
+          color: var(--color-inline-code);
+          background: var(--color-inline-code-bg);
+          border-radius: 3px;
         }
       }
 
       a {
-        color: $color-theme;
+        color: var(--color-theme);
         font-weight: 600;
       }
 
@@ -213,7 +227,7 @@
   }
 
   ul {
-    @media (max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       margin: 0 0 0 !important;
     }
 
@@ -228,12 +242,12 @@
   }
 }
 
-// Side-by-side table comparison
+/* Side-by-side table comparison */
 .compare-tables {
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $tablet-breakpoint) {
+  @media (--tablet) {
     display: block !important;
     margin-right: calc(-50vw + 50%) !important;
     margin-left: calc(-50vw + 50%) !important;
@@ -244,13 +258,13 @@
     height: fit-content;
     max-height: unset;
 
-    @media (max-width: $tablet-breakpoint) {
+    @media (--tablet) {
       width: -webkit-fit-content !important;
       max-width: unset;
       margin: 0 40px 40px !important;
     }
 
-    @media (max-width: $mobile-breakpoint) {
+    @media (--mobile) {
       min-width: 100% !important;
       margin: 0 0 40px !important;
     }

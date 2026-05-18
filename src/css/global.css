@@ -1,0 +1,140 @@
+@import "./core/variables.css";
+@import "./layout.css";
+@import "./header.css";
+@import "./post-card.css";
+@import "./feed.css";
+@import "./sidebar.css";
+@import "./footer.css";
+@import "./pagination.css";
+@import "./mobile-menu.css";
+@import url("../../assets/built/hamburgers.min.css");
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-background-grey) !important;
+  font-family: var(--body-font);
+  font-size: 1.7rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6em;
+  overflow-x: hidden;
+
+  &::selection {
+    color: white;
+    background: var(--color-theme);
+  }
+
+  b,
+  strong {
+    font-family: var(--body-font-semibold);
+    font-weight: unset;
+  }
+}
+
+.page.sidebar {
+  grid-gap: 30px;
+  display: grid;
+  grid-template-columns: 2.1fr 1fr;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+
+  @media (--smallscreen) {
+    grid-gap: 20px;
+  }
+
+  @media (--tablet) {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+}
+
+.post-title {
+  color: var(--color-header-grey);
+  display: block;
+  font-family: var(--header-font);
+  font-size: 2.3em;
+  margin: unset;
+  font-weight: unset;
+  line-height: 1.1;
+  max-width: 720px;
+  order: 2;
+  width: -webkit-fill-available;
+}
+
+.site-content {
+
+  h2 {
+    font-family: var(--body-font-light);
+    font-weight: normal;
+    font-size: 2.3em;
+    margin: 40px 0 5px;
+    color: var(--color-header-grey);
+  }
+
+  h3 {
+    color: var(--color-header-grey);
+  }
+
+  p {
+    margin: 0 0 25px;
+    -webkit-font-smoothing: antialiased;
+    color: #414d5a;
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    line-height: 1.6em;
+
+    &::selection {
+      background: var(--color-theme);
+      color: white;
+    }
+
+    code {
+      display: inline;
+      font-family: var(--monospace-font);
+      vertical-align: middle;
+      font-weight: 600;
+      padding: 0.1em 0.4em 0.1em;
+      font-size: 0.78em;
+      line-height: 1.4em;
+      color: var(--color-inline-code);
+      background: var(--color-inline-code-bg);
+      border-radius: 3px;
+    }
+  }
+
+  li {
+    -webkit-font-smoothing: antialiased;
+    color: #414d5a;
+    font-family: var(--body-font);
+    font-size: 1.1em;
+    line-height: 1.7em;
+    padding: unset;
+  }
+
+  a {
+    transition: var(--transition);
+  }
+
+  input[type="email"]:hover,
+  input[type="text"]:hover {
+    border: 1px solid #84aac0;
+    background-color: #c3e1f0;
+    color: #445d6d;
+    cursor: text;
+    transition: var(--transition);
+
+    &::placeholder {
+      color: #96b2d1 !important;
+    }
+  }
+
+  .home-template,
+  .author-template,
+  .tag-template,
+  .paged {
+    background: var(--color-background-grey);
+  }
+}

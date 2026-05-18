@@ -1,7 +1,7 @@
-import "../scss/page.scss";
-import "../scss/series-all.scss";
-import "../scss/series-detail.scss";
-import "../scss/about.scss";
+import "../css/page.css";
+import "../css/series-all.css";
+import "../css/series-detail.css";
+import "../css/about.css";
 
 window.addEventListener("load", function () {
   fixGithubUrls();

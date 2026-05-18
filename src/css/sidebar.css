@@ -1,23 +1,22 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
+@import "./core/variables.css";
 
 /* 12. Sidebar
 /* ---------------------------------------------------------- */
 .sidebar {
-  @media (max-width: $tablet-breakpoint) {
+  @media (--tablet) {
     display: none;
   }
 
   .widget {
     background-color: white;
     padding: 20px;
-    box-shadow: $card-shadow;
+    box-shadow: var(--card-shadow);
     margin-bottom: 20px;
     position: relative;
 
     .widget-title {
-      color: $color-lightgrey;
-      font-family: $body-font-medium;
+      color: var(--color-lightgrey);
+      font-family: var(--body-font-medium);
       font-size: .9em;
       letter-spacing: 1px;
       line-height: 1;
@@ -29,8 +28,8 @@
     }
 
     label {
-      color: $color-darkgrey;
-      font-family: $body-font-medium;
+      color: var(--color-darkgrey);
+      font-family: var(--body-font-medium);
       opacity: .7;
       display: block;
       line-height: 1.5;
@@ -50,7 +49,7 @@
       line-height: 1.3;
       font-size: 1em;
       margin-bottom: 15px;
-      font-family: $body-font-light;
+      font-family: var(--body-font-light);
       color: #313b45;
     }
 
@@ -69,13 +68,13 @@
         color: #78849c;
         display: inline-block;
         flex-grow: 1;
-        font-family: $body-font-medium;
+        font-family: var(--body-font-medium);
         font-size: .85em !important;
         line-height: 1.5em;
         margin: 0 2px 4px;
         padding: 4px 10px;
         text-align: center;
-        transition: $transition;
+        transition: var(--transition);
 
         &:hover {
           border: 1px solid #78849c;
@@ -96,8 +95,8 @@
         padding: 5px 0;
 
         .stat-name {
-          color: $color-lightgrey;
-          font-family: $body-font-medium;
+          color: var(--color-lightgrey);
+          font-family: var(--body-font-medium);
           font-size: .95em;
         }
       }
@@ -116,30 +115,30 @@
         margin-bottom: 10px;
         padding: 5px 0 0;
 
-        &>.gh-widget-item {
+        & > .gh-widget-item {
           padding: 0;
         }
 
         .full-name {
           font-size: 1.2em;
           white-space: nowrap;
-          font-family: $body-font-medium;
+          font-family: var(--body-font-medium);
           line-height: 1em;
-          color: $color-header-grey;
+          color: var(--color-header-grey);
         }
 
         .bio {
-          color: $color-sidebar-description;
+          color: var(--color-sidebar-description);
           line-height: 1.3;
           font-size: .95em;
           margin: 5px 0 10px;
-          font-family: $body-font-light;
+          font-family: var(--body-font-light);
         }
 
         .location {
           font-size: .9em;
-          font-family: $body-font-semibold;
-          color: $color-lightgrey;
+          font-family: var(--body-font-semibold);
+          color: var(--color-lightgrey);
           line-height: 1;
         }
       }
@@ -155,7 +154,7 @@
         }
 
         .count {
-          font-family: $body-font-semibold;
+          font-family: var(--body-font-semibold);
           font-size: 1.2em;
           line-height: 1;
         }
@@ -165,8 +164,8 @@
         display: block;
         line-height: 1;
         font-size: 1.1em;
-        color: $color-lightgrey;
-        font-family: $body-font-semibold;
+        color: var(--color-lightgrey);
+        font-family: var(--body-font-semibold);
         margin-bottom: 5px;
         padding: 0;
       }
@@ -192,8 +191,8 @@
         .language {
           font-size: .8em;
           text-align: right;
-          font-family: $body-font-medium;
-          color: $color-sidebar-description;
+          font-family: var(--body-font-medium);
+          color: var(--color-sidebar-description);
         }
 
         .stars {
@@ -211,7 +210,7 @@
 
       .gh-widget-link {
         text-decoration: none;
-        font-family: $body-font-semibold;
+        font-family: var(--body-font-semibold);
         line-height: 1;
         font-size: .85em;
       }
@@ -220,12 +219,12 @@
         justify-content: unset;
       }
 
-      &>div>.gh-widget-container:first-child {
+      & > div > .gh-widget-container:first-child {
         align-items: unset;
         padding: 0;
       }
 
-      &>div>.gh-widget-container:last-child {
+      & > div > .gh-widget-container:last-child {
         margin-top: 15px;
         justify-content: space-between;
 
@@ -247,9 +246,14 @@
           width: 80px;
           border-radius: 3px;
           line-height: 1;
+          background-color: var(--color-theme);
+          box-shadow: inset 0 0 0 1px var(--color-theme);
+          color: #fff !important;
+          transition: var(--transition);
 
-          & {
-            @include filled-button;
+          &:hover {
+            cursor: pointer;
+            background-color: var(--color-hover) !important;
           }
 
           a {
@@ -270,7 +274,7 @@
   }
 
   .series-list-count {
-    font-family: $header-font;
+    font-family: var(--header-font);
     width: 25px;
     text-align: center;
     border-radius: 2px;
@@ -279,7 +283,7 @@
 
   .series-widget-list {
     .series-list-link {
-      font-family: $body-font-medium !important;
+      font-family: var(--body-font-medium) !important;
       padding: 9px 6px;
       border-bottom: 1px solid #f0f1f4;
       font-size: .9em;
@@ -287,7 +291,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: $transition;
+      transition: var(--transition);
 
       &:last-of-type {
         border-bottom: unset;
@@ -295,8 +299,8 @@
       }
 
       &:hover {
-        background-color: $color-hover;
-        border-bottom: 1px solid $color-hover;
+        background-color: var(--color-hover);
+        border-bottom: 1px solid var(--color-hover);
         cursor: pointer;
 
         * {
@@ -306,15 +310,15 @@
       }
 
       * {
-        transition: $transition;
+        transition: var(--transition);
       }
 
       a {
-        color: $color-lightgrey;
+        color: var(--color-lightgrey);
       }
 
       .series-list-link-title {
-        font-family: $body-font-medium;
+        font-family: var(--body-font-medium);
       }
 
       a,
@@ -331,16 +335,16 @@
 
 .subscribe-form {
   .subscribe-form-description {
-    color: $color-sidebar-description;
+    color: var(--color-sidebar-description);
   }
 
   .sidebar-input-field {
     color: #4e5869;
-    font-family: $body-font;
+    font-family: var(--body-font);
     font-size: .9em;
     margin: 0 0 10px;
     padding: 12px 10px 10px !important;
-    transition: $transition;
+    transition: var(--transition);
     width: 100%;
 
     &:focus,
@@ -350,7 +354,7 @@
       background-color: #e7f5fc;
       color: #445d6d;
       cursor: text;
-      transition: $transition;
+      transition: var(--transition);
     }
 
     &::placeholder {
@@ -358,25 +362,30 @@
     }
   }
 
-
   .newsletter-messages {
     display: none;
-
-    & {
-      @include message-overlay;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: var(--transition);
+    opacity: 0;
 
     .message {
       padding: 20px;
       display: none;
-
-      & {
-        @include message-overlay;
-      }
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: var(--transition);
+      opacity: 0;
     }
 
     * {
-      font-family: $body-font-bold;
+      font-family: var(--body-font-bold);
     }
   }
 
@@ -394,7 +403,7 @@
       .success-title {
         display: block;
         font-size: 2em;
-        font-family: $header-font;
+        font-family: var(--header-font);
         margin-bottom: 10px;
       }
 
@@ -417,7 +426,7 @@
         .error-title {
           display: block;
           font-size: 2em;
-          font-family: $header-font;
+          font-family: var(--header-font);
           margin-bottom: 10px;
         }
 
@@ -443,12 +452,12 @@
     text-align: right;
     width: 100%;
     background: none;
-    font-family: $body-font-bold;
-    transition: $transition;
+    font-family: var(--body-font-bold);
+    transition: var(--transition);
 
     &:hover {
       cursor: pointer;
-      color: $color-hover;
+      color: var(--color-hover);
     }
   }
 }
@@ -459,10 +468,10 @@
 .widget.about .widget-logo {
   display: block;
   margin: 0 auto 15px;
-  transition: $transition;
+  transition: var(--transition);
   width: 230px;
 
-  @media(max-width: $smallscreen-breakpoint) {
+  @media (--smallscreen) {
     margin: 0 auto 10px;
   }
 
@@ -473,8 +482,8 @@
 }
 
 .widget.about .description {
-  font-family: $body-font-light;
-  color: $color-sidebar-description;
+  font-family: var(--body-font-light);
+  color: var(--color-sidebar-description);
   line-height: 1.3;
   margin: 15px 0 0;
   text-align: center;
@@ -490,15 +499,31 @@
   height: 70px;
   align-items: center;
 
-  @media(max-width: 900px) {
+  @media (--large-tablet) {
     height: 60px;
   }
 
   .social-media-button {
     font-size: 1.7em;
+    background: unset;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+    color: var(--color-social-btn);
+    fill: var(--color-social-btn);
 
-    & {
-      @include social-media-icon;
+    i,
+    svg {
+      color: var(--color-social-btn);
+      transition: var(--transition);
+      line-height: 1;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--color-hover);
+        fill: var(--color-hover);
+      }
     }
 
     &:hover {
@@ -507,12 +532,12 @@
 
       i,
       svg {
-        fill: $color-hover;
-        color: $color-hover;
+        fill: var(--color-hover);
+        color: var(--color-hover);
       }
     }
 
-    @media(max-width: $smallscreen-breakpoint) {
+    @media (--smallscreen) {
       font-size: 1.5em;
 
       &:hover {
