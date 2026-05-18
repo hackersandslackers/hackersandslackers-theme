@@ -370,16 +370,20 @@
 
 @mixin blockquote {
   color: $color-header-grey;
-  font-style: italic;
-  font-weight: 900;
-  line-height: 1.6em;
   padding: 1em 1em;
-  position: relative;
-  font-size: 1.2em;
-  font-style: italic;
   max-width: 100%;
   z-index: 1;
-  margin: 30px 40px;
+  margin: 30px 0;
+  background-color: #e5e8ef;
+  border-left: 3px solid #5eb9d7;
+
+  code {
+    background: $color-inline-code-bg;
+    font-size: .8em;
+    color: #37728d;
+    padding: 0.1em 0.4em 0.1em;
+    border-radius: 3px;
+  }
 
   @media(max-width: $tablet-breakpoint) {
     margin: 1.5em 1em !important;
@@ -387,41 +391,6 @@
 
   @media(max-width: $mobile-breakpoint) {
     line-height: 1.4em;
-  }
-
-  &::before {
-    content: "\f10d";
-    -webkit-font-smoothing: antialiased;
-    position: absolute;
-    color: #e8ebee;
-    font-family: $icon-font;
-    font-style: normal;
-    font-size: 3em;
-    left: -1rem;
-    top: 0;
-    z-index: -10;
-
-    @media(max-width: $mobile-breakpoint) {
-      font-size: 2.5em;
-    }
-  }
-
-  &::after {
-    content: "\f10e";
-    -webkit-font-smoothing: antialiased;
-    position: absolute;
-    color: #e8ebee;
-    font-family: $icon-font;
-    font-style: normal;
-    font-size: 3em;
-    right: 1rem;
-    bottom: 2rem;
-    z-index: 0;
-
-    @media(max-width: $mobile-breakpoint) {
-      font-size: 2.5em;
-      bottom: 1rem;
-    }
   }
 }
 
