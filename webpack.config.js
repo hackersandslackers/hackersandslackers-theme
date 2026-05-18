@@ -1,6 +1,5 @@
 const path = require("path");
 const DotEnv = require(`dotenv-webpack`);
-const FontConfigWebpackPlugin = require("font-config-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require(`terser-webpack-plugin`);
 
@@ -9,11 +8,9 @@ module.exports = {
     main: path.resolve(__dirname, `./src/js/index.js`),
     post: path.resolve(__dirname, `./src/js/post.js`),
     page: path.resolve(__dirname, `./src/js/page.js`),
-    // author: path.resolve(__dirname, `./src/js/author.js`),
   },
   plugins: [
     new DotEnv({ path: "./.env" }),
-    new FontConfigWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css",
@@ -22,7 +19,7 @@ module.exports = {
   mode: process.env.ENVIRONMENT,
   resolve: {
     alias: {
-      Styles: path.resolve(__dirname, "./src/scss/"),
+      Styles: path.resolve(__dirname, "./src/css/"),
     },
   },
   output: {
@@ -36,20 +33,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/,
-        use: [
-          "style-loader",
-          "css-loader",
-          {
-            loader: "sass-loader",
-            options: {
-              // Prefer `dart-sass`
-              implementation: require.resolve("sass"),
-            },
-          },
-        ],
-      },
-      {
         test: /\.css$/,
         use: [
           {
@@ -59,6 +42,7 @@ module.exports = {
             },
           },
           "css-loader",
+          "postcss-loader",
         ],
       },
       {

@@ -1,5 +1,4 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
+@import "./core/variables.css";
 
 /* 6. Post Feed
 /* ---------------------------------------------------------- */
@@ -11,7 +10,7 @@
   grid-template-columns: 1fr;
   margin: 0 auto;
 
-  @media(max-width: $mobile-breakpoint) {
+  @media (--mobile) {
     grid-gap: 4.5vw;
     margin: 2.5vh 4vw;
   }

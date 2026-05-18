@@ -1,6 +1,4 @@
-@use "core/_variables.scss" as *;
-@use "core/_mixins.scss" as *;
-
+@import "./core/variables.css";
 
 .pagination {
   align-items: center;
@@ -11,18 +9,17 @@
 
   .pagination-arrow {
     font-size: 1.4em;
-    transition: $transition;
-    color: $color-lightgrey;
+    transition: var(--transition);
+    color: var(--color-lightgrey);
 
     &:hover {
 
       i,
       svg {
-        color: $color-hover !important;
+        color: var(--color-hover) !important;
         cursor: pointer;
-        fill: $color-hover !important;
+        fill: var(--color-hover) !important;
       }
-
     }
   }
 
@@ -37,7 +34,7 @@
   }
 
   .page-number {
-    font-family: $body-font-bold;
+    font-family: var(--body-font-bold);
     opacity: .5;
     line-height: 1;
     font-size: 1.1em;

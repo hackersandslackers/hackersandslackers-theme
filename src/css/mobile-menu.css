@@ -1,4 +1,4 @@
-@use "core/_variables.scss" as *;
+@import "./core/variables.css";
 
 .mobile-menu {
   position: fixed;
@@ -11,7 +11,7 @@
   top: 0;
   right: -100%;
   height: -webkit-fill-available;
-  transition: $transition;
+  transition: var(--transition);
 
   &.active {
     right: 0 !important;
@@ -23,20 +23,20 @@
     padding: 0;
 
     .mobile-nav-link {
-      font-family: $body-font-medium;
+      font-family: var(--body-font-medium);
       font-size: 1.5em;
       text-align: center;
       margin-bottom: 15px;
-      transition: $transition;
+      transition: var(--transition);
 
       &:hover {
         cursor: pointer;
-        color: $color-hover;
+        color: var(--color-hover);
 
         i,
         span,
-        &>a {
-          color: $color-hover;
+        & > a {
+          color: var(--color-hover);
         }
 
         li {
@@ -45,13 +45,11 @@
 
         svg,
         span {
-          color: $color-hover;
+          color: var(--color-hover);
         }
       }
     }
   }
-
-  
 
   #mobile-nav-tags-links,
   #mobile-nav-series-links {
@@ -80,17 +78,17 @@
     display: none;
 
     .mobile-nav-link-nested {
-      font-family: $body-font;
+      font-family: var(--body-font);
       font-size: .75em;
       margin-bottom: 6px;
       margin-left: 5px;
 
       a {
-        transition: $transition;
+        transition: var(--transition);
 
         &:hover {
           cursor: pointer;
-          color: $color-hover;
+          color: var(--color-hover);
         }
       }
     }
@@ -101,11 +99,11 @@
     margin-left: 5px;
 
     a {
-      transition: $transition;
+      transition: var(--transition);
 
       &:hover {
         cursor: pointer;
-        color: $color-hover;
+        color: var(--color-hover);
       }
     }
   }
@@ -123,25 +121,25 @@
 
     a {
       display: block;
-      font-family: $body-font-medium;
+      font-family: var(--body-font-medium);
       font-size: 1.2em;
       margin: 0 10px;
-      transition: $transition;
+      transition: var(--transition);
 
       &:hover {
         cursor: pointer;
-        color: $color-hover;
+        color: var(--color-hover);
       }
 
       .mobile-signin-button,
       .mobile-signup-button {
         border: 1px solid blue;
-        transition: $transition;
+        transition: var(--transition);
         padding: 10px 20px;
 
         &:hover {
           cursor: pointer;
-          color: $color-hover;
+          color: var(--color-hover);
         }
       }
     }
@@ -158,36 +156,35 @@
   display: block;
   width: 84vw;
 
-.gh-navigation-members {
-  display: flex;
-  justify-content: space-between;
+  .gh-navigation-members {
+    display: flex;
+    justify-content: space-between;
 
-  a {
-    display: block;
-    padding: 10px;
-    font-size: 1.2em;
-    border-radius: 2px;
-    border: 3px solid $color-theme;
-    color: $color-theme;
-    font-family: $body-font-semibold;
-    width: 48%;
-    text-align: center;
-    transition: $transition;
+    a {
+      display: block;
+      padding: 10px;
+      font-size: 1.2em;
+      border-radius: 2px;
+      border: 3px solid var(--color-theme);
+      color: var(--color-theme);
+      font-family: var(--body-font-semibold);
+      width: 48%;
+      text-align: center;
+      transition: var(--transition);
 
-    &:last-of-type {
-      background-color: $color-theme;
-      color: white;
+      &:last-of-type {
+        background-color: var(--color-theme);
+        color: white;
 
-      &:hover {
-        color: $color-theme !important;
+        &:hover {
+          color: var(--color-theme) !important;
+        }
       }
 
-    }
-
-    &:hover {
-      cursor: pointer;
-      color: $color-hover;
+      &:hover {
+        cursor: pointer;
+        color: var(--color-hover);
+      }
     }
   }
-}
 }
