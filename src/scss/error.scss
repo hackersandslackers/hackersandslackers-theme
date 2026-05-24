@@ -10,12 +10,12 @@
   }
 
   .error-body-content {
-    width: 800px;
+    width: $content-width;
     padding: 40px;
     background: white;
     margin: 0 auto;
     height: 100%;
-    max-width: 800px;
+    max-width: $content-width;
     box-shadow: $card-shadow;
 
     @media(max-width: $smallscreen-breakpoint) {
@@ -24,7 +24,7 @@
       max-width: unset;
     }
 
-    @media($mobile-breakpoint) {
+    @media(max-width: $mobile-breakpoint) {
       box-shadow: unset;
     }
 
@@ -141,10 +141,10 @@
 
         .post-card-content {
           padding: 15px;
-          width: -webkit-fill-available;
+          width: 100%;
           display: block;
-          height: -webkit-fill-available;
-          max-height: -webkit-fill-available;
+          height: 100%;
+          max-height: 100%;
         }
 
         .post-card-meta {
@@ -186,7 +186,7 @@
   }
 
   .footer-wrapper {
-    max-width: 800px;
+    max-width: $content-width;
 
     @media(max-width:$mobile-breakpoint) {
       padding: 0 30px;

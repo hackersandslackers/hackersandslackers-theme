@@ -9,7 +9,7 @@
     box-shadow: $card-shadow;
     padding: 30px;
     margin: 0 auto 50px;
-    width: 950px;
+    width: $smallscreen-breakpoint;
     max-width: 95%;
 
     @media(max-width: $tablet-breakpoint) {
@@ -19,20 +19,20 @@
 
     h1 {
       font-family: $header-font-medium;
-      color: $color-header-grey
+      color: $color-header-grey;
     }
 
     p {
       line-height: 1.6;
       margin-bottom: 0;
-      font-size: 1.1;
+      font-size: 1.1em;
     }
   }
 
   .series-all {
     margin: 0 auto 40px;
     max-width: 95%;
-    width: 950px;
+    width: $smallscreen-breakpoint;
 
     @media(max-width: $mobile-breakpoint) {
       max-width: 90vw;
@@ -110,7 +110,7 @@
           text-align: left;
           text-overflow: ellipsis;
           transition: all .2s ease-out;
-          width: -webkit-fill-available;
+          width: 100%;
         }
 
         .series-card-post-count {

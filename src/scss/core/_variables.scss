@@ -72,4 +72,18 @@ $hamburger-color: $color-lightgrey;
 
 /* Etc. */
 $card-shadow: 0 1px 4px rgba(39, 44, 49, 0.35);
+$shadow-header: 0 1px 0 rgba(39, 44, 49, 0.15);
 $transition: all .2s ease-out;
+
+/* Layout widths */
+$content-width: 800px;
+$content-wrapper-width: 1000px;
+
+/* Additional breakpoints */
+$breakpoint-md: 767px;
+
+/* Additional colors */
+$color-secondary-text-dark: #414d5a;
+$color-link-muted: #778291;
+$color-border-nav: #cdd9e0;
+$color-protip: #694503;

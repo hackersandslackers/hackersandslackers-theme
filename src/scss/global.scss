@@ -13,7 +13,6 @@
 
 body {
   text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
   background-color: $color-background-grey !important;
   font-family: $body-font;
   font-size: 1.7rem;
@@ -41,9 +40,9 @@ body {
   grid-template-columns: 2.1fr 1fr;
   margin: 0 auto;
   max-width: 100%;
-  width: 1000px;
+  width: $content-wrapper-width;
 
-  @media (max-width: 950px) {
+  @media (max-width: $smallscreen-breakpoint) {
     grid-gap: 20px;
   }
 
@@ -63,7 +62,7 @@ body {
   line-height: 1.1;
   max-width: 720px;
   order: 2;
-  width: -webkit-fill-available;
+  width: 100%;
 }
 
 .site-content {
@@ -74,7 +73,6 @@ body {
     font-size: 2.3em;
     margin: 40px 0 5px;
     color: $color-header-grey;
-    margin: 40px 0 5px;
   }
 
   h3 {

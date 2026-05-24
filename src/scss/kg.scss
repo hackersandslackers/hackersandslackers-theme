@@ -36,7 +36,6 @@ make sure they look good, and are given a bit of extra spacing. */
     }
 
     iframe {
-      margin: 0;
       height: 60vw;
       border: 2px solid #4d4e53;
       border-radius: 10px;
@@ -117,9 +116,7 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 
   figcaption {
-    order: 1;
     width: 100%;
-    width: -moz-available;
     margin: 0 auto;
     padding: 10px 10px;
     border-radius: 4px 4px 0 0 !important;
@@ -177,7 +174,8 @@ make sure they look good, and are given a bit of extra spacing. */
 
   p,
   ol,
-  ul {
+  ul,
+  u {
     font-size: 1.7rem;
     line-height: 1.6em;
   }
@@ -202,19 +200,6 @@ make sure they look good, and are given a bit of extra spacing. */
 
   figcaption {
     @include kg-card-figcaption;
-  }
-}
-
-/* Product Cards */
-/* ---------------------------------------------------------- */
-
-.kg-product-card .kg-product-card-description {
-
-  p,
-  ol,
-  u {
-    font-size: 1.7rem;
-    line-height: 1.6em;
   }
 }
 
@@ -331,7 +316,7 @@ make sure they look good, and are given a bit of extra spacing. */
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
-    color: #4e576a;
+    color: $color-header-grey;
     display: -webkit-box;
     font-family: $body-font-bold;
     font-size: 1em;
@@ -340,7 +325,7 @@ make sure they look good, and are given a bit of extra spacing. */
     overflow: hidden;
     text-decoration: none;
     text-overflow: ellipsis;
-    width: -webkit-fill-available;
+    width: 100%;
 
     @media(max-width: $mobile-breakpoint) {
       font-family: $body-font-semibold;
@@ -352,14 +337,14 @@ make sure they look good, and are given a bit of extra spacing. */
     line-clamp: 2;
     -webkit-box-orient: vertical;
     display: -webkit-box;
-    font-family: CamphorPro-Regular, HelveticaNeue, sans-serif;
+    font-family: $body-font;
     font-size: .9em;
     line-height: 1.5;
     margin: 15px 0;
     max-width: 475px;
     overflow-y: hidden;
     text-overflow: ellipsis;
-    width: -webkit-fill-available;
+    width: 100%;
 
     @media(max-width: $mobile-breakpoint) {
       margin: 10px 0;
@@ -418,12 +403,12 @@ make sure they look good, and are given a bit of extra spacing. */
   }
 
   .kg-callout-text {
-    color: #694503;
+    color: $color-protip;
     font-size: 1em !important;
 
     a {
-      color: #694503;
-      border-bottom: 1px solid #694503 !important;
+      color: $color-protip;
+      border-bottom: 1px solid $color-protip !important;
 
       &:hover {
         color: #b07200 !important;

@@ -121,7 +121,7 @@
         font-size: 1.2em;
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: $breakpoint-md) {
         margin: 5px 0 15px;
       }
 

@@ -2,8 +2,6 @@
 @use "core/_mixins.scss" as *;
 @use "../../assets/built/hamburgers.min.css";
 
-$hamburger-thickness:3px;
-
 /* 4. Site Header
 /* ---------------------------------------------------------- */
 
@@ -25,8 +23,7 @@ $hamburger-thickness:3px;
   }
 
   .nav-wrapper {
-    width: 950px;
-    margin: auto;
+    width: $smallscreen-breakpoint;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -133,7 +130,6 @@ $hamburger-thickness:3px;
     font-style: normal;
     line-height: 1;
     text-rendering: optimizelegibility;
-    -webkit-font-smoothing: antialiased;
 
     @media(max-width: $tablet-breakpoint) {
       margin-right: 10px;
@@ -167,12 +163,10 @@ $hamburger-thickness:3px;
   }
 
   .search-button {
-    display: flex;
-    align-items: center;
+    display: block;
     color: $color-lightgrey;
     transition: $transition;
     font-size: 1.3em;
-    display: block;
     height: 20px;
 
     @media(max-width: $mobile-breakpoint) {
@@ -507,5 +501,5 @@ $hamburger-thickness:3px;
 }
 
 .error-template .nav-wrapper {
-  max-width: 900px;
+  max-width: $smallscreen-breakpoint;
 }
