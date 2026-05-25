@@ -89,3 +89,6 @@ yarn-error.log
 
 # Yarn
 .yarn
+
+# npm lockfile (project uses yarn)
+package-lock.json

@@ -291,7 +291,6 @@
 
       &:last-of-type {
         border-bottom: unset;
-        padding: 9px 6px;
       }
 
       &:hover {
@@ -490,7 +489,7 @@
   height: 70px;
   align-items: center;
 
-  @media(max-width: 900px) {
+  @media(max-width: $smallscreen-breakpoint) {
     height: 60px;
   }
 
