@@ -1074,13 +1074,13 @@
     "@parcel/watcher-win32-x64" "2.5.6"
 
 "@rocktimsaikia/github-card@^3.0.1":
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/@rocktimsaikia/github-card/-/github-card-3.0.1.tgz"
-  integrity sha512-lCia3yAxTf0fr7i0FZJ2U+ElbhEYsGVhEp7rFsmlX4/kNUS5VFMD5TrVvRSY/kNT5WEqOff3mBPPHEaj7R0c5g==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@rocktimsaikia/github-card/-/github-card-3.0.3.tgz#d337301d8d4a1a57b48cab5ef4cd78e1bbffff58"
+  integrity sha512-3lw7V8HvyiPmCq/9miQcCgZRZSZigDmos26fS/sxjyUDZ1AQ781gWWf+6SWfPsrONM19rAEo3ccQL1MKlhh10Q==
 
 "@stdlib/array-float32@^0.2.2", "@stdlib/array-float32@^0.2.3":
   version "0.2.3"
-  resolved "https://registry.npmjs.org/@stdlib/array-float32/-/array-float32-0.2.3.tgz"
+  resolved "https://registry.yarnpkg.com/@stdlib/array-float32/-/array-float32-0.2.3.tgz#3fc614814be7688b9254d5ec36ac44caba5177f9"
   integrity sha512-LxdKGrpsCehFDgU+nw7r3/NL+g8pe9zcDn/6fvNwiuy0AiunX/+c8lin9qUy/FEhrbU6aFXepFM2Ql/9YQD+TA==
   dependencies:
     "@stdlib/assert-has-float32array-support" "^0.2.3"
