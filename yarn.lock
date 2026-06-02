@@ -1074,9 +1074,9 @@
     "@parcel/watcher-win32-x64" "2.5.6"
 
 "@rocktimsaikia/github-card@^3.0.1":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@rocktimsaikia/github-card/-/github-card-3.0.3.tgz#d337301d8d4a1a57b48cab5ef4cd78e1bbffff58"
-  integrity sha512-3lw7V8HvyiPmCq/9miQcCgZRZSZigDmos26fS/sxjyUDZ1AQ781gWWf+6SWfPsrONM19rAEo3ccQL1MKlhh10Q==
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/@rocktimsaikia/github-card/-/github-card-3.0.4.tgz#f70cb84d97b653706096129df40884cc6b98db73"
+  integrity sha512-tToOplqFVLCyOwUNh6V3uvZoeWrQ0d+7B22JB/9PEITxIWV+pdlyT5QcTO/0DxlaJF+GEsHxs5KyFK4RqD149Q==
 
 "@stdlib/array-float32@^0.2.2", "@stdlib/array-float32@^0.2.3":
   version "0.2.3"
