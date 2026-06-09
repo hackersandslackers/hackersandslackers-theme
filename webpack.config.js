@@ -40,11 +40,12 @@ module.exports = {
         use: [
           "style-loader",
           "css-loader",
+          "postcss-loader",
           {
             loader: "sass-loader",
             options: {
               // Prefer `dart-sass`
-              implementation: require.resolve("sass"),
+              implementation: require("sass"),
             },
           },
         ],
@@ -59,6 +60,7 @@ module.exports = {
             },
           },
           "css-loader",
+          "postcss-loader",
         ],
       },
       {

@@ -92,3 +92,6 @@ yarn-error.log
 
 # npm lockfile (project uses yarn)
 package-lock.json
+
+# LLMs
+.claude/
