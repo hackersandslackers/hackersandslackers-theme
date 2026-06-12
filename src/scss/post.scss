@@ -488,6 +488,28 @@
           }
         }
       }
+
+      ul {
+          margin: 5px 0 0 0;
+          padding: 0 0 0 1em;
+
+        li {
+          color: #6e7482;
+          line-height: 1;
+          
+          a {
+            color: #677584;
+            border-bottom: 1px solid #677584;
+
+            &:hover {
+              color: #0297f6;
+              border-bottom: 1px solid #0297f6;
+            }
+          }
+        }
+      }
+
+      
     }
   }
 
