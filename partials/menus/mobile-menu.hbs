@@ -6,38 +6,44 @@
       <a href="{{@site.url}}">Home</a>
     </li>
 
+    <li class="nav-about mobile-nav-link">
+      {{#link href="/about/"}}About{{/link}}
+    </li>
+
     {{#foreach navigation}}
       {{#has slug="tags"}}
         {{> "menus/mobile-menu-tags-subnav"}}
-          <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
-            <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
-          </li>
       {{/has}}
       {{#has slug="series"}}
         {{> "menus/mobile-menu-series-subnav"}}
-          <li class="{{link_class for=(url) class=(concat "mobile-nav-link nav-" slug)}}">
-            <a href="{{url absolute="true"}}" title="{{name}}">{{label}}</a>
-          </li>
       {{/has}}
-      </li>
     {{/foreach}}
-    </ul>
 
-    <div class="gh-navigation-actions">
-                <div class="gh-navigation-members">
-                    {{#unless @member}}
-                        {{#unless @site.members_invite_only}}
-                            <a href="#/portal/signin" data-portal="signin">Sign in</a>
+    <li class="nav-join mobile-nav-link">
+      {{#link href="/join-us/"}}Join Us{{/link}}
+    </li>
+
+    <li class="nav-donate mobile-nav-link">
+      {{#link href="https://buymeacoffee.com/hackersslackers"}}Donate{{/link}}
+    </li>
+
+  </ul>
+
+  <div class="gh-navigation-actions">
+    <div class="gh-navigation-members">
+      {{#unless @member}}
+         {{#unless @site.members_invite_only}}
+            <a href="#/portal/signin" class="mobile-nav-signin" data-portal="signin">Sign in</a>
                             {{#unless hideSubscribeButton}}
-                                <a class="gh-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                                <a class="gh-button" class="mobile-nav-signup" href="#/portal/signup" data-portal="signup">Subscribe</a>
                             {{/unless}}
                         {{else}}
                             <a class="gh-button" href="#/portal/signin" data-portal="signin">Sign in</a>
                         {{/unless}}
                     {{else}}
                         <a class="gh-button" href="#/portal/account" data-portal="account">Account</a>
-                    {{/unless}}
-                </div>
-        </div>
+        {{/unless}}
+      </div>
+    </div>
   
 </nav>

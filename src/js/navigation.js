@@ -37,8 +37,8 @@ export function hamburgerMenu() {
   const mobileTagLink = document.getElementById("mobile-nav-tags-links");
 
   // Icons of expandable sub-navigation elements
-  let mobileTagsNavIcon = document.querySelector(".nav-tags .fa-angle-up");
-  let mobileSeriesNavIcon = document.querySelector(".nav-series .fa-angle-up");
+  let mobileTagsNavIcon = document.querySelector(".nav-tags .fa-angle-right");
+  let mobileSeriesNavIcon = document.querySelector(".nav-series .fa-angle-right");
 
   hamburger.addEventListener("click", function () {
     hamburger.classList.toggle("active");
@@ -50,7 +50,7 @@ export function hamburgerMenu() {
   if (mobileSeriesNav != null) {
     mobileSeriesLink.addEventListener("click", function () {
       mobileSeriesNav.classList.toggle("active");
-      mobileSeriesNavIcon.classList.toggle("flip-vertically");
+      mobileSeriesNavIcon.classList.toggle("flip-90-degrees");
     });
   }
 
@@ -60,7 +60,7 @@ export function hamburgerMenu() {
   if (mobileTagNav != null) {
     mobileTagLink.addEventListener("click", function () {
       mobileTagNav.classList.toggle("active");
-      mobileTagsNavIcon.classList.toggle("flip-vertically");
+      mobileTagsNavIcon.classList.toggle("flip-90-degrees");
     });
   }
   

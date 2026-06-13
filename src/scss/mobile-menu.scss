@@ -110,8 +110,8 @@
     }
   }
 
-  .flip-vertically {
-    transform: scaleY(-1);
+  .flip-90-degrees {
+    transform: rotate(90deg);
   }
 
   .mobile-member-actions {
@@ -174,14 +174,21 @@
     text-align: center;
     transition: $transition;
 
+    &:first-of-type {
+      &:hover {
+        color: white;
+        background-color: $color-theme;
+      }
+    }
+
     &:last-of-type {
       background-color: $color-theme;
       color: white;
 
       &:hover {
-        color: $color-theme !important;
+        color: $color-theme;
+        background-color: white;
       }
-
     }
 
     &:hover {
