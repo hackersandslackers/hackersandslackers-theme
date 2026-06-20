@@ -375,22 +375,23 @@
   z-index: 1;
   margin: 30px 0;
   background-color: #e5e8ef;
-  border-left: 3px solid #5eb9d7;
+  border-left: 3px solid #939393;
+  border-radius: 4px;
 
   code {
     background: $color-inline-code-bg;
     font-size: .8em;
-    color: #37728d;
+    color: #545e62;
     padding: 0.1em 0.4em 0.1em;
     border-radius: 3px;
   }
 
   @media(max-width: $tablet-breakpoint) {
-    margin: 1.5em 1em !important;
+    margin: 1.5em 1em;
   }
 
   @media(max-width: $mobile-breakpoint) {
-    line-height: 1.4em;
+    margin: 1.5em 0;
   }
 }
 
@@ -436,12 +437,15 @@
   flex-direction: column;
   border-radius: 5px;
   background: #ffd3a7;
-  box-shadow: 2px 2px 5px -2px rgb(71 30 0 / 74%), 0 0 1px rgba(0, 0, 0, .4);
+  box-shadow: 2px 2px 5px -2px rgba(71, 30, 0, .74), 0 0 1px rgba(0, 0, 0, .4);
   overflow: hidden;
+  padding: 45px 15px 10px;
+  position: relative;
 
   p,
   .kg-callout-text {
     line-height: 1.5;
+    font-size: 1em;
     color: #694503;
     font-family: $body-font;
 
@@ -450,12 +454,23 @@
     }
   }
 
+  code {
+    color: #5e4623;
+    background: rgb(153 92 31 / 20%);
+  }
+
   &::before {
     content: "Protip";
-    background: #ffd3a7;
-    padding: 5px;
+    font-family: SofiaPro-Medium, HelveticaNeue, sans-serif;
+    color: #513d16;
+    background: #e1a66b;
+    padding: 4px 8px;
     display: block;
     border-radius: 4px 4px 0 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
   }
 }
 

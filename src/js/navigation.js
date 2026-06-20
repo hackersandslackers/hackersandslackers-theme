@@ -56,7 +56,7 @@ export function hamburgerMenu() {
 
 
   // Mobile expandable Tags menu
-  const mobileTagNav = document.querySelector(".nav-tag .mobile-nav-links-list");
+  const mobileTagNav = document.querySelector(".nav-tags .mobile-nav-links-list");
   if (mobileTagNav != null) {
     mobileTagLink.addEventListener("click", function () {
       mobileTagNav.classList.toggle("active");
