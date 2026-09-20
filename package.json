@@ -50,7 +50,7 @@
         "@rocktimsaikia/github-card": "^3.0.1",
         "babel-plugin-prismjs": "^2.1.0",
         "basiclightbox": "^5.0.4",
-        "dotenv": "^17.2.1",
+        "dotenv": "^18.0.0",
         "dotenv-webpack": "^9.0.0",
         "github-profile-card": "^3.1.0",
         "prismjs": "^1.30.0"
